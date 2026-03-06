@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { categories } from "@/lib/tools";
 import { type Locale } from "@/lib/i18n";
 
 interface FooterProps {
@@ -9,9 +8,6 @@ interface FooterProps {
 
 export default function Footer({ lang, t }: FooterProps) {
   const footer = t.footer as Record<string, string>;
-  const toolsT = t.tools as Record<string, Record<string, string>>;
-  const navCategories = (t.nav as Record<string, unknown>)
-    .categories as Record<string, string>;
   const year = new Date().getFullYear();
 
   return (
@@ -34,26 +30,29 @@ export default function Footer({ lang, t }: FooterProps) {
             </p>
           </div>
 
-          {/* Tool links */}
+          {/* Legal & Contact links */}
           <div className="space-y-3">
-            {categories.map((category) => (
-              <div key={category.key}>
-                <h4 className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-1">
-                  {navCategories[category.key] || category.key}
-                </h4>
-                <div className="flex flex-wrap gap-x-3 gap-y-1">
-                  {category.tools.map((slug) => (
-                    <Link
-                      key={slug}
-                      href={`/${lang}/${slug}/`}
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      {toolsT[slug]?.name || slug}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ))}
+            <h3 className="font-semibold text-sm">{footer.linksTitle}</h3>
+            <nav className="flex flex-col gap-2">
+              <Link
+                href={`/${lang}/privacy/`}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {footer.privacyPolicy}
+              </Link>
+              <Link
+                href={`/${lang}/terms/`}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {footer.termsOfService}
+              </Link>
+              <Link
+                href={`/${lang}/contact/`}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {footer.contact}
+              </Link>
+            </nav>
           </div>
         </div>
 

@@ -50,8 +50,113 @@
     "privacyText": "All tools on PureKit run entirely in your browser. No data is ever sent to any server. We don't track, store, or process your data.",
     "howItWorks": "How It Works",
     "howItWorksText": "PureKit uses modern browser APIs to process everything client-side. There are zero network requests for data processing.",
+    "linksTitle": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "contact": "Contact",
     "copyright": "© {year} PureKit. Free, open-source developer tools.",
     "tagline": "Your files never leave your device."
+  },
+  "privacy": {
+    "metaTitle": "Privacy Policy | PureKit",
+    "metaDescription": "PureKit's privacy policy. All tools run entirely in your browser — no data is collected, stored, or transmitted to any server.",
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: March 2026",
+    "intro": "PureKit is built with a privacy-first approach. This policy explains how we handle your data — or more accurately, how we don't.",
+    "sections": [
+      {
+        "heading": "No Data Collection",
+        "content": "All PureKit tools run entirely in your browser using client-side JavaScript. Your data — including text, files, images, and any other input — is processed locally on your device and is never sent to any server. We do not collect, store, transmit, or have access to any data you process with our tools."
+      },
+      {
+        "heading": "No Cookies or Tracking",
+        "content": "PureKit does not use cookies, analytics trackers, or any form of user tracking. We do not use Google Analytics, Facebook Pixel, or any similar services. We do not fingerprint your browser or device."
+      },
+      {
+        "heading": "No User Accounts",
+        "content": "PureKit does not require registration or user accounts. There is no login, no profile, and no personal information to provide."
+      },
+      {
+        "heading": "Hosting & CDN",
+        "content": "PureKit is hosted as a static website on Cloudflare Pages. Cloudflare may collect standard server logs (IP address, user agent, timestamps) as part of their infrastructure. These logs are managed by Cloudflare under their own privacy policy and are not accessible to PureKit."
+      },
+      {
+        "heading": "Third-Party Services",
+        "content": "PureKit does not integrate with any third-party services that process your data. All tool functionality is self-contained within the browser. No external APIs are called with your data."
+      },
+      {
+        "heading": "Open Source",
+        "content": "PureKit's source code is publicly available. You can verify our privacy claims by inspecting the code yourself. There are no hidden network requests or data transmissions."
+      },
+      {
+        "heading": "Changes to This Policy",
+        "content": "If we make changes to this privacy policy, we will update this page. Given our architecture (100% client-side processing), significant privacy changes are unlikely."
+      },
+      {
+        "heading": "Contact",
+        "content": "If you have questions about this privacy policy, please contact us at support@purekit.dev."
+      }
+    ]
+  },
+  "terms": {
+    "metaTitle": "Terms of Service | PureKit",
+    "metaDescription": "Terms of service for PureKit — free, browser-based developer tools. No warranty, provided as-is for your convenience.",
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: March 2026",
+    "intro": "By using PureKit, you agree to the following terms.",
+    "sections": [
+      {
+        "heading": "Service Description",
+        "content": "PureKit provides free, browser-based developer tools. All tools run entirely in your browser — no data is uploaded to or processed by our servers."
+      },
+      {
+        "heading": "As-Is Availability",
+        "content": "PureKit is provided \"as is\" and \"as available\" without warranties of any kind, whether express or implied. We do not guarantee that the tools will be error-free, uninterrupted, or that the results produced will be accurate or suitable for any particular purpose."
+      },
+      {
+        "heading": "Your Responsibility",
+        "content": "You are solely responsible for your use of PureKit and any data you process with our tools. Always verify critical outputs independently. Do not rely on PureKit as the sole tool for security-sensitive operations without independent verification."
+      },
+      {
+        "heading": "Limitation of Liability",
+        "content": "To the fullest extent permitted by law, PureKit and its maintainers shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising from your use of or inability to use the service."
+      },
+      {
+        "heading": "Intellectual Property",
+        "content": "The PureKit name, logo, and website design are the property of PureKit. The tools and their underlying source code are available under an open-source license. You may not use the PureKit brand to imply endorsement of your products or services."
+      },
+      {
+        "heading": "Acceptable Use",
+        "content": "You agree to use PureKit only for lawful purposes. You may not attempt to reverse-engineer, disrupt, or abuse the service infrastructure."
+      },
+      {
+        "heading": "Changes to Terms",
+        "content": "We may update these terms from time to time. Continued use of PureKit after changes constitutes acceptance of the updated terms."
+      },
+      {
+        "heading": "Contact",
+        "content": "For questions about these terms, please contact us at support@purekit.dev."
+      }
+    ]
+  },
+  "contact": {
+    "metaTitle": "Contact Us | PureKit",
+    "metaDescription": "Get in touch with the PureKit team. Report bugs, suggest features, or ask questions about our free browser-based developer tools.",
+    "title": "Contact Us",
+    "intro": "Have a question, found a bug, or want to suggest a new tool? We'd love to hear from you.",
+    "emailTitle": "Email",
+    "emailDescription": "For general inquiries, bug reports, or feature requests:",
+    "email": "support@purekit.dev",
+    "responseTime": "We typically respond within 1–2 business days.",
+    "topics": {
+      "title": "What can we help with?",
+      "items": [
+        "Bug reports — something not working as expected",
+        "Feature requests — tools or features you'd like to see",
+        "General questions — about PureKit, privacy, or how our tools work",
+        "Partnership inquiries — collaboration or integration opportunities"
+      ]
+    }
   },
   "home": {
     "title": "Free Browser-Based Developer Tools",
@@ -290,6 +395,456 @@
         {
           "question": "Is my data safe when generating hashes?",
           "answer": "Yes. All hashing is performed entirely in your browser using the Web Crypto API (for SHA) and a JavaScript implementation (for MD5). Your text is never transmitted to any server."
+        }
+      ]
+    },
+    "jwt-decoder": {
+      "name": "JWT Decoder",
+      "shortDescription": "Decode and inspect JSON Web Tokens (JWT) instantly in your browser.",
+      "metaTitle": "JWT Decoder - Free Online Tool | PureKit",
+      "metaDescription": "Decode and inspect JWT tokens online for free. View header, payload, and signature. Check expiration status. No signup, no data upload. Browser-based and privacy-first.",
+      "keywords": ["jwt decoder", "jwt parser", "json web token", "decode jwt", "jwt online", "jwt inspector", "token decoder"],
+      "inputPlaceholder": "Paste your JWT token here (eyJhbG...)...",
+      "header": "Header",
+      "payload": "Payload",
+      "signature": "Signature",
+      "issuedAt": "Issued At",
+      "expiresAt": "Expires At",
+      "notBefore": "Not Before",
+      "expired": "Expired",
+      "active": "Active",
+      "invalidToken": "Invalid JWT token",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Decode JWT header and payload with formatted JSON output",
+          "Display signature information and algorithm used",
+          "Show token expiration status with human-readable dates",
+          "Detect and display standard JWT claims (iss, sub, aud, exp, iat, nbf)",
+          "Real-time decoding as you paste — no submit button needed"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the JWT Decoder",
+        "steps": [
+          "Paste your JWT token (starting with eyJ...) into the input area",
+          "The header, payload, and signature are decoded and displayed instantly",
+          "Check the expiration status — active tokens show green, expired show red",
+          "Click \"Copy\" to copy any section to your clipboard"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is a JWT (JSON Web Token)?",
+          "answer": "A JWT is a compact, URL-safe token format used for securely transmitting information between parties. It consists of three parts separated by dots: a header (algorithm and token type), a payload (claims/data), and a signature. JWTs are commonly used for authentication and authorization in web applications."
+        },
+        {
+          "question": "Is it safe to decode JWTs here?",
+          "answer": "Yes. JWT decoding is done entirely in your browser using JavaScript's atob() function. Your token is never sent to any server. Note that decoding a JWT does not verify its signature — it only reads the data contained within."
+        },
+        {
+          "question": "Does this tool verify JWT signatures?",
+          "answer": "No. This tool decodes and displays the content of JWT tokens but does not verify signatures. Signature verification requires the secret key or public key used to sign the token. Use this tool for inspecting token contents during development and debugging."
+        }
+      ]
+    },
+    "unix-timestamp-converter": {
+      "name": "Unix Timestamp Converter",
+      "shortDescription": "Convert between Unix timestamps and human-readable dates instantly.",
+      "metaTitle": "Unix Timestamp Converter - Free Online Tool | PureKit",
+      "metaDescription": "Convert Unix timestamps to human-readable dates and vice versa. Supports seconds and milliseconds. No signup required. Browser-based and privacy-first.",
+      "keywords": ["unix timestamp", "epoch converter", "timestamp to date", "date to timestamp", "unix time", "epoch time", "utc converter"],
+      "currentTimestamp": "Current Unix Timestamp",
+      "timestampToDate": "Timestamp to Date",
+      "dateToTimestamp": "Date to Timestamp",
+      "timestampPlaceholder": "Enter Unix timestamp...",
+      "seconds": "Seconds",
+      "milliseconds": "Milliseconds",
+      "localTime": "Local Time",
+      "utcTime": "UTC Time",
+      "relativeTime": "Relative",
+      "isoFormat": "ISO 8601",
+      "invalidTimestamp": "Invalid timestamp",
+      "invalidDate": "Invalid date",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert Unix timestamps (seconds or milliseconds) to human-readable dates",
+          "Convert dates back to Unix timestamps",
+          "Display current Unix timestamp with live updates",
+          "Show both local time and UTC time",
+          "Display relative time (e.g., '2 hours ago') and ISO 8601 format"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Unix Timestamp Converter",
+        "steps": [
+          "To convert a timestamp: paste it in the \"Timestamp to Date\" section and select seconds or milliseconds",
+          "To get a timestamp: use the date picker in the \"Date to Timestamp\" section",
+          "The current Unix timestamp is shown at the top and updates in real-time",
+          "Copy any result using the \"Copy\" button"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is a Unix timestamp?",
+          "answer": "A Unix timestamp (also called Epoch time) is the number of seconds that have elapsed since January 1, 1970, at 00:00:00 UTC. It's a simple way to represent a point in time as a single number, widely used in programming, databases, and APIs."
+        },
+        {
+          "question": "What's the difference between seconds and milliseconds?",
+          "answer": "Unix timestamps in seconds are 10 digits (e.g., 1700000000), while millisecond timestamps are 13 digits (e.g., 1700000000000). JavaScript's Date.now() returns milliseconds, while many APIs and databases use seconds. This tool auto-detects and supports both formats."
+        },
+        {
+          "question": "What is the Year 2038 problem?",
+          "answer": "The Year 2038 problem occurs because 32-bit systems store Unix timestamps as signed 32-bit integers, which will overflow on January 19, 2038. Modern 64-bit systems and JavaScript use 64-bit numbers, so they are not affected by this limitation."
+        }
+      ]
+    },
+    "color-converter": {
+      "name": "Color Converter",
+      "shortDescription": "Convert colors between HEX, RGB, HSL, and other formats instantly.",
+      "metaTitle": "Color Converter (HEX, RGB, HSL) - Free Online Tool | PureKit",
+      "metaDescription": "Convert colors between HEX, RGB, HSL, and CSS formats online for free. Visual color picker included. No signup required. Browser-based and privacy-first.",
+      "keywords": ["color converter", "hex to rgb", "rgb to hex", "hsl converter", "color picker", "css color", "color code"],
+      "hex": "HEX",
+      "rgb": "RGB",
+      "hsl": "HSL",
+      "preview": "Preview",
+      "inputPlaceholder": "Enter a color value (e.g., #3b82f6, rgb(59,130,246), hsl(217,91%,60%))...",
+      "invalidColor": "Invalid color value",
+      "cssValues": "CSS Values",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert between HEX, RGB, and HSL color formats",
+          "Visual color preview updates in real-time",
+          "Copy CSS-ready color values with one click",
+          "Interactive color picker for visual color selection",
+          "Parse flexible input — accepts HEX (#fff or #ffffff), RGB, and HSL formats"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Color Converter",
+        "steps": [
+          "Enter a color value in any supported format (HEX, RGB, or HSL)",
+          "All other color formats are calculated and displayed instantly",
+          "Use the color picker to visually select a color",
+          "Click \"Copy\" next to any format to copy it to your clipboard"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What color formats are supported?",
+          "answer": "This tool supports HEX (#RRGGBB or #RGB), RGB (rgb(r, g, b)), and HSL (hsl(h, s%, l%)) formats. All formats can be freely converted between each other. You can input any format and get all others instantly."
+        },
+        {
+          "question": "What's the difference between HEX, RGB, and HSL?",
+          "answer": "HEX uses hexadecimal notation (#FF5733). RGB defines colors by Red, Green, and Blue values (0-255). HSL uses Hue (0-360°), Saturation (0-100%), and Lightness (0-100%), which many designers find more intuitive for adjusting colors."
+        },
+        {
+          "question": "Is the color picker accurate?",
+          "answer": "Yes. The color picker uses the browser's native color input, which accurately represents colors in the sRGB color space. The converted values are precise to standard CSS specifications."
+        }
+      ]
+    },
+    "diff-checker": {
+      "name": "Diff Checker",
+      "shortDescription": "Compare two texts and highlight the differences line by line.",
+      "metaTitle": "Diff Checker - Free Online Text Comparison Tool | PureKit",
+      "metaDescription": "Compare two blocks of text and see differences highlighted line by line. Supports unified and side-by-side views. No signup required. Browser-based and privacy-first.",
+      "keywords": ["diff checker", "text compare", "text diff", "compare files", "difference checker", "online diff", "code compare"],
+      "original": "Original",
+      "modified": "Modified",
+      "originalPlaceholder": "Paste the original text here...",
+      "modifiedPlaceholder": "Paste the modified text here...",
+      "compare": "Compare",
+      "noDifferences": "No differences found — the texts are identical.",
+      "linesAdded": "lines added",
+      "linesRemoved": "lines removed",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Compare two texts side by side with color-coded differences",
+          "Line-level diff highlighting with added (green) and removed (red) lines",
+          "Summary showing total lines added and removed",
+          "Support for large texts — handles files with thousands of lines",
+          "Clean, readable diff output using the standard unified diff algorithm"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Diff Checker",
+        "steps": [
+          "Paste the original text in the left input area",
+          "Paste the modified text in the right input area",
+          "Click \"Compare\" to generate the diff",
+          "Review the color-coded output — green for additions, red for removals"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What diff algorithm is used?",
+          "answer": "This tool uses the standard diff algorithm (similar to Unix diff) via the 'diff' library. It produces accurate line-by-line comparisons suitable for code reviews, document comparisons, and content auditing."
+        },
+        {
+          "question": "Can I compare code files?",
+          "answer": "Yes. The diff checker works with any plain text including source code, configuration files, JSON, XML, and markdown. It preserves whitespace and formatting for accurate comparisons."
+        },
+        {
+          "question": "Is there a size limit?",
+          "answer": "There's no hard limit, but very large texts (hundreds of thousands of lines) may slow down due to browser processing constraints. For most practical use cases (files up to tens of thousands of lines), performance is excellent."
+        }
+      ]
+    },
+    "markdown-preview": {
+      "name": "Markdown Preview",
+      "shortDescription": "Write Markdown and preview the rendered HTML output in real-time.",
+      "metaTitle": "Markdown Preview - Free Online Renderer | PureKit",
+      "metaDescription": "Write and preview Markdown with real-time rendering. Supports GitHub Flavored Markdown (GFM). No signup required. Browser-based and privacy-first.",
+      "keywords": ["markdown preview", "markdown editor", "markdown renderer", "markdown to html", "gfm", "github markdown", "md preview"],
+      "editor": "Editor",
+      "renderedPreview": "Preview",
+      "editorPlaceholder": "Write or paste your Markdown here...\n\n# Heading 1\n## Heading 2\n\n**bold** and *italic*\n\n- List item 1\n- List item 2\n\n```js\nconsole.log('Hello!');\n```",
+      "copyHtml": "Copy HTML",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Real-time Markdown rendering as you type",
+          "Support for GitHub Flavored Markdown (GFM) including tables and task lists",
+          "Syntax highlighting for code blocks",
+          "Copy rendered HTML with one click",
+          "Clean, readable preview with proper typography"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Markdown Preview",
+        "steps": [
+          "Type or paste your Markdown content in the editor on the left",
+          "The rendered preview updates in real-time on the right",
+          "Click \"Copy HTML\" to copy the rendered HTML output",
+          "Use standard Markdown syntax — headings, lists, code blocks, links, images, and more"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What Markdown features are supported?",
+          "answer": "This tool supports standard Markdown syntax plus GitHub Flavored Markdown (GFM) extensions including tables, task lists (checkboxes), strikethrough, and fenced code blocks. Most Markdown content you'd write for GitHub, GitLab, or documentation sites will render correctly."
+        },
+        {
+          "question": "Can I use this for GitHub README files?",
+          "answer": "Yes. The renderer supports GitHub Flavored Markdown (GFM), which is the same Markdown dialect used by GitHub for README files, issues, and pull requests. The preview closely matches how your content will look on GitHub."
+        },
+        {
+          "question": "Is the HTML output clean?",
+          "answer": "Yes. The generated HTML is clean, semantic, and ready to use. It uses standard HTML tags (h1-h6, p, ul, ol, code, pre, table, etc.) without unnecessary wrappers or styling. You can copy the HTML and use it in any web project."
+        }
+      ]
+    },
+    "qr-code-generator": {
+      "name": "QR Code Generator",
+      "shortDescription": "Generate QR codes for URLs, text, or any data instantly in your browser.",
+      "metaTitle": "QR Code Generator - Free Online Tool | PureKit",
+      "metaDescription": "Generate QR codes for URLs, text, Wi-Fi credentials, and more. Customize size and download as PNG. No signup required. Browser-based and privacy-first.",
+      "keywords": ["qr code generator", "qr code maker", "create qr code", "qr code online", "url to qr", "free qr code"],
+      "inputPlaceholder": "Enter URL, text, or any data to encode...",
+      "size": "Size",
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large",
+      "downloadPng": "Download PNG",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Generate QR codes from any text, URL, or data",
+          "Customizable output size (small, medium, large)",
+          "Download QR codes as PNG images",
+          "Real-time generation as you type",
+          "High error correction level for reliable scanning"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the QR Code Generator",
+        "steps": [
+          "Enter the URL, text, or data you want to encode in the input field",
+          "The QR code is generated instantly as you type",
+          "Select your preferred size (small, medium, or large)",
+          "Click \"Download PNG\" to save the QR code image to your device"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What can I encode in a QR code?",
+          "answer": "You can encode any text data including URLs, plain text, email addresses, phone numbers, Wi-Fi credentials, and more. QR codes can hold up to about 3,000 alphanumeric characters or 7,000 numeric characters, depending on the error correction level."
+        },
+        {
+          "question": "What image format is the QR code?",
+          "answer": "QR codes are generated as PNG images, which provide crisp, lossless quality suitable for both digital use and printing. The generated images have a white background with black modules for maximum contrast and scan reliability."
+        },
+        {
+          "question": "How reliable are the generated QR codes?",
+          "answer": "Very reliable. The tool uses high error correction (Level H), which means the QR code can still be scanned even if up to 30% of it is damaged or obscured. This makes the codes suitable for printing on physical materials."
+        }
+      ]
+    },
+    "csv-data-cleaner": {
+      "name": "CSV Data Cleaner",
+      "shortDescription": "Parse, clean, and transform CSV data with deduplication and filtering.",
+      "metaTitle": "CSV Data Cleaner - Free Online Tool | PureKit",
+      "metaDescription": "Parse, clean, and transform CSV data online. Remove duplicates, filter rows, sort columns. No signup required. Browser-based and privacy-first.",
+      "keywords": ["csv cleaner", "csv parser", "csv editor", "clean csv", "remove duplicates csv", "csv filter", "csv online"],
+      "inputPlaceholder": "Paste your CSV data here...",
+      "parseData": "Parse Data",
+      "removeDuplicates": "Remove Duplicates",
+      "sortBy": "Sort By",
+      "ascending": "Ascending",
+      "descending": "Descending",
+      "downloadCsv": "Download CSV",
+      "rows": "rows",
+      "columns": "columns",
+      "duplicatesFound": "duplicates found",
+      "duplicatesRemoved": "duplicates removed",
+      "noDataParsed": "No data parsed. Paste CSV data and click \"Parse Data\".",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Parse CSV data with automatic delimiter detection",
+          "Remove duplicate rows based on all columns",
+          "Sort data by any column in ascending or descending order",
+          "Preview data in a clean table format",
+          "Export cleaned data as a downloadable CSV file"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the CSV Data Cleaner",
+        "steps": [
+          "Paste your CSV data into the input area",
+          "Click \"Parse Data\" to parse and display the data in a table",
+          "Use the toolbar to remove duplicates or sort by a specific column",
+          "Click \"Download CSV\" to export the cleaned data"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What CSV formats are supported?",
+          "answer": "The tool supports standard CSV with comma delimiters, as well as TSV (tab-separated) and other delimited formats. It auto-detects the delimiter from your data. Headers are expected in the first row."
+        },
+        {
+          "question": "How does duplicate removal work?",
+          "answer": "Duplicate detection compares all column values in each row. Two rows are considered duplicates if every column value matches exactly. The first occurrence is kept and subsequent duplicates are removed."
+        },
+        {
+          "question": "Is there a row limit?",
+          "answer": "There's no hard limit, but the tool works best with datasets up to about 100,000 rows. All processing happens in your browser, so performance depends on your device. For very large datasets, consider using a dedicated data processing tool."
+        }
+      ]
+    },
+    "image-format-converter": {
+      "name": "Image Format Converter",
+      "shortDescription": "Convert images between PNG, JPEG, and WebP formats in your browser.",
+      "metaTitle": "Image Format Converter (PNG, JPEG, WebP) - Free Online Tool | PureKit",
+      "metaDescription": "Convert images between PNG, JPEG, and WebP formats online for free. No upload to server — all conversion happens in your browser. Privacy-first.",
+      "keywords": ["image converter", "png to jpg", "jpg to png", "webp converter", "image format", "convert image online", "png to webp"],
+      "dropzone": "Drop an image here or click to select",
+      "supportedFormats": "Supports PNG, JPEG, WebP, GIF, BMP",
+      "outputFormat": "Output Format",
+      "quality": "Quality",
+      "convert": "Convert",
+      "downloadImage": "Download Image",
+      "originalSize": "Original Size",
+      "convertedSize": "Converted Size",
+      "sizeReduced": "Smaller by",
+      "sizeIncreased": "Larger by",
+      "sameSize": "Same size",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert between PNG, JPEG, and WebP image formats",
+          "Adjustable quality setting for JPEG and WebP output",
+          "Preview original and converted images side by side",
+          "See file size comparison showing the size difference",
+          "Download converted images instantly — no server upload"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Image Format Converter",
+        "steps": [
+          "Drop an image file into the upload area or click to select from your device",
+          "Choose the desired output format (PNG, JPEG, or WebP)",
+          "Adjust the quality slider for JPEG/WebP output (higher quality = larger file)",
+          "Click \"Convert\" and then \"Download\" to save the converted image"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Is my image uploaded to a server?",
+          "answer": "No. All image conversion happens entirely in your browser using the HTML5 Canvas API. Your images never leave your device, ensuring complete privacy."
+        },
+        {
+          "question": "Which format should I use?",
+          "answer": "PNG is best for images with transparency or graphics/screenshots. JPEG is ideal for photographs (smaller file size). WebP offers the best compression for web use, supporting both lossy and lossless modes with smaller files than PNG or JPEG."
+        },
+        {
+          "question": "Is there a file size limit?",
+          "answer": "There's no hard limit, but very large images (above 50MB) may be slow to process depending on your device. Most images for web use (under 10MB) convert instantly."
+        }
+      ]
+    },
+    "image-compressor": {
+      "name": "Image Compressor",
+      "shortDescription": "Compress images to reduce file size while maintaining visual quality.",
+      "metaTitle": "Image Compressor - Free Online Tool | PureKit",
+      "metaDescription": "Compress images online for free. Reduce file size while maintaining quality. Supports JPEG, PNG, and WebP. No upload to server. Browser-based and privacy-first.",
+      "keywords": ["image compressor", "compress image", "reduce image size", "image optimizer", "compress jpeg", "compress png", "image size reducer"],
+      "dropzone": "Drop an image here or click to select",
+      "supportedFormats": "Supports JPEG, PNG, WebP",
+      "compressionLevel": "Compression Level",
+      "light": "Light",
+      "medium": "Medium",
+      "strong": "Strong",
+      "lightDesc": "Target ≤ 2 MB — minimal quality loss",
+      "mediumDesc": "Target ≤ 1 MB — good balance of quality and size",
+      "strongDesc": "Target ≤ 300 KB — smallest file size",
+      "outputFormat": "Output Format",
+      "original": "Original",
+      "pngNotice": "PNG is lossless — to reduce file size, convert to JPEG or WebP.",
+      "compress": "Compress",
+      "downloadImage": "Download Image",
+      "originalSize": "Original Size",
+      "compressedSize": "Compressed Size",
+      "sizeReduced": "Smaller by",
+      "sizeIncreased": "Larger by",
+      "sameSize": "Same size",
+      "compressing": "Compressing...",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Compress JPEG, PNG, and WebP images with smart optimization",
+          "Set target file size in KB for precise control",
+          "Optional maximum width to resize large images",
+          "Preview compressed result with before/after comparison",
+          "Download compressed images instantly — no server upload needed"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Image Compressor",
+        "steps": [
+          "Drop an image file into the upload area or click to select from your device",
+          "Optionally set a target file size (KB) or maximum width (px)",
+          "Click \"Compress\" to start compression",
+          "Compare original and compressed sizes, then click \"Download\" to save"
+        ]
+      },
+      "faq": [
+        {
+          "question": "How does the compression work?",
+          "answer": "The tool uses the browser-image-compression library which employs smart compression algorithms. It can reduce quality, resize dimensions, and optimize encoding — all in your browser. The algorithm iteratively adjusts quality to hit your target size while maintaining the best possible visual quality."
+        },
+        {
+          "question": "Will compression affect image quality?",
+          "answer": "Some quality loss is inherent in lossy compression (JPEG, WebP), but the algorithm is designed to maintain visual quality as much as possible. For typical web use, the difference is usually imperceptible. PNG compression is lossless — quality is preserved."
+        },
+        {
+          "question": "Is there a file size limit?",
+          "answer": "There's no hard limit. The tool works well with images up to about 50MB. All processing happens in your browser, so larger images may take a bit longer. Most web images (under 10MB) compress in seconds."
         }
       ]
     }

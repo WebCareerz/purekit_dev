@@ -5,6 +5,8 @@ import { allToolSlugs } from "@/lib/tools";
 
 export const dynamic = "force-static";
 
+const staticPages = ["privacy", "terms", "contact"];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const currentDate = new Date().toISOString();
 
@@ -34,5 +36,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  return [...homeUrls, ...toolUrls];
+  const staticUrls: MetadataRoute.Sitemap = staticPages.flatMap((page) =>
+    locales.map((locale) => ({
+      url: `${SITE_URL}/${locale}/${page}/`,
+      lastModified: currentDate,
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+      alternates: {
+        languages: Object.fromEntries(
+          locales.map((l) => [l, `${SITE_URL}/${l}/${page}/`])
+        ),
+      },
+    }))
+  );
+
+  return [...homeUrls, ...toolUrls, ...staticUrls];
 }

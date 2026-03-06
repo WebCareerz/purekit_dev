@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
-import { Button } from "@/components/ui/button";
+import { useState, useEffect, useCallback } from "react";
 import { Textarea } from "@/components/ui/textarea";
 import { SegmentedControl } from "@/components/ui/segmented-control";
 import CopyButton from "./CopyButton";
@@ -17,8 +16,14 @@ export default function JsonFormatter({ t }: JsonFormatterProps) {
   const [input, setInput] = useState("");
   const [output, setOutput] = useState("");
   const [error, setError] = useState("");
+  const [mode, setMode] = useState<string>("format");
   const [indent, setIndent] = useState<string>("2");
   const [isValid, setIsValid] = useState<boolean | null>(null);
+
+  const modeOptions = [
+    { label: common.format, value: "format" },
+    { label: common.minify, value: "minify" },
+  ];
 
   const indentOptions = [
     { label: toolT.spaces2, value: "2" },
@@ -31,82 +36,62 @@ export default function JsonFormatter({ t }: JsonFormatterProps) {
     return Number(v);
   };
 
-  const handleFormat = useCallback(() => {
-    if (!input.trim()) {
-      setOutput("");
-      setError("");
-      setIsValid(null);
-      return;
-    }
-    try {
-      const parsed = JSON.parse(input);
-      const formatted = JSON.stringify(parsed, null, getIndentValue(indent));
-      setOutput(formatted);
-      setError("");
-      setIsValid(true);
-    } catch (e) {
-      const msg = e instanceof Error ? e.message : String(e);
-      setError(msg);
-      setOutput("");
-      setIsValid(false);
-    }
-  }, [input, indent]);
+  const process = useCallback(
+    (text: string, currentMode: string, currentIndent: string) => {
+      if (!text.trim()) {
+        setOutput("");
+        setError("");
+        setIsValid(null);
+        return;
+      }
+      try {
+        const parsed = JSON.parse(text);
+        const result =
+          currentMode === "minify"
+            ? JSON.stringify(parsed)
+            : JSON.stringify(parsed, null, getIndentValue(currentIndent));
+        setOutput(result);
+        setError("");
+        setIsValid(true);
+      } catch (e) {
+        const msg = e instanceof Error ? e.message : String(e);
+        setError(msg);
+        setOutput("");
+        setIsValid(false);
+      }
+    },
+    []
+  );
 
-  const handleMinify = useCallback(() => {
-    if (!input.trim()) {
-      setOutput("");
-      setError("");
-      setIsValid(null);
-      return;
-    }
-    try {
-      const parsed = JSON.parse(input);
-      const minified = JSON.stringify(parsed);
-      setOutput(minified);
-      setError("");
-      setIsValid(true);
-    } catch (e) {
-      const msg = e instanceof Error ? e.message : String(e);
-      setError(msg);
-      setOutput("");
-      setIsValid(false);
-    }
-  }, [input]);
-
-  const handleClear = useCallback(() => {
-    setInput("");
-    setOutput("");
-    setError("");
-    setIsValid(null);
-  }, []);
+  // Real-time processing
+  useEffect(() => {
+    process(input, mode, indent);
+  }, [input, mode, indent, process]);
 
   return (
     <div className="space-y-4">
       {/* Toolbar */}
       <div className="flex flex-wrap items-center gap-3 border border-border rounded-lg px-3 py-2 bg-muted/30">
-        <div className="flex items-center gap-2">
-          <Button onClick={handleFormat} size="sm">
-            {common.format}
-          </Button>
-          <Button onClick={handleMinify} variant="secondary" size="sm">
-            {common.minify}
-          </Button>
-          <Button onClick={handleClear} variant="ghost" size="sm">
-            {common.clear}
-          </Button>
-        </div>
+        <SegmentedControl
+          options={modeOptions}
+          value={mode}
+          onChange={setMode}
+          size="sm"
+        />
 
-        <div className="flex items-center gap-2 ml-auto">
-          <span className="text-xs text-muted-foreground">
-            {toolT.indentation}
-          </span>
-          <SegmentedControl
-            options={indentOptions}
-            value={indent}
-            onChange={setIndent}
-            size="sm"
-          />
-        </div>
+        {mode === "format" && (
+          <div className="flex items-center gap-2">
+            <span className="text-xs text-muted-foreground">
+              {toolT.indentation}
+            </span>
+            <SegmentedControl
+              options={indentOptions}
+              value={indent}
+              onChange={setIndent}
+              size="sm"
+            />
+          </div>
+        )}
       </div>
 
       {/* Status indicator */}

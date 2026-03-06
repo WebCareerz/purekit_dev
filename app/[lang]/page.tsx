@@ -1,9 +1,28 @@
 import { getDictionary, locales, type Locale } from "@/lib/i18n";
+import { generateSEO } from "@/lib/seo";
 import { Badge } from "@/components/ui/badge";
 import ToolGrid from "@/components/tools/ToolGrid";
 
 export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+  const t = await getDictionary(lang as Locale);
+  const meta = t.meta as Record<string, string>;
+
+  return generateSEO({
+    title: meta.siteTitle,
+    description: meta.siteDescription,
+    path: `/${lang}/`,
+    lang: lang as Locale,
+    keywords: meta.keywords as unknown as string[],
+  });
 }
 
 export default async function HomePage({
