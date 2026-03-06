@@ -1,0 +1,297 @@
+{
+  "meta": {
+    "siteTitle": "PureKit - Free Online Developer Tools",
+    "siteDescription": "Privacy-first browser-based developer tools. JSON formatter, Base64 encoder, URL encoder, UUID generator, hash generator and more. Your data never leaves your device.",
+    "titleTemplate": "%s | PureKit"
+  },
+  "nav": {
+    "home": "All Tools",
+    "categories": {
+      "formatters": "Formatters",
+      "encodersDecoders": "Encoders & Decoders",
+      "generators": "Generators",
+      "converters": "Converters",
+      "textTools": "Text Tools",
+      "dataTools": "Data Tools",
+      "pdfTools": "PDF Tools",
+      "imageTools": "Image Tools"
+    }
+  },
+  "common": {
+    "input": "Input",
+    "output": "Output",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "clear": "Clear",
+    "paste": "Paste",
+    "encode": "Encode",
+    "decode": "Decode",
+    "format": "Format",
+    "minify": "Minify",
+    "validate": "Validate",
+    "generate": "Generate",
+    "download": "Download",
+    "reset": "Reset",
+    "swap": "Swap",
+    "processedLocally": "All processing happens in your browser. Your data never leaves your device.",
+    "relatedTools": "Related Tools",
+    "faq": "Frequently Asked Questions",
+    "features": "Features",
+    "howToUse": "How to Use",
+    "inputPlaceholder": "Paste or type your input here...",
+    "outputPlaceholder": "Output will appear here...",
+    "error": "Error",
+    "success": "Success",
+    "valid": "Valid",
+    "invalid": "Invalid"
+  },
+  "footer": {
+    "privacyTitle": "Your Privacy, Protected",
+    "privacyText": "All tools on PureKit run entirely in your browser. No data is ever sent to any server. We don't track, store, or process your data.",
+    "howItWorks": "How It Works",
+    "howItWorksText": "PureKit uses modern browser APIs to process everything client-side. There are zero network requests for data processing.",
+    "copyright": "© {year} PureKit. Free, open-source developer tools.",
+    "tagline": "Your files never leave your device."
+  },
+  "home": {
+    "title": "Free Browser-Based Developer Tools",
+    "subtitle": "Privacy-first tools that run entirely in your browser. No uploads, no tracking, no signup required.",
+    "badge": "Your data never leaves your device",
+    "allTools": "All Tools",
+    "searchPlaceholder": "Search tools...",
+    "noResults": "No tools found. Try a different search term.",
+    "searchHint": "Quick search"
+  },
+  "tools": {
+    "json-formatter": {
+      "name": "JSON Formatter & Validator",
+      "shortDescription": "Format, validate, and minify JSON data instantly in your browser.",
+      "metaTitle": "JSON Formatter & Validator - Free Online Tool | PureKit",
+      "metaDescription": "Format, validate, and beautify JSON online for free. No signup, no data upload. Supports minification, syntax highlighting, and error detection. Browser-based and privacy-first.",
+      "keywords": ["json formatter", "json validator", "json beautifier", "json minifier", "format json online", "validate json", "json pretty print"],
+      "indentation": "Indentation",
+      "spaces2": "2 Spaces",
+      "spaces4": "4 Spaces",
+      "tab": "Tab",
+      "validJson": "Valid JSON",
+      "invalidJson": "Invalid JSON",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Format and beautify JSON with customizable indentation (2 spaces, 4 spaces, or tabs)",
+          "Validate JSON syntax with detailed error messages and line numbers",
+          "Minify JSON to reduce file size for production use",
+          "Instant processing — works entirely in your browser",
+          "Support for large JSON files up to several megabytes"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the JSON Formatter",
+        "steps": [
+          "Paste your JSON data into the input area on the left",
+          "Click \"Format\" to beautify or \"Minify\" to compress your JSON",
+          "View validation results — valid JSON shows a green indicator, errors show details",
+          "Click \"Copy\" to copy the formatted output to your clipboard"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Is my JSON data safe?",
+          "answer": "Yes, absolutely. All JSON processing happens entirely in your browser using JavaScript's built-in JSON.parse() and JSON.stringify(). Your data is never sent to any server."
+        },
+        {
+          "question": "What is the maximum JSON size supported?",
+          "answer": "PureKit can handle JSON files up to several megabytes. Processing happens in your browser, so performance depends on your device's capabilities."
+        },
+        {
+          "question": "Can I validate JSON with comments?",
+          "answer": "Standard JSON (RFC 8259) does not support comments. If your JSON contains comments, the validator will flag them as syntax errors. Consider using JSONC or JSON5 formats for commented JSON data."
+        },
+        {
+          "question": "What's the difference between Format and Minify?",
+          "answer": "Format (beautify) adds indentation and line breaks to make JSON human-readable. Minify removes all unnecessary whitespace to produce the smallest possible output, ideal for production use or API payloads."
+        }
+      ]
+    },
+    "base64-encode-decode": {
+      "name": "Base64 Encode / Decode",
+      "shortDescription": "Encode text to Base64 or decode Base64 strings instantly in your browser.",
+      "metaTitle": "Base64 Encode & Decode - Free Online Tool | PureKit",
+      "metaDescription": "Encode and decode Base64 strings online for free. Supports UTF-8 text. No signup, no data upload. Browser-based and privacy-first.",
+      "keywords": ["base64 encode", "base64 decode", "base64 converter", "base64 online", "text to base64", "base64 to text"],
+      "encodePlaceholder": "Enter text to encode to Base64...",
+      "decodePlaceholder": "Enter Base64 string to decode...",
+      "encodeOutputPlaceholder": "Base64 encoded output will appear here...",
+      "decodeOutputPlaceholder": "Decoded text will appear here...",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Encode any text string to Base64 format",
+          "Decode Base64 strings back to plain text",
+          "Full UTF-8 support for international characters and emoji",
+          "Real-time encoding and decoding as you type",
+          "Zero external dependencies — uses browser's built-in APIs"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Base64 Encoder/Decoder",
+        "steps": [
+          "Select the \"Encode\" or \"Decode\" tab based on your needs",
+          "Paste or type your text in the input area",
+          "The result appears instantly in the output area",
+          "Click \"Copy\" to copy the result to your clipboard"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is Base64 encoding?",
+          "answer": "Base64 is a binary-to-text encoding scheme that represents binary data using 64 ASCII characters (A-Z, a-z, 0-9, +, /). It's commonly used to embed binary data in text-based formats like JSON, XML, HTML, and email."
+        },
+        {
+          "question": "Is Base64 encryption?",
+          "answer": "No. Base64 is an encoding scheme, not encryption. It does not provide any security — anyone can decode a Base64 string. Use proper encryption (like AES) if you need to protect sensitive data."
+        },
+        {
+          "question": "Does this support UTF-8 characters?",
+          "answer": "Yes. This tool properly handles UTF-8 text including international characters, accented letters, CJK characters, and emoji. It uses the TextEncoder/TextDecoder APIs for correct Unicode handling."
+        }
+      ]
+    },
+    "url-encode-decode": {
+      "name": "URL Encode / Decode",
+      "shortDescription": "Encode or decode URL components instantly in your browser.",
+      "metaTitle": "URL Encode & Decode - Free Online Tool | PureKit",
+      "metaDescription": "URL encode and decode strings online for free. Perfect for query parameters, form data, and URI components. No signup required. Browser-based and privacy-first.",
+      "keywords": ["url encode", "url decode", "percent encoding", "urlencode online", "url encoder", "url decoder", "encodeURIComponent"],
+      "encodePlaceholder": "Enter text to URL encode...",
+      "decodePlaceholder": "Enter URL encoded string to decode...",
+      "encodeOutputPlaceholder": "URL encoded output will appear here...",
+      "decodeOutputPlaceholder": "Decoded text will appear here...",
+      "encodeMode": "Encode Component",
+      "encodeFullUrl": "Encode Full URL",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Encode special characters for safe use in URLs and query parameters",
+          "Decode percent-encoded strings back to readable text",
+          "Two encoding modes: component encoding and full URL encoding",
+          "Real-time processing as you type",
+          "Handles all special characters including Unicode and emoji"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the URL Encoder/Decoder",
+        "steps": [
+          "Select the \"Encode\" or \"Decode\" tab",
+          "Paste or type your text in the input area",
+          "For encoding, choose between \"Component\" mode (for query params) or \"Full URL\" mode",
+          "The result appears instantly — click \"Copy\" to copy it"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is URL encoding?",
+          "answer": "URL encoding (also called percent-encoding) replaces special characters in URLs with percent signs followed by their hexadecimal values. For example, a space becomes %20 and an ampersand becomes %26. This ensures URLs are valid and properly interpreted by web servers."
+        },
+        {
+          "question": "What's the difference between encodeURI and encodeURIComponent?",
+          "answer": "encodeURI encodes a complete URI, preserving characters that are valid in URLs (like /, ?, #, &). encodeURIComponent encodes individual URI components more aggressively, encoding characters like & and = that have special meaning in query strings. Use encodeURIComponent for encoding individual parameter values."
+        },
+        {
+          "question": "When should I URL encode data?",
+          "answer": "You should URL encode data whenever you're building query parameters, form data for POST requests, or including user-generated content in URLs. Common cases include search queries, API parameters, and redirect URLs."
+        }
+      ]
+    },
+    "uuid-generator": {
+      "name": "UUID Generator",
+      "shortDescription": "Generate random UUIDs (v4) instantly in your browser.",
+      "metaTitle": "UUID Generator - Free Online Tool | PureKit",
+      "metaDescription": "Generate random UUID v4 identifiers online for free. Bulk generation, uppercase/lowercase options. No signup required. Browser-based and privacy-first.",
+      "keywords": ["uuid generator", "uuid v4", "random uuid", "guid generator", "unique id generator", "uuid online"],
+      "quantity": "Quantity",
+      "uppercase": "Uppercase",
+      "lowercase": "Lowercase",
+      "hyphens": "With Hyphens",
+      "noHyphens": "Without Hyphens",
+      "generateCount": "Generate {count}",
+      "copyAll": "Copy All",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Generate cryptographically random UUID v4 identifiers",
+          "Bulk generation — create up to 50 UUIDs at once",
+          "Toggle between uppercase and lowercase output",
+          "Option to include or remove hyphens",
+          "Uses the Web Crypto API for true randomness"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the UUID Generator",
+        "steps": [
+          "Set the quantity of UUIDs you want to generate (1 to 50)",
+          "Choose your preferred format: uppercase/lowercase, with/without hyphens",
+          "Click \"Generate\" to create new UUIDs",
+          "Click on any UUID to copy it, or use \"Copy All\" for bulk copying"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is a UUID?",
+          "answer": "UUID (Universally Unique Identifier) is a 128-bit identifier that is practically unique across all systems. UUID v4, which this tool generates, uses random numbers to create identifiers with an extremely low probability of collision. The format is: xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx."
+        },
+        {
+          "question": "Is UUID the same as GUID?",
+          "answer": "Essentially yes. GUID (Globally Unique Identifier) is Microsoft's implementation of the UUID standard. They follow the same format and serve the same purpose. UUID is the more widely used term in non-Microsoft contexts."
+        },
+        {
+          "question": "Are the generated UUIDs truly random?",
+          "answer": "Yes. This tool uses the Web Crypto API (crypto.randomUUID()), which provides cryptographically secure random values. The generated UUIDs are suitable for use as database primary keys, session tokens, and other security-sensitive identifiers."
+        }
+      ]
+    },
+    "hash-generator": {
+      "name": "Hash Generator",
+      "shortDescription": "Generate MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes in your browser.",
+      "metaTitle": "Hash Generator (MD5, SHA-256) - Free Online Tool | PureKit",
+      "metaDescription": "Generate MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes online for free. Real-time hashing as you type. No data upload. Browser-based and privacy-first.",
+      "keywords": ["hash generator", "md5 hash", "sha256 hash", "sha-1", "sha-512", "online hash", "hash calculator"],
+      "algorithm": "Algorithm",
+      "inputPlaceholder": "Enter text to hash...",
+      "allHashes": "All Hashes",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Generate hashes using MD5, SHA-1, SHA-256, SHA-384, and SHA-512 algorithms",
+          "Real-time hashing — results update as you type",
+          "View all hash algorithms at once or select a specific one",
+          "Uses the Web Crypto API for SHA family hashes",
+          "Output in standard hexadecimal format"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Hash Generator",
+        "steps": [
+          "Enter or paste the text you want to hash in the input area",
+          "Select a specific algorithm or view all hashes simultaneously",
+          "Hash values update in real-time as you type",
+          "Click \"Copy\" next to any hash to copy it to your clipboard"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is a hash function?",
+          "answer": "A hash function takes an input (any text or data) and produces a fixed-size string of characters (the hash or digest). The same input always produces the same hash, but even a tiny change in input produces a completely different hash. Hashes are one-way — you cannot reverse them to get the original input."
+        },
+        {
+          "question": "Which hash algorithm should I use?",
+          "answer": "For general-purpose use and security, SHA-256 is recommended. MD5 and SHA-1 are considered weak for security purposes but are still useful for checksums and data integrity verification. SHA-384 and SHA-512 provide longer hashes for higher security requirements."
+        },
+        {
+          "question": "Is my data safe when generating hashes?",
+          "answer": "Yes. All hashing is performed entirely in your browser using the Web Crypto API (for SHA) and a JavaScript implementation (for MD5). Your text is never transmitted to any server."
+        }
+      ]
+    }
+  }
+}
