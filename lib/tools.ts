@@ -14,7 +14,7 @@ export interface CategoryDefinition {
 export const categories: CategoryDefinition[] = [
   {
     key: "formatters",
-    tools: ["json-formatter"],
+    tools: ["json-formatter", "sql-formatter"],
   },
   {
     key: "encodersDecoders",
@@ -22,15 +22,15 @@ export const categories: CategoryDefinition[] = [
   },
   {
     key: "generators",
-    tools: ["uuid-generator", "qr-code-generator"],
+    tools: ["uuid-generator", "qr-code-generator", "mock-data-generator", "cron-expression-builder"],
   },
   {
     key: "converters",
-    tools: ["unix-timestamp-converter", "color-converter"],
+    tools: ["unix-timestamp-converter", "color-converter", "yaml-json-toml-converter"],
   },
   {
     key: "textTools",
-    tools: ["diff-checker", "markdown-preview"],
+    tools: ["diff-checker", "markdown-preview", "regex-tester"],
   },
   {
     key: "dataTools",
@@ -39,6 +39,10 @@ export const categories: CategoryDefinition[] = [
   {
     key: "imageTools",
     tools: ["image-format-converter", "image-compressor"],
+  },
+  {
+    key: "pdfTools",
+    tools: ["pdf-merge", "pdf-compress", "pdf-split", "pdf-to-image"],
   },
 ];
 
@@ -140,6 +144,69 @@ export const tools: Record<string, ToolDefinition> = {
     icon: "Minimize",
     relatedSlugs: ["image-format-converter", "base64-encode-decode", "qr-code-generator"],
     searchTerms: ["image", "compress", "reduce", "size", "optimize", "photo", "quality"],
+  },
+  "pdf-merge": {
+    slug: "pdf-merge",
+    categoryKey: "pdfTools",
+    icon: "FilePlus",
+    relatedSlugs: ["pdf-split", "pdf-compress", "pdf-to-image"],
+    searchTerms: ["pdf", "merge", "combine", "join", "concatenate", "document"],
+  },
+  "pdf-compress": {
+    slug: "pdf-compress",
+    categoryKey: "pdfTools",
+    icon: "FileDown",
+    relatedSlugs: ["pdf-merge", "pdf-split", "image-compressor"],
+    searchTerms: ["pdf", "compress", "reduce", "size", "optimize", "shrink", "smaller"],
+  },
+  "pdf-split": {
+    slug: "pdf-split",
+    categoryKey: "pdfTools",
+    icon: "Scissors",
+    relatedSlugs: ["pdf-merge", "pdf-compress", "pdf-to-image"],
+    searchTerms: ["pdf", "split", "extract", "page", "separate", "divide"],
+  },
+  "pdf-to-image": {
+    slug: "pdf-to-image",
+    categoryKey: "pdfTools",
+    icon: "FileImage",
+    relatedSlugs: ["pdf-merge", "pdf-split", "image-format-converter"],
+    searchTerms: ["pdf", "image", "png", "jpg", "convert", "export", "screenshot", "page"],
+  },
+  "regex-tester": {
+    slug: "regex-tester",
+    categoryKey: "textTools",
+    icon: "Regex",
+    relatedSlugs: ["diff-checker", "json-formatter", "markdown-preview"],
+    searchTerms: ["regex", "regular expression", "test", "match", "pattern", "replace", "capture", "group"],
+  },
+  "cron-expression-builder": {
+    slug: "cron-expression-builder",
+    categoryKey: "generators",
+    icon: "Timer",
+    relatedSlugs: ["unix-timestamp-converter", "regex-tester", "uuid-generator"],
+    searchTerms: ["cron", "crontab", "schedule", "timer", "job", "task", "expression", "builder"],
+  },
+  "sql-formatter": {
+    slug: "sql-formatter",
+    categoryKey: "formatters",
+    icon: "Database",
+    relatedSlugs: ["json-formatter", "csv-data-cleaner", "diff-checker"],
+    searchTerms: ["sql", "format", "beautify", "query", "database", "indent", "pretty print"],
+  },
+  "yaml-json-toml-converter": {
+    slug: "yaml-json-toml-converter",
+    categoryKey: "converters",
+    icon: "ArrowLeftRight",
+    relatedSlugs: ["json-formatter", "csv-data-cleaner", "diff-checker"],
+    searchTerms: ["yaml", "json", "toml", "convert", "transform", "config", "configuration"],
+  },
+  "mock-data-generator": {
+    slug: "mock-data-generator",
+    categoryKey: "generators",
+    icon: "Shuffle",
+    relatedSlugs: ["uuid-generator", "json-formatter", "csv-data-cleaner"],
+    searchTerms: ["mock", "fake", "data", "generate", "random", "name", "email", "address", "test"],
   },
 };
 

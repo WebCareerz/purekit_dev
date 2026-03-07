@@ -6,6 +6,7 @@
   },
   "nav": {
     "home": "All Tools",
+    "more": "More",
     "categories": {
       "formatters": "Formatters",
       "encodersDecoders": "Encoders & Decoders",
@@ -845,6 +846,493 @@
         {
           "question": "Is there a file size limit?",
           "answer": "There's no hard limit. The tool works well with images up to about 50MB. All processing happens in your browser, so larger images may take a bit longer. Most web images (under 10MB) compress in seconds."
+        }
+      ]
+    },
+    "pdf-merge": {
+      "name": "PDF Merge",
+      "shortDescription": "Combine multiple PDF files into one document",
+      "title": "PDF Merge - Combine PDF Files Online",
+      "description": "Merge multiple PDF files into a single document. Drag to reorder pages. Free, private, browser-based — your files never leave your device.",
+      "keywords": ["pdf merge", "combine pdf", "join pdf", "merge pdf online", "pdf combiner", "concatenate pdf"],
+      "dropzone": "Drop PDF files here or click to select",
+      "supportedFormats": "PDF files only",
+      "addMore": "Add More Files",
+      "merge": "Merge PDFs",
+      "merging": "Merging...",
+      "download": "Download Merged PDF",
+      "fileCount": "files selected",
+      "pages": "pages",
+      "dragToReorder": "Drag to reorder",
+      "removeFile": "Remove",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Combine unlimited PDF files into a single document",
+          "Drag and drop to reorder files before merging",
+          "Preview page count for each file",
+          "All processing happens in your browser — files never uploaded",
+          "Download the merged PDF instantly"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use PDF Merge",
+        "steps": [
+          "Drop PDF files into the upload area or click to select multiple files",
+          "Drag to reorder the files in your preferred sequence",
+          "Click \"Merge PDFs\" to combine all files",
+          "Download the merged PDF document"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Is there a limit on the number of files?",
+          "answer": "No hard limit. You can merge as many PDF files as your browser can handle. All processing happens locally, so performance depends on file sizes and your device's memory."
+        },
+        {
+          "question": "Will the merged PDF maintain original quality?",
+          "answer": "Yes, merging is lossless. The tool combines the PDF pages without re-encoding or compressing the content, so all text, images, and formatting remain exactly as in the originals."
+        },
+        {
+          "question": "Are my files uploaded to a server?",
+          "answer": "No. All processing happens entirely in your browser using JavaScript. Your PDF files never leave your device. This is a core privacy guarantee of PureKit."
+        }
+      ]
+    },
+    "pdf-compress": {
+      "name": "PDF Compress",
+      "shortDescription": "Reduce PDF file size while maintaining quality",
+      "title": "PDF Compress - Reduce PDF File Size Online",
+      "description": "Compress PDF files to reduce size. Optimize images within PDFs for smaller file sizes. Free, private, no upload required.",
+      "keywords": ["pdf compress", "reduce pdf size", "compress pdf online", "pdf optimizer", "shrink pdf", "smaller pdf"],
+      "dropzone": "Drop a PDF file here or click to select",
+      "supportedFormats": "PDF files only",
+      "compressing": "Compressing...",
+      "download": "Download Compressed PDF",
+      "originalSize": "Original Size",
+      "compressedSize": "Compressed Size",
+      "sizeReduced": "Smaller by",
+      "sizeIncreased": "Larger by",
+      "sameSize": "Same size",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Reduce PDF file size by optimizing embedded images",
+          "Smart compression balances quality and file size",
+          "Preview size reduction before downloading",
+          "All processing in browser — no file upload required",
+          "Fast compression for most document types"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use PDF Compress",
+        "steps": [
+          "Drop a PDF file into the upload area or click to select",
+          "Compression starts automatically",
+          "Review original vs compressed size comparison",
+          "Download the compressed PDF"
+        ]
+      },
+      "faq": [
+        {
+          "question": "How much can the file size be reduced?",
+          "answer": "Reduction depends on the PDF content. PDFs with large embedded images see the most benefit (30-80% reduction). Text-heavy PDFs with few images may see minimal reduction since text is already compact."
+        },
+        {
+          "question": "Does compression affect text quality?",
+          "answer": "No. Text and vector graphics remain untouched. Only embedded raster images are optimized. The text will remain perfectly sharp and searchable."
+        },
+        {
+          "question": "Can I compress password-protected PDFs?",
+          "answer": "No. The tool cannot process encrypted or password-protected PDF files. You need to remove the password protection first before compressing."
+        }
+      ]
+    },
+    "pdf-split": {
+      "name": "PDF Split",
+      "shortDescription": "Extract pages or split PDF into multiple files",
+      "title": "PDF Split - Extract Pages from PDF Online",
+      "description": "Split PDF files into individual pages or custom page ranges. Extract specific pages from any PDF. Free, private, browser-based.",
+      "keywords": ["pdf split", "extract pdf pages", "split pdf online", "pdf page extractor", "separate pdf pages", "divide pdf"],
+      "dropzone": "Drop a PDF file here or click to select",
+      "supportedFormats": "PDF files only",
+      "totalPages": "Total pages",
+      "pageRange": "Page Range",
+      "pageRangePlaceholder": "e.g. 1-3, 5, 7-9",
+      "pageRangeHint": "Enter page numbers or ranges separated by commas",
+      "extractAll": "Extract All Pages",
+      "extractRange": "Extract Selected Pages",
+      "splitting": "Splitting...",
+      "download": "Download",
+      "downloadAll": "Download All",
+      "page": "Page",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Split PDF into individual pages or custom ranges",
+          "Specify exact pages with flexible range syntax (e.g. 1-3, 5, 7-9)",
+          "Extract all pages as separate PDF files at once",
+          "Preview total page count before splitting",
+          "All processing in browser — no server upload"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use PDF Split",
+        "steps": [
+          "Drop a PDF file into the upload area or click to select",
+          "Enter page numbers or ranges (e.g. 1-3, 5, 7-9), or choose \"Extract All\"",
+          "Click the extract button to split the PDF",
+          "Download individual pages or all extracted pages"
+        ]
+      },
+      "faq": [
+        {
+          "question": "How do I specify which pages to extract?",
+          "answer": "Use a comma-separated list of page numbers and ranges. For example: \"1-3, 5, 7-9\" extracts pages 1 through 3, page 5, and pages 7 through 9. You can also click \"Extract All\" to split every page into a separate file."
+        },
+        {
+          "question": "Is the quality preserved when splitting?",
+          "answer": "Yes. Splitting is lossless — each extracted page retains all original content, formatting, images, and metadata exactly as in the source PDF."
+        },
+        {
+          "question": "Can I split a large PDF with many pages?",
+          "answer": "Yes. The tool handles large PDFs well since all processing happens in your browser. Performance depends on your device, but PDFs with hundreds of pages typically work fine."
+        }
+      ]
+    },
+    "pdf-to-image": {
+      "name": "PDF to Image",
+      "shortDescription": "Convert PDF pages to PNG or JPEG images",
+      "title": "PDF to Image - Convert PDF to PNG/JPEG Online",
+      "description": "Convert PDF pages to high-quality PNG or JPEG images. Export all pages or specific pages. Free, private, browser-based.",
+      "keywords": ["pdf to image", "pdf to png", "pdf to jpg", "convert pdf to image", "pdf to jpeg", "pdf export"],
+      "dropzone": "Drop a PDF file here or click to select",
+      "supportedFormats": "PDF files only",
+      "totalPages": "Total pages",
+      "outputFormat": "Output Format",
+      "scale": "Scale",
+      "converting": "Converting...",
+      "convertingProgress": "Converting page {current} of {total}...",
+      "convertAll": "Convert All Pages",
+      "pages": "pages",
+      "imagesConverted": "images converted",
+      "download": "Download",
+      "downloadAll": "Download All",
+      "page": "Page",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert PDF pages to high-quality PNG or JPEG images",
+          "Adjustable output scale (1x, 2x, 3x) for different resolution needs",
+          "Convert all pages at once with batch processing",
+          "Preview converted images before downloading",
+          "All rendering happens in your browser — no file upload"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use PDF to Image",
+        "steps": [
+          "Drop a PDF file into the upload area or click to select",
+          "Choose output format (PNG or JPEG) and scale factor",
+          "Click \"Convert All Pages\" to start conversion",
+          "Preview results and download individual images or all as ZIP"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What resolution are the output images?",
+          "answer": "Resolution depends on the scale factor you choose. 1x gives standard screen resolution (72 DPI equivalent), 2x gives double resolution (good for retina displays), and 3x gives triple resolution (suitable for high-quality printing)."
+        },
+        {
+          "question": "Should I choose PNG or JPEG?",
+          "answer": "Use PNG for text-heavy documents, diagrams, or when you need transparency and pixel-perfect quality. Use JPEG for photo-heavy PDFs or when you need smaller file sizes. PNG is lossless; JPEG is lossy but more compact."
+        },
+        {
+          "question": "Can I convert specific pages only?",
+          "answer": "Currently the tool converts all pages at once. For specific pages, you can use the PDF Split tool first to extract the pages you need, then convert those individual PDFs to images."
+        }
+      ]
+    },
+    "regex-tester": {
+      "name": "Regex Tester",
+      "shortDescription": "Test and debug regular expressions with live matching",
+      "title": "Regex Tester - Test Regular Expressions Online",
+      "description": "Test and debug regular expressions with real-time matching and highlighting. See capture groups, match details, and test replacement patterns. Free, private, browser-based.",
+      "keywords": ["regex tester", "regular expression test", "regex online", "regex debugger", "regex match", "pattern matcher"],
+      "pattern": "Pattern",
+      "patternPlaceholder": "Enter regex pattern...",
+      "flags": "Flags",
+      "testString": "Test String",
+      "testStringPlaceholder": "Enter text to test against...",
+      "matches": "Matches",
+      "noMatches": "No matches found",
+      "match": "Match",
+      "group": "Group",
+      "fullMatch": "Full Match",
+      "index": "Index",
+      "replacement": "Replacement",
+      "replacementPlaceholder": "Replacement pattern (e.g. $1-$2)",
+      "replacementResult": "Result",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Real-time regex matching with instant visual feedback",
+          "Support for all JavaScript regex flags (g, i, m, s, u, d)",
+          "View capture groups and named groups for each match",
+          "Test replacement patterns with $1, $2 syntax",
+          "All processing in browser — your test data stays private"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Regex Tester",
+        "steps": [
+          "Enter your regular expression pattern in the pattern field",
+          "Select regex flags (g for global, i for case-insensitive, etc.)",
+          "Type or paste your test string in the text area",
+          "View matches highlighted in real-time with capture group details"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Which regex flavor does this use?",
+          "answer": "This tool uses JavaScript's built-in RegExp engine, which supports ECMAScript regex syntax. This includes features like lookbehind assertions, named capture groups, Unicode property escapes, and the dotAll (s) flag."
+        },
+        {
+          "question": "Can I use replacement patterns?",
+          "answer": "Yes. Enter a replacement pattern using $1, $2 for capture group references, $& for the full match, $` for text before the match, and $' for text after. Named groups can be referenced with $<name>."
+        },
+        {
+          "question": "How do I match across multiple lines?",
+          "answer": "Use the 'm' (multiline) flag to make ^ and $ match the start and end of each line. Use the 's' (dotAll) flag to make '.' match newline characters as well."
+        }
+      ]
+    },
+    "cron-expression-builder": {
+      "name": "Cron Expression Builder",
+      "shortDescription": "Build and validate cron expressions with a visual editor",
+      "title": "Cron Expression Builder - Visual Cron Editor Online",
+      "description": "Build cron expressions with an interactive visual editor. See human-readable descriptions and next run times. Free, private, browser-based.",
+      "keywords": ["cron expression", "cron builder", "crontab", "cron generator", "cron schedule", "cron editor"],
+      "expression": "Cron Expression",
+      "expressionPlaceholder": "* * * * *",
+      "minute": "Minute",
+      "hour": "Hour",
+      "dayOfMonth": "Day of Month",
+      "month": "Month",
+      "dayOfWeek": "Day of Week",
+      "every": "Every",
+      "specific": "Specific",
+      "range": "Range",
+      "humanReadable": "Human Readable",
+      "nextRuns": "Next Run Times",
+      "invalidExpression": "Invalid cron expression",
+      "presets": "Common Presets",
+      "everyMinute": "Every Minute",
+      "everyHour": "Every Hour",
+      "everyDay": "Every Day at Midnight",
+      "everyWeek": "Every Monday at Midnight",
+      "everyMonth": "1st of Every Month",
+      "weekdays": "Weekdays at 9 AM",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Visual cron expression builder with interactive field editors",
+          "Human-readable description of the schedule",
+          "Preview next scheduled run times",
+          "Common presets for quick setup (hourly, daily, weekly, monthly)",
+          "Support for standard 5-field cron syntax (minute, hour, day, month, weekday)"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Cron Expression Builder",
+        "steps": [
+          "Start with a preset or type a cron expression directly",
+          "Use the visual fields to adjust minute, hour, day, month, and weekday",
+          "Read the human-readable description to verify the schedule",
+          "Check the next run times to confirm correct behavior"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is a cron expression?",
+          "answer": "A cron expression is a string of five fields separated by spaces, representing a schedule: minute (0-59), hour (0-23), day of month (1-31), month (1-12), and day of week (0-6, where 0 is Sunday). Special characters like * (any), , (list), - (range), and / (step) modify the behavior."
+        },
+        {
+          "question": "What is the difference between 5-field and 6-field cron?",
+          "answer": "This tool uses 5-field (standard UNIX) cron: minute, hour, day-of-month, month, day-of-week. Some systems add a 6th field for seconds at the beginning. If your system uses 6 fields, simply prepend the seconds field to the expression this tool generates."
+        },
+        {
+          "question": "How do I set a schedule for every 15 minutes?",
+          "answer": "Use */15 in the minute field and * for all other fields: '*/15 * * * *'. This means 'every 15th minute', which runs at :00, :15, :30, and :45 of every hour."
+        }
+      ]
+    },
+    "sql-formatter": {
+      "name": "SQL Formatter",
+      "shortDescription": "Format and beautify SQL queries with proper indentation",
+      "title": "SQL Formatter - Beautify SQL Queries Online",
+      "description": "Format and beautify SQL queries with proper indentation and syntax structure. Supports multiple SQL dialects. Free, private, browser-based.",
+      "keywords": ["sql formatter", "sql beautify", "format sql", "sql pretty print", "sql indent", "sql online"],
+      "inputPlaceholder": "Paste your SQL query here...",
+      "dialect": "SQL Dialect",
+      "standard": "Standard SQL",
+      "mysql": "MySQL",
+      "postgresql": "PostgreSQL",
+      "transactsql": "Transact-SQL",
+      "plsql": "PL/SQL",
+      "sqlite": "SQLite",
+      "indentation": "Indentation",
+      "spaces2": "2 Spaces",
+      "spaces4": "4 Spaces",
+      "tab": "Tab",
+      "uppercase": "Uppercase Keywords",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Format SQL queries with proper indentation and line breaks",
+          "Support for multiple SQL dialects (MySQL, PostgreSQL, SQLite, etc.)",
+          "Configurable indentation (2 spaces, 4 spaces, or tabs)",
+          "Option to uppercase SQL keywords (SELECT, FROM, WHERE, etc.)",
+          "Real-time formatting as you type"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the SQL Formatter",
+        "steps": [
+          "Paste your SQL query into the input area",
+          "Select your SQL dialect for accurate formatting",
+          "Choose indentation style and keyword casing preference",
+          "Copy the formatted output or continue editing"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Which SQL dialects are supported?",
+          "answer": "The tool supports Standard SQL, MySQL, PostgreSQL, Transact-SQL (SQL Server), PL/SQL (Oracle), and SQLite. Each dialect handles specific syntax differences like backtick quoting, TOP vs LIMIT, and dialect-specific functions."
+        },
+        {
+          "question": "Does this validate SQL syntax?",
+          "answer": "The formatter focuses on formatting, not validation. It will format syntactically broken SQL as best it can without reporting errors. For syntax validation, use your database's query analyzer or a dedicated SQL linter."
+        },
+        {
+          "question": "Can it handle complex queries with subqueries and CTEs?",
+          "answer": "Yes. The formatter handles complex queries including nested subqueries, Common Table Expressions (WITH clauses), JOINs, UNION operations, window functions, and more. Each level of nesting is properly indented."
+        }
+      ]
+    },
+    "yaml-json-toml-converter": {
+      "name": "YAML / JSON / TOML Converter",
+      "shortDescription": "Convert between YAML, JSON, and TOML config formats",
+      "title": "YAML JSON TOML Converter - Config Format Converter Online",
+      "description": "Convert between YAML, JSON, and TOML configuration formats. Bidirectional conversion with proper formatting. Free, private, browser-based.",
+      "keywords": ["yaml to json", "json to yaml", "toml converter", "yaml converter", "config converter", "json to toml"],
+      "inputFormat": "Input Format",
+      "outputFormat": "Output Format",
+      "inputPlaceholder": "Paste your YAML, JSON, or TOML here...",
+      "convertError": "Conversion error",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert between YAML, JSON, and TOML formats bidirectionally",
+          "Auto-detect input format for quick conversion",
+          "Preserves data structure and types during conversion",
+          "Formatted output with proper indentation",
+          "All conversion happens in your browser — config data stays private"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Config Converter",
+        "steps": [
+          "Select your input format (YAML, JSON, or TOML)",
+          "Paste your configuration data into the input area",
+          "Select the desired output format",
+          "Copy the converted output"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Are all YAML features supported?",
+          "answer": "The converter supports standard YAML features including nested objects, arrays, multiline strings, anchors, and aliases. Some advanced YAML features like custom tags may not convert perfectly to JSON or TOML since those formats don't support them."
+        },
+        {
+          "question": "What TOML features are supported?",
+          "answer": "Standard TOML features are supported including tables, arrays of tables, inline tables, multiline strings, dates, and integers. TOML's strict typing means some YAML/JSON values may be represented differently."
+        },
+        {
+          "question": "Will comments be preserved?",
+          "answer": "No. Comments are not preserved during conversion because JSON does not support comments, and the conversion process parses the data into a format-agnostic structure. If you need to preserve comments, consider using a text editor's find-and-replace instead."
+        }
+      ]
+    },
+    "mock-data-generator": {
+      "name": "Mock Data Generator",
+      "shortDescription": "Generate realistic fake data for testing and development",
+      "title": "Mock Data Generator - Generate Test Data Online",
+      "description": "Generate realistic mock data for testing. Names, emails, addresses, phone numbers, and more. Export as JSON or CSV. Free, private, browser-based.",
+      "keywords": ["mock data", "fake data", "test data generator", "random data", "faker", "sample data", "dummy data"],
+      "fields": "Fields",
+      "addField": "Add Field",
+      "removeField": "Remove",
+      "fieldName": "Field Name",
+      "fieldType": "Type",
+      "rowCount": "Number of Rows",
+      "generate": "Generate Data",
+      "exportJson": "Export JSON",
+      "exportCsv": "Export CSV",
+      "preview": "Preview",
+      "types": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "fullName": "Full Name",
+        "email": "Email",
+        "phone": "Phone",
+        "address": "Address",
+        "city": "City",
+        "country": "Country",
+        "zipCode": "Zip Code",
+        "company": "Company",
+        "jobTitle": "Job Title",
+        "uuid": "UUID",
+        "integer": "Integer",
+        "float": "Float",
+        "boolean": "Boolean",
+        "date": "Date",
+        "url": "URL",
+        "ipAddress": "IP Address",
+        "color": "Color (Hex)",
+        "paragraph": "Paragraph"
+      },
+      "features": {
+        "title": "Features",
+        "items": [
+          "Generate realistic fake data with 20+ field types (names, emails, addresses, etc.)",
+          "Customize field names and types to match your data model",
+          "Generate up to 1000 rows at once",
+          "Export as JSON or CSV for immediate use in your projects",
+          "All data generated in your browser — no external API calls"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Mock Data Generator",
+        "steps": [
+          "Add fields and select the data type for each (name, email, phone, etc.)",
+          "Set the number of rows you want to generate",
+          "Click \"Generate Data\" to create the mock dataset",
+          "Preview the results and export as JSON or CSV"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Is the generated data truly random?",
+          "answer": "Yes. Each generation creates fresh random data using the Faker.js library. Names, emails, addresses, and other fields are randomly combined from realistic datasets. No two generations will produce identical results."
+        },
+        {
+          "question": "Can I use this data in production?",
+          "answer": "The data is intended for testing and development only. While the generated names and addresses look realistic, they are randomly generated and should not be used as real personal information. They are perfect for database seeding, UI prototyping, and automated testing."
+        },
+        {
+          "question": "How many rows can I generate?",
+          "answer": "The tool supports generating up to 1000 rows per batch. For larger datasets, you can generate multiple batches and combine them. All processing happens in your browser, so very large generations may be slow on older devices."
         }
       ]
     }
