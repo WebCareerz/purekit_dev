@@ -1337,6 +1337,336 @@
           "answer": "The tool supports generating up to 1000 rows per batch. For larger datasets, you can generate multiple batches and combine them. All processing happens in your browser, so very large generations may be slow on older devices."
         }
       ]
+    },
+    "html-formatter": {
+      "name": "HTML Formatter",
+      "shortDescription": "Format and beautify HTML code online",
+      "metaTitle": "HTML Formatter - Free Online HTML Beautifier Tool | PureKit",
+      "metaDescription": "Format and beautify HTML code online for free. Minify HTML or make it readable with proper indentation. Browser-based, no signup required.",
+      "keywords": ["html formatter", "html beautifier", "html minifier", "format html online", "beautify html", "html pretty print"],
+      "characters": "characters",
+      "emptyInput": "Please enter HTML code to format",
+      "formatError": "Error formatting HTML. Please check your syntax.",
+      "minifyError": "Error minifying HTML. Please check your syntax.",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Format and beautify messy HTML code with proper indentation",
+          "Minify HTML to reduce file size",
+          "Remove extra whitespace and optimize code",
+          "Syntax-aware formatting preserves tag structure",
+          "All processing happens in your browser — your code never leaves your device"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the HTML Formatter",
+        "steps": [
+          "Paste your HTML code into the input area",
+          "Click \"Format\" to beautify the HTML with proper indentation",
+          "Click \"Minify\" to compress the HTML by removing whitespace",
+          "Copy the formatted output for use in your project"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What's the difference between format and minify?",
+          "answer": "Format (beautify) adds proper indentation and line breaks to make HTML code more readable for humans. Minify removes all unnecessary whitespace and line breaks to reduce file size for production deployment."
+        },
+        {
+          "question": "Does this validator check for syntax errors?",
+          "answer": "This tool focuses on formatting and beautification. While it handles common HTML structures, it doesn't perform strict validation. For comprehensive HTML validation, use the W3C Markup Validation Service."
+        },
+        {
+          "question": "Will my HTML comments be preserved?",
+          "answer": "Yes, when using the format option. Comments are preserved to maintain code documentation. The minify option removes comments to reduce file size."
+        },
+        {
+          "question": "Can I format inline HTML?",
+          "answer": "Yes. The formatter works with any valid HTML, including inline fragments, full documents, or templating syntax (though template tags may not be perfectly formatted)."
+        },
+        {
+          "question": "Is this safe for production HTML?",
+          "answer": "The formatter preserves the structure and functionality of your HTML. However, always test the formatted output before deploying to production, especially with complex templating or custom components."
+        }
+      ]
+    },
+    "javascript-beautifier": {
+      "name": "JavaScript Beautifier",
+      "shortDescription": "Format and beautify JavaScript code online",
+      "metaTitle": "JavaScript Beautifier - Free JS Code Formatter | PureKit",
+      "metaDescription": "Beautify and format JavaScript code online. Minify JS or make it readable with proper indentation. Free, browser-based, no signup required.",
+      "keywords": ["javascript beautifier", "js formatter", "javascript minifier", "beautify javascript", "format js online", "javascript pretty print"],
+      "characters": "characters",
+      "beautify": "Beautify",
+      "emptyInput": "Please enter JavaScript code to beautify",
+      "beautifyError": "Error beautifying JavaScript. Please check your syntax.",
+      "minifyError": "Error minifying JavaScript. Please check your syntax.",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Beautify minified or messy JavaScript code with proper indentation",
+          "Minify JavaScript to reduce file size for production",
+          "Syntax-aware formatting preserves code logic and structure",
+          "Handles modern ES6+ syntax including arrow functions and template literals",
+          "All processing happens in your browser — your code stays private"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the JavaScript Beautifier",
+        "steps": [
+          "Paste your JavaScript code into the input area",
+          "Click \"Beautify\" to format the code with proper indentation and line breaks",
+          "Click \"Minify\" to compress the code by removing whitespace and comments",
+          "Copy the formatted output for use in your project"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What's the difference between beautify and minify?",
+          "answer": "Beautify adds indentation, line breaks, and spacing to make code human-readable. Minify removes all unnecessary characters (whitespace, comments, newlines) to reduce file size for faster page loads."
+        },
+        {
+          "question": "Does this tool check for syntax errors?",
+          "answer": "This tool focuses on formatting. While it can handle common JavaScript syntax, it doesn't validate or debug code. For syntax checking, use a linter like ESLint or your code editor's built-in checker."
+        },
+        {
+          "question": "Will minifying break my code?",
+          "answer": "Basic minification (removing whitespace and comments) is safe. However, advanced minification techniques like variable renaming are not performed by this tool. For production-grade minification, use tools like Terser or UglifyJS."
+        },
+        {
+          "question": "Can I beautify React/JSX code?",
+          "answer": "This tool is designed for standard JavaScript. While it may handle some JSX syntax, it's not optimized for it. For React code, use a specialized formatter like Prettier."
+        },
+        {
+          "question": "Does it support TypeScript?",
+          "answer": "This tool works best with plain JavaScript. TypeScript-specific syntax (type annotations, interfaces) may not format correctly. Use the TypeScript compiler or Prettier for TypeScript code."
+        }
+      ]
+    },
+    "css-beautifier": {
+      "name": "CSS Beautifier",
+      "shortDescription": "Format and beautify CSS code online",
+      "metaTitle": "CSS Beautifier - Free CSS Code Formatter | PureKit",
+      "metaDescription": "Beautify and format CSS stylesheets online. Minify CSS or make it readable with proper indentation. Free, browser-based, no signup required.",
+      "keywords": ["css beautifier", "css formatter", "css minifier", "beautify css", "format css online", "css pretty print"],
+      "characters": "characters",
+      "beautify": "Beautify",
+      "emptyInput": "Please enter CSS code to beautify",
+      "beautifyError": "Error beautifying CSS. Please check your syntax.",
+      "minifyError": "Error minifying CSS. Please check your syntax.",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Beautify minified or messy CSS with proper indentation and formatting",
+          "Minify CSS to reduce file size for production deployment",
+          "Syntax-aware formatting preserves selectors and properties",
+          "Handles modern CSS including custom properties and nested rules",
+          "All processing happens in your browser — your stylesheets stay private"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the CSS Beautifier",
+        "steps": [
+          "Paste your CSS code into the input area",
+          "Click \"Beautify\" to format the CSS with proper indentation and spacing",
+          "Click \"Minify\" to compress the CSS by removing whitespace and comments",
+          "Copy the formatted output for use in your project"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What's the difference between beautify and minify?",
+          "answer": "Beautify adds line breaks, indentation, and spacing to make CSS readable and maintainable. Minify removes all unnecessary characters to create the smallest possible file size for faster page loads."
+        },
+        {
+          "question": "Does this tool validate CSS?",
+          "answer": "This tool focuses on formatting and beautification. It doesn't perform strict CSS validation. For comprehensive validation, use the W3C CSS Validation Service."
+        },
+        {
+          "question": "Will CSS comments be preserved?",
+          "answer": "Yes, when using beautify. Comments are kept to maintain documentation. The minify option removes comments to reduce file size."
+        },
+        {
+          "question": "Can I format Sass or SCSS?",
+          "answer": "This tool is designed for standard CSS. While it may handle some Sass/SCSS syntax, advanced features like mixins, variables, and nesting may not format correctly. Use a Sass-specific formatter for those."
+        },
+        {
+          "question": "Does it support CSS preprocessors?",
+          "answer": "This tool works best with standard CSS. For preprocessor syntax (Less, Sass, Stylus), use a formatter designed for those languages, or compile to CSS first and then beautify."
+        }
+      ]
+    },
+    "json-to-csv-converter": {
+      "name": "JSON to CSV Converter",
+      "shortDescription": "Convert JSON data to CSV format online",
+      "metaTitle": "JSON to CSV Converter - Free Online Tool | PureKit",
+      "metaDescription": "Convert JSON to CSV online for free. Export JSON arrays to CSV spreadsheets instantly. Browser-based, no signup, your data stays private.",
+      "keywords": ["json to csv", "json to csv converter", "convert json to csv", "json array to csv", "export json to csv"],
+      "characters": "characters",
+      "convert": "Convert to CSV",
+      "jsonInput": "JSON Input",
+      "csvOutput": "CSV Output",
+      "jsonPlaceholder": "Paste your JSON array here...\nExample: [{\"name\":\"Alice\",\"age\":30},{\"name\":\"Bob\",\"age\":25}]",
+      "emptyInput": "Please enter JSON data to convert",
+      "convertError": "Error converting JSON to CSV. Please check your JSON format.",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert JSON arrays to CSV format instantly",
+          "Automatic header detection from JSON object keys",
+          "Handles nested values and special characters",
+          "Download output as .csv file for use in Excel, Google Sheets, or any spreadsheet app",
+          "All conversion happens in your browser — your data never leaves your device"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the JSON to CSV Converter",
+        "steps": [
+          "Paste your JSON data into the input area (must be an array of objects)",
+          "Click \"Convert to CSV\" to transform the data",
+          "Review the CSV output with comma-separated values",
+          "Click \"Download\" to save as a .csv file, or copy the text directly"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What JSON format is supported?",
+          "answer": "The converter works best with an array of objects, where each object represents a row and keys represent column headers. Example: [{\"name\":\"Alice\",\"age\":30},{\"name\":\"Bob\",\"age\":25}]. Single objects are also supported and will be converted to a single-row CSV."
+        },
+        {
+          "question": "How are nested objects handled?",
+          "answer": "Nested objects and arrays are converted to strings. For complex nested data, you may need to flatten your JSON structure before conversion for best results."
+        },
+        {
+          "question": "Will the column order be preserved?",
+          "answer": "Column order is determined by the keys in the first JSON object. If different objects have keys in different orders, the converter uses the first object's key order as the header."
+        },
+        {
+          "question": "Can I convert large JSON files?",
+          "answer": "Yes, but very large files (>10MB) may be slow to process since conversion happens in your browser. For massive datasets, consider using a command-line tool or server-side converter."
+        },
+        {
+          "question": "How are special characters handled?",
+          "answer": "The converter follows standard CSV escaping rules. Values containing commas, quotes, or newlines are automatically wrapped in double quotes, and internal quotes are escaped."
+        }
+      ]
+    },
+    "text-case-converter": {
+      "name": "Text Case Converter",
+      "shortDescription": "Convert text to different case formats online",
+      "metaTitle": "Text Case Converter - Uppercase, Lowercase, Title Case | PureKit",
+      "metaDescription": "Convert text to uppercase, lowercase, title case, camelCase, snake_case, and more. Free online case converter. Browser-based, instant results.",
+      "keywords": ["case converter", "text case", "uppercase", "lowercase", "title case", "camel case", "snake case", "kebab case"],
+      "characters": "characters",
+      "textCases": "Text Cases:",
+      "programmingCases": "Programming Cases:",
+      "lowercase": "lowercase",
+      "uppercase": "UPPERCASE",
+      "titleCase": "Title Case",
+      "sentenceCase": "Sentence case",
+      "camelCase": "camelCase",
+      "pascalCase": "PascalCase",
+      "snakeCase": "snake_case",
+      "kebabCase": "kebab-case",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert text to 8 different case formats instantly",
+          "Standard text cases: uppercase, lowercase, title case, sentence case",
+          "Programming cases: camelCase, PascalCase, snake_case, kebab-case",
+          "Real-time conversion as you type",
+          "All processing happens in your browser — your text stays private"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Text Case Converter",
+        "steps": [
+          "Paste or type your text into the input area",
+          "Click the desired case format button",
+          "The output updates instantly with the converted text",
+          "Copy the result for use in your project"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What's the difference between Title Case and Sentence case?",
+          "answer": "Title Case capitalizes the first letter of every word (e.g., \"This Is A Title\"). Sentence case only capitalizes the first letter of the first word and proper nouns (e.g., \"This is a sentence\")."
+        },
+        {
+          "question": "What is camelCase used for?",
+          "answer": "camelCase is commonly used in programming for variable names and function names. It starts with a lowercase letter and capitalizes each subsequent word (e.g., \"myVariableName\")."
+        },
+        {
+          "question": "When should I use snake_case vs kebab-case?",
+          "answer": "snake_case (words separated by underscores) is common in Python, Ruby, and database column names. kebab-case (words separated by hyphens) is used in URLs, CSS class names, and some languages like Lisp."
+        },
+        {
+          "question": "Does this preserve special characters?",
+          "answer": "For text cases (uppercase, lowercase, title), special characters are preserved. For programming cases (camel, snake, kebab), non-alphanumeric characters are replaced with the appropriate separator or removed."
+        },
+        {
+          "question": "Can I convert programming variable names?",
+          "answer": "Yes! This tool is perfect for converting between different naming conventions. For example, convert \"user_email_address\" (snake_case) to \"userEmailAddress\" (camelCase) or \"user-email-address\" (kebab-case)."
+        }
+      ]
+    },
+    "word-counter": {
+      "name": "Word Counter",
+      "shortDescription": "Count words, characters, sentences, and paragraphs",
+      "metaTitle": "Word Counter - Character Counter & Reading Time | PureKit",
+      "metaDescription": "Count words, characters, sentences, paragraphs, and estimate reading time. Free online word counter tool. Real-time statistics as you type.",
+      "keywords": ["word counter", "character counter", "word count", "character count", "reading time", "sentence counter"],
+      "characters": "Characters",
+      "charactersNoSpaces": "Characters (no spaces)",
+      "words": "Words",
+      "sentences": "Sentences",
+      "paragraphs": "Paragraphs",
+      "readingTime": "Reading Time",
+      "speakingTime": "Speaking Time",
+      "textInput": "Your Text",
+      "textPlaceholder": "Start typing or paste your text here...",
+      "statistics": "Statistics",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Real-time word, character, sentence, and paragraph counting",
+          "Character count with and without spaces",
+          "Estimated reading time (based on 200 words per minute)",
+          "Estimated speaking time (based on 130 words per minute)",
+          "All processing happens in your browser — your text stays private"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Word Counter",
+        "steps": [
+          "Type or paste your text into the input area",
+          "Statistics update automatically in real-time",
+          "View character count, word count, sentence count, and more",
+          "Use reading time and speaking time estimates for planning"
+        ]
+      },
+      "faq": [
+        {
+          "question": "How is word count calculated?",
+          "answer": "Words are counted by splitting text on whitespace. Any sequence of characters separated by spaces, tabs, or newlines counts as one word. Hyphenated words count as one word."
+        },
+        {
+          "question": "How accurate is the reading time estimate?",
+          "answer": "Reading time is based on an average reading speed of 200 words per minute, which is typical for adults reading standard text. Actual reading speed varies based on text complexity and reader skill."
+        },
+        {
+          "question": "What's the difference between reading and speaking time?",
+          "answer": "Reading time assumes silent reading (200 wpm). Speaking time assumes reading aloud or giving a presentation (130 wpm), which is slower because you need to enunciate and pause."
+        },
+        {
+          "question": "How are sentences counted?",
+          "answer": "Sentences are detected by looking for punctuation marks like periods, exclamation points, and question marks. This is a simple heuristic and may not be 100% accurate for complex text with abbreviations."
+        },
+        {
+          "question": "Does this work for non-English text?",
+          "answer": "Yes! The word counter works with any language. However, languages without spaces (like Chinese or Japanese) may not count words accurately since the tool relies on whitespace to detect word boundaries."
+        }
+      ]
     }
   }
 }

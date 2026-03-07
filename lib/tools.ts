@@ -14,7 +14,7 @@ export interface CategoryDefinition {
 export const categories: CategoryDefinition[] = [
   {
     key: "formatters",
-    tools: ["json-formatter", "sql-formatter"],
+    tools: ["json-formatter", "sql-formatter", "html-formatter", "javascript-beautifier", "css-beautifier"],
   },
   {
     key: "encodersDecoders",
@@ -26,11 +26,11 @@ export const categories: CategoryDefinition[] = [
   },
   {
     key: "converters",
-    tools: ["unix-timestamp-converter", "color-converter", "yaml-json-toml-converter"],
+    tools: ["unix-timestamp-converter", "color-converter", "yaml-json-toml-converter", "json-to-csv-converter"],
   },
   {
     key: "textTools",
-    tools: ["diff-checker", "markdown-preview", "regex-tester"],
+    tools: ["diff-checker", "markdown-preview", "regex-tester", "text-case-converter", "word-counter"],
   },
   {
     key: "dataTools",
@@ -207,6 +207,48 @@ export const tools: Record<string, ToolDefinition> = {
     icon: "Shuffle",
     relatedSlugs: ["uuid-generator", "json-formatter", "csv-data-cleaner"],
     searchTerms: ["mock", "fake", "data", "generate", "random", "name", "email", "address", "test"],
+  },
+  "html-formatter": {
+    slug: "html-formatter",
+    categoryKey: "formatters",
+    icon: "Code",
+    relatedSlugs: ["javascript-beautifier", "css-beautifier", "json-formatter"],
+    searchTerms: ["html", "format", "beautify", "minify", "pretty", "indent", "markup", "web"],
+  },
+  "javascript-beautifier": {
+    slug: "javascript-beautifier",
+    categoryKey: "formatters",
+    icon: "FileCode2",
+    relatedSlugs: ["html-formatter", "css-beautifier", "json-formatter"],
+    searchTerms: ["javascript", "js", "beautify", "format", "minify", "pretty", "indent", "code"],
+  },
+  "css-beautifier": {
+    slug: "css-beautifier",
+    categoryKey: "formatters",
+    icon: "Paintbrush",
+    relatedSlugs: ["html-formatter", "javascript-beautifier", "color-converter"],
+    searchTerms: ["css", "stylesheet", "beautify", "format", "minify", "pretty", "indent", "style"],
+  },
+  "json-to-csv-converter": {
+    slug: "json-to-csv-converter",
+    categoryKey: "converters",
+    icon: "ArrowRightLeft",
+    relatedSlugs: ["json-formatter", "csv-data-cleaner", "yaml-json-toml-converter"],
+    searchTerms: ["json", "csv", "convert", "export", "data", "table", "spreadsheet"],
+  },
+  "text-case-converter": {
+    slug: "text-case-converter",
+    categoryKey: "textTools",
+    icon: "CaseSensitive",
+    relatedSlugs: ["word-counter", "diff-checker", "markdown-preview"],
+    searchTerms: ["case", "upper", "lower", "title", "camel", "pascal", "snake", "kebab", "convert"],
+  },
+  "word-counter": {
+    slug: "word-counter",
+    categoryKey: "textTools",
+    icon: "FileText",
+    relatedSlugs: ["text-case-converter", "markdown-preview", "diff-checker"],
+    searchTerms: ["word", "count", "character", "sentence", "paragraph", "reading", "time", "statistics"],
   },
 };
 
