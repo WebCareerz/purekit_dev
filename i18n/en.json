@@ -50,7 +50,7 @@
     "privacyTitle": "Your Privacy, Protected",
     "privacyText": "All tools on PureKit run entirely in your browser. No data is ever sent to any server. We don't track, store, or process your data.",
     "howItWorks": "How It Works",
-    "howItWorksText": "PureKit uses modern browser APIs to process everything client-side. There are zero network requests for data processing.",
+    "howItWorksText": "PureKit uses modern browser technology to process everything on your device. Your data never touches the internet.",
     "linksTitle": "Legal",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
@@ -71,7 +71,7 @@
       },
       {
         "heading": "No Cookies or Tracking",
-        "content": "PureKit does not use cookies, analytics trackers, or any form of user tracking. We do not use Google Analytics, Facebook Pixel, or any similar services. We do not fingerprint your browser or device."
+        "content": "PureKit does not use cookies, analytics trackers, or any form of user tracking. We do not use Google Analytics, Facebook Pixel, or any similar services. We don't use browser fingerprinting, device tracking, or any sneaky techniques to identify you."
       },
       {
         "heading": "No User Accounts",
@@ -166,7 +166,9 @@
     "allTools": "All Tools",
     "searchPlaceholder": "Search tools...",
     "noResults": "No tools found. Try a different search term.",
-    "searchHint": "Quick search"
+    "searchHint": "Quick search",
+    "mostPopular": "Most Popular Tools",
+    "mostPopularSubtitle": "Our most-used privacy-first developer tools"
   },
   "tools": {
     "json-formatter": {
@@ -187,7 +189,7 @@
           "Format and beautify JSON with customizable indentation (2 spaces, 4 spaces, or tabs)",
           "Validate JSON syntax with detailed error messages and line numbers",
           "Minify JSON to reduce file size for production use",
-          "Instant processing — works entirely in your browser",
+          "Real-time preview as you type",
           "Support for large JSON files up to several megabytes"
         ]
       },
@@ -211,7 +213,7 @@
         },
         {
           "question": "Can I validate JSON with comments?",
-          "answer": "Standard JSON (RFC 8259) does not support comments. If your JSON contains comments, the validator will flag them as syntax errors. Consider using JSONC or JSON5 formats for commented JSON data."
+          "answer": "No, standard JSON doesn't support comments. If your JSON file has lines starting with // or /* */, the validator will show syntax errors.\n\nTip: If you're using JSON for configuration files (like VS Code settings), you may be using JSONC or JSON5, which allow comments. Our validator only checks standard JSON. You can remove the comments first, or use a JSONC/JSON5-specific tool."
         },
         {
           "question": "What's the difference between Format and Minify?",
@@ -236,7 +238,7 @@
           "Decode Base64 strings back to plain text",
           "Full UTF-8 support for international characters and emoji",
           "Real-time encoding and decoding as you type",
-          "Zero external dependencies — uses browser's built-in APIs"
+          "Works entirely offline — no internet needed"
         ]
       },
       "howToUse": {
@@ -762,7 +764,7 @@
           "Adjustable quality setting for JPEG and WebP output",
           "Preview original and converted images side by side",
           "See file size comparison showing the size difference",
-          "Download converted images instantly — no server upload"
+          "All processing happens locally on your device"
         ]
       },
       "howToUse": {
@@ -822,7 +824,7 @@
           "Set target file size in KB for precise control",
           "Optional maximum width to resize large images",
           "Preview compressed result with before/after comparison",
-          "Download compressed images instantly — no server upload needed"
+          "Zero-knowledge processing — your images stay on your device"
         ]
       },
       "howToUse": {
@@ -837,7 +839,7 @@
       "faq": [
         {
           "question": "How does the compression work?",
-          "answer": "The tool uses the browser-image-compression library which employs smart compression algorithms. It can reduce quality, resize dimensions, and optimize encoding — all in your browser. The algorithm iteratively adjusts quality to hit your target size while maintaining the best possible visual quality."
+          "answer": "It automatically reduces file size by adjusting image quality and resolution — similar to how Instagram compresses photos when you upload them.\n\nFor JPEG and WebP, we use \"lossy\" compression (some quality loss, much smaller file). For PNG, we use \"lossless\" compression (no quality loss, smaller savings).\n\nTechnical note: We use browser-native APIs + the browser-image-compression library, all running in your browser."
         },
         {
           "question": "Will compression affect image quality?",
@@ -871,8 +873,8 @@
           "Combine unlimited PDF files into a single document",
           "Drag and drop to reorder files before merging",
           "Preview page count for each file",
-          "All processing happens in your browser — files never uploaded",
-          "Download the merged PDF instantly"
+          "Complete privacy — files never leave your computer",
+          "Download the merged PDF when ready"
         ]
       },
       "howToUse": {
