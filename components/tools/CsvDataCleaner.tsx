@@ -205,10 +205,15 @@ export default function CsvDataCleaner({ t }: CsvDataCleanerProps) {
           </div>
 
           {/* Toolbar */}
-          <div className="flex flex-wrap items-center gap-3 border border-border rounded-lg px-3 py-2 bg-muted/30">
-            <Button onClick={handleRemoveDuplicates} variant="secondary" size="sm">
-              {toolT.removeDuplicates}
-            </Button>
+          <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3 border border-border rounded-lg px-3 py-2 bg-muted/30">
+            <div className="flex items-center gap-2">
+              <Button onClick={handleRemoveDuplicates} variant="secondary" size="sm">
+                {toolT.removeDuplicates}
+              </Button>
+              <Button onClick={handleDownloadCsv} variant="secondary" size="sm">
+                {toolT.downloadCsv}
+              </Button>
+            </div>
 
             {/* Sort controls */}
             <div className="flex items-center gap-2">
@@ -267,12 +272,6 @@ export default function CsvDataCleaner({ t }: CsvDataCleanerProps) {
                 size="sm"
               />
             </div>
-
-            <div className="ml-auto">
-              <Button onClick={handleDownloadCsv} variant="secondary" size="sm">
-                {toolT.downloadCsv}
-              </Button>
-            </div>
           </div>
 
           {/* Data table */}
@@ -300,7 +299,7 @@ export default function CsvDataCleaner({ t }: CsvDataCleanerProps) {
                       {headers.map((_, colIndex) => (
                         <td
                           key={colIndex}
-                          className="px-3 py-1.5 whitespace-nowrap font-mono text-sm"
+                          className="px-3 py-1.5 whitespace-nowrap font-mono text-sm max-w-[200px] sm:max-w-none truncate"
                         >
                           {row[colIndex] ?? ""}
                         </td>

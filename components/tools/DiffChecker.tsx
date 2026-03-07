@@ -70,14 +70,14 @@ export default function DiffChecker({ t }: DiffCheckerProps) {
   return (
     <div className="space-y-4">
       {/* Input textareas */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-2">
           <label className="text-sm font-medium">{toolT.original}</label>
           <Textarea
             value={original}
             onChange={(e) => setOriginal(e.target.value)}
             placeholder={toolT.originalPlaceholder}
-            className="font-mono text-sm min-h-[300px] resize-y"
+            className="font-mono text-sm min-h-[200px] sm:min-h-[300px] resize-y"
             spellCheck={false}
           />
         </div>
@@ -87,7 +87,7 @@ export default function DiffChecker({ t }: DiffCheckerProps) {
             value={modified}
             onChange={(e) => setModified(e.target.value)}
             placeholder={toolT.modifiedPlaceholder}
-            className="font-mono text-sm min-h-[300px] resize-y"
+            className="font-mono text-sm min-h-[200px] sm:min-h-[300px] resize-y"
             spellCheck={false}
           />
         </div>

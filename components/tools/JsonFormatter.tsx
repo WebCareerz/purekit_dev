@@ -108,14 +108,14 @@ export default function JsonFormatter({ t }: JsonFormatterProps) {
       )}
 
       {/* Input / Output */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-2">
           <label className="text-sm font-medium">{common.input}</label>
           <Textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder={common.inputPlaceholder}
-            className="font-mono text-sm min-h-[400px] resize-y"
+            className="font-mono text-sm min-h-[200px] sm:min-h-[400px] resize-y"
             spellCheck={false}
           />
         </div>
@@ -132,7 +132,7 @@ export default function JsonFormatter({ t }: JsonFormatterProps) {
             value={output}
             readOnly
             placeholder={common.outputPlaceholder}
-            className="font-mono text-sm min-h-[400px] resize-y"
+            className="font-mono text-sm min-h-[200px] sm:min-h-[400px] resize-y"
             spellCheck={false}
           />
         </div>
