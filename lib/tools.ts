@@ -22,7 +22,7 @@ export const categories: CategoryDefinition[] = [
   },
   {
     key: "generators",
-    tools: ["uuid-generator", "qr-code-generator", "mock-data-generator", "cron-expression-builder"],
+    tools: ["uuid-generator", "qr-code-generator", "mock-data-generator", "cron-expression-builder", "password-generator", "lorem-ipsum-generator"],
   },
   {
     key: "converters",
@@ -38,7 +38,7 @@ export const categories: CategoryDefinition[] = [
   },
   {
     key: "imageTools",
-    tools: ["image-format-converter", "image-compressor"],
+    tools: ["image-format-converter", "image-compressor", "image-to-pdf"],
   },
   {
     key: "pdfTools",
@@ -249,6 +249,27 @@ export const tools: Record<string, ToolDefinition> = {
     icon: "FileText",
     relatedSlugs: ["text-case-converter", "markdown-preview", "diff-checker"],
     searchTerms: ["word", "count", "character", "sentence", "paragraph", "reading", "time", "statistics"],
+  },
+  "password-generator": {
+    slug: "password-generator",
+    categoryKey: "generators",
+    icon: "Lock",
+    relatedSlugs: ["uuid-generator", "hash-generator", "mock-data-generator"],
+    searchTerms: ["password", "generate", "random", "secure", "strong", "passphrase", "credentials"],
+  },
+  "lorem-ipsum-generator": {
+    slug: "lorem-ipsum-generator",
+    categoryKey: "generators",
+    icon: "AlignLeft",
+    relatedSlugs: ["word-counter", "text-case-converter", "mock-data-generator"],
+    searchTerms: ["lorem", "ipsum", "placeholder", "dummy", "text", "filler", "sample"],
+  },
+  "image-to-pdf": {
+    slug: "image-to-pdf",
+    categoryKey: "imageTools",
+    icon: "FileOutput",
+    relatedSlugs: ["pdf-merge", "image-compressor", "image-format-converter"],
+    searchTerms: ["image", "pdf", "convert", "jpg", "png", "photo", "document", "export"],
   },
 };
 

@@ -44,7 +44,8 @@
     "error": "Error",
     "success": "Success",
     "valid": "Valid",
-    "invalid": "Invalid"
+    "invalid": "Invalid",
+    "remove": "Remove"
   },
   "footer": {
     "privacyTitle": "Your Privacy, Protected",
@@ -176,7 +177,15 @@
       "shortDescription": "Format, validate, and minify JSON data instantly in your browser.",
       "metaTitle": "JSON Formatter & Validator - Free Online Tool | PureKit",
       "metaDescription": "Format, validate, and beautify JSON online for free. No signup, no data upload. Supports minification, syntax highlighting, and error detection. Browser-based and privacy-first.",
-      "keywords": ["json formatter", "json validator", "json beautifier", "json minifier", "format json online", "validate json", "json pretty print"],
+      "keywords": [
+        "json formatter",
+        "json validator",
+        "json beautifier",
+        "json minifier",
+        "format json online",
+        "validate json",
+        "json pretty print"
+      ],
       "indentation": "Indentation",
       "spaces2": "2 Spaces",
       "spaces4": "4 Spaces",
@@ -226,7 +235,14 @@
       "shortDescription": "Encode text to Base64 or decode Base64 strings instantly in your browser.",
       "metaTitle": "Base64 Encode & Decode - Free Online Tool | PureKit",
       "metaDescription": "Encode and decode Base64 strings online for free. Supports UTF-8 text. No signup, no data upload. Browser-based and privacy-first.",
-      "keywords": ["base64 encode", "base64 decode", "base64 converter", "base64 online", "text to base64", "base64 to text"],
+      "keywords": [
+        "base64 encode",
+        "base64 decode",
+        "base64 converter",
+        "base64 online",
+        "text to base64",
+        "base64 to text"
+      ],
       "encodePlaceholder": "Enter text to encode to Base64...",
       "decodePlaceholder": "Enter Base64 string to decode...",
       "encodeOutputPlaceholder": "Base64 encoded output will appear here...",
@@ -270,7 +286,15 @@
       "shortDescription": "Encode or decode URL components instantly in your browser.",
       "metaTitle": "URL Encode & Decode - Free Online Tool | PureKit",
       "metaDescription": "URL encode and decode strings online for free. Perfect for query parameters, form data, and URI components. No signup required. Browser-based and privacy-first.",
-      "keywords": ["url encode", "url decode", "percent encoding", "urlencode online", "url encoder", "url decoder", "encodeURIComponent"],
+      "keywords": [
+        "url encode",
+        "url decode",
+        "percent encoding",
+        "urlencode online",
+        "url encoder",
+        "url decoder",
+        "encodeURIComponent"
+      ],
       "encodePlaceholder": "Enter text to URL encode...",
       "decodePlaceholder": "Enter URL encoded string to decode...",
       "encodeOutputPlaceholder": "URL encoded output will appear here...",
@@ -316,7 +340,14 @@
       "shortDescription": "Generate random UUIDs (v4) instantly in your browser.",
       "metaTitle": "UUID Generator - Free Online Tool | PureKit",
       "metaDescription": "Generate random UUID v4 identifiers online for free. Bulk generation, uppercase/lowercase options. No signup required. Browser-based and privacy-first.",
-      "keywords": ["uuid generator", "uuid v4", "random uuid", "guid generator", "unique id generator", "uuid online"],
+      "keywords": [
+        "uuid generator",
+        "uuid v4",
+        "random uuid",
+        "guid generator",
+        "unique id generator",
+        "uuid online"
+      ],
       "quantity": "Quantity",
       "uppercase": "Uppercase",
       "lowercase": "Lowercase",
@@ -363,7 +394,15 @@
       "shortDescription": "Generate MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes in your browser.",
       "metaTitle": "Hash Generator (MD5, SHA-256) - Free Online Tool | PureKit",
       "metaDescription": "Generate MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes online for free. Real-time hashing as you type. No data upload. Browser-based and privacy-first.",
-      "keywords": ["hash generator", "md5 hash", "sha256 hash", "sha-1", "sha-512", "online hash", "hash calculator"],
+      "keywords": [
+        "hash generator",
+        "md5 hash",
+        "sha256 hash",
+        "sha-1",
+        "sha-512",
+        "online hash",
+        "hash calculator"
+      ],
       "algorithm": "Algorithm",
       "inputPlaceholder": "Enter text to hash...",
       "allHashes": "All Hashes",
@@ -406,7 +445,15 @@
       "shortDescription": "Decode and inspect JSON Web Tokens (JWT) instantly in your browser.",
       "metaTitle": "JWT Decoder - Free Online Tool | PureKit",
       "metaDescription": "Decode and inspect JWT tokens online for free. View header, payload, and signature. Check expiration status. No signup, no data upload. Browser-based and privacy-first.",
-      "keywords": ["jwt decoder", "jwt parser", "json web token", "decode jwt", "jwt online", "jwt inspector", "token decoder"],
+      "keywords": [
+        "jwt decoder",
+        "jwt parser",
+        "json web token",
+        "decode jwt",
+        "jwt online",
+        "jwt inspector",
+        "token decoder"
+      ],
       "inputPlaceholder": "Paste your JWT token here (eyJhbG...)...",
       "header": "Header",
       "payload": "Payload",
@@ -456,7 +503,15 @@
       "shortDescription": "Convert between Unix timestamps and human-readable dates instantly.",
       "metaTitle": "Unix Timestamp Converter - Free Online Tool | PureKit",
       "metaDescription": "Convert Unix timestamps to human-readable dates and vice versa. Supports seconds and milliseconds. No signup required. Browser-based and privacy-first.",
-      "keywords": ["unix timestamp", "epoch converter", "timestamp to date", "date to timestamp", "unix time", "epoch time", "utc converter"],
+      "keywords": [
+        "unix timestamp",
+        "epoch converter",
+        "timestamp to date",
+        "date to timestamp",
+        "unix time",
+        "epoch time",
+        "utc converter"
+      ],
       "currentTimestamp": "Current Unix Timestamp",
       "timestampToDate": "Timestamp to Date",
       "dateToTimestamp": "Date to Timestamp",
@@ -508,7 +563,15 @@
       "shortDescription": "Convert colors between HEX, RGB, HSL, and other formats instantly.",
       "metaTitle": "Color Converter (HEX, RGB, HSL) - Free Online Tool | PureKit",
       "metaDescription": "Convert colors between HEX, RGB, HSL, and CSS formats online for free. Visual color picker included. No signup required. Browser-based and privacy-first.",
-      "keywords": ["color converter", "hex to rgb", "rgb to hex", "hsl converter", "color picker", "css color", "color code"],
+      "keywords": [
+        "color converter",
+        "hex to rgb",
+        "rgb to hex",
+        "hsl converter",
+        "color picker",
+        "css color",
+        "color code"
+      ],
       "hex": "HEX",
       "rgb": "RGB",
       "hsl": "HSL",
@@ -555,7 +618,15 @@
       "shortDescription": "Compare two texts and highlight the differences line by line.",
       "metaTitle": "Diff Checker - Free Online Text Comparison Tool | PureKit",
       "metaDescription": "Compare two blocks of text and see differences highlighted line by line. Supports unified and side-by-side views. No signup required. Browser-based and privacy-first.",
-      "keywords": ["diff checker", "text compare", "text diff", "compare files", "difference checker", "online diff", "code compare"],
+      "keywords": [
+        "diff checker",
+        "text compare",
+        "text diff",
+        "compare files",
+        "difference checker",
+        "online diff",
+        "code compare"
+      ],
       "original": "Original",
       "modified": "Modified",
       "originalPlaceholder": "Paste the original text here...",
@@ -603,7 +674,15 @@
       "shortDescription": "Write Markdown and preview the rendered HTML output in real-time.",
       "metaTitle": "Markdown Preview - Free Online Renderer | PureKit",
       "metaDescription": "Write and preview Markdown with real-time rendering. Supports GitHub Flavored Markdown (GFM). No signup required. Browser-based and privacy-first.",
-      "keywords": ["markdown preview", "markdown editor", "markdown renderer", "markdown to html", "gfm", "github markdown", "md preview"],
+      "keywords": [
+        "markdown preview",
+        "markdown editor",
+        "markdown renderer",
+        "markdown to html",
+        "gfm",
+        "github markdown",
+        "md preview"
+      ],
       "editor": "Editor",
       "renderedPreview": "Preview",
       "editorPlaceholder": "Write or paste your Markdown here...\n\n# Heading 1\n## Heading 2\n\n**bold** and *italic*\n\n- List item 1\n- List item 2\n\n```js\nconsole.log('Hello!');\n```",
@@ -647,7 +726,14 @@
       "shortDescription": "Generate QR codes for URLs, text, or any data instantly in your browser.",
       "metaTitle": "QR Code Generator - Free Online Tool | PureKit",
       "metaDescription": "Generate QR codes for URLs, text, Wi-Fi credentials, and more. Customize size and download as PNG. No signup required. Browser-based and privacy-first.",
-      "keywords": ["qr code generator", "qr code maker", "create qr code", "qr code online", "url to qr", "free qr code"],
+      "keywords": [
+        "qr code generator",
+        "qr code maker",
+        "create qr code",
+        "qr code online",
+        "url to qr",
+        "free qr code"
+      ],
       "inputPlaceholder": "Enter URL, text, or any data to encode...",
       "size": "Size",
       "small": "Small",
@@ -693,7 +779,15 @@
       "shortDescription": "Parse, clean, and transform CSV data with deduplication and filtering.",
       "metaTitle": "CSV Data Cleaner - Free Online Tool | PureKit",
       "metaDescription": "Parse, clean, and transform CSV data online. Remove duplicates, filter rows, sort columns. No signup required. Browser-based and privacy-first.",
-      "keywords": ["csv cleaner", "csv parser", "csv editor", "clean csv", "remove duplicates csv", "csv filter", "csv online"],
+      "keywords": [
+        "csv cleaner",
+        "csv parser",
+        "csv editor",
+        "clean csv",
+        "remove duplicates csv",
+        "csv filter",
+        "csv online"
+      ],
       "inputPlaceholder": "Paste your CSV data here...",
       "parseData": "Parse Data",
       "removeDuplicates": "Remove Duplicates",
@@ -745,7 +839,15 @@
       "shortDescription": "Convert images between PNG, JPEG, and WebP formats in your browser.",
       "metaTitle": "Image Format Converter (PNG, JPEG, WebP) - Free Online Tool | PureKit",
       "metaDescription": "Convert images between PNG, JPEG, and WebP formats online for free. No upload to server — all conversion happens in your browser. Privacy-first.",
-      "keywords": ["image converter", "png to jpg", "jpg to png", "webp converter", "image format", "convert image online", "png to webp"],
+      "keywords": [
+        "image converter",
+        "png to jpg",
+        "jpg to png",
+        "webp converter",
+        "image format",
+        "convert image online",
+        "png to webp"
+      ],
       "dropzone": "Drop an image here or click to select",
       "supportedFormats": "Supports PNG, JPEG, WebP, GIF, BMP",
       "outputFormat": "Output Format",
@@ -796,7 +898,15 @@
       "shortDescription": "Compress images to reduce file size while maintaining visual quality.",
       "metaTitle": "Image Compressor - Free Online Tool | PureKit",
       "metaDescription": "Compress images online for free. Reduce file size while maintaining quality. Supports JPEG, PNG, and WebP. No upload to server. Browser-based and privacy-first.",
-      "keywords": ["image compressor", "compress image", "reduce image size", "image optimizer", "compress jpeg", "compress png", "image size reducer"],
+      "keywords": [
+        "image compressor",
+        "compress image",
+        "reduce image size",
+        "image optimizer",
+        "compress jpeg",
+        "compress png",
+        "image size reducer"
+      ],
       "dropzone": "Drop an image here or click to select",
       "supportedFormats": "Supports JPEG, PNG, WebP",
       "compressionLevel": "Compression Level",
@@ -856,7 +966,14 @@
       "shortDescription": "Combine multiple PDF files into one document",
       "title": "PDF Merge - Combine PDF Files Online",
       "description": "Merge multiple PDF files into a single document. Drag to reorder pages. Free, private, browser-based — your files never leave your device.",
-      "keywords": ["pdf merge", "combine pdf", "join pdf", "merge pdf online", "pdf combiner", "concatenate pdf"],
+      "keywords": [
+        "pdf merge",
+        "combine pdf",
+        "join pdf",
+        "merge pdf online",
+        "pdf combiner",
+        "concatenate pdf"
+      ],
       "dropzone": "Drop PDF files here or click to select",
       "supportedFormats": "PDF files only",
       "addMore": "Add More Files",
@@ -906,7 +1023,14 @@
       "shortDescription": "Reduce PDF file size while maintaining quality",
       "title": "PDF Compress - Reduce PDF File Size Online",
       "description": "Compress PDF files to reduce size. Optimize images within PDFs for smaller file sizes. Free, private, no upload required.",
-      "keywords": ["pdf compress", "reduce pdf size", "compress pdf online", "pdf optimizer", "shrink pdf", "smaller pdf"],
+      "keywords": [
+        "pdf compress",
+        "reduce pdf size",
+        "compress pdf online",
+        "pdf optimizer",
+        "shrink pdf",
+        "smaller pdf"
+      ],
       "dropzone": "Drop a PDF file here or click to select",
       "supportedFormats": "PDF files only",
       "compressing": "Compressing...",
@@ -955,7 +1079,14 @@
       "shortDescription": "Extract pages or split PDF into multiple files",
       "title": "PDF Split - Extract Pages from PDF Online",
       "description": "Split PDF files into individual pages or custom page ranges. Extract specific pages from any PDF. Free, private, browser-based.",
-      "keywords": ["pdf split", "extract pdf pages", "split pdf online", "pdf page extractor", "separate pdf pages", "divide pdf"],
+      "keywords": [
+        "pdf split",
+        "extract pdf pages",
+        "split pdf online",
+        "pdf page extractor",
+        "separate pdf pages",
+        "divide pdf"
+      ],
       "dropzone": "Drop a PDF file here or click to select",
       "supportedFormats": "PDF files only",
       "totalPages": "Total pages",
@@ -1007,7 +1138,14 @@
       "shortDescription": "Convert PDF pages to PNG or JPEG images",
       "title": "PDF to Image - Convert PDF to PNG/JPEG Online",
       "description": "Convert PDF pages to high-quality PNG or JPEG images. Export all pages or specific pages. Free, private, browser-based.",
-      "keywords": ["pdf to image", "pdf to png", "pdf to jpg", "convert pdf to image", "pdf to jpeg", "pdf export"],
+      "keywords": [
+        "pdf to image",
+        "pdf to png",
+        "pdf to jpg",
+        "convert pdf to image",
+        "pdf to jpeg",
+        "pdf export"
+      ],
       "dropzone": "Drop a PDF file here or click to select",
       "supportedFormats": "PDF files only",
       "totalPages": "Total pages",
@@ -1060,7 +1198,14 @@
       "shortDescription": "Test and debug regular expressions with live matching",
       "title": "Regex Tester - Test Regular Expressions Online",
       "description": "Test and debug regular expressions with real-time matching and highlighting. See capture groups, match details, and test replacement patterns. Free, private, browser-based.",
-      "keywords": ["regex tester", "regular expression test", "regex online", "regex debugger", "regex match", "pattern matcher"],
+      "keywords": [
+        "regex tester",
+        "regular expression test",
+        "regex online",
+        "regex debugger",
+        "regex match",
+        "pattern matcher"
+      ],
       "pattern": "Pattern",
       "patternPlaceholder": "Enter regex pattern...",
       "flags": "Flags",
@@ -1114,7 +1259,14 @@
       "shortDescription": "Build and validate cron expressions with a visual editor",
       "title": "Cron Expression Builder - Visual Cron Editor Online",
       "description": "Build cron expressions with an interactive visual editor. See human-readable descriptions and next run times. Free, private, browser-based.",
-      "keywords": ["cron expression", "cron builder", "crontab", "cron generator", "cron schedule", "cron editor"],
+      "keywords": [
+        "cron expression",
+        "cron builder",
+        "crontab",
+        "cron generator",
+        "cron schedule",
+        "cron editor"
+      ],
       "expression": "Cron Expression",
       "expressionPlaceholder": "* * * * *",
       "minute": "Minute",
@@ -1174,7 +1326,14 @@
       "shortDescription": "Format and beautify SQL queries with proper indentation",
       "title": "SQL Formatter - Beautify SQL Queries Online",
       "description": "Format and beautify SQL queries with proper indentation and syntax structure. Supports multiple SQL dialects. Free, private, browser-based.",
-      "keywords": ["sql formatter", "sql beautify", "format sql", "sql pretty print", "sql indent", "sql online"],
+      "keywords": [
+        "sql formatter",
+        "sql beautify",
+        "format sql",
+        "sql pretty print",
+        "sql indent",
+        "sql online"
+      ],
       "inputPlaceholder": "Paste your SQL query here...",
       "dialect": "SQL Dialect",
       "standard": "Standard SQL",
@@ -1227,7 +1386,14 @@
       "shortDescription": "Convert between YAML, JSON, and TOML config formats",
       "title": "YAML JSON TOML Converter - Config Format Converter Online",
       "description": "Convert between YAML, JSON, and TOML configuration formats. Bidirectional conversion with proper formatting. Free, private, browser-based.",
-      "keywords": ["yaml to json", "json to yaml", "toml converter", "yaml converter", "config converter", "json to toml"],
+      "keywords": [
+        "yaml to json",
+        "json to yaml",
+        "toml converter",
+        "yaml converter",
+        "config converter",
+        "json to toml"
+      ],
       "inputFormat": "Input Format",
       "outputFormat": "Output Format",
       "inputPlaceholder": "Paste your YAML, JSON, or TOML here...",
@@ -1271,7 +1437,15 @@
       "shortDescription": "Generate realistic fake data for testing and development",
       "title": "Mock Data Generator - Generate Test Data Online",
       "description": "Generate realistic mock data for testing. Names, emails, addresses, phone numbers, and more. Export as JSON or CSV. Free, private, browser-based.",
-      "keywords": ["mock data", "fake data", "test data generator", "random data", "faker", "sample data", "dummy data"],
+      "keywords": [
+        "mock data",
+        "fake data",
+        "test data generator",
+        "random data",
+        "faker",
+        "sample data",
+        "dummy data"
+      ],
       "fields": "Fields",
       "addField": "Add Field",
       "removeField": "Remove",
@@ -1343,7 +1517,14 @@
       "shortDescription": "Format and beautify HTML code online",
       "metaTitle": "HTML Formatter - Free Online HTML Beautifier Tool | PureKit",
       "metaDescription": "Format and beautify HTML code online for free. Minify HTML or make it readable with proper indentation. Browser-based, no signup required.",
-      "keywords": ["html formatter", "html beautifier", "html minifier", "format html online", "beautify html", "html pretty print"],
+      "keywords": [
+        "html formatter",
+        "html beautifier",
+        "html minifier",
+        "format html online",
+        "beautify html",
+        "html pretty print"
+      ],
       "characters": "characters",
       "emptyInput": "Please enter HTML code to format",
       "formatError": "Error formatting HTML. Please check your syntax.",
@@ -1395,7 +1576,14 @@
       "shortDescription": "Format and beautify JavaScript code online",
       "metaTitle": "JavaScript Beautifier - Free JS Code Formatter | PureKit",
       "metaDescription": "Beautify and format JavaScript code online. Minify JS or make it readable with proper indentation. Free, browser-based, no signup required.",
-      "keywords": ["javascript beautifier", "js formatter", "javascript minifier", "beautify javascript", "format js online", "javascript pretty print"],
+      "keywords": [
+        "javascript beautifier",
+        "js formatter",
+        "javascript minifier",
+        "beautify javascript",
+        "format js online",
+        "javascript pretty print"
+      ],
       "characters": "characters",
       "beautify": "Beautify",
       "emptyInput": "Please enter JavaScript code to beautify",
@@ -1448,7 +1636,14 @@
       "shortDescription": "Format and beautify CSS code online",
       "metaTitle": "CSS Beautifier - Free CSS Code Formatter | PureKit",
       "metaDescription": "Beautify and format CSS stylesheets online. Minify CSS or make it readable with proper indentation. Free, browser-based, no signup required.",
-      "keywords": ["css beautifier", "css formatter", "css minifier", "beautify css", "format css online", "css pretty print"],
+      "keywords": [
+        "css beautifier",
+        "css formatter",
+        "css minifier",
+        "beautify css",
+        "format css online",
+        "css pretty print"
+      ],
       "characters": "characters",
       "beautify": "Beautify",
       "emptyInput": "Please enter CSS code to beautify",
@@ -1501,7 +1696,13 @@
       "shortDescription": "Convert JSON data to CSV format online",
       "metaTitle": "JSON to CSV Converter - Free Online Tool | PureKit",
       "metaDescription": "Convert JSON to CSV online for free. Export JSON arrays to CSV spreadsheets instantly. Browser-based, no signup, your data stays private.",
-      "keywords": ["json to csv", "json to csv converter", "convert json to csv", "json array to csv", "export json to csv"],
+      "keywords": [
+        "json to csv",
+        "json to csv converter",
+        "convert json to csv",
+        "json array to csv",
+        "export json to csv"
+      ],
       "characters": "characters",
       "convert": "Convert to CSV",
       "jsonInput": "JSON Input",
@@ -1556,7 +1757,16 @@
       "shortDescription": "Convert text to different case formats online",
       "metaTitle": "Text Case Converter - Uppercase, Lowercase, Title Case | PureKit",
       "metaDescription": "Convert text to uppercase, lowercase, title case, camelCase, snake_case, and more. Free online case converter. Browser-based, instant results.",
-      "keywords": ["case converter", "text case", "uppercase", "lowercase", "title case", "camel case", "snake case", "kebab case"],
+      "keywords": [
+        "case converter",
+        "text case",
+        "uppercase",
+        "lowercase",
+        "title case",
+        "camel case",
+        "snake case",
+        "kebab case"
+      ],
       "characters": "characters",
       "textCases": "Text Cases:",
       "programmingCases": "Programming Cases:",
@@ -1615,7 +1825,14 @@
       "shortDescription": "Count words, characters, sentences, and paragraphs",
       "metaTitle": "Word Counter - Character Counter & Reading Time | PureKit",
       "metaDescription": "Count words, characters, sentences, paragraphs, and estimate reading time. Free online word counter tool. Real-time statistics as you type.",
-      "keywords": ["word counter", "character counter", "word count", "character count", "reading time", "sentence counter"],
+      "keywords": [
+        "word counter",
+        "character counter",
+        "word count",
+        "character count",
+        "reading time",
+        "sentence counter"
+      ],
       "characters": "Characters",
       "charactersNoSpaces": "Characters (no spaces)",
       "words": "Words",
@@ -1665,6 +1882,176 @@
         {
           "question": "Does this work for non-English text?",
           "answer": "Yes! The word counter works with any language. However, languages without spaces (like Chinese or Japanese) may not count words accurately since the tool relies on whitespace to detect word boundaries."
+        }
+      ]
+    },
+    "password-generator": {
+      "name": "Password Generator",
+      "shortDescription": "Generate secure, random passwords instantly in your browser.",
+      "metaTitle": "Password Generator - Free Strong Password Tool | PureKit",
+      "metaDescription": "Generate strong, random passwords online for free. Customize length, characters, and generate in bulk. Browser-based, no data sent to servers.",
+      "keywords": [
+        "password generator",
+        "random password",
+        "strong password",
+        "secure password generator",
+        "password tool online",
+        "generate password"
+      ],
+      "length": "Length",
+      "uppercase": "A-Z",
+      "lowercase": "a-z",
+      "numbers": "0-9",
+      "symbols": "!@#$%",
+      "quantity": "Quantity",
+      "generate": "Generate Password",
+      "strength": "Strength",
+      "copyAll": "Copy All",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Cryptographically secure random generation using Web Crypto API",
+          "Customizable length from 4 to 128 characters",
+          "Toggle uppercase, lowercase, numbers, and symbols independently",
+          "Bulk generation — create up to 50 passwords at once",
+          "Visual password strength indicator",
+          "100% client-side — your passwords never leave your browser"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Password Generator",
+        "steps": [
+          "Set your desired password length using the slider or dropdown",
+          "Choose which character types to include (uppercase, lowercase, numbers, symbols)",
+          "Select how many passwords to generate",
+          "Click 'Generate Password' to create secure passwords",
+          "Click the copy button to copy any password to your clipboard"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Are the passwords generated securely?",
+          "answer": "Yes. This tool uses the Web Crypto API (crypto.getRandomValues), which provides cryptographically secure random values. The passwords are generated entirely in your browser and are never sent to any server."
+        },
+        {
+          "question": "What makes a strong password?",
+          "answer": "A strong password is at least 12 characters long and includes a mix of uppercase letters, lowercase letters, numbers, and symbols. This tool's strength meter evaluates these factors to help you create secure passwords."
+        },
+        {
+          "question": "How long should my password be?",
+          "answer": "We recommend at least 16 characters for important accounts. For maximum security, use 20+ characters. Longer passwords are exponentially harder to crack through brute force attacks."
+        }
+      ]
+    },
+    "lorem-ipsum-generator": {
+      "name": "Lorem Ipsum Generator",
+      "shortDescription": "Generate placeholder text for your designs and layouts.",
+      "metaTitle": "Lorem Ipsum Generator - Free Placeholder Text Tool | PureKit",
+      "metaDescription": "Generate lorem ipsum placeholder text online for free. Create paragraphs, sentences, or words. Perfect for mockups, designs, and content layout testing.",
+      "keywords": [
+        "lorem ipsum generator",
+        "placeholder text",
+        "dummy text generator",
+        "lorem ipsum",
+        "filler text",
+        "sample text"
+      ],
+      "type": "Type",
+      "paragraphs": "Paragraphs",
+      "sentences": "Sentences",
+      "words": "Words",
+      "count": "Count",
+      "startWithLorem": "Start with \"Lorem ipsum...\"",
+      "generate": "Generate Text",
+      "wordsLabel": "words",
+      "charsLabel": "characters",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Generate paragraphs, sentences, or individual words",
+          "Customizable quantity from 1 to 100",
+          "Option to start with the classic \"Lorem ipsum dolor sit amet\" opening",
+          "Word and character count display",
+          "One-click copy to clipboard",
+          "No signup or internet connection required"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Lorem Ipsum Generator",
+        "steps": [
+          "Choose the type of text: paragraphs, sentences, or words",
+          "Set the desired quantity",
+          "Optionally toggle the classic 'Lorem ipsum' opening",
+          "Click 'Generate Text' to create placeholder content",
+          "Copy the generated text with one click"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is Lorem Ipsum?",
+          "answer": "Lorem Ipsum is placeholder text derived from a work by Cicero written in 45 BC. It has been the industry standard dummy text since the 1500s. Designers and developers use it to fill layouts when the actual content is not yet available."
+        },
+        {
+          "question": "Why use Lorem Ipsum instead of real text?",
+          "answer": "Lorem Ipsum helps reviewers focus on the visual design rather than reading the content. It has a relatively normal distribution of letters, making it look like readable English, which helps evaluate typography and layout."
+        },
+        {
+          "question": "Can I use the generated text commercially?",
+          "answer": "Yes, Lorem Ipsum is in the public domain and can be used freely in any project — commercial or personal. It's meant to be replaced with real content before publication."
+        }
+      ]
+    },
+    "image-to-pdf": {
+      "name": "Image to PDF Converter",
+      "shortDescription": "Convert images to PDF documents right in your browser.",
+      "metaTitle": "Image to PDF Converter - Free Online Tool | PureKit",
+      "metaDescription": "Convert JPG, PNG, WebP and other images to PDF online for free. Arrange pages, set margins, choose page sizes. Browser-based, your files never leave your device.",
+      "keywords": [
+        "image to pdf",
+        "jpg to pdf",
+        "png to pdf",
+        "convert image to pdf",
+        "photo to pdf",
+        "image to pdf converter"
+      ],
+      "dropzone": "Drop images here or click to browse (JPG, PNG, WebP, GIF)",
+      "pageSize": "Page Size",
+      "fitToImage": "Fit to Image",
+      "margin": "Margin",
+      "generate": "Generate PDF",
+      "generating": "Generating...",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert JPG, PNG, WebP, GIF and other image formats to PDF",
+          "Drag and drop multiple images at once",
+          "Reorder images before creating the PDF",
+          "Choose page size: A4, Letter, or auto-fit to image dimensions",
+          "Adjustable margins for professional-looking documents",
+          "100% browser-based — your images never leave your device"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Image to PDF Converter",
+        "steps": [
+          "Drag and drop images or click the upload area to select files",
+          "Rearrange images by hovering and using the arrow buttons",
+          "Choose your preferred page size and margin settings",
+          "Click 'Generate PDF' to create and download your PDF"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What image formats are supported?",
+          "answer": "This tool supports all common image formats including JPG/JPEG, PNG, WebP, GIF, BMP, and SVG. The images are converted to high-quality JPEG when embedded in the PDF for optimal file size."
+        },
+        {
+          "question": "Is there a limit on the number of images?",
+          "answer": "There's no hard limit. However, since everything runs in your browser, very large batches (100+ high-resolution images) may be slow depending on your device's memory. For best results, keep batches under 50 images."
+        },
+        {
+          "question": "Are my images uploaded to a server?",
+          "answer": "No. All processing happens entirely in your browser using JavaScript. Your images are never uploaded to any server, making this tool completely private and secure."
         }
       ]
     }
