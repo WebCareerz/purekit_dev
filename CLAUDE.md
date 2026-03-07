@@ -1,5 +1,25 @@
 # PureKit.dev 工程规范
 
+## 构建验证规范（必须）
+
+每次修改代码后，**push 之前**必须在本地完成以下验证：
+
+```bash
+# 1. 清理并重新安装依赖（模拟 CI 环境）
+rm -rf node_modules
+npm ci
+
+# 2. 完整构建
+npm run build
+```
+
+**两步都通过了才能 push。** 不要只跑 `npm install`，CI 用的是 `npm ci`（严格按 package-lock.json 安装）。
+
+常见陷阱：
+- 加了新依赖但 `package-lock.json` 没有同步更新
+- 本地 `npm install` 能过但 `npm ci` 过不了
+- 构建问题必须在本地解决，不能甩给 CI
+
 ## 响应式适配规范
 
 ### 双栏布局断点
