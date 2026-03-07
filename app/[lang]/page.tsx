@@ -2,6 +2,7 @@ import { getDictionary, locales, type Locale } from "@/lib/i18n";
 import { generateSEO } from "@/lib/seo";
 import { Badge } from "@/components/ui/badge";
 import ToolGrid from "@/components/tools/ToolGrid";
+import MostPopularTools from "@/components/home/MostPopularTools";
 
 export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
@@ -51,6 +52,9 @@ export default async function HomePage({
           {home.subtitle}
         </p>
       </div>
+
+      {/* Most Popular Tools */}
+      <MostPopularTools lang={lang as Locale} t={t} />
 
       {/* Tools with search */}
       <ToolGrid
