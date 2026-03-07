@@ -34,15 +34,17 @@ function generatePassword(length: number, options: Record<string, boolean>): str
 
 function getStrength(password: string): { label: string; color: string; width: string } {
   let score = 0;
+  if (password.length >= 8) score++;
   if (password.length >= 12) score++;
   if (password.length >= 20) score++;
   if (/[a-z]/.test(password) && /[A-Z]/.test(password)) score++;
   if (/\d/.test(password)) score++;
   if (/[^a-zA-Z0-9]/.test(password)) score++;
 
-  if (score <= 2) return { label: "Weak", color: "bg-red-500", width: "w-1/4" };
-  if (score === 3) return { label: "Fair", color: "bg-yellow-500", width: "w-2/4" };
-  if (score === 4) return { label: "Strong", color: "bg-blue-500", width: "w-3/4" };
+  if (score <= 2) return { label: "Weak", color: "bg-red-500", width: "w-1/6" };
+  if (score === 3) return { label: "Fair", color: "bg-yellow-500", width: "w-2/6" };
+  if (score === 4) return { label: "Good", color: "bg-orange-500", width: "w-3/6" };
+  if (score === 5) return { label: "Strong", color: "bg-blue-500", width: "w-4/6" };
   return { label: "Very Strong", color: "bg-green-500", width: "w-full" };
 }
 
@@ -129,7 +131,7 @@ export default function PasswordGenerator({ t }: PasswordGeneratorProps) {
               ))}
             </select>
           </div>
-          <Button onClick={generate} size="sm">
+          <Button onClick={generate} size="lg" className="text-base px-8 py-3 font-semibold">
             {toolT.generate}
           </Button>
         </div>

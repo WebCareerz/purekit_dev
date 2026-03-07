@@ -201,7 +201,7 @@ export default function ImageToPdf({ t }: ImageToPdfProps) {
           {images.map((img, i) => (
             <div key={img.id} className="relative group border border-border rounded-lg overflow-hidden bg-muted/20">
               <img src={img.url} alt="" className="w-full h-32 object-cover" />
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-1">
+              <div className="absolute inset-0 bg-black/50 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex items-center justify-center gap-1">
                 <button
                   onClick={() => moveImage(i, -1)}
                   disabled={i === 0}
