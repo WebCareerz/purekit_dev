@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
+import { SegmentedControl } from "@/components/ui/segmented-control";
 import CopyButton from "./CopyButton";
 
 interface LoremIpsumGeneratorProps {
@@ -86,44 +87,48 @@ export default function LoremIpsumGenerator({ t }: LoremIpsumGeneratorProps) {
     <div className="space-y-4">
       {/* Controls */}
       <div className="border border-border rounded-lg p-4 bg-muted/30 space-y-4">
-        <div className="flex flex-col sm:flex-row flex-wrap gap-4">
+        <div className="flex flex-col gap-3">
           {/* Mode */}
-          <div className="flex items-center gap-2">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2">
             <label className="text-sm font-medium">{toolT.type}</label>
-            <select
+            <SegmentedControl
+              options={[
+                { label: toolT.paragraphs, value: "paragraphs" as Mode },
+                { label: toolT.sentences, value: "sentences" as Mode },
+                { label: toolT.words, value: "words" as Mode },
+              ]}
               value={mode}
-              onChange={(e) => setMode(e.target.value as Mode)}
-              className="rounded border border-border bg-background px-2 py-1 text-sm"
+              onChange={setMode}
+              size="sm"
+            />
+          </div>
+
+          {/* Count & Start with Lorem */}
+          <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3">
+            <div className="flex items-center gap-2">
+              <label className="text-sm font-medium">{toolT.count}</label>
+              <input
+                type="number"
+                min={1}
+                max={100}
+                value={count}
+                onChange={(e) => setCount(Math.max(1, Math.min(100, Number(e.target.value))))}
+                className="w-20 rounded border border-border bg-background px-2 py-1 text-sm"
+              />
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setStartWithLorem(!startWithLorem)}
+              className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-colors ${
+                startWithLorem
+                  ? "bg-primary text-primary-foreground"
+                  : "bg-muted text-muted-foreground hover:text-foreground"
+              }`}
             >
-              <option value="paragraphs">{toolT.paragraphs}</option>
-              <option value="sentences">{toolT.sentences}</option>
-              <option value="words">{toolT.words}</option>
-            </select>
+              {toolT.startWithLorem}
+            </button>
           </div>
-
-          {/* Count */}
-          <div className="flex items-center gap-2">
-            <label className="text-sm font-medium">{toolT.count}</label>
-            <input
-              type="number"
-              min={1}
-              max={100}
-              value={count}
-              onChange={(e) => setCount(Math.max(1, Math.min(100, Number(e.target.value))))}
-              className="w-20 rounded border border-border bg-background px-2 py-1 text-sm"
-            />
-          </div>
-
-          {/* Start with Lorem */}
-          <label className="flex items-center gap-2 text-sm cursor-pointer">
-            <input
-              type="checkbox"
-              checked={startWithLorem}
-              onChange={(e) => setStartWithLorem(e.target.checked)}
-              className="rounded"
-            />
-            {toolT.startWithLorem}
-          </label>
         </div>
 
         <Button onClick={generate} size="sm">

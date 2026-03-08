@@ -119,38 +119,26 @@ export default function TextCaseConverter({ t }: TextCaseConverterProps) {
     <div className="space-y-4">
       {/* Toolbar */}
       <div className="flex flex-col gap-3 border border-border rounded-lg px-3 py-2 bg-muted/30">
-        <div className="flex flex-col sm:flex-row gap-2">
-          <span className="text-xs text-muted-foreground self-center">{toolT.textCases}</span>
-          <div className="flex flex-wrap gap-2">
-            {caseOptions.map((option) => (
-              <Button
-                key={option.value}
-                onClick={() => handleConvert(option.value)}
-                size="sm"
-                variant={caseType === option.value ? "default" : "outline"}
-              >
-                {option.label}
-              </Button>
-            ))}
-          </div>
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+          <span className="text-xs text-muted-foreground shrink-0">{toolT.textCases}</span>
+          <SegmentedControl
+            options={caseOptions}
+            value={caseType}
+            onChange={handleConvert}
+            size="sm"
+          />
         </div>
 
         <div className="h-px bg-border" />
 
-        <div className="flex flex-col sm:flex-row gap-2">
-          <span className="text-xs text-muted-foreground self-center">{toolT.programmingCases}</span>
-          <div className="flex flex-wrap gap-2">
-            {programmingCaseOptions.map((option) => (
-              <Button
-                key={option.value}
-                onClick={() => handleConvert(option.value)}
-                size="sm"
-                variant={caseType === option.value ? "default" : "outline"}
-              >
-                {option.label}
-              </Button>
-            ))}
-          </div>
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+          <span className="text-xs text-muted-foreground shrink-0">{toolT.programmingCases}</span>
+          <SegmentedControl
+            options={programmingCaseOptions}
+            value={caseType}
+            onChange={handleConvert}
+            size="sm"
+          />
         </div>
 
         <div className="h-px bg-border" />

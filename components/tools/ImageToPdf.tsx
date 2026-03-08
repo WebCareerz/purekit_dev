@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useRef } from "react";
 import { Button } from "@/components/ui/button";
+import { SegmentedControl } from "@/components/ui/segmented-control";
 
 interface ImageToPdfProps {
   t: Record<string, unknown>;
@@ -167,15 +168,16 @@ export default function ImageToPdf({ t }: ImageToPdfProps) {
         <div className="border border-border rounded-lg p-4 bg-muted/30 flex flex-col sm:flex-row flex-wrap gap-4">
           <div className="flex items-center gap-2">
             <label className="text-sm font-medium">{toolT.pageSize}</label>
-            <select
+            <SegmentedControl
+              options={[
+                { label: "A4", value: "a4" as const },
+                { label: "Letter", value: "letter" as const },
+                { label: toolT.fitToImage, value: "fit" as const },
+              ]}
               value={pageSize}
-              onChange={(e) => setPageSize(e.target.value as "fit" | "a4" | "letter")}
-              className="rounded border border-border bg-background px-2 py-1 text-sm"
-            >
-              <option value="a4">A4</option>
-              <option value="letter">Letter</option>
-              <option value="fit">{toolT.fitToImage}</option>
-            </select>
+              onChange={(v) => setPageSize(v as "fit" | "a4" | "letter")}
+              size="sm"
+            />
           </div>
           <div className="flex items-center gap-2">
             <label className="text-sm font-medium">{toolT.margin}</label>

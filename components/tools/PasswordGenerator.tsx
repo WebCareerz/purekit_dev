@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
+import { SegmentedControl } from "@/components/ui/segmented-control";
 import CopyButton from "./CopyButton";
 
 interface PasswordGeneratorProps {
@@ -11,6 +12,7 @@ interface PasswordGeneratorProps {
 type CommonT = Record<string, string>;
 
 const LENGTHS = [8, 12, 16, 20, 24, 32, 48, 64];
+const QUANTITIES = [1, 5, 10, 25, 50];
 
 const CHARSETS = {
   uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -81,39 +83,31 @@ export default function PasswordGenerator({ t }: PasswordGeneratorProps) {
       {/* Controls */}
       <div className="border border-border rounded-lg p-4 bg-muted/30 space-y-4">
         {/* Length */}
-        <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-          <label className="text-sm font-medium w-24">{toolT.length}</label>
-          <input
-            type="range"
-            min={4}
-            max={128}
+        <div className="flex flex-col gap-2">
+          <label className="text-sm font-medium">{toolT.length}</label>
+          <SegmentedControl
+            options={LENGTHS.map((l) => ({ label: String(l), value: l }))}
             value={length}
-            onChange={(e) => setLength(Number(e.target.value))}
-            className="flex-1"
+            onChange={setLength}
+            size="sm"
           />
-          <select
-            value={length}
-            onChange={(e) => setLength(Number(e.target.value))}
-            className="w-20 rounded border border-border bg-background px-2 py-1 text-sm"
-          >
-            {LENGTHS.map((l) => (
-              <option key={l} value={l}>{l}</option>
-            ))}
-          </select>
         </div>
 
         {/* Charset Options */}
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-2">
           {Object.keys(CHARSETS).map((key) => (
-            <label key={key} className="flex items-center gap-2 text-sm cursor-pointer">
-              <input
-                type="checkbox"
-                checked={options[key as keyof typeof options]}
-                onChange={() => toggleOption(key)}
-                className="rounded"
-              />
+            <button
+              key={key}
+              type="button"
+              onClick={() => toggleOption(key)}
+              className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-colors ${
+                options[key as keyof typeof options]
+                  ? "bg-primary text-primary-foreground"
+                  : "bg-muted text-muted-foreground hover:text-foreground"
+              }`}
+            >
               {toolT[key]}
-            </label>
+            </button>
           ))}
         </div>
 
@@ -121,15 +115,12 @@ export default function PasswordGenerator({ t }: PasswordGeneratorProps) {
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
           <div className="flex items-center gap-2">
             <label className="text-sm font-medium">{toolT.quantity}</label>
-            <select
+            <SegmentedControl
+              options={QUANTITIES.map((q) => ({ label: String(q), value: q }))}
               value={quantity}
-              onChange={(e) => setQuantity(Number(e.target.value))}
-              className="rounded border border-border bg-background px-2 py-1 text-sm"
-            >
-              {[1, 5, 10, 25, 50].map((q) => (
-                <option key={q} value={q}>{q}</option>
-              ))}
-            </select>
+              onChange={setQuantity}
+              size="sm"
+            />
           </div>
           <Button onClick={generate} size="lg" className="text-base px-8 py-3 font-semibold">
             {toolT.generate}
