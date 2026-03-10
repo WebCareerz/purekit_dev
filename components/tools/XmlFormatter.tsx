@@ -153,7 +153,7 @@ export default function XmlFormatter({ t }: XmlFormatterProps) {
         <div className="space-y-2">
           <div className="flex items-center justify-between">
             <label className="text-sm font-medium">{common.output}</label>
-            <CopyButton text={output} disabled={!output} />
+            <CopyButton text={output} copyLabel={common.copy} copiedLabel={common.copied} />
           </div>
           <Textarea
             value={output}
