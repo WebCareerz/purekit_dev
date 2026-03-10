@@ -15,7 +15,7 @@ export default function HtmlToMarkdown({ t }: HtmlToMarkdownProps) {
   const [input, setInput] = useState("");
   const [output, setOutput] = useState("");
   const [error, setError] = useState("");
-  const turndownRef = useRef<typeof import("turndown").default | null>(null);
+  const turndownRef = useRef<any>(null);
 
   const getTurndown = useCallback(async () => {
     if (turndownRef.current) return turndownRef.current;
