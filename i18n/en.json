@@ -34,7 +34,7 @@
     "download": "Download",
     "reset": "Reset",
     "swap": "Swap",
-    "processedLocally": "All processing happens in your browser. Your data never leaves your device.",
+    "processedLocally": "100% Client-Side • Privacy Protected",
     "relatedTools": "Related Tools",
     "faq": "Frequently Asked Questions",
     "features": "Features",
@@ -2235,6 +2235,177 @@
         {
           "question": "What is GFM (GitHub Flavored Markdown)?",
           "answer": "GFM is an extension of standard Markdown used by GitHub. It adds support for tables, task lists (checkboxes), strikethrough text, and autolinked URLs, among other features."
+        }
+      ]
+    },
+    "html-to-markdown": {
+      "name": "HTML to Markdown Converter",
+      "shortDescription": "Convert HTML to clean Markdown format with support for tables, code blocks, and links.",
+      "metaTitle": "HTML to Markdown Converter - Free Online Tool | PureKit",
+      "metaDescription": "Convert HTML to Markdown instantly in your browser. Preserves structure for tables, code blocks, links, images, and more. Privacy-first with no server uploads.",
+      "keywords": [
+        "html to markdown",
+        "html converter",
+        "markdown export",
+        "html to md",
+        "convert html",
+        "web scraping",
+        "markdown format"
+      ],
+      "htmlInput": "HTML Input",
+      "markdownOutput": "Markdown Output",
+      "htmlPlaceholder": "Paste your HTML here...",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert HTML to clean, readable Markdown format",
+          "Preserves tables, code blocks, links, images, and text formatting",
+          "Real-time conversion as you type or paste",
+          "One-click copy Markdown output to clipboard",
+          "Handles complex HTML structures including nested elements"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the HTML to Markdown Converter",
+        "steps": [
+          "Paste your HTML code into the left input area",
+          "View the converted Markdown output on the right in real time",
+          "Click \"Copy\" to copy the Markdown to your clipboard",
+          "Use the output in README files, documentation, or any Markdown editor"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What HTML elements are supported?",
+          "answer": "This tool supports most standard HTML elements including headings (h1-h6), paragraphs, links, images, lists (ul/ol), tables, code blocks (pre/code), blockquotes, and text formatting (bold, italic, strikethrough)."
+        },
+        {
+          "question": "Is my HTML data sent to a server?",
+          "answer": "No. All conversion happens entirely in your browser using the Turndown library. Your HTML content is never uploaded or sent anywhere."
+        },
+        {
+          "question": "Can I convert entire web pages?",
+          "answer": "Yes, you can paste the HTML source of a web page. However, note that complex styling, scripts, and interactive elements will be stripped out, leaving only the semantic content structure."
+        }
+      ]
+    },
+    "xml-formatter": {
+      "name": "XML Formatter & Validator",
+      "shortDescription": "Format, validate, and minify XML with syntax highlighting and error detection.",
+      "metaTitle": "XML Formatter & Validator - Free Online Tool | PureKit",
+      "metaDescription": "Format and validate XML online for free. Beautify or minify XML with customizable indentation. Real-time syntax checking and error detection. Privacy-first browser tool.",
+      "keywords": [
+        "xml formatter",
+        "xml validator",
+        "xml beautifier",
+        "xml minifier",
+        "format xml",
+        "validate xml",
+        "xml pretty print"
+      ],
+      "indentation": "Indentation",
+      "spaces2": "2 Spaces",
+      "spaces4": "4 Spaces",
+      "tab": "Tab",
+      "xmlPlaceholder": "Paste or type your XML here...",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Format and beautify XML with customizable indentation (2 spaces, 4 spaces, or tabs)",
+          "Validate XML syntax with instant error detection and detailed messages",
+          "Minify XML to reduce file size by removing whitespace",
+          "Real-time processing as you type",
+          "Browser-based validation using native DOMParser"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the XML Formatter",
+        "steps": [
+          "Paste your XML data into the left input area",
+          "Choose \"Format\" to beautify or \"Minify\" to compress",
+          "Adjust indentation style if formatting (2 spaces, 4 spaces, or tab)",
+          "View validation status — valid XML shows green, errors show red with details",
+          "Click \"Copy\" to copy the formatted XML to your clipboard"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Is my XML data safe?",
+          "answer": "Yes, all XML processing happens in your browser using the native DOMParser API and xml-formatter library. Your data never leaves your device."
+        },
+        {
+          "question": "What XML features are supported?",
+          "answer": "This tool supports standard XML 1.0 including elements, attributes, CDATA sections, comments, and processing instructions. Namespaces are also supported."
+        },
+        {
+          "question": "Can I validate XML with schemas (XSD)?",
+          "answer": "No, this tool only validates well-formed XML syntax. It does not validate against XML schemas (XSD) or DTDs. It checks that tags are properly nested and closed."
+        }
+      ]
+    },
+    "favicon-generator": {
+      "name": "Favicon Generator",
+      "shortDescription": "Generate favicons from text or emoji in multiple sizes with customizable colors and styles.",
+      "metaTitle": "Favicon Generator - Create Icons for Your Website | PureKit",
+      "metaDescription": "Generate favicons from text or emoji in all sizes (16x16 to 512x512). Customize colors, border radius, and font size. Download PNG/ICO and get HTML meta tags. Free and browser-based.",
+      "keywords": [
+        "favicon generator",
+        "favicon maker",
+        "icon generator",
+        "emoji favicon",
+        "website icon",
+        "browser icon",
+        "ico generator",
+        "apple touch icon"
+      ],
+      "text": "Text or Emoji",
+      "textPlaceholder": "🚀",
+      "textHint": "Enter text (1-4 characters) or an emoji",
+      "backgroundColor": "Background Color",
+      "fontSize": "Font Size",
+      "borderRadius": "Border Radius",
+      "preview": "Preview",
+      "downloadAll": "Download All Sizes",
+      "htmlMetaTags": "HTML Meta Tags",
+      "htmlHint": "Copy and paste these tags into your HTML <head> section",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Generate favicons from text, letters, or emoji characters",
+          "Customize background color, font size, and border radius",
+          "Generate all standard sizes: 16x16, 32x32, 48x48, 180x180, 512x512",
+          "Download individual sizes or all at once",
+          "Get ready-to-use HTML meta tags for quick integration",
+          "Real-time preview of all icon sizes"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Favicon Generator",
+        "steps": [
+          "Enter text (1-4 characters) or paste an emoji into the text field",
+          "Choose a background color using the color picker or enter a hex code",
+          "Adjust font size and border radius sliders to customize appearance",
+          "Preview all icon sizes in real time on the right",
+          "Click \"Download All Sizes\" to download all favicons as PNG files",
+          "Copy the generated HTML meta tags and paste them into your website's <head> section"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What file format are the favicons?",
+          "answer": "All icons are generated as PNG files. You can convert them to .ico format using a separate converter if needed, but modern browsers support PNG favicons."
+        },
+        {
+          "question": "What sizes should I use for my website?",
+          "answer": "For best compatibility: use 16x16 and 32x32 for browser tabs, 48x48 for desktop shortcuts, 180x180 for Apple touch icons, and 512x512 for high-res displays and PWAs."
+        },
+        {
+          "question": "Can I use emoji as favicons?",
+          "answer": "Yes! Emoji work great for favicons. Just paste an emoji into the text field. Note that emoji appearance may vary across different devices and operating systems."
+        },
+        {
+          "question": "Are the generated icons browser-compatible?",
+          "answer": "Yes, PNG favicons are supported by all modern browsers. The provided HTML meta tags cover compatibility for Chrome, Firefox, Safari, Edge, and mobile browsers."
         }
       ]
     }

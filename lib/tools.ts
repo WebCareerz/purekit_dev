@@ -14,7 +14,7 @@ export interface CategoryDefinition {
 export const categories: CategoryDefinition[] = [
   {
     key: "formatters",
-    tools: ["json-formatter", "sql-formatter", "html-formatter", "javascript-beautifier", "css-beautifier"],
+    tools: ["json-formatter", "sql-formatter", "html-formatter", "xml-formatter", "javascript-beautifier", "css-beautifier"],
   },
   {
     key: "encodersDecoders",
@@ -22,11 +22,11 @@ export const categories: CategoryDefinition[] = [
   },
   {
     key: "generators",
-    tools: ["uuid-generator", "qr-code-generator", "mock-data-generator", "cron-expression-builder", "password-generator", "lorem-ipsum-generator", "placeholder-image-generator"],
+    tools: ["uuid-generator", "qr-code-generator", "favicon-generator", "mock-data-generator", "cron-expression-builder", "password-generator", "lorem-ipsum-generator", "placeholder-image-generator"],
   },
   {
     key: "converters",
-    tools: ["unix-timestamp-converter", "color-converter", "yaml-json-toml-converter", "json-to-csv-converter", "number-base-converter", "markdown-to-html"],
+    tools: ["unix-timestamp-converter", "color-converter", "yaml-json-toml-converter", "json-to-csv-converter", "number-base-converter", "markdown-to-html", "html-to-markdown"],
   },
   {
     key: "textTools",
@@ -291,6 +291,27 @@ export const tools: Record<string, ToolDefinition> = {
     icon: "FileCode",
     relatedSlugs: ["markdown-preview", "html-formatter", "diff-checker"],
     searchTerms: ["markdown", "html", "convert", "gfm", "render", "export", "md"],
+  },
+  "html-to-markdown": {
+    slug: "html-to-markdown",
+    categoryKey: "converters",
+    icon: "FileCode2",
+    relatedSlugs: ["markdown-to-html", "html-formatter", "markdown-preview"],
+    searchTerms: ["html", "markdown", "convert", "md", "export", "markup"],
+  },
+  "xml-formatter": {
+    slug: "xml-formatter",
+    categoryKey: "formatters",
+    icon: "FileX",
+    relatedSlugs: ["html-formatter", "json-formatter", "yaml-json-toml-converter"],
+    searchTerms: ["xml", "format", "beautify", "minify", "pretty", "validate", "indent"],
+  },
+  "favicon-generator": {
+    slug: "favicon-generator",
+    categoryKey: "generators",
+    icon: "Sparkles",
+    relatedSlugs: ["qr-code-generator", "placeholder-image-generator", "image-format-converter"],
+    searchTerms: ["favicon", "icon", "generate", "emoji", "logo", "website", "browser", "ico"],
   },
 };
 
