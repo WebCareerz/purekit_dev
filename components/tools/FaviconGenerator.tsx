@@ -174,22 +174,25 @@ export default function FaviconGenerator({ t }: FaviconGeneratorProps) {
         <div className="space-y-4">
           <label className="text-sm font-medium">{toolT.preview}</label>
           <div className="flex flex-wrap gap-4 items-end">
-            {SIZES.map((size) => (
-              <div key={size} className="flex flex-col items-center gap-1">
-                <div
-                  style={{
-                    width: Math.min(size, 64),
-                    height: Math.min(size, 64),
-                    backgroundImage: `url(${previews[size]})`,
-                    backgroundSize: "contain",
-                    backgroundRepeat: "no-repeat",
-                    border: "1px solid var(--border)",
-                    borderRadius: "4px",
-                  }}
-                />
-                <span className="text-xs text-muted-foreground">{size}×{size}</span>
-              </div>
-            ))}
+            {SIZES.map((size) => {
+              const displaySize = size <= 32 ? 48 : Math.min(size, 64);
+              return (
+                <div key={size} className="flex flex-col items-center gap-1">
+                  <div
+                    style={{
+                      width: displaySize,
+                      height: displaySize,
+                      backgroundImage: `url(${previews[size]})`,
+                      backgroundSize: "contain",
+                      backgroundRepeat: "no-repeat",
+                      border: "1px solid var(--border)",
+                      borderRadius: "4px",
+                    }}
+                  />
+                  <span className="text-xs font-medium text-muted-foreground">{size}×{size}</span>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

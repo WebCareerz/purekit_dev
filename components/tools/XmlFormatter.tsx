@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { SegmentedControl } from "@/components/ui/segmented-control";
 import CopyButton from "./CopyButton";
@@ -131,14 +132,14 @@ export default function XmlFormatter({ t }: XmlFormatterProps) {
         <div className="space-y-2">
           <div className="flex items-center justify-between">
             <label className="text-sm font-medium">{common.input}</label>
-            <div className="flex gap-2">
-              <button
-                onClick={() => setInput("")}
-                className="text-xs text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {common.clear}
-              </button>
-            </div>
+            <Button
+              onClick={() => setInput("")}
+              size="sm"
+              variant="ghost"
+              className="h-7 text-xs"
+            >
+              {common.clear}
+            </Button>
           </div>
           <Textarea
             value={input}
@@ -158,7 +159,7 @@ export default function XmlFormatter({ t }: XmlFormatterProps) {
           <Textarea
             value={output}
             readOnly
-            placeholder={common.outputPlaceholder}
+            placeholder={error ? "" : common.outputPlaceholder}
             className="font-mono text-sm min-h-[200px] sm:min-h-[400px] resize-none bg-muted/50"
             spellCheck={false}
           />
