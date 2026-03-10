@@ -22,11 +22,11 @@ export const categories: CategoryDefinition[] = [
   },
   {
     key: "generators",
-    tools: ["uuid-generator", "qr-code-generator", "mock-data-generator", "cron-expression-builder", "password-generator", "lorem-ipsum-generator"],
+    tools: ["uuid-generator", "qr-code-generator", "mock-data-generator", "cron-expression-builder", "password-generator", "lorem-ipsum-generator", "placeholder-image-generator"],
   },
   {
     key: "converters",
-    tools: ["unix-timestamp-converter", "color-converter", "yaml-json-toml-converter", "json-to-csv-converter"],
+    tools: ["unix-timestamp-converter", "color-converter", "yaml-json-toml-converter", "json-to-csv-converter", "number-base-converter", "markdown-to-html"],
   },
   {
     key: "textTools",
@@ -270,6 +270,27 @@ export const tools: Record<string, ToolDefinition> = {
     icon: "FileOutput",
     relatedSlugs: ["pdf-merge", "image-compressor", "image-format-converter"],
     searchTerms: ["image", "pdf", "convert", "jpg", "png", "photo", "document", "export"],
+  },
+  "placeholder-image-generator": {
+    slug: "placeholder-image-generator",
+    categoryKey: "generators",
+    icon: "Image",
+    relatedSlugs: ["image-format-converter", "image-compressor", "qr-code-generator"],
+    searchTerms: ["placeholder", "image", "generate", "dummy", "banner", "size", "avatar", "thumbnail", "og"],
+  },
+  "number-base-converter": {
+    slug: "number-base-converter",
+    categoryKey: "converters",
+    icon: "Binary",
+    relatedSlugs: ["color-converter", "base64-encode-decode", "hash-generator"],
+    searchTerms: ["binary", "octal", "decimal", "hex", "hexadecimal", "base", "convert", "number", "radix"],
+  },
+  "markdown-to-html": {
+    slug: "markdown-to-html",
+    categoryKey: "converters",
+    icon: "FileCode",
+    relatedSlugs: ["markdown-preview", "html-formatter", "diff-checker"],
+    searchTerms: ["markdown", "html", "convert", "gfm", "render", "export", "md"],
   },
 };
 

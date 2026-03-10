@@ -2054,6 +2054,189 @@
           "answer": "No. All processing happens entirely in your browser using JavaScript. Your images are never uploaded to any server, making this tool completely private and secure."
         }
       ]
+    },
+    "placeholder-image-generator": {
+      "name": "Placeholder Image Generator",
+      "shortDescription": "Generate placeholder images with custom size, color, text, and format. Download as PNG, WebP, or SVG.",
+      "metaTitle": "Placeholder Image Generator - Free Online Tool | PureKit",
+      "metaDescription": "Generate placeholder images instantly with custom dimensions, background color, text, and format. Supports PNG, WebP, and SVG. Free, browser-based, no upload required.",
+      "keywords": [
+        "placeholder image",
+        "dummy image",
+        "placeholder generator",
+        "image generator",
+        "banner placeholder",
+        "og image",
+        "thumbnail generator"
+      ],
+      "width": "Width (px)",
+      "height": "Height (px)",
+      "bgColor": "Background Color",
+      "textColor": "Text Color",
+      "customText": "Custom Text",
+      "format": "Format",
+      "download": "Download Image",
+      "presets": "Preset Sizes",
+      "preview": "Preview",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Generate placeholder images with custom width and height (up to 4096px)",
+          "Choose background color and text color with color picker",
+          "Add custom text or auto-display dimensions",
+          "Export as PNG, WebP, or SVG format",
+          "Preset sizes for common use cases: social media, ads, avatars, and more",
+          "Everything runs in your browser — no server upload needed"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Placeholder Image Generator",
+        "steps": [
+          "Set the image dimensions (width and height) or pick a preset size",
+          "Customize the background color and text color using the color pickers",
+          "Optionally enter custom text (defaults to showing dimensions)",
+          "Select your preferred output format: PNG, WebP, or SVG",
+          "Click \"Download Image\" to save the generated placeholder"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What sizes are available as presets?",
+          "answer": "PureKit includes presets for common sizes: 150×150 (avatar), 300×250 (medium rectangle ad), 728×90 (leaderboard ad), 1200×630 (OG image), 1200×675 (Twitter card), 1080×1080 (Instagram), 1920×1080 (HD), 375×667 (mobile), and 32×32 (favicon)."
+        },
+        {
+          "question": "Is the image generated on the server?",
+          "answer": "No. The image is generated entirely in your browser using the HTML Canvas API. Nothing is uploaded to any server, making it fast and private."
+        },
+        {
+          "question": "What is the maximum image size?",
+          "answer": "You can generate images up to 4096×4096 pixels. Larger sizes depend on your browser and device memory."
+        },
+        {
+          "question": "What is the difference between PNG, WebP, and SVG?",
+          "answer": "PNG is widely supported and lossless. WebP offers smaller file sizes with good quality. SVG is vector-based, scales to any size without quality loss, and is ideal for web use."
+        }
+      ]
+    },
+    "number-base-converter": {
+      "name": "Number Base Converter",
+      "shortDescription": "Convert numbers between Binary, Octal, Decimal, and Hexadecimal instantly.",
+      "metaTitle": "Number Base Converter - Binary, Octal, Decimal, Hex | PureKit",
+      "metaDescription": "Convert numbers between binary, octal, decimal, and hexadecimal in real time. Supports BigInt for large numbers. Free online tool, no signup required.",
+      "keywords": [
+        "number base converter",
+        "binary converter",
+        "hex converter",
+        "decimal to binary",
+        "binary to hex",
+        "octal converter",
+        "radix converter",
+        "base converter"
+      ],
+      "binary": "Binary (Base 2)",
+      "octal": "Octal (Base 8)",
+      "decimal": "Decimal (Base 10)",
+      "hexadecimal": "Hexadecimal (Base 16)",
+      "showSteps": "Show Conversion Steps",
+      "hideSteps": "Hide Steps",
+      "conversionSteps": "Conversion Steps",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert between Binary (base 2), Octal (base 8), Decimal (base 10), and Hexadecimal (base 16)",
+          "Real-time conversion — type in any field and see all other bases update instantly",
+          "BigInt support for arbitrarily large numbers",
+          "Optional step-by-step conversion explanation",
+          "Input validation with clear error messages",
+          "One-click copy for any result"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Number Base Converter",
+        "steps": [
+          "Type a number in any of the four input fields (Binary, Octal, Decimal, or Hex)",
+          "The other three fields will update automatically with the converted values",
+          "Click the copy button next to any result to copy it to your clipboard",
+          "Toggle \"Show Conversion Steps\" to see how the conversion is performed"
+        ]
+      },
+      "faq": [
+        {
+          "question": "How large of a number can I convert?",
+          "answer": "This tool uses JavaScript BigInt, so there is no practical limit on number size. You can convert numbers with hundreds or thousands of digits."
+        },
+        {
+          "question": "Does it support negative numbers?",
+          "answer": "Yes, you can enter negative decimal numbers (e.g., -42). The tool will show the negative representation in all bases."
+        },
+        {
+          "question": "What characters are valid for each base?",
+          "answer": "Binary: 0-1. Octal: 0-7. Decimal: 0-9 (and optional leading minus). Hexadecimal: 0-9 and A-F (case-insensitive)."
+        },
+        {
+          "question": "Is my data processed on a server?",
+          "answer": "No. All conversions happen entirely in your browser using JavaScript. No data is sent anywhere."
+        }
+      ]
+    },
+    "markdown-to-html": {
+      "name": "Markdown to HTML Converter",
+      "shortDescription": "Convert Markdown to HTML in real time with live preview and source code view.",
+      "metaTitle": "Markdown to HTML Converter - Free Online Tool | PureKit",
+      "metaDescription": "Convert Markdown to HTML instantly with live preview. Supports GitHub Flavored Markdown (GFM), tables, task lists, and code blocks. Copy or download the HTML output.",
+      "keywords": [
+        "markdown to html",
+        "markdown converter",
+        "md to html",
+        "markdown render",
+        "gfm",
+        "github markdown",
+        "markdown export"
+      ],
+      "markdownInput": "Markdown Input",
+      "inputPlaceholder": "Type or paste your Markdown here...",
+      "preview": "Preview",
+      "htmlSource": "HTML Source",
+      "downloadHtml": "Download",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Real-time Markdown to HTML conversion as you type",
+          "Side-by-side layout: Markdown editor on the left, output on the right",
+          "Toggle between rendered preview and raw HTML source code",
+          "Full GitHub Flavored Markdown (GFM) support: tables, task lists, strikethrough, and more",
+          "One-click copy HTML to clipboard",
+          "Download complete HTML file with basic styling"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Markdown to HTML Converter",
+        "steps": [
+          "Type or paste your Markdown content in the left editor panel",
+          "View the rendered HTML preview on the right in real time",
+          "Switch to \"HTML Source\" to see the raw HTML code",
+          "Click the copy button to copy the HTML output to your clipboard",
+          "Click \"Download\" to save a complete, styled HTML file"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What Markdown features are supported?",
+          "answer": "This tool supports GitHub Flavored Markdown (GFM) including: headings, bold, italic, strikethrough, links, images, code blocks with syntax highlighting, tables, task lists, blockquotes, and ordered/unordered lists."
+        },
+        {
+          "question": "Is the conversion done on the server?",
+          "answer": "No. Everything is processed in your browser using the marked.js library. Your content is never sent to any server."
+        },
+        {
+          "question": "Can I use the generated HTML in my website?",
+          "answer": "Yes! You can copy the raw HTML source and use it anywhere. The downloaded HTML file includes basic responsive styling that you can customize."
+        },
+        {
+          "question": "What is GFM (GitHub Flavored Markdown)?",
+          "answer": "GFM is an extension of standard Markdown used by GitHub. It adds support for tables, task lists (checkboxes), strikethrough text, and autolinked URLs, among other features."
+        }
+      ]
     }
   }
 }
