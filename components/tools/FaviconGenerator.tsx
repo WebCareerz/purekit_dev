@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useCallback, useRef, useEffect } from "react";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 
@@ -112,11 +111,13 @@ export default function FaviconGenerator({ t }: FaviconGeneratorProps) {
         <div className="space-y-4">
           <div className="space-y-2">
             <label className="text-sm font-medium">{toolT.text}</label>
-            <Input
+            <input
+              type="text"
               value={text}
               onChange={(e) => setText(e.target.value)}
               placeholder={toolT.textPlaceholder}
               maxLength={4}
+              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
             />
             <p className="text-xs text-muted-foreground">{toolT.textHint}</p>
           </div>
@@ -124,18 +125,18 @@ export default function FaviconGenerator({ t }: FaviconGeneratorProps) {
           <div className="space-y-2">
             <label className="text-sm font-medium">{toolT.backgroundColor}</label>
             <div className="flex gap-2">
-              <Input
+              <input
                 type="color"
                 value={bgColor}
                 onChange={(e) => setBgColor(e.target.value)}
-                className="w-20 h-10 p-1 cursor-pointer"
+                className="w-20 h-10 p-1 cursor-pointer rounded-md border border-input"
               />
-              <Input
+              <input
                 type="text"
                 value={bgColor}
                 onChange={(e) => setBgColor(e.target.value)}
                 placeholder="#3b82f6"
-                className="flex-1 font-mono"
+                className="flex-1 font-mono flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
               />
             </div>
           </div>
