@@ -177,7 +177,7 @@ export const tools: Record<string, ToolDefinition> = {
     slug: "regex-tester",
     categoryKey: "textTools",
     icon: "Regex",
-    relatedSlugs: ["diff-checker", "json-formatter", "markdown-preview"],
+    relatedSlugs: ["text-case-converter", "word-counter", "diff-checker"],
     searchTerms: ["regex", "regular expression", "test", "match", "pattern", "replace", "capture", "group"],
   },
   "cron-expression-builder": {

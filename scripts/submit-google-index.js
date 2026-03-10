@@ -28,7 +28,7 @@ const os = require('os');
 const { URL } = require('url');
 
 // 代理配置 - 根据你的代理设置修改，设为 null 则不使用代理
-const PROXY_URL = process.env.HTTPS_PROXY || process.env.https_proxy || 'http://127.0.0.1:21467';
+const PROXY_URL = null; // process.env.HTTPS_PROXY || process.env.https_proxy || 'http://127.0.0.1:21467';
 
 // 配置
 const CREDENTIALS_PATH = path.join(__dirname, 'google-credentials.json');

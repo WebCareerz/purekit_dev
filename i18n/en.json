@@ -241,7 +241,10 @@
         "base64 converter",
         "base64 online",
         "text to base64",
-        "base64 to text"
+        "base64 to text",
+        "base64 image encoder",
+        "base64url",
+        "file to base64"
       ],
       "encodePlaceholder": "Enter text to encode to Base64...",
       "decodePlaceholder": "Enter Base64 string to decode...",
@@ -278,6 +281,18 @@
         {
           "question": "Does this support UTF-8 characters?",
           "answer": "Yes. This tool properly handles UTF-8 text including international characters, accented letters, CJK characters, and emoji. It uses the TextEncoder/TextDecoder APIs for correct Unicode handling."
+        },
+        {
+          "question": "How do I encode a file to Base64?",
+          "answer": "In JavaScript, use the FileReader API with readAsDataURL() to convert a file into a Base64 data URI. This is useful for embedding images directly in HTML or CSS, or for sending file attachments inside JSON payloads to APIs that don't support multipart uploads."
+        },
+        {
+          "question": "What is Base64url encoding?",
+          "answer": "Base64url is a URL-safe variant of Base64 that replaces + with - and / with _, and omits padding (=). It's used in JSON Web Tokens (JWT), URL query parameters, and filenames where standard Base64 characters would cause issues."
+        },
+        {
+          "question": "Why does Base64 increase data size?",
+          "answer": "Base64 encodes every 3 bytes of binary data into 4 ASCII characters, resulting in roughly 33% size increase. This overhead makes it unsuitable for transferring large files. For large data, use direct binary transfer (e.g., multipart form upload) and reserve Base64 for small payloads like icons or tokens."
         }
       ]
     },
@@ -401,7 +416,10 @@
         "sha-1",
         "sha-512",
         "online hash",
-        "hash calculator"
+        "hash calculator",
+        "sha256 online",
+        "file hash check",
+        "md5 checksum"
       ],
       "algorithm": "Algorithm",
       "inputPlaceholder": "Enter text to hash...",
@@ -437,6 +455,18 @@
         {
           "question": "Is my data safe when generating hashes?",
           "answer": "Yes. All hashing is performed entirely in your browser using the Web Crypto API (for SHA) and a JavaScript implementation (for MD5). Your text is never transmitted to any server."
+        },
+        {
+          "question": "Can I reverse a hash to get the original text?",
+          "answer": "No. Hash functions are one-way by design — there is no mathematical way to reverse them. Attackers may use rainbow tables (precomputed hash-to-text lookups) or brute-force attempts, but a strong input with sufficient length and randomness is practically irreversible."
+        },
+        {
+          "question": "What is the difference between hashing and encryption?",
+          "answer": "Hashing is one-way: it produces a fixed-size digest and cannot be reversed. Encryption is two-way: data is transformed with a key and can be decrypted back. Use hashing for password storage and data integrity checks; use encryption (like AES) when you need to recover the original data."
+        },
+        {
+          "question": "How do I verify a file's integrity with a hash?",
+          "answer": "After downloading a file, generate its SHA-256 hash and compare it with the hash published by the source. If the two hashes match exactly, the file has not been altered or corrupted during transfer. Many software download pages provide SHA-256 checksums for this purpose."
         }
       ]
     },
@@ -1198,13 +1228,18 @@
       "shortDescription": "Test and debug regular expressions with live matching",
       "title": "Regex Tester - Test Regular Expressions Online",
       "description": "Test and debug regular expressions with real-time matching and highlighting. See capture groups, match details, and test replacement patterns. Free, private, browser-based.",
+      "metaTitle": "Regex Tester - Test Regular Expressions Online Free | PureKit",
+      "metaDescription": "Test and debug regular expressions online with real-time matching, capture groups, and replacement patterns. Free regex validator — no signup, runs in your browser.",
       "keywords": [
         "regex tester",
         "regular expression test",
         "regex online",
         "regex debugger",
         "regex match",
-        "pattern matcher"
+        "pattern matcher",
+        "regex validator",
+        "javascript regex",
+        "regex capture groups"
       ],
       "pattern": "Pattern",
       "patternPlaceholder": "Enter regex pattern...",
@@ -1251,6 +1286,18 @@
         {
           "question": "How do I match across multiple lines?",
           "answer": "Use the 'm' (multiline) flag to make ^ and $ match the start and end of each line. Use the 's' (dotAll) flag to make '.' match newline characters as well."
+        },
+        {
+          "question": "What are capture groups?",
+          "answer": "Capture groups use parentheses () to extract parts of a match. For example, (\\d{4})-(\\d{2}) captures a year in $1 and a month in $2. Use (?:...) for non-capturing groups when you need grouping without extraction. Named groups like (?<year>\\d{4}) let you reference matches by name."
+        },
+        {
+          "question": "How do I write a regex for email validation?",
+          "answer": "A practical basic pattern is: ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$ — this covers most real-world email addresses. Keep in mind that the full email RFC is extremely complex, so for production systems it's best to combine a simple regex check with actual email verification (sending a confirmation link)."
+        },
+        {
+          "question": "What is the difference between .* and .*? (greedy vs lazy)?",
+          "answer": ".* is greedy — it matches as much text as possible. .*? is lazy (or non-greedy) — it matches as little as possible. For example, given '<b>hello</b><b>world</b>', the pattern <b>(.*)</b> greedily captures 'hello</b><b>world', while <b>(.*?)</b> lazily captures just 'hello'. Use lazy quantifiers when you want the shortest match."
         }
       ]
     },
