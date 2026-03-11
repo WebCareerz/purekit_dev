@@ -274,6 +274,82 @@ const toolIcons: Record<string, React.ReactNode> = {
       <path d="m14 19 3-3" />
     </svg>
   ),
+  "placeholder-image-generator": (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+      <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+      <circle cx="9" cy="9" r="2" />
+      <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+    </svg>
+  ),
+  "number-base-converter": (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+      <rect x="14" y="14" width="4" height="6" rx="2" />
+      <rect x="6" y="4" width="4" height="6" rx="2" />
+      <path d="M6 20h4" />
+      <path d="M14 10h4" />
+      <path d="M6 14h2v6" />
+      <path d="M14 4h2v6" />
+    </svg>
+  ),
+  "markdown-to-html": (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+      <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+      <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+      <polyline points="16 13 12 17 8 13" />
+      <line x1="12" y1="17" x2="12" y2="9" />
+    </svg>
+  ),
+  "html-to-markdown": (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+      <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+      <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+      <polyline points="8 11 12 7 16 11" />
+      <line x1="12" y1="7" x2="12" y2="15" />
+    </svg>
+  ),
+  "svg-to-png": (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+      <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+      <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+      <circle cx="10" cy="13" r="2" />
+      <path d="m20 17-1.296-1.296a2 2 0 0 0-2.828 0L12 19" />
+    </svg>
+  ),
+  "xml-formatter": (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+      <path d="m18 7 3-3-3-3" />
+      <path d="M14 4h7" />
+      <path d="m9 20-3 3 3 3" />
+      <path d="M3 17h7" />
+      <path d="m14 20 3 3-3 3" />
+      <path d="M10 17h7" />
+      <path d="m9 4-3-3 3-3" />
+      <path d="M3 7h7" />
+    </svg>
+  ),
+  "favicon-generator": (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+      <path d="M12 3a9 9 0 0 1 9 9 9 9 0 0 1-9 9 9 9 0 0 1-9-9 9 9 0 0 1 9-9z" />
+      <path d="M19.5 7.5 12 12l-7.5-4.5" />
+      <path d="m12 12 7.5 4.5" />
+      <path d="M12 12v9" />
+    </svg>
+  ),
+  "image-to-base64": (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+      <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+      <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+      <polyline points="16 13 12 17 8 13" />
+      <line x1="12" y1="17" x2="12" y2="9" />
+    </svg>
+  ),
+  "html-entity-encoder": (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+      <polyline points="16 18 22 12 16 6" />
+      <polyline points="8 6 2 12 8 18" />
+      <line x1="10" y1="3" x2="14" y2="21" />
+    </svg>
+  ),
 };
 
 export default function ToolGrid({
