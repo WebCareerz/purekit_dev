@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback, useRef } from "react";
+import { FileImage } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -121,7 +122,7 @@ export default function SvgToPng({ t }: SvgToPngProps) {
           className="hidden"
         />
         <div className="space-y-2">
-          <div className="text-4xl">🎨</div>
+          <FileImage className="w-12 h-12 mx-auto text-muted-foreground" />
           <p className="text-sm font-medium">{toolT.dropzone}</p>
           <p className="text-xs text-muted-foreground">{toolT.supportedFormats}</p>
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback, useRef } from "react";
+import { Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import CopyButton from "./CopyButton";
@@ -88,7 +89,7 @@ export default function ImageToBase64({ t }: ImageToBase64Props) {
           className="hidden"
         />
         <div className="space-y-2">
-          <div className="text-4xl">📷</div>
+          <Upload className="w-12 h-12 mx-auto text-muted-foreground" />
           <p className="text-sm font-medium">{toolT.dropzone}</p>
           <p className="text-xs text-muted-foreground">{toolT.supportedFormats}</p>
           {fileName && (
