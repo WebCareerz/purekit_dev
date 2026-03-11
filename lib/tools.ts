@@ -18,7 +18,7 @@ export const categories: CategoryDefinition[] = [
   },
   {
     key: "encodersDecoders",
-    tools: ["base64-encode-decode", "url-encode-decode", "jwt-decoder", "hash-generator"],
+    tools: ["base64-encode-decode", "url-encode-decode", "jwt-decoder", "hash-generator", "html-entity-encoder"],
   },
   {
     key: "generators",
@@ -26,7 +26,7 @@ export const categories: CategoryDefinition[] = [
   },
   {
     key: "converters",
-    tools: ["unix-timestamp-converter", "color-converter", "yaml-json-toml-converter", "json-to-csv-converter", "number-base-converter", "markdown-to-html", "html-to-markdown"],
+    tools: ["unix-timestamp-converter", "color-converter", "yaml-json-toml-converter", "json-to-csv-converter", "number-base-converter", "markdown-to-html", "html-to-markdown", "svg-to-png"],
   },
   {
     key: "textTools",
@@ -38,7 +38,7 @@ export const categories: CategoryDefinition[] = [
   },
   {
     key: "imageTools",
-    tools: ["image-format-converter", "image-compressor", "image-to-pdf"],
+    tools: ["image-format-converter", "image-compressor", "image-to-pdf", "image-to-base64"],
   },
   {
     key: "pdfTools",
@@ -312,6 +312,27 @@ export const tools: Record<string, ToolDefinition> = {
     icon: "Sparkles",
     relatedSlugs: ["qr-code-generator", "placeholder-image-generator", "image-format-converter"],
     searchTerms: ["favicon", "icon", "generate", "emoji", "logo", "website", "browser", "ico"],
+  },
+  "image-to-base64": {
+    slug: "image-to-base64",
+    categoryKey: "imageTools",
+    icon: "FileCode",
+    relatedSlugs: ["base64-encode-decode", "image-format-converter", "image-compressor"],
+    searchTerms: ["image", "base64", "encode", "data uri", "convert", "image to base64"],
+  },
+  "html-entity-encoder": {
+    slug: "html-entity-encoder",
+    categoryKey: "encodersDecoders",
+    icon: "Code",
+    relatedSlugs: ["url-encode-decode", "base64-encode-decode", "html-formatter"],
+    searchTerms: ["html", "entity", "encode", "decode", "escape", "unescape", "html entities"],
+  },
+  "svg-to-png": {
+    slug: "svg-to-png",
+    categoryKey: "converters",
+    icon: "FileImage",
+    relatedSlugs: ["image-format-converter", "image-compressor", "placeholder-image-generator"],
+    searchTerms: ["svg", "png", "convert", "vector", "raster", "svg to png", "export"],
   },
 };
 

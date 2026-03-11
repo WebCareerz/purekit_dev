@@ -1619,10 +1619,10 @@
       ]
     },
     "javascript-beautifier": {
-      "name": "JavaScript Beautifier",
-      "shortDescription": "Format and beautify JavaScript code online",
-      "metaTitle": "JavaScript Beautifier - Free JS Code Formatter | PureKit",
-      "metaDescription": "Beautify and format JavaScript code online. Minify JS or make it readable with proper indentation. Free, browser-based, no signup required.",
+      "name": "JavaScript Formatter & Minifier",
+      "shortDescription": "Format and minify JavaScript code online",
+      "metaTitle": "JavaScript Formatter & Minifier - Free JS Tool | PureKit",
+      "metaDescription": "Format and minify JavaScript code online. Beautify messy JS or compress for production. Free, browser-based, no signup required.",
       "keywords": [
         "javascript beautifier",
         "js formatter",
@@ -1679,10 +1679,10 @@
       ]
     },
     "css-beautifier": {
-      "name": "CSS Beautifier",
-      "shortDescription": "Format and beautify CSS code online",
-      "metaTitle": "CSS Beautifier - Free CSS Code Formatter | PureKit",
-      "metaDescription": "Beautify and format CSS stylesheets online. Minify CSS or make it readable with proper indentation. Free, browser-based, no signup required.",
+      "name": "CSS Formatter & Minifier",
+      "shortDescription": "Format and minify CSS code online",
+      "metaTitle": "CSS Formatter & Minifier - Free CSS Tool | PureKit",
+      "metaDescription": "Format and minify CSS stylesheets online. Beautify messy CSS or compress for production. Free, browser-based, no signup required.",
       "keywords": [
         "css beautifier",
         "css formatter",
@@ -2453,6 +2453,170 @@
         {
           "question": "Are the generated icons browser-compatible?",
           "answer": "Yes, PNG favicons are supported by all modern browsers. The provided HTML meta tags cover compatibility for Chrome, Firefox, Safari, Edge, and mobile browsers."
+        }
+      ]
+    },
+    "image-to-base64": {
+      "name": "Image to Base64 Encoder",
+      "shortDescription": "Convert images to Base64 data URI or plain Base64 string",
+      "metaTitle": "Image to Base64 Encoder - Free Online Tool | PureKit",
+      "metaDescription": "Convert images to Base64 data URI or plain Base64 string instantly. Supports drag and drop. Privacy-first, browser-based conversion.",
+      "keywords": [
+        "image to base64",
+        "base64 encoder",
+        "image encoder",
+        "data uri",
+        "base64 image",
+        "convert image to base64"
+      ],
+      "dropzone": "Drop an image here or click to select",
+      "supportedFormats": "Supports JPEG, PNG, GIF, WebP, BMP, SVG",
+      "outputFormat": "Output Format",
+      "dataUri": "Data URI",
+      "plainBase64": "Plain Base64",
+      "copyDataUri": "Copy Data URI",
+      "copyBase64": "Copy Base64",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert images to Base64-encoded strings instantly",
+          "Two output formats: full data URI or plain Base64",
+          "Drag and drop or click to upload",
+          "Supports JPEG, PNG, GIF, WebP, BMP, and SVG formats",
+          "All conversion happens in your browser — your images never leave your device"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Image to Base64 Encoder",
+        "steps": [
+          "Drag and drop an image or click the upload area to select a file",
+          "Choose output format: Data URI (includes MIME type) or Plain Base64",
+          "Click the copy button to copy the Base64 string",
+          "Use the encoded string in HTML, CSS, or API requests"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is the difference between Data URI and Plain Base64?",
+          "answer": "Data URI includes the MIME type prefix (e.g., data:image/png;base64,...) and can be used directly in HTML img src or CSS background-image. Plain Base64 is just the encoded string without metadata, useful for APIs or databases."
+        },
+        {
+          "question": "Is there a file size limit?",
+          "answer": "There is no hard limit, but very large images (above 10MB) may be slow to process. Base64 encoding increases file size by roughly 33%, so keep that in mind for performance."
+        },
+        {
+          "question": "Are my images uploaded to a server?",
+          "answer": "No. All encoding happens in your browser using the FileReader API. Your images never leave your device."
+        }
+      ]
+    },
+    "html-entity-encoder": {
+      "name": "HTML Entity Encoder & Decoder",
+      "shortDescription": "Encode and decode HTML entities in real time",
+      "metaTitle": "HTML Entity Encoder & Decoder - Free Online Tool | PureKit",
+      "metaDescription": "Encode and decode HTML entities online. Convert special characters like <, >, & to safe HTML entities. Real-time conversion, browser-based.",
+      "keywords": [
+        "html entity encoder",
+        "html entity decoder",
+        "html escape",
+        "encode html",
+        "decode html",
+        "html entities"
+      ],
+      "encodePlaceholder": "Enter text to encode (e.g., <div>Hello & welcome</div>)",
+      "decodePlaceholder": "Enter HTML entities to decode (e.g., &lt;div&gt;Hello &amp; welcome&lt;/div&gt;)",
+      "encodeOutputPlaceholder": "Encoded HTML entities will appear here...",
+      "decodeOutputPlaceholder": "Decoded text will appear here...",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Encode special characters (<, >, &, \", ') to HTML entities",
+          "Decode both named entities (&lt;) and numeric entities (&#60;)",
+          "Real-time conversion as you type",
+          "Handles all standard HTML entities",
+          "All processing happens in your browser"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the HTML Entity Encoder/Decoder",
+        "steps": [
+          "Select the 'Encode' or 'Decode' tab",
+          "Paste or type your text in the input area",
+          "View the result instantly in the output area",
+          "Click 'Copy' to copy the result to your clipboard"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What are HTML entities?",
+          "answer": "HTML entities are special codes used to display reserved characters in HTML. For example, < becomes &lt; and > becomes &gt;. They prevent browsers from interpreting these characters as HTML tags."
+        },
+        {
+          "question": "When should I use HTML entity encoding?",
+          "answer": "Use encoding when displaying user-generated content or raw text in HTML to prevent XSS attacks and rendering issues. Always encode < > & \" ' when inserting untrusted data into HTML."
+        },
+        {
+          "question": "What is the difference between named and numeric entities?",
+          "answer": "Named entities use readable names like &lt; for <. Numeric entities use character codes like &#60; (decimal) or &#x3C; (hex). Both are valid, but named entities are more human-readable."
+        }
+      ]
+    },
+    "svg-to-png": {
+      "name": "SVG to PNG Converter",
+      "shortDescription": "Convert SVG to PNG with custom resolution and scaling",
+      "metaTitle": "SVG to PNG Converter - Free Online Tool | PureKit",
+      "metaDescription": "Convert SVG to PNG online with custom resolution. Supports 1x, 2x, 3x scaling for retina displays. Drag and drop or paste SVG code. Privacy-first, browser-based.",
+      "keywords": [
+        "svg to png",
+        "svg converter",
+        "convert svg",
+        "svg to image",
+        "vector to raster",
+        "svg export"
+      ],
+      "dropzone": "Drop an SVG file here or click to select",
+      "pasteArea": "Or paste your SVG code here",
+      "supportedFormats": "SVG files only",
+      "scale": "Scale",
+      "scale1x": "1x (Standard)",
+      "scale2x": "2x (Retina)",
+      "scale3x": "3x (High-Res)",
+      "convert": "Convert to PNG",
+      "downloadPng": "Download PNG",
+      "preview": "Preview",
+      "originalSize": "Original Size",
+      "outputSize": "Output Size",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert SVG files or code to high-quality PNG images",
+          "Choose output resolution: 1x, 2x, or 3x scaling for retina displays",
+          "Drag and drop SVG files or paste SVG code directly",
+          "Preview the converted image before downloading",
+          "All rendering happens in your browser using Canvas API"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the SVG to PNG Converter",
+        "steps": [
+          "Drag and drop an SVG file or paste SVG code in the text area",
+          "Select the desired output scale (1x, 2x, or 3x)",
+          "Click 'Convert to PNG' to render the image",
+          "Preview the result and click 'Download PNG' to save"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is the difference between 1x, 2x, and 3x scaling?",
+          "answer": "1x renders at the SVG's native size. 2x doubles the resolution (good for retina displays). 3x triples it (high-resolution printing). Higher scales produce larger file sizes but better quality on high-DPI screens."
+        },
+        {
+          "question": "Will transparency be preserved?",
+          "answer": "Yes, transparent areas in your SVG will be preserved as transparent pixels in the PNG output."
+        },
+        {
+          "question": "Is my SVG uploaded to a server?",
+          "answer": "No. All conversion happens in your browser using the Canvas API. Your SVG files and code never leave your device."
         }
       ]
     }
