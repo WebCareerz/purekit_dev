@@ -26,7 +26,8 @@ export default function GzipCompressDecompress({ t }: GzipCompressDecompressProp
   const compressData = useCallback(async (data: Uint8Array): Promise<Uint8Array> => {
     if (typeof CompressionStream !== "undefined") {
       // Use native Compression Streams API
-      const stream = new Response(data).body!.pipeThrough(
+      const blob = new Blob([data as BlobPart]);
+      const stream = blob.stream().pipeThrough(
         new CompressionStream("gzip")
       );
       const compressed = await new Response(stream).arrayBuffer();
@@ -39,7 +40,8 @@ export default function GzipCompressDecompress({ t }: GzipCompressDecompressProp
 
   const decompressData = useCallback(async (data: Uint8Array): Promise<Uint8Array> => {
     if (typeof DecompressionStream !== "undefined") {
-      const stream = new Response(data).body!.pipeThrough(
+      const blob = new Blob([data as BlobPart]);
+      const stream = blob.stream().pipeThrough(
         new DecompressionStream("gzip")
       );
       const decompressed = await new Response(stream).arrayBuffer();
