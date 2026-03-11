@@ -279,6 +279,8 @@ const toolIcons: Record<string, React.ReactNode> = {
       <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
       <circle cx="9" cy="9" r="2" />
       <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+      <line x1="12" y1="16" x2="12" y2="20" />
+      <line x1="14" y1="18" x2="10" y2="18" />
     </svg>
   ),
   "number-base-converter": (
@@ -337,10 +339,14 @@ const toolIcons: Record<string, React.ReactNode> = {
   ),
   "image-to-base64": (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
-      <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
-      <path d="M14 2v4a2 2 0 0 0 2 2h4" />
-      <polyline points="16 13 12 17 8 13" />
-      <line x1="12" y1="17" x2="12" y2="9" />
+      <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+      <circle cx="9" cy="9" r="2" />
+      <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+      <path d="M9 13h1" />
+      <path d="M13 13h1" />
+      <path d="M17 13h1" />
+      <path d="M9 17h1" />
+      <path d="M13 17h1" />
     </svg>
   ),
   "html-entity-encoder": (
