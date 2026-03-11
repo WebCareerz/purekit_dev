@@ -18,7 +18,7 @@ export const categories: CategoryDefinition[] = [
   },
   {
     key: "encodersDecoders",
-    tools: ["base64-encode-decode", "url-encode-decode", "jwt-decoder", "hash-generator", "html-entity-encoder"],
+    tools: ["base64-encode-decode", "url-encode-decode", "jwt-decoder", "hash-generator", "html-entity-encoder", "gzip-compress-decompress"],
   },
   {
     key: "generators",
@@ -26,11 +26,11 @@ export const categories: CategoryDefinition[] = [
   },
   {
     key: "converters",
-    tools: ["unix-timestamp-converter", "color-converter", "yaml-json-toml-converter", "json-to-csv-converter", "number-base-converter", "markdown-to-html", "html-to-markdown", "svg-to-png"],
+    tools: ["unix-timestamp-converter", "color-converter", "yaml-json-toml-converter", "json-to-csv-converter", "csv-to-json", "number-base-converter", "markdown-to-html", "html-to-markdown", "svg-to-png"],
   },
   {
     key: "textTools",
-    tools: ["diff-checker", "markdown-preview", "regex-tester", "text-case-converter", "word-counter"],
+    tools: ["diff-checker", "markdown-preview", "regex-tester", "text-case-converter", "word-counter", "character-counter"],
   },
   {
     key: "dataTools",
@@ -333,6 +333,27 @@ export const tools: Record<string, ToolDefinition> = {
     icon: "FileImage",
     relatedSlugs: ["image-format-converter", "image-compressor", "placeholder-image-generator"],
     searchTerms: ["svg", "png", "convert", "vector", "raster", "svg to png", "export"],
+  },
+  "gzip-compress-decompress": {
+    slug: "gzip-compress-decompress",
+    categoryKey: "encodersDecoders",
+    icon: "Archive",
+    relatedSlugs: ["base64-encode-decode", "hash-generator", "url-encode-decode"],
+    searchTerms: ["gzip", "compress", "decompress", "gz", "compression", "archive", "deflate"],
+  },
+  "csv-to-json": {
+    slug: "csv-to-json",
+    categoryKey: "converters",
+    icon: "ArrowRightLeft",
+    relatedSlugs: ["json-to-csv-converter", "json-formatter", "csv-data-cleaner"],
+    searchTerms: ["csv", "json", "convert", "parse", "spreadsheet", "data", "table"],
+  },
+  "character-counter": {
+    slug: "character-counter",
+    categoryKey: "textTools",
+    icon: "FileText",
+    relatedSlugs: ["word-counter", "text-case-converter", "markdown-preview"],
+    searchTerms: ["character", "count", "word", "letter", "statistics", "reading", "time", "frequency"],
   },
 };
 

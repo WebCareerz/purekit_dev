@@ -2619,6 +2619,224 @@
           "answer": "No. All conversion happens in your browser using the Canvas API. Your SVG files and code never leave your device."
         }
       ]
+    },
+    "gzip-compress-decompress": {
+      "name": "GZIP Compress/Decompress",
+      "shortDescription": "Compress and decompress GZIP files online",
+      "metaTitle": "GZIP Compress/Decompress - Free Online Tool | PureKit",
+      "metaDescription": "Compress and decompress GZIP files online for free. Convert text or files to .gz format or decompress GZIP archives instantly. Browser-based, no signup required.",
+      "keywords": [
+        "gzip online",
+        "gzip compress",
+        "gzip decompress",
+        "decompress gzip online",
+        "gz file",
+        "gzip converter"
+      ],
+      "compress": "Compress",
+      "decompress": "Decompress",
+      "compressBtn": "Compress to GZIP",
+      "decompressBtn": "Decompress GZIP",
+      "downloadGz": "Download .gz",
+      "characters": "characters",
+      "emptyInput": "Please enter text or upload a file",
+      "compressError": "Error compressing data. Please try again.",
+      "decompressError": "Error decompressing data. Please check the file format.",
+      "inputData": "Input Data",
+      "compressedInput": "Compressed Input (Base64 or upload .gz file)",
+      "compressedOutput": "Compressed Output (Base64)",
+      "decompressedOutput": "Decompressed Output",
+      "inputPlaceholder": "Enter text to compress or upload a file...",
+      "compressedPlaceholder": "Paste Base64 compressed data or upload a .gz file...",
+      "outputPlaceholder": "Result will appear here...",
+      "uploadedFile": "Uploaded file",
+      "compressionRatio": "Compression ratio",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Compress text or files to GZIP format (.gz)",
+          "Decompress GZIP files back to original content",
+          "Real-time compression ratio display",
+          "Download compressed files as .gz archives",
+          "Uses native browser Compression Streams API for fast processing",
+          "All processing happens locally — your data never leaves your device"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use GZIP Compress/Decompress",
+        "steps": [
+          "Select Compress or Decompress mode",
+          "For compression: paste text or upload any file",
+          "For decompression: upload a .gz file or paste Base64 compressed data",
+          "Click the compress/decompress button",
+          "Download the result or view it directly in the output area"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is GZIP compression?",
+          "answer": "GZIP is a file compression format based on the DEFLATE algorithm. It is widely used for web content compression and file archiving. GZIP typically reduces file sizes by 60-80% for text-based content."
+        },
+        {
+          "question": "Can I compress any type of file?",
+          "answer": "Yes! You can compress any file type. However, GZIP works best with text-based files (HTML, JSON, CSV, code). Already-compressed files (JPEG, MP4, ZIP) will not compress much further."
+        },
+        {
+          "question": "Is the compressed output a valid .gz file?",
+          "answer": "Yes. When you click Download .gz, you get a standard GZIP-compressed file that can be opened with any GZIP-compatible tool (gunzip, 7-Zip, WinRAR, etc.)."
+        },
+        {
+          "question": "What is the Base64 output shown?",
+          "answer": "Base64 is a way to represent binary data (like compressed GZIP files) as text. This makes it easier to copy/paste or embed in text-based formats. You can paste this Base64 string back into the Decompress mode to restore the original data."
+        },
+        {
+          "question": "Does this work offline?",
+          "answer": "Yes! All compression and decompression happens in your browser using native APIs. No internet connection is required after the page loads."
+        }
+      ]
+    },
+    "csv-to-json": {
+      "name": "CSV to JSON Converter",
+      "shortDescription": "Convert CSV data to JSON format online",
+      "metaTitle": "CSV to JSON Converter - Free Online Tool | PureKit",
+      "metaDescription": "Convert CSV to JSON online for free. Parse CSV files and convert them to JSON arrays instantly. Auto-detect delimiters, handle quoted fields. Browser-based, no signup required.",
+      "keywords": [
+        "csv to json",
+        "csv to json converter",
+        "convert csv to json online",
+        "csv parser",
+        "csv to json array"
+      ],
+      "convert": "Convert to JSON",
+      "downloadJson": "Download JSON",
+      "characters": "characters",
+      "emptyInput": "Please enter CSV data to convert",
+      "convertError": "Error converting CSV to JSON. Please check your CSV format.",
+      "csvInput": "CSV Input",
+      "jsonOutput": "JSON Output",
+      "csvPlaceholder": "Paste CSV data here or upload a .csv file...\nExample:\nname,age,city\nAlice,30,NYC\nBob,25,LA",
+      "jsonPlaceholder": "JSON output will appear here...",
+      "useFirstRowAsKeys": "Use first row as keys",
+      "delimiter": "Delimiter",
+      "autoDetect": "Auto-detect",
+      "comma": "Comma (,)",
+      "tab": "Tab (\\t)",
+      "semicolon": "Semicolon (;)",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert CSV to JSON arrays instantly",
+          "Auto-detect delimiters (comma, tab, semicolon)",
+          "Option to use first row as object keys",
+          "Handles quoted fields and special characters",
+          "Download output as .json file",
+          "All conversion happens locally — your data never leaves your device"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use CSV to JSON Converter",
+        "steps": [
+          "Paste your CSV data or upload a .csv file",
+          "Choose delimiter (or let the tool auto-detect it)",
+          "Enable Use first row as keys if your CSV has headers",
+          "Click Convert to JSON",
+          "Copy or download the JSON output"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What if my CSV uses tabs or semicolons?",
+          "answer": "The tool supports comma, tab, and semicolon delimiters. Use the Auto-detect option (default) to automatically identify the correct delimiter, or manually select it from the dropdown."
+        },
+        {
+          "question": "How are quoted fields handled?",
+          "answer": "The parser correctly handles fields enclosed in double quotes, including fields containing commas or newlines. Quote characters inside quoted fields should be escaped as double quotes (\"\")."
+        },
+        {
+          "question": "What does Use first row as keys do?",
+          "answer": "When enabled, the first row of your CSV is treated as column headers, and each subsequent row becomes a JSON object with those headers as keys. When disabled, each row becomes a simple array."
+        },
+        {
+          "question": "Can I convert large CSV files?",
+          "answer": "Yes, the tool can handle large CSV files. However, very large files (multiple megabytes) may slow down your browser. For best performance, ensure your browser has enough memory."
+        },
+        {
+          "question": "Is my data sent to a server?",
+          "answer": "No. All CSV parsing and conversion happens locally in your browser. Your data is never uploaded to any server."
+        }
+      ]
+    },
+    "character-counter": {
+      "name": "Character Counter",
+      "shortDescription": "Count characters, words, sentences, and more",
+      "metaTitle": "Character Counter - Free Online Tool | PureKit",
+      "metaDescription": "Count characters, words, sentences, paragraphs, and lines online. Get reading time estimates and keyword frequency analysis. Free character counter tool.",
+      "keywords": [
+        "character counter",
+        "character count online",
+        "letter counter",
+        "word count",
+        "text statistics"
+      ],
+      "characters": "Characters",
+      "charactersNoSpaces": "Characters (no spaces)",
+      "words": "Words",
+      "sentences": "Sentences",
+      "paragraphs": "Paragraphs",
+      "lines": "Lines",
+      "readingTime": "Reading Time (min)",
+      "inputText": "Your Text",
+      "placeholder": "Start typing or paste your text here...",
+      "topWords": "Top 10 Most Frequent Words",
+      "topCharacters": "Top 10 Most Frequent Characters",
+      "word": "Word",
+      "character": "Character",
+      "count": "Count",
+      "frequency": "Frequency",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Real-time character counting with and without spaces",
+          "Word, sentence, paragraph, and line counting",
+          "Reading time estimation (200 words/min average)",
+          "Top 10 keyword density analysis",
+          "Character frequency distribution",
+          "Supports Unicode text (CJK characters counted correctly)",
+          "All processing happens locally — your text stays private"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Character Counter",
+        "steps": [
+          "Type or paste your text into the input area",
+          "Statistics update automatically in real-time",
+          "View character count, word count, sentences, paragraphs, and lines",
+          "Check reading time estimates for content planning",
+          "Review keyword frequency to identify common words"
+        ]
+      },
+      "faq": [
+        {
+          "question": "How is character count calculated?",
+          "answer": "Character count includes all visible characters, spaces, punctuation, and newlines. The Characters (no spaces) count excludes all whitespace characters (spaces, tabs, newlines)."
+        },
+        {
+          "question": "How are words counted?",
+          "answer": "Words are counted by splitting text on whitespace. Any sequence of characters separated by spaces, tabs, or newlines counts as one word. Hyphenated words count as a single word."
+        },
+        {
+          "question": "How accurate is the reading time?",
+          "answer": "Reading time is based on an average reading speed of 200 words per minute for adults. Actual reading speed varies by text complexity and reader skill level."
+        },
+        {
+          "question": "What does keyword density show?",
+          "answer": "The Top 10 Most Frequent Words table shows which words appear most often in your text, along with their percentage frequency. This helps identify main themes and avoid overuse of specific words."
+        },
+        {
+          "question": "Does this work for non-English text?",
+          "answer": "Yes! The counter supports Unicode and works with any language. Character and line counts work for all languages. Word counting is most accurate for space-separated languages (English, Spanish, etc.) but may be less accurate for languages without spaces (Chinese, Japanese)."
+        }
+      ]
     }
   },
   "devtoysAlternative": {
@@ -2629,15 +2847,51 @@
     "whyPureKit": "Why PureKit is the Better Alternative",
     "comparisonTitle": "PureKit vs DevToys: Feature Comparison",
     "features": [
-      { "name": "Zero Installation Required", "purekit": true, "devtoys": false },
-      { "name": "Works in Browser (No Download)", "purekit": true, "devtoys": false },
-      { "name": "100% Privacy-First (Data Never Leaves Your Device)", "purekit": true, "devtoys": true },
-      { "name": "Cross-Platform (Windows, Mac, Linux, Mobile)", "purekit": true, "devtoys": false },
-      { "name": "Instant Access from Any Device", "purekit": true, "devtoys": false },
-      { "name": "38+ Tools and Growing Weekly", "purekit": true, "devtoys": false },
-      { "name": "Fast Loading (Static Site)", "purekit": true, "devtoys": false },
-      { "name": "Mobile-Friendly UI", "purekit": true, "devtoys": false },
-      { "name": "Completely Free Forever", "purekit": true, "devtoys": true }
+      {
+        "name": "Zero Installation Required",
+        "purekit": true,
+        "devtoys": false
+      },
+      {
+        "name": "Works in Browser (No Download)",
+        "purekit": true,
+        "devtoys": false
+      },
+      {
+        "name": "100% Privacy-First (Data Never Leaves Your Device)",
+        "purekit": true,
+        "devtoys": true
+      },
+      {
+        "name": "Cross-Platform (Windows, Mac, Linux, Mobile)",
+        "purekit": true,
+        "devtoys": false
+      },
+      {
+        "name": "Instant Access from Any Device",
+        "purekit": true,
+        "devtoys": false
+      },
+      {
+        "name": "38+ Tools and Growing Weekly",
+        "purekit": true,
+        "devtoys": false
+      },
+      {
+        "name": "Fast Loading (Static Site)",
+        "purekit": true,
+        "devtoys": false
+      },
+      {
+        "name": "Mobile-Friendly UI",
+        "purekit": true,
+        "devtoys": false
+      },
+      {
+        "name": "Completely Free Forever",
+        "purekit": true,
+        "devtoys": true
+      }
     ],
     "advantages": [
       {
@@ -2669,15 +2923,51 @@
     "whyPureKit": "Why PureKit is the Better Alternative",
     "comparisonTitle": "PureKit vs IT-Tools: Feature Comparison",
     "features": [
-      { "name": "No Docker / Self-Hosting Required", "purekit": true, "ittools": false },
-      { "name": "Instant Access (No Setup)", "purekit": true, "ittools": false },
-      { "name": "100% Privacy-First (Client-Side Processing)", "purekit": true, "ittools": true },
-      { "name": "Always Online (No Server Maintenance)", "purekit": true, "ittools": false },
-      { "name": "Mobile-Friendly Interface", "purekit": true, "ittools": false },
-      { "name": "38+ Tools and Growing Weekly", "purekit": true, "ittools": false },
-      { "name": "Zero Configuration", "purekit": true, "ittools": false },
-      { "name": "Stable Updates (No Breaking Changes)", "purekit": true, "ittools": false },
-      { "name": "Completely Free Forever", "purekit": true, "ittools": true }
+      {
+        "name": "No Docker / Self-Hosting Required",
+        "purekit": true,
+        "ittools": false
+      },
+      {
+        "name": "Instant Access (No Setup)",
+        "purekit": true,
+        "ittools": false
+      },
+      {
+        "name": "100% Privacy-First (Client-Side Processing)",
+        "purekit": true,
+        "ittools": true
+      },
+      {
+        "name": "Always Online (No Server Maintenance)",
+        "purekit": true,
+        "ittools": false
+      },
+      {
+        "name": "Mobile-Friendly Interface",
+        "purekit": true,
+        "ittools": false
+      },
+      {
+        "name": "38+ Tools and Growing Weekly",
+        "purekit": true,
+        "ittools": false
+      },
+      {
+        "name": "Zero Configuration",
+        "purekit": true,
+        "ittools": false
+      },
+      {
+        "name": "Stable Updates (No Breaking Changes)",
+        "purekit": true,
+        "ittools": false
+      },
+      {
+        "name": "Completely Free Forever",
+        "purekit": true,
+        "ittools": true
+      }
     ],
     "advantages": [
       {
