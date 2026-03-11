@@ -5,7 +5,13 @@ import { allToolSlugs } from "@/lib/tools";
 
 export const dynamic = "force-static";
 
-const staticPages = ["privacy", "terms", "contact"];
+const staticPages = [
+  "privacy",
+  "terms",
+  "contact",
+  "devtoys-alternative",
+  "it-tools-alternative",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const currentDate = new Date().toISOString();
