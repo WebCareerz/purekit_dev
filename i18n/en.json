@@ -2477,19 +2477,19 @@
     ],
     "advantages": [
       {
-        "title": "🌐 Access Anywhere, Instantly",
+        "title": "Access Anywhere, Instantly",
         "description": "No installation needed. Open your browser and start working. Works on Windows, Mac, Linux, tablets, and phones — DevToys requires Windows-only download and installation."
       },
       {
-        "title": "🚀 Lightning Fast & Always Updated",
+        "title": "Lightning Fast & Always Updated",
         "description": "Static site architecture means instant load times. We add 3-6 new tools every week. No manual updates, no app store delays — just visit the site and use the latest tools."
       },
       {
-        "title": "🔒 100% Privacy Protected",
+        "title": "100% Privacy Protected",
         "description": "All processing happens in your browser using JavaScript. Your data never touches our servers. No analytics, no tracking, no telemetry — just like DevToys, but without needing to trust an installed app."
       },
       {
-        "title": "💡 38+ Tools in One Place",
+        "title": "38+ Tools in One Place",
         "description": "From JSON formatters to PDF tools, image converters to regex testers — we cover more use cases than DevToys. Everything is organized, searchable, and just one click away."
       }
     ],
@@ -2517,19 +2517,19 @@
     ],
     "advantages": [
       {
-        "title": "⚡ Zero Setup, Instant Access",
+        "title": "Zero Setup, Instant Access",
         "description": "No Docker images to pull, no self-hosting, no server maintenance. Just visit PureKit and start working. IT-Tools requires Docker setup and ongoing server management."
       },
       {
-        "title": "🌍 Available Everywhere",
+        "title": "Available Everywhere",
         "description": "PureKit is hosted on Cloudflare Pages with 99.99% uptime. Access from anywhere, on any device — your team doesn't need to VPN into a self-hosted instance."
       },
       {
-        "title": "🔒 Privacy Without the Hassle",
+        "title": "Privacy Without the Hassle",
         "description": "All tools run 100% in your browser — your data never leaves your device. Same privacy as IT-Tools, but without needing to self-host. No servers, no logs, no tracking."
       },
       {
-        "title": "🚀 Stable, Growing Toolset",
+        "title": "Stable, Growing Toolset",
         "description": "38+ tools with 3-6 new additions every week. Unlike IT-Tools' community-driven development, PureKit follows a stable, consistent roadmap with weekly updates and zero breaking changes."
       }
     ],
