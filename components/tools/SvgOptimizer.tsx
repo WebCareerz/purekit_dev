@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
+import { Sparkles, Download } from "lucide-react";
 import CopyButton from "./CopyButton";
 
 interface SvgOptimizerProps {
@@ -199,10 +200,12 @@ export default function SvgOptimizer({ t }: SvgOptimizerProps) {
       <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3 border border-border rounded-lg px-3 py-2 bg-muted/30">
         <div className="flex items-center gap-2">
           <Button onClick={handleOptimize} size="sm">
+            <Sparkles className="h-4 w-4 mr-1.5" />
             {toolT.optimize}
           </Button>
           {output && (
             <Button onClick={handleDownload} size="sm" variant="secondary">
+              <Download className="h-4 w-4 mr-1.5" />
               {toolT.downloadSvg}
             </Button>
           )}

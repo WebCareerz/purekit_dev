@@ -100,7 +100,7 @@ export default function RobotsTxtGenerator({ t }: RobotsTxtGeneratorProps) {
         }
       });
 
-      if (crawlDelay && rule.userAgent !== "*") {
+      if (crawlDelay) {
         result += `Crawl-delay: ${crawlDelay}\n`;
       }
 

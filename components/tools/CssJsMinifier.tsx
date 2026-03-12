@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import { Minimize2, Download } from "lucide-react";
 import CopyButton from "./CopyButton";
 
 interface CssJsMinifierProps {
@@ -33,14 +34,28 @@ export default function CssJsMinifier({ t }: CssJsMinifierProps) {
   }, []);
 
   const minifyJs = useCallback((js: string): string => {
-    // Basic JS minification (remove comments, extra spaces, newlines)
-    return js
-      .replace(/\/\*[\s\S]*?\*\//g, "") // Remove multi-line comments
-      .replace(/\/\/.*/g, "") // Remove single-line comments
-      .replace(/\s{2,}/g, " ") // Collapse spaces
-      .replace(/\n/g, "") // Remove newlines
-      .replace(/\s*([{}():;,=<>+\-*/%&|!])\s*/g, "$1") // Remove spaces around operators
-      .trim();
+    // Conservative JS minification - preserves code correctness
+    let result = js;
+    
+    // Remove multi-line comments
+    result = result.replace(/\/\*[\s\S]*?\*\//g, "");
+    
+    // Remove single-line comments (preserve URLs)
+    result = result.replace(/([^:])\/\/.*/g, "$1");
+    
+    // Remove leading/trailing whitespace on each line
+    result = result.replace(/^\s+|\s+$/gm, "");
+    
+    // Replace multiple spaces with single space
+    result = result.replace(/  +/g, " ");
+    
+    // Remove newlines (but keep some spaces for safety)
+    result = result.replace(/\n/g, " ");
+    
+    // Collapse multiple spaces again
+    result = result.replace(/  +/g, " ");
+    
+    return result.trim();
   }, []);
 
   const handleMinify = useCallback(() => {
@@ -124,10 +139,12 @@ export default function CssJsMinifier({ t }: CssJsMinifierProps) {
       <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3 border border-border rounded-lg px-3 py-2 bg-muted/30">
         <div className="flex items-center gap-2">
           <Button onClick={handleMinify} size="sm">
+            <Minimize2 className="h-4 w-4 mr-1.5" />
             {toolT.minify}
           </Button>
           {output && (
             <Button onClick={handleDownload} size="sm" variant="secondary">
+              <Download className="h-4 w-4 mr-1.5" />
               {common.download}
             </Button>
           )}
