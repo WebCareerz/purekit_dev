@@ -286,7 +286,13 @@ export default function MetaTagsGenerator({ t }: MetaTagsGeneratorProps) {
                 )}
                 <div className="p-3 space-y-1">
                   <div className="text-xs text-muted-foreground uppercase">
-                    {ogUrl ? new URL(ogUrl).hostname : 'example.com'}
+                    {ogUrl ? (() => {
+                      try {
+                        return new URL(ogUrl).hostname;
+                      } catch {
+                        return ogUrl.replace(/^https?:\/\//, '').split('/')[0] || 'example.com';
+                      }
+                    })() : 'example.com'}
                   </div>
                   <div className="font-semibold text-sm line-clamp-2">
                     {ogTitle || title}
@@ -322,7 +328,13 @@ export default function MetaTagsGenerator({ t }: MetaTagsGeneratorProps) {
                     {ogDescription || description}
                   </div>
                   <div className="text-xs text-muted-foreground">
-                    {ogUrl ? new URL(ogUrl).hostname : 'example.com'}
+                    {ogUrl ? (() => {
+                      try {
+                        return new URL(ogUrl).hostname;
+                      } catch {
+                        return ogUrl.replace(/^https?:\/\//, '').split('/')[0] || 'example.com';
+                      }
+                    })() : 'example.com'}
                   </div>
                 </div>
               </div>
