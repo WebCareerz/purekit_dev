@@ -53,7 +53,7 @@ export default function FaviconGenerator({ t }: FaviconGeneratorProps) {
       }
 
       // Text
-      const textSize = (size * fontSize) / 100;
+      const textSize = ((size * 0.8) * fontSize) / 100;
       ctx.font = `${textSize}px Arial, sans-serif`;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
