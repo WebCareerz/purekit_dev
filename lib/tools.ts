@@ -14,7 +14,7 @@ export interface CategoryDefinition {
 export const categories: CategoryDefinition[] = [
   {
     key: "formatters",
-    tools: ["json-formatter", "sql-formatter", "html-formatter", "xml-formatter", "javascript-beautifier", "css-beautifier"],
+    tools: ["json-formatter", "sql-formatter", "html-formatter", "xml-formatter", "javascript-beautifier", "css-beautifier", "css-js-minifier"],
   },
   {
     key: "encodersDecoders",
@@ -22,7 +22,7 @@ export const categories: CategoryDefinition[] = [
   },
   {
     key: "generators",
-    tools: ["uuid-generator", "qr-code-generator", "favicon-generator", "mock-data-generator", "cron-expression-builder", "password-generator", "lorem-ipsum-generator", "placeholder-image-generator"],
+    tools: ["uuid-generator", "qr-code-generator", "favicon-generator", "mock-data-generator", "cron-expression-builder", "password-generator", "lorem-ipsum-generator", "placeholder-image-generator", "robots-txt-generator"],
   },
   {
     key: "converters",
@@ -38,7 +38,7 @@ export const categories: CategoryDefinition[] = [
   },
   {
     key: "imageTools",
-    tools: ["image-format-converter", "image-compressor", "image-to-pdf", "image-to-base64"],
+    tools: ["image-format-converter", "image-compressor", "image-to-pdf", "image-to-base64", "svg-optimizer"],
   },
   {
     key: "pdfTools",
@@ -354,6 +354,27 @@ export const tools: Record<string, ToolDefinition> = {
     icon: "FileText",
     relatedSlugs: ["word-counter", "text-case-converter", "markdown-preview"],
     searchTerms: ["character", "count", "word", "letter", "statistics", "reading", "time", "frequency"],
+  },
+  "css-js-minifier": {
+    slug: "css-js-minifier",
+    categoryKey: "formatters",
+    icon: "Minimize2",
+    relatedSlugs: ["css-beautifier", "javascript-beautifier", "html-formatter"],
+    searchTerms: ["css", "js", "javascript", "minify", "compress", "optimize", "reduce", "file size"],
+  },
+  "svg-optimizer": {
+    slug: "svg-optimizer",
+    categoryKey: "imageTools",
+    icon: "Sparkles",
+    relatedSlugs: ["svg-to-png", "image-compressor", "image-format-converter"],
+    searchTerms: ["svg", "optimize", "compress", "reduce", "clean", "vector", "file size"],
+  },
+  "robots-txt-generator": {
+    slug: "robots-txt-generator",
+    categoryKey: "generators",
+    icon: "Bot",
+    relatedSlugs: ["qr-code-generator", "uuid-generator", "cron-expression-builder"],
+    searchTerms: ["robots", "txt", "seo", "crawler", "search engine", "sitemap", "disallow", "allow"],
   },
 };
 

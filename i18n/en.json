@@ -2837,6 +2837,180 @@
           "answer": "Yes! The counter supports Unicode and works with any language. Character and line counts work for all languages. Word counting is most accurate for space-separated languages (English, Spanish, etc.) but may be less accurate for languages without spaces (Chinese, Japanese)."
         }
       ]
+    },
+    "css-js-minifier": {
+      "name": "CSS & JS Minifier",
+      "shortDescription": "Compress and minify CSS/JavaScript code to reduce file size for faster page loads",
+      "metaTitle": "CSS & JS Minifier - Free Online Code Compression Tool",
+      "metaDescription": "Minify CSS and JavaScript code online. Reduce file size by removing whitespace, comments, and unnecessary characters for faster page loads.",
+      "keywords": [
+        "css minifier",
+        "js minifier",
+        "javascript minifier",
+        "compress css",
+        "compress js",
+        "minify code",
+        "reduce file size"
+      ],
+      "css": "CSS",
+      "javascript": "JavaScript",
+      "minify": "Minify",
+      "original": "Original",
+      "minified": "Minified",
+      "saved": "Saved",
+      "cssPlaceholder": "Paste your CSS code here...",
+      "jsPlaceholder": "Paste your JavaScript code here...",
+      "characters": "characters",
+      "emptyInput": "Please enter CSS or JavaScript code to minify",
+      "minifyError": "Error minifying code. Please check your syntax.",
+      "features": {
+        "title": "Key Features",
+        "items": [
+          "Minify CSS and JavaScript code",
+          "Remove comments and whitespace",
+          "Reduce file size for faster loading",
+          "Show compression statistics",
+          "Download minified files",
+          "All processing happens in your browser"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use",
+        "steps": [
+          "Choose CSS or JavaScript mode",
+          "Paste your code in the input area",
+          "Click 'Minify' to compress the code",
+          "Download or copy the minified code"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is code minification?",
+          "answer": "Code minification removes unnecessary characters (whitespace, comments, newlines) without changing functionality, reducing file size and improving load times."
+        },
+        {
+          "question": "Is my code safe?",
+          "answer": "Yes, all minification happens locally in your browser. Your code is never sent to any server."
+        }
+      ]
+    },
+    "svg-optimizer": {
+      "name": "SVG Optimizer",
+      "shortDescription": "Optimize and compress SVG files by removing unnecessary code and metadata",
+      "metaTitle": "SVG Optimizer - Free Online SVG Compression Tool",
+      "metaDescription": "Optimize SVG files online. Remove metadata, comments, and hidden elements to reduce file size while maintaining quality.",
+      "keywords": [
+        "svg optimizer",
+        "svg compress",
+        "optimize svg",
+        "reduce svg size",
+        "clean svg",
+        "svg minifier"
+      ],
+      "optimize": "Optimize",
+      "svgInput": "SVG Input",
+      "svgPlaceholder": "Paste your SVG code here or upload a file...",
+      "optimizedOutput": "Optimized Output",
+      "downloadSvg": "Download SVG",
+      "removeComments": "Remove comments",
+      "removeMetadata": "Remove metadata",
+      "removeHiddenElements": "Remove hidden elements",
+      "precision": "Precision",
+      "original": "Original",
+      "optimized": "Optimized",
+      "saved": "Saved",
+      "characters": "characters",
+      "emptyInput": "Please enter SVG code or upload a file",
+      "invalidSvg": "Invalid SVG code. Please check your input.",
+      "optimizeError": "Error optimizing SVG. Please check your code.",
+      "features": {
+        "title": "Key Features",
+        "items": [
+          "Remove comments and metadata",
+          "Clean up hidden elements",
+          "Round number precision",
+          "Show file size reduction",
+          "Upload SVG files",
+          "All processing happens in your browser"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use",
+        "steps": [
+          "Paste SVG code or upload a file",
+          "Configure optimization options",
+          "Click 'Optimize' to compress",
+          "Download or copy the optimized SVG"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Will optimization affect quality?",
+          "answer": "No, SVG optimization removes unnecessary data without affecting visual quality. The image will look identical."
+        },
+        {
+          "question": "Is my SVG file safe?",
+          "answer": "Yes, all optimization happens locally in your browser. Your files are never uploaded to any server."
+        }
+      ]
+    },
+    "robots-txt-generator": {
+      "name": "Robots.txt Generator",
+      "shortDescription": "Generate robots.txt file to control search engine crawler access",
+      "metaTitle": "Robots.txt Generator - Free Online SEO Tool",
+      "metaDescription": "Generate robots.txt file online. Control search engine crawler access with allow/disallow rules, sitemap, and crawl delay settings.",
+      "keywords": [
+        "robots txt generator",
+        "robots.txt",
+        "seo tool",
+        "crawler control",
+        "search engine",
+        "sitemap",
+        "disallow"
+      ],
+      "templates": "Templates",
+      "allowAll": "Allow All",
+      "blockAll": "Block All",
+      "commonRules": "Common Rules",
+      "userAgent": "User-Agent",
+      "disallow": "Disallow",
+      "allow": "Allow",
+      "addPath": "Add Path",
+      "addRule": "Add Rule",
+      "sitemapUrl": "Sitemap URL",
+      "crawlDelay": "Crawl Delay (seconds)",
+      "robotsTxtOutput": "robots.txt Output",
+      "features": {
+        "title": "Key Features",
+        "items": [
+          "Generate robots.txt files",
+          "Multiple user-agent rules",
+          "Allow and disallow paths",
+          "Sitemap URL configuration",
+          "Crawl delay settings",
+          "Pre-made templates"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use",
+        "steps": [
+          "Choose a template or start from scratch",
+          "Add user-agent rules",
+          "Configure allow/disallow paths",
+          "Add sitemap URL (optional)",
+          "Click 'Generate' and download robots.txt"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is robots.txt?",
+          "answer": "robots.txt is a file that tells search engine crawlers which pages or sections of your site to crawl or avoid."
+        },
+        {
+          "question": "Where should I place robots.txt?",
+          "answer": "Place robots.txt in your website's root directory (e.g., https://example.com/robots.txt)."
+        }
+      ]
     }
   },
   "devtoysAlternative": {
