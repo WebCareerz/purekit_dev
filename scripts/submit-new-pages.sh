@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# 新增页面URL列表
+# 新增页面URL列表（Batch Auto 0312: 3个工具）
 URLS=(
-  "https://www.purekit.dev/en/gzip-compress-decompress/"
-  "https://www.purekit.dev/en/csv-to-json/"
-  "https://www.purekit.dev/en/character-counter/"
+  "https://www.purekit.dev/en/css-js-minifier/"
+  "https://www.purekit.dev/en/svg-optimizer/"
+  "https://www.purekit.dev/en/robots-txt-generator/"
 )
 
 # IndexNow配置
@@ -24,7 +24,14 @@ JSON_PAYLOAD=$(jq -n \
   '{host: $host, key: $key, keyLocation: $keyLocation, urlList: $urlList}')
 
 echo "====== IndexNow提交 ======"
+echo "提交时间: $(date '+%Y-%m-%d %H:%M:%S %Z')"
+echo "提交批次: Batch Auto 0312"
 echo "提交URL数量: ${#URLS[@]}"
+echo ""
+echo "URL列表:"
+for url in "${URLS[@]}"; do
+  echo "  • $url"
+done
 echo ""
 echo "请求体:"
 echo "$JSON_PAYLOAD" | jq .
@@ -55,13 +62,23 @@ else
 fi
 
 echo ""
-echo "====== Google Search Console提交建议 ======"
-echo "Google已于2024年停止URL Inspection API的批量提交功能。"
-echo "请手动在GSC中提交URL或使用sitemap："
+echo "====== 工具说明 ======"
+echo "• CSS & JS Minifier - 压缩CSS/JS代码减小文件体积"
+echo "• SVG Optimizer - 优化SVG文件移除冗余代码"
+echo "• Robots.txt Generator - 生成robots.txt控制爬虫访问"
 echo ""
-for url in "${URLS[@]}"; do
-  echo "  $url"
-done
+echo "====== 搜索引擎覆盖 ======"
+echo "IndexNow联盟成员（已自动通知）："
+echo "  • Bing"
+echo "  • Yandex"
+echo "  • Seznam.cz"
+echo "  • Naver（部分支持）"
 echo ""
-echo "或者确保这些URL已包含在sitemap中："
+echo "====== Google Search Console ======"
+echo "Google已于2023年停止sitemap ping服务。"
+echo "索引方式："
+echo "  1. 自动：Google会定期爬取sitemap.xml并检测<lastmod>更新"
+echo "  2. 手动：在GSC中逐个提交URL可加速收录（可选）"
+echo ""
+echo "Sitemap地址："
 echo "  https://www.purekit.dev/sitemap.xml"

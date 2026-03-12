@@ -14,7 +14,7 @@ export interface CategoryDefinition {
 export const categories: CategoryDefinition[] = [
   {
     key: "formatters",
-    tools: ["json-formatter", "sql-formatter", "html-formatter", "xml-formatter", "javascript-beautifier", "css-beautifier", "css-js-minifier"],
+    tools: ["json-formatter", "sql-formatter", "html-formatter", "xml-formatter", "javascript-beautifier", "css-beautifier", "css-js-minifier", "html-viewer"],
   },
   {
     key: "encodersDecoders",
@@ -22,11 +22,11 @@ export const categories: CategoryDefinition[] = [
   },
   {
     key: "generators",
-    tools: ["uuid-generator", "qr-code-generator", "favicon-generator", "mock-data-generator", "cron-expression-builder", "password-generator", "lorem-ipsum-generator", "placeholder-image-generator", "robots-txt-generator"],
+    tools: ["uuid-generator", "qr-code-generator", "favicon-generator", "mock-data-generator", "cron-expression-builder", "password-generator", "lorem-ipsum-generator", "placeholder-image-generator", "robots-txt-generator", "meta-tags-generator"],
   },
   {
     key: "converters",
-    tools: ["unix-timestamp-converter", "color-converter", "yaml-json-toml-converter", "json-to-csv-converter", "csv-to-json", "number-base-converter", "markdown-to-html", "html-to-markdown", "svg-to-png"],
+    tools: ["unix-timestamp-converter", "color-converter", "yaml-json-toml-converter", "json-to-csv-converter", "csv-to-json", "number-base-converter", "markdown-to-html", "html-to-markdown", "svg-to-png", "hex-to-text"],
   },
   {
     key: "textTools",
@@ -375,6 +375,27 @@ export const tools: Record<string, ToolDefinition> = {
     icon: "Bot",
     relatedSlugs: ["qr-code-generator", "uuid-generator", "cron-expression-builder"],
     searchTerms: ["robots", "txt", "seo", "crawler", "search engine", "sitemap", "disallow", "allow"],
+  },
+  "meta-tags-generator": {
+    slug: "meta-tags-generator",
+    categoryKey: "generators",
+    icon: "Tags",
+    relatedSlugs: ["robots-txt-generator", "favicon-generator", "html-formatter"],
+    searchTerms: ["meta", "tags", "open graph", "og", "twitter", "social media", "seo", "preview"],
+  },
+  "hex-to-text": {
+    slug: "hex-to-text",
+    categoryKey: "converters",
+    icon: "Hash",
+    relatedSlugs: ["base64-encode-decode", "number-base-converter", "url-encode-decode"],
+    searchTerms: ["hex", "hexadecimal", "binary", "ascii", "text", "convert", "decode"],
+  },
+  "html-viewer": {
+    slug: "html-viewer",
+    categoryKey: "formatters",
+    icon: "Eye",
+    relatedSlugs: ["html-formatter", "markdown-preview", "html-to-markdown"],
+    searchTerms: ["html", "preview", "live", "render", "viewer", "code", "visual"],
   },
 };
 

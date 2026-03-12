@@ -3011,6 +3011,178 @@
           "answer": "Place robots.txt in your website's root directory (e.g., https://example.com/robots.txt)."
         }
       ]
+    },
+    "meta-tags-generator": {
+      "name": "Meta Tags Generator",
+      "shortDescription": "Generate HTML meta tags and Open Graph tags with live social media preview",
+      "metaTitle": "Meta Tags & Open Graph Generator - Free SEO Tool",
+      "metaDescription": "Generate HTML meta tags, Open Graph tags, and Twitter Cards. Preview how your page appears on Facebook, Twitter, and other social platforms.",
+      "keywords": "Keywords",
+      "preview": "Preview",
+      "basicInfo": "Basic Information",
+      "socialMedia": "Social Media / Open Graph",
+      "pageTitle": "Page Title",
+      "pageDescription": "Description",
+      "author": "Author",
+      "ogTitle": "OG Title",
+      "ogDescription": "OG Description",
+      "ogImage": "OG Image URL",
+      "pageUrl": "Page URL",
+      "twitterCard": "Twitter Card Type",
+      "optionalFallback": "Optional (falls back to basic info)",
+      "generatedCode": "Generated HTML Code",
+      "socialPreview": "Social Media Preview",
+      "facebookPreview": "Facebook / Open Graph",
+      "twitterPreview": "Twitter Card",
+      "features": {
+        "title": "Key Features",
+        "items": [
+          "Generate meta tags for SEO",
+          "Create Open Graph tags for social sharing",
+          "Twitter Card configuration",
+          "Live social media preview",
+          "See how your page appears on Facebook and Twitter",
+          "All processing happens in your browser"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use",
+        "steps": [
+          "Enter basic page information (title, description)",
+          "Add Open Graph details for social media",
+          "Click 'Preview' to see social media cards",
+          "Click 'Generate' to create HTML meta tags",
+          "Copy and paste into your HTML <head> section"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What are meta tags?",
+          "answer": "Meta tags provide information about a web page to search engines and social media platforms. They control how your page appears in search results and when shared on social media."
+        },
+        {
+          "question": "What is Open Graph?",
+          "answer": "Open Graph is a protocol that controls how URLs appear when shared on social platforms like Facebook, LinkedIn, and Twitter. It defines the title, description, and image shown in social previews."
+        }
+      ]
+    },
+    "hex-to-text": {
+      "name": "Hex to Text Converter",
+      "shortDescription": "Convert between hexadecimal, binary, ASCII and text formats",
+      "metaTitle": "Hex to Text Converter - Free Online Tool",
+      "metaDescription": "Convert between hexadecimal, binary, ASCII and text formats. Encode and decode hex strings, binary data, and text online.",
+      "keywords": [
+        "hex to text",
+        "hexadecimal converter",
+        "binary converter",
+        "ascii converter",
+        "hex decode"
+      ],
+      "hexToText": "Hex → Text",
+      "textToHex": "Text → Hex",
+      "binaryToText": "Binary → Text",
+      "textToBinary": "Text → Binary",
+      "convert": "Convert",
+      "swap": "Swap",
+      "hexInput": "Hexadecimal Input",
+      "textInput": "Text Input",
+      "binaryInput": "Binary Input",
+      "hexOutput": "Hexadecimal Output",
+      "textOutput": "Text Output",
+      "binaryOutput": "Binary Output",
+      "hexPlaceholder": "Enter hexadecimal (e.g., 48656C6C6F)",
+      "textPlaceholder": "Enter text to convert",
+      "binaryPlaceholder": "Enter binary (e.g., 01001000 01100101)",
+      "characters": "characters",
+      "emptyInput": "Please enter data to convert",
+      "invalidHex": "Invalid hexadecimal format. Must contain only 0-9 and A-F.",
+      "invalidBinary": "Invalid binary format. Must contain only 0 and 1, and be a multiple of 8 bits.",
+      "conversionError": "Error during conversion. Please check your input format.",
+      "features": {
+        "title": "Key Features",
+        "items": [
+          "Convert hex to text and vice versa",
+          "Convert binary to text and vice versa",
+          "Supports ASCII character encoding",
+          "Swap input and output",
+          "Validate hex and binary formats",
+          "All processing happens in your browser"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use",
+        "steps": [
+          "Select conversion mode (Hex to Text, Text to Hex, etc.)",
+          "Paste or type your input",
+          "Click 'Convert' to see the result",
+          "Use 'Swap' to reverse the conversion"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is hexadecimal?",
+          "answer": "Hexadecimal (hex) is a base-16 number system using 0-9 and A-F. It's commonly used to represent binary data in a more compact and readable form."
+        },
+        {
+          "question": "When would I use this tool?",
+          "answer": "This tool is useful for debugging, data encoding/decoding, programming, and working with low-level data formats."
+        }
+      ]
+    },
+    "html-viewer": {
+      "name": "HTML Live Preview",
+      "shortDescription": "Real-time HTML code renderer with instant visual preview",
+      "metaTitle": "HTML Live Preview - Free Online HTML Viewer",
+      "metaDescription": "Preview HTML code in real-time. See instant visual output as you type. Test HTML, CSS, and JavaScript code in your browser.",
+      "keywords": [
+        "html viewer",
+        "html preview",
+        "live preview",
+        "html renderer",
+        "code preview",
+        "html editor"
+      ],
+      "autoPreview": "Auto Preview",
+      "updatePreview": "Update Preview",
+      "templates": "Templates",
+      "basicHtml": "Basic HTML",
+      "styledHtml": "Styled (CSS)",
+      "interactiveHtml": "Interactive (JS)",
+      "htmlCode": "HTML Code",
+      "livePreview": "Live Preview",
+      "htmlPlaceholder": "Enter HTML code here...\n\n<!DOCTYPE html>\n<html>\n<head>\n  <title>My Page</title>\n</head>\n<body>\n  <h1>Hello!</h1>\n</body>\n</html>",
+      "characters": "characters",
+      "securityNote": "Preview is sandboxed for security. Some features (like external requests) may be restricted.",
+      "features": {
+        "title": "Key Features",
+        "items": [
+          "Real-time HTML preview",
+          "Supports CSS and JavaScript",
+          "Auto-update as you type",
+          "Pre-made templates",
+          "Sandboxed preview for security",
+          "All processing happens in your browser"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use",
+        "steps": [
+          "Type or paste HTML code in the editor",
+          "Preview updates automatically (or click 'Update Preview')",
+          "Use templates to start quickly",
+          "Test your HTML, CSS, and JavaScript code"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Can I use CSS and JavaScript?",
+          "answer": "Yes! The preview supports inline CSS (<style> tags) and JavaScript (<script> tags). External resources may be restricted for security."
+        },
+        {
+          "question": "Is my code saved?",
+          "answer": "No, all code stays in your browser. Nothing is sent to any server. Your code is completely private."
+        }
+      ]
     }
   },
   "devtoysAlternative": {
