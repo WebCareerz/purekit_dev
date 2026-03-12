@@ -33,10 +33,9 @@ export default function GzipCompressDecompress({ t }: GzipCompressDecompressProp
       const compressed = await new Response(stream).arrayBuffer();
       return new Uint8Array(compressed);
     } else {
-      // Fallback: use pako if available (we'll add this as optional dependency)
-      throw new Error("CompressionStream not supported in this browser. Please use a modern browser.");
+      throw new Error(toolT.compressError);
     }
-  }, []);
+  }, [toolT]);
 
   const decompressData = useCallback(async (data: Uint8Array): Promise<Uint8Array> => {
     if (typeof DecompressionStream !== "undefined") {
@@ -47,9 +46,9 @@ export default function GzipCompressDecompress({ t }: GzipCompressDecompressProp
       const decompressed = await new Response(stream).arrayBuffer();
       return new Uint8Array(decompressed);
     } else {
-      throw new Error("DecompressionStream not supported in this browser. Please use a modern browser.");
+      throw new Error(toolT.decompressError);
     }
-  }, []);
+  }, [toolT]);
 
   const handleCompress = useCallback(async () => {
     if (!input.trim() && !uploadedFile) {

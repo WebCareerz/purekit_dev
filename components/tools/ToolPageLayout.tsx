@@ -2,6 +2,7 @@ import { type Locale } from "@/lib/i18n";
 import { SITE_URL, generateWebApplicationSchema, generateFAQSchema } from "@/lib/seo";
 import { getRelatedTools } from "@/lib/tools";
 import { Badge } from "@/components/ui/badge";
+import { Check } from "lucide-react";
 import RelatedTools from "./RelatedTools";
 
 interface ToolPageLayoutProps {
@@ -74,15 +75,7 @@ export default function ToolPageLayout({
           <ul className="space-y-2">
             {features.items.map((item, i) => (
               <li key={i} className="flex gap-2 text-muted-foreground">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  className="h-5 w-5 shrink-0 text-primary mt-0.5"
-                >
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
+                <Check className="h-5 w-5 shrink-0 text-primary mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}

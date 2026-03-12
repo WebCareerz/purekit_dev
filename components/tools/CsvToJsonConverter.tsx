@@ -81,7 +81,7 @@ export default function CsvToJsonConverter({ t }: CsvToJsonConverterProps) {
       const rows = parseCSV(input, actualDelimiter);
 
       if (rows.length === 0) {
-        throw new Error("No data found in CSV");
+        throw new Error(toolT.convertError);
       }
 
       let jsonData: unknown[];
