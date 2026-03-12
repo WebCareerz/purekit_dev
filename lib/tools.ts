@@ -30,7 +30,7 @@ export const categories: CategoryDefinition[] = [
   },
   {
     key: "textTools",
-    tools: ["diff-checker", "markdown-preview", "regex-tester", "text-case-converter", "word-counter", "character-counter"],
+    tools: ["diff-checker", "markdown-preview", "regex-tester", "text-case-converter", "word-counter"],
   },
   {
     key: "dataTools",
@@ -248,7 +248,7 @@ export const tools: Record<string, ToolDefinition> = {
     categoryKey: "textTools",
     icon: "FileText",
     relatedSlugs: ["text-case-converter", "markdown-preview", "diff-checker"],
-    searchTerms: ["word", "count", "character", "sentence", "paragraph", "reading", "time", "statistics"],
+    searchTerms: ["word", "count", "character", "sentence", "paragraph", "reading", "time", "statistics", "frequency", "letter", "character counter"],
   },
   "password-generator": {
     slug: "password-generator",
@@ -348,13 +348,7 @@ export const tools: Record<string, ToolDefinition> = {
     relatedSlugs: ["json-to-csv-converter", "json-formatter", "csv-data-cleaner"],
     searchTerms: ["csv", "json", "convert", "parse", "spreadsheet", "data", "table"],
   },
-  "character-counter": {
-    slug: "character-counter",
-    categoryKey: "textTools",
-    icon: "FileText",
-    relatedSlugs: ["word-counter", "text-case-converter", "markdown-preview"],
-    searchTerms: ["character", "count", "word", "letter", "statistics", "reading", "time", "frequency"],
-  },
+
   "css-js-minifier": {
     slug: "css-js-minifier",
     categoryKey: "formatters",
