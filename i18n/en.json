@@ -1678,66 +1678,6 @@
         }
       ]
     },
-    "css-beautifier": {
-      "name": "CSS Formatter & Minifier",
-      "shortDescription": "Format and minify CSS code online",
-      "metaTitle": "CSS Formatter & Minifier - Free CSS Tool | PureKit",
-      "metaDescription": "Format and minify CSS stylesheets online. Beautify messy CSS or compress for production. Free, browser-based, no signup required.",
-      "keywords": [
-        "css beautifier",
-        "css formatter",
-        "css minifier",
-        "beautify css",
-        "format css online",
-        "css pretty print"
-      ],
-      "characters": "characters",
-      "beautify": "Beautify",
-      "emptyInput": "Please enter CSS code to beautify",
-      "beautifyError": "Error beautifying CSS. Please check your syntax.",
-      "minifyError": "Error minifying CSS. Please check your syntax.",
-      "features": {
-        "title": "Features",
-        "items": [
-          "Beautify minified or messy CSS with proper indentation and formatting",
-          "Minify CSS to reduce file size for production deployment",
-          "Syntax-aware formatting preserves selectors and properties",
-          "Handles modern CSS including custom properties and nested rules",
-          "All processing happens in your browser — your stylesheets stay private"
-        ]
-      },
-      "howToUse": {
-        "title": "How to Use the CSS Beautifier",
-        "steps": [
-          "Paste your CSS code into the input area",
-          "Click \"Beautify\" to format the CSS with proper indentation and spacing",
-          "Click \"Minify\" to compress the CSS by removing whitespace and comments",
-          "Copy the formatted output for use in your project"
-        ]
-      },
-      "faq": [
-        {
-          "question": "What's the difference between beautify and minify?",
-          "answer": "Beautify adds line breaks, indentation, and spacing to make CSS readable and maintainable. Minify removes all unnecessary characters to create the smallest possible file size for faster page loads."
-        },
-        {
-          "question": "Does this tool validate CSS?",
-          "answer": "This tool focuses on formatting and beautification. It doesn't perform strict CSS validation. For comprehensive validation, use the W3C CSS Validation Service."
-        },
-        {
-          "question": "Will CSS comments be preserved?",
-          "answer": "Yes, when using beautify. Comments are kept to maintain documentation. The minify option removes comments to reduce file size."
-        },
-        {
-          "question": "Can I format Sass or SCSS?",
-          "answer": "This tool is designed for standard CSS. While it may handle some Sass/SCSS syntax, advanced features like mixins, variables, and nesting may not format correctly. Use a Sass-specific formatter for those."
-        },
-        {
-          "question": "Does it support CSS preprocessors?",
-          "answer": "This tool works best with standard CSS. For preprocessor syntax (Less, Sass, Stylus), use a formatter designed for those languages, or compile to CSS first and then beautify."
-        }
-      ]
-    },
     "json-to-csv-converter": {
       "name": "JSON to CSV Converter",
       "shortDescription": "Convert JSON data to CSV format online",
@@ -2839,10 +2779,10 @@
       ]
     },
     "css-js-minifier": {
-      "name": "CSS & JS Minifier",
-      "shortDescription": "Compress and minify CSS/JavaScript code to reduce file size for faster page loads",
-      "metaTitle": "CSS & JS Minifier - Free Online Code Compression Tool",
-      "metaDescription": "Minify CSS and JavaScript code online. Reduce file size by removing whitespace, comments, and unnecessary characters for faster page loads.",
+      "name": "CSS & JS Minifier & Beautifier",
+      "shortDescription": "Minify or beautify CSS/JavaScript code - compress for production or format for readability",
+      "metaTitle": "CSS & JS Minifier & Beautifier - Free Online Code Formatter",
+      "metaDescription": "Minify or beautify CSS and JavaScript code online. Compress code to reduce file size or format it with proper indentation for better readability.",
       "keywords": [
         "css minifier",
         "js minifier",
@@ -2850,27 +2790,41 @@
         "compress css",
         "compress js",
         "minify code",
-        "reduce file size"
+        "reduce file size",
+        "css beautifier",
+        "js beautifier",
+        "css formatter",
+        "js formatter",
+        "format css",
+        "format javascript",
+        "pretty print",
+        "code indent",
+        "stylesheet formatter"
       ],
       "css": "CSS",
       "javascript": "JavaScript",
       "minify": "Minify",
+      "beautify": "Beautify",
       "original": "Original",
       "minified": "Minified",
+      "formatted": "Formatted",
       "saved": "Saved",
+      "increased": "Increased",
       "cssPlaceholder": "Paste your CSS code here...",
       "jsPlaceholder": "Paste your JavaScript code here...",
       "characters": "characters",
-      "emptyInput": "Please enter CSS or JavaScript code to minify",
+      "emptyInput": "Please enter CSS or JavaScript code to process",
       "minifyError": "Error minifying code. Please check your syntax.",
+      "processError": "Error processing code. Please check your syntax.",
       "features": {
         "title": "Key Features",
         "items": [
-          "Minify CSS and JavaScript code",
-          "Remove comments and whitespace",
-          "Reduce file size for faster loading",
-          "Show compression statistics",
-          "Download minified files",
+          "Minify or beautify CSS and JavaScript code",
+          "Compress code to reduce file size",
+          "Format code with proper indentation",
+          "Remove or preserve comments",
+          "Show size and compression statistics",
+          "Download processed files",
           "All processing happens in your browser"
         ]
       },

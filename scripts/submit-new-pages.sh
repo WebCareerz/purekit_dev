@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# 新增页面URL列表（Batch Auto 0312: 3个工具）
+# 新增页面URL列表（Jake Round 2: 3个工具）
 URLS=(
-  "https://www.purekit.dev/en/css-js-minifier/"
-  "https://www.purekit.dev/en/svg-optimizer/"
-  "https://www.purekit.dev/en/robots-txt-generator/"
+  "https://www.purekit.dev/en/meta-tags-generator/"
+  "https://www.purekit.dev/en/hex-to-text/"
+  "https://www.purekit.dev/en/html-viewer/"
 )
 
 # IndexNow配置
@@ -25,7 +25,7 @@ JSON_PAYLOAD=$(jq -n \
 
 echo "====== IndexNow提交 ======"
 echo "提交时间: $(date '+%Y-%m-%d %H:%M:%S %Z')"
-echo "提交批次: Batch Auto 0312"
+echo "提交批次: Jake Round 2"
 echo "提交URL数量: ${#URLS[@]}"
 echo ""
 echo "URL列表:"
@@ -63,9 +63,15 @@ fi
 
 echo ""
 echo "====== 工具说明 ======"
-echo "• CSS & JS Minifier - 压缩CSS/JS代码减小文件体积"
-echo "• SVG Optimizer - 优化SVG文件移除冗余代码"
-echo "• Robots.txt Generator - 生成robots.txt控制爬虫访问"
+echo "• Meta Tags Generator - 生成HTML meta标签和Open Graph预览"
+echo "• Hex to Text - 十六进制/二进制/ASCII/文本格式转换"
+echo "• HTML Viewer - 实时HTML代码渲染预览"
+echo ""
+echo "====== SEO价值 ======"
+echo "• Meta Tags Generator: ~3000/月搜索量 - SEO工具刚需"
+echo "• Hex to Text: ~1200/月搜索量 - 开发者编码工具"
+echo "• HTML Viewer: ~1500/月搜索量 - 前端开发预览"
+echo "• 总流量潜力: ~5700/月"
 echo ""
 echo "====== 搜索引擎覆盖 ======"
 echo "IndexNow联盟成员（已自动通知）："
