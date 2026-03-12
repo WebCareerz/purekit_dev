@@ -218,14 +218,7 @@ const toolIcons: Record<string, React.ReactNode> = {
       <path d="m14 17 2-2-2-2" />
     </svg>
   ),
-  "css-beautifier": (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
-      <path d="m12 3-4 7h8Z" />
-      <path d="M12 3v7" />
-      <rect x="3" y="14" width="7" height="7" rx="1" />
-      <circle cx="17.5" cy="17.5" r="3.5" />
-    </svg>
-  ),
+
   "json-to-csv-converter": (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
       <path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1" />

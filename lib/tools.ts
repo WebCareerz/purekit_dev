@@ -14,7 +14,7 @@ export interface CategoryDefinition {
 export const categories: CategoryDefinition[] = [
   {
     key: "formatters",
-    tools: ["json-formatter", "sql-formatter", "html-formatter", "xml-formatter", "javascript-beautifier", "css-beautifier", "css-js-minifier", "html-viewer"],
+    tools: ["json-formatter", "sql-formatter", "html-formatter", "xml-formatter", "javascript-beautifier", "css-js-minifier", "html-viewer"],
   },
   {
     key: "encodersDecoders",
@@ -212,23 +212,17 @@ export const tools: Record<string, ToolDefinition> = {
     slug: "html-formatter",
     categoryKey: "formatters",
     icon: "Code",
-    relatedSlugs: ["javascript-beautifier", "css-beautifier", "json-formatter"],
+    relatedSlugs: ["javascript-beautifier", "css-js-minifier", "json-formatter"],
     searchTerms: ["html", "format", "beautify", "minify", "pretty", "indent", "markup", "web"],
   },
   "javascript-beautifier": {
     slug: "javascript-beautifier",
     categoryKey: "formatters",
     icon: "FileCode2",
-    relatedSlugs: ["html-formatter", "css-beautifier", "json-formatter"],
+    relatedSlugs: ["html-formatter", "css-js-minifier", "json-formatter"],
     searchTerms: ["javascript", "js", "beautify", "format", "minify", "pretty", "indent", "code"],
   },
-  "css-beautifier": {
-    slug: "css-beautifier",
-    categoryKey: "formatters",
-    icon: "Paintbrush",
-    relatedSlugs: ["html-formatter", "javascript-beautifier", "color-converter"],
-    searchTerms: ["css", "stylesheet", "beautify", "format", "minify", "pretty", "indent", "style"],
-  },
+
   "json-to-csv-converter": {
     slug: "json-to-csv-converter",
     categoryKey: "converters",
@@ -353,8 +347,8 @@ export const tools: Record<string, ToolDefinition> = {
     slug: "css-js-minifier",
     categoryKey: "formatters",
     icon: "Minimize2",
-    relatedSlugs: ["css-beautifier", "javascript-beautifier", "html-formatter"],
-    searchTerms: ["css", "js", "javascript", "minify", "compress", "optimize", "reduce", "file size"],
+    relatedSlugs: ["javascript-beautifier", "html-formatter", "color-converter"],
+    searchTerms: ["css", "js", "javascript", "minify", "compress", "optimize", "reduce", "file size", "beautify", "format", "formatter", "pretty", "indent", "stylesheet"],
   },
   "svg-optimizer": {
     slug: "svg-optimizer",
