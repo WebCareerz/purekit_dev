@@ -253,8 +253,8 @@ export default function CssJsMinifier({ t }: CssJsMinifierProps) {
     const a = document.createElement("a");
     a.href = url;
     a.download = mode === "css" 
-      ? `${extension}.${action === "minify" ? "min." : ""}css`
-      : `${extension}.${action === "minify" ? "min." : ""}js`;
+      ? `output.${extension}.css`
+      : `output.${extension}.js`;
     a.click();
     URL.revokeObjectURL(url);
   }, [output, mode, action]);
