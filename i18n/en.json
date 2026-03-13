@@ -71,8 +71,12 @@
         "content": "All PureKit tools run entirely in your browser using client-side JavaScript. Your data — including text, files, images, and any other input — is processed locally on your device and is never sent to any server. We do not collect, store, transmit, or have access to any data you process with our tools."
       },
       {
-        "heading": "No Cookies or Tracking",
-        "content": "PureKit does not use cookies, analytics trackers, or any form of user tracking. We do not use Google Analytics, Facebook Pixel, or any similar services. We don't use browser fingerprinting, device tracking, or any sneaky techniques to identify you."
+        "heading": "Privacy-Friendly Analytics",
+        "content": "PureKit uses Cloudflare Web Analytics, a privacy-respecting analytics service that does not use cookies or track individual users. It provides basic aggregate statistics (page views, referrers) without collecting personally identifiable information. Cloudflare Web Analytics is GDPR and CCPA compliant."
+      },
+      {
+        "heading": "No Cookies or Personal Tracking",
+        "content": "PureKit does not use cookies for tracking. We do not use Google Analytics, Facebook Pixel, or any similar invasive services. We don't use browser fingerprinting, device tracking, or any techniques to identify individual users."
       },
       {
         "heading": "No User Accounts",
@@ -96,7 +100,7 @@
       },
       {
         "heading": "Contact",
-        "content": "If you have questions about this privacy policy, please contact us at support@purekit.dev."
+        "content": "If you have questions about this privacy policy, please contact us at webcareercontact@gmail.com."
       }
     ]
   },
@@ -116,12 +120,20 @@
         "content": "PureKit is provided \"as is\" and \"as available\" without warranties of any kind, whether express or implied. We do not guarantee that the tools will be error-free, uninterrupted, or that the results produced will be accurate or suitable for any particular purpose."
       },
       {
+        "heading": "No Liability for Data Loss",
+        "content": "Since all processing happens locally in your browser, we are not responsible for any data loss or corruption. Always keep backups of important data. Do not rely on browser processing as the sole means of data transformation for critical operations."
+      },
+      {
         "heading": "Your Responsibility",
         "content": "You are solely responsible for your use of PureKit and any data you process with our tools. Always verify critical outputs independently. Do not rely on PureKit as the sole tool for security-sensitive operations without independent verification."
       },
       {
         "heading": "Limitation of Liability",
         "content": "To the fullest extent permitted by law, PureKit and its maintainers shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising from your use of or inability to use the service."
+      },
+      {
+        "heading": "Right to Modify Service",
+        "content": "We reserve the right to modify, suspend, or discontinue any part of PureKit at any time without prior notice. We may add, remove, or change tools and features as we see fit."
       },
       {
         "heading": "Intellectual Property",
@@ -137,7 +149,7 @@
       },
       {
         "heading": "Contact",
-        "content": "For questions about these terms, please contact us at support@purekit.dev."
+        "content": "For questions about these terms, please contact us at webcareercontact@gmail.com."
       }
     ]
   },
