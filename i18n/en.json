@@ -484,59 +484,136 @@
     },
     "jwt-decoder": {
       "name": "JWT Decoder",
-      "shortDescription": "Decode and inspect JSON Web Tokens (JWT) instantly in your browser.",
-      "metaTitle": "JWT Decoder - Free Online Tool | PureKit",
-      "metaDescription": "Decode and inspect JWT tokens online for free. View header, payload, and signature. Check expiration status. No signup, no data upload. Browser-based and privacy-first.",
+      "shortDescription": "Decode and inspect JWT tokens and bearer tokens online. View header, payload, signature, and expiration status.",
+      "metaTitle": "JWT & Bearer Token Decoder - Free Online Tool | PureKit",
+      "metaDescription": "Decode JWT tokens and bearer tokens online. Inspect header, payload, signature, and claims. Check expiration status. OAuth token decoder, JWT debugger, and claims parser - browser-based and privacy-first.",
       "keywords": [
         "jwt decoder",
+        "bearer token decoder",
         "jwt parser",
         "json web token",
         "decode jwt",
         "jwt online",
         "jwt inspector",
-        "token decoder"
+        "token decoder",
+        "oauth token decoder",
+        "jwt claims parser",
+        "jwt debugger",
+        "bearer token parser",
+        "jwt validator",
+        "jwt token analyzer",
+        "jwt header decoder",
+        "jwt payload decoder",
+        "jwt signature verify",
+        "authentication token decoder",
+        "access token decoder",
+        "jwt base64 decoder"
       ],
-      "inputPlaceholder": "Paste your JWT token here (eyJhbG...)...",
       "header": "Header",
       "payload": "Payload",
       "signature": "Signature",
-      "issuedAt": "Issued At",
-      "expiresAt": "Expires At",
-      "notBefore": "Not Before",
+      "algorithm": "Algorithm",
+      "type": "Type",
+      "issued": "Issued (iat)",
+      "expires": "Expires (exp)",
+      "subject": "Subject (sub)",
+      "issuer": "Issuer (iss)",
+      "audience": "Audience (aud)",
       "expired": "Expired",
-      "active": "Active",
-      "invalidToken": "Invalid JWT token",
+      "valid": "Valid",
+      "invalidFormat": "Invalid JWT format. Please paste a valid JWT token.",
+      "emptyInput": "Please paste a JWT token to decode.",
+      "pasteToken": "Paste JWT token here...",
+      "characters": "characters",
+      "understanding": {
+        "title": "Understanding JWT Structure",
+        "intro": "JSON Web Tokens (JWTs) are a compact, URL-safe means of representing claims between two parties. Understanding their structure is essential for modern web authentication and authorization.",
+        "sections": [
+          {
+            "heading": "What is a JWT Token?",
+            "content": "A JWT (JSON Web Token) is a self-contained token format used for securely transmitting information between parties as a JSON object. It consists of three parts separated by dots: Header.Payload.Signature. JWTs are commonly used for authentication and information exchange in modern web applications, APIs, and microservices architectures."
+          },
+          {
+            "heading": "JWT Header",
+            "content": "The header typically consists of two parts: the token type (JWT) and the signing algorithm (e.g., HMAC SHA256 or RSA). The header is Base64Url encoded to form the first part of the JWT. Example: {\"alg\": \"HS256\", \"typ\": \"JWT\"}. The algorithm field indicates how the token signature should be verified."
+          },
+          {
+            "heading": "JWT Payload (Claims)",
+            "content": "The payload contains the claims - statements about an entity (typically the user) and additional data. There are three types of claims: registered claims (predefined like iss, exp, sub), public claims (custom but should be collision-resistant), and private claims (custom shared between parties). Common claims include exp (expiration time), iat (issued at), sub (subject/user ID), iss (issuer), and aud (audience)."
+          },
+          {
+            "heading": "JWT Signature",
+            "content": "The signature is created by encoding the header and payload with Base64Url, concatenating them with a dot, and then signing the result using the algorithm specified in the header with a secret key. The signature ensures that the token hasn't been tampered with. To verify a JWT, the receiver must have access to the same secret key (for HMAC) or public key (for RSA/ECDSA)."
+          },
+          {
+            "heading": "Bearer Tokens Explained",
+            "content": "Bearer tokens are a type of access token included in the HTTP Authorization header. The format is 'Authorization: Bearer <token>'. JWTs are commonly used as bearer tokens in OAuth 2.0 and OpenID Connect flows. When you paste a bearer token into our decoder, we automatically extract the JWT portion. Bearer tokens grant access to protected resources - anyone who possesses the token can use it, hence they must be kept secure and transmitted only over HTTPS."
+          },
+          {
+            "heading": "Common JWT Use Cases",
+            "content": "Authentication: After login, the server issues a JWT that the client includes in subsequent requests. The server validates the token without querying the database. Authorization: JWTs can contain user roles and permissions in the payload. Information Exchange: JWTs securely transmit information between services because you can verify the sender and ensure data integrity. Single Sign-On (SSO): One token can authenticate a user across multiple applications. Stateless API Authentication: No need to maintain server-side session storage."
+          }
+        ]
+      },
       "features": {
-        "title": "Features",
+        "title": "Key Features",
         "items": [
-          "Decode JWT header and payload with formatted JSON output",
-          "Display signature information and algorithm used",
-          "Show token expiration status with human-readable dates",
-          "Detect and display standard JWT claims (iss, sub, aud, exp, iat, nbf)",
-          "Real-time decoding as you paste — no submit button needed"
+          "Decode JWT tokens and bearer tokens instantly",
+          "View header, payload, and signature in readable JSON format",
+          "Check token expiration status automatically",
+          "Inspect all JWT claims (iss, sub, aud, exp, iat, etc.)",
+          "Support for all JWT algorithms (HS256, RS256, ES256, etc.)",
+          "Parse OAuth 2.0 and OpenID Connect tokens",
+          "Privacy-first: All decoding happens in your browser",
+          "No signup, no data upload, completely free"
         ]
       },
       "howToUse": {
         "title": "How to Use the JWT Decoder",
         "steps": [
-          "Paste your JWT token (starting with eyJ...) into the input area",
-          "The header, payload, and signature are decoded and displayed instantly",
-          "Check the expiration status — active tokens show green, expired show red",
-          "Click \"Copy\" to copy any section to your clipboard"
+          "Copy your JWT token or bearer token from your application",
+          "Paste it into the input field (we'll auto-extract the token from 'Bearer <token>' format)",
+          "The decoder instantly displays the header, payload, and signature",
+          "Review the decoded claims and check expiration status",
+          "Verify the algorithm and token structure"
         ]
       },
       "faq": [
         {
-          "question": "What is a JWT (JSON Web Token)?",
-          "answer": "A JWT is a compact, URL-safe token format used for securely transmitting information between parties. It consists of three parts separated by dots: a header (algorithm and token type), a payload (claims/data), and a signature. JWTs are commonly used for authentication and authorization in web applications."
+          "question": "What is a JWT token?",
+          "answer": "A JWT (JSON Web Token) is a compact, URL-safe token format used for securely transmitting information between parties. It consists of three Base64Url-encoded parts: header, payload, and signature, separated by dots. JWTs are commonly used for authentication and authorization in modern web applications."
         },
         {
-          "question": "Is it safe to decode JWTs here?",
-          "answer": "Yes. JWT decoding is done entirely in your browser using JavaScript's atob() function. Your token is never sent to any server. Note that decoding a JWT does not verify its signature — it only reads the data contained within."
+          "question": "What is a bearer token?",
+          "answer": "A bearer token is an access token included in the Authorization HTTP header using the format 'Authorization: Bearer <token>'. JWTs are frequently used as bearer tokens in OAuth 2.0 and OpenID Connect protocols. Anyone who possesses a bearer token can use it to access protected resources, so they must be transmitted securely over HTTPS."
         },
         {
-          "question": "Does this tool verify JWT signatures?",
-          "answer": "No. This tool decodes and displays the content of JWT tokens but does not verify signatures. Signature verification requires the secret key or public key used to sign the token. Use this tool for inspecting token contents during development and debugging."
+          "question": "Can I decode bearer tokens with this tool?",
+          "answer": "Yes! Our decoder automatically extracts the JWT from bearer token format. Simply paste the entire 'Bearer <token>' string or just the JWT portion. The decoder will handle both formats and display the decoded header, payload, and signature."
+        },
+        {
+          "question": "Is JWT decoding safe? Will my token be uploaded?",
+          "answer": "Absolutely safe. All JWT decoding happens entirely in your browser using JavaScript - nothing is sent to any server. Your tokens never leave your device. We don't collect, store, or transmit any data. You can verify this by checking your browser's network tab or inspecting our open-source code."
+        },
+        {
+          "question": "Can this tool verify JWT signatures?",
+          "answer": "Our tool decodes and displays the JWT structure but does not verify signatures because that would require access to your secret key. Signature verification should be done on your backend server where the secret key is stored securely. This tool is designed for inspection and debugging, not authentication."
+        },
+        {
+          "question": "What are JWT claims?",
+          "answer": "JWT claims are statements about an entity (usually the user) contained in the payload. Common registered claims include: exp (expiration time), iat (issued at time), sub (subject/user identifier), iss (issuer), aud (audience), and nbf (not before). You can also include custom private claims specific to your application."
+        },
+        {
+          "question": "JWT vs Session Authentication - what's the difference?",
+          "answer": "Session authentication stores user state on the server and uses a session ID in cookies. JWT authentication is stateless - all user information is encoded in the token itself. JWTs enable horizontal scaling and work well with microservices, but they cannot be easily revoked before expiration. Sessions require server-side storage but allow instant revocation."
+        },
+        {
+          "question": "What is the difference between JWE and JWT?",
+          "answer": "JWT (JSON Web Token) is for signing data to ensure integrity and authenticity. JWE (JSON Web Encryption) is for encrypting data to ensure confidentiality. JWTs are typically signed (JWS - JSON Web Signature) but not encrypted, meaning anyone can decode and read the payload. JWE encrypts the entire payload so only parties with the decryption key can read it."
+        },
+        {
+          "question": "Why does my JWT token show as expired?",
+          "answer": "JWTs include an 'exp' (expiration) claim that specifies when the token becomes invalid. Our decoder checks this timestamp against the current time and highlights expired tokens. Expired tokens should not be accepted by your API. Token expiration is a security feature to limit the window of potential misuse if a token is compromised."
         }
       ]
     },

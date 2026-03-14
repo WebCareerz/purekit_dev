@@ -26,6 +26,7 @@ export default function ToolPageLayout({
   const shortDescription = toolT.shortDescription as string;
   const features = toolT.features as { title: string; items: string[] };
   const howToUse = toolT.howToUse as { title: string; steps: string[] };
+  const understanding = toolT.understanding as { title: string; intro: string; sections: { heading: string; content: string }[] } | undefined;
   const faq = toolT.faq as { question: string; answer: string }[];
 
   const relatedTools = getRelatedTools(toolSlug);
@@ -97,6 +98,26 @@ export default function ToolPageLayout({
               </li>
             ))}
           </ol>
+        </section>
+      )}
+
+      {/* Understanding Section (Educational Content) */}
+      {understanding && (
+        <section className="mb-10">
+          <h2 className="text-xl font-semibold mb-4">{understanding.title}</h2>
+          <p className="text-muted-foreground mb-6 leading-relaxed">
+            {understanding.intro}
+          </p>
+          <div className="space-y-6">
+            {understanding.sections.map((section, i) => (
+              <div key={i}>
+                <h3 className="text-lg font-semibold mb-2">{section.heading}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {section.content}
+                </p>
+              </div>
+            ))}
+          </div>
         </section>
       )}
 
