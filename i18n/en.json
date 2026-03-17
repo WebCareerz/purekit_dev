@@ -1,0 +1,3383 @@
+{
+  "meta": {
+    "siteTitle": "PureKit - Free Online Developer Tools",
+    "siteDescription": "Privacy-first browser-based developer tools. JSON formatter, Base64 encoder, URL encoder, UUID generator, hash generator and more. Your data never leaves your device.",
+    "titleTemplate": "%s | PureKit"
+  },
+  "nav": {
+    "home": "All Tools",
+    "more": "More",
+    "categories": {
+      "formatters": "Formatters",
+      "encodersDecoders": "Encoders & Decoders",
+      "generators": "Generators",
+      "converters": "Converters",
+      "textTools": "Text Tools",
+      "dataTools": "Data Tools",
+      "pdfTools": "PDF Tools",
+      "imageTools": "Image Tools"
+    }
+  },
+  "common": {
+    "input": "Input",
+    "output": "Output",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "clear": "Clear",
+    "paste": "Paste",
+    "encode": "Encode",
+    "decode": "Decode",
+    "format": "Format",
+    "minify": "Minify",
+    "validate": "Validate",
+    "generate": "Generate",
+    "download": "Download",
+    "reset": "Reset",
+    "swap": "Swap",
+    "processedLocally": "100% Client-Side • Privacy Protected",
+    "relatedTools": "Related Tools",
+    "faq": "Frequently Asked Questions",
+    "features": "Features",
+    "howToUse": "How to Use",
+    "inputPlaceholder": "Paste or type your input here...",
+    "outputPlaceholder": "Output will appear here...",
+    "error": "Error",
+    "success": "Success",
+    "valid": "Valid",
+    "invalid": "Invalid",
+    "remove": "Remove"
+  },
+  "footer": {
+    "privacyTitle": "Your Privacy, Protected",
+    "privacyText": "All tools on PureKit run entirely in your browser. No data is ever sent to any server. We don't track, store, or process your data.",
+    "howItWorks": "How It Works",
+    "howItWorksText": "PureKit uses modern browser technology to process everything on your device. Your data never touches the internet.",
+    "linksTitle": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "contact": "Contact",
+    "copyright": "© {year} PureKit. Free, open-source developer tools.",
+    "tagline": "Your files never leave your device."
+  },
+  "privacy": {
+    "metaTitle": "Privacy Policy | PureKit",
+    "metaDescription": "PureKit's privacy policy. All tools run entirely in your browser — no data is collected, stored, or transmitted to any server.",
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: March 2026",
+    "intro": "PureKit is built with a privacy-first approach. This policy explains how we handle your data — or more accurately, how we don't.",
+    "sections": [
+      {
+        "heading": "No Data Collection",
+        "content": "All PureKit tools run entirely in your browser using client-side JavaScript. Your data — including text, files, images, and any other input — is processed locally on your device and is never sent to any server. We do not collect, store, transmit, or have access to any data you process with our tools."
+      },
+      {
+        "heading": "Privacy-Friendly Analytics",
+        "content": "PureKit uses Cloudflare Web Analytics, a privacy-respecting analytics service that does not use cookies or track individual users. It provides basic aggregate statistics (page views, referrers) without collecting personally identifiable information. Cloudflare Web Analytics is GDPR and CCPA compliant."
+      },
+      {
+        "heading": "No Cookies or Personal Tracking",
+        "content": "PureKit does not use cookies for tracking. We do not use Google Analytics, Facebook Pixel, or any similar invasive services. We don't use browser fingerprinting, device tracking, or any techniques to identify individual users."
+      },
+      {
+        "heading": "No User Accounts",
+        "content": "PureKit does not require registration or user accounts. There is no login, no profile, and no personal information to provide."
+      },
+      {
+        "heading": "Hosting & CDN",
+        "content": "PureKit is hosted as a static website on Cloudflare Pages. Cloudflare may collect standard server logs (IP address, user agent, timestamps) as part of their infrastructure. These logs are managed by Cloudflare under their own privacy policy and are not accessible to PureKit."
+      },
+      {
+        "heading": "Third-Party Services",
+        "content": "PureKit does not integrate with any third-party services that process your data. All tool functionality is self-contained within the browser. No external APIs are called with your data."
+      },
+      {
+        "heading": "Open Source",
+        "content": "PureKit's source code is publicly available. You can verify our privacy claims by inspecting the code yourself. There are no hidden network requests or data transmissions."
+      },
+      {
+        "heading": "Changes to This Policy",
+        "content": "If we make changes to this privacy policy, we will update this page. Given our architecture (100% client-side processing), significant privacy changes are unlikely."
+      },
+      {
+        "heading": "Contact",
+        "content": "If you have questions about this privacy policy, please contact us at support@purekit.dev."
+      }
+    ]
+  },
+  "terms": {
+    "metaTitle": "Terms of Service | PureKit",
+    "metaDescription": "Terms of service for PureKit — free, browser-based developer tools. No warranty, provided as-is for your convenience.",
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: March 2026",
+    "intro": "By using PureKit, you agree to the following terms.",
+    "sections": [
+      {
+        "heading": "Service Description",
+        "content": "PureKit provides free, browser-based developer tools. All tools run entirely in your browser — no data is uploaded to or processed by our servers."
+      },
+      {
+        "heading": "As-Is Availability",
+        "content": "PureKit is provided \"as is\" and \"as available\" without warranties of any kind, whether express or implied. We do not guarantee that the tools will be error-free, uninterrupted, or that the results produced will be accurate or suitable for any particular purpose."
+      },
+      {
+        "heading": "No Liability for Data Loss",
+        "content": "Since all processing happens locally in your browser, we are not responsible for any data loss or corruption. Always keep backups of important data. Do not rely on browser processing as the sole means of data transformation for critical operations."
+      },
+      {
+        "heading": "Your Responsibility",
+        "content": "You are solely responsible for your use of PureKit and any data you process with our tools. Always verify critical outputs independently. Do not rely on PureKit as the sole tool for security-sensitive operations without independent verification."
+      },
+      {
+        "heading": "Limitation of Liability",
+        "content": "To the fullest extent permitted by law, PureKit and its maintainers shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising from your use of or inability to use the service."
+      },
+      {
+        "heading": "Right to Modify Service",
+        "content": "We reserve the right to modify, suspend, or discontinue any part of PureKit at any time without prior notice. We may add, remove, or change tools and features as we see fit."
+      },
+      {
+        "heading": "Intellectual Property",
+        "content": "The PureKit name, logo, and website design are the property of PureKit. The tools and their underlying source code are available under an open-source license. You may not use the PureKit brand to imply endorsement of your products or services."
+      },
+      {
+        "heading": "Acceptable Use",
+        "content": "You agree to use PureKit only for lawful purposes. You may not attempt to reverse-engineer, disrupt, or abuse the service infrastructure."
+      },
+      {
+        "heading": "Changes to Terms",
+        "content": "We may update these terms from time to time. Continued use of PureKit after changes constitutes acceptance of the updated terms."
+      },
+      {
+        "heading": "Contact",
+        "content": "For questions about these terms, please contact us at support@purekit.dev."
+      }
+    ]
+  },
+  "contact": {
+    "metaTitle": "Contact Us | PureKit",
+    "metaDescription": "Get in touch with the PureKit team. Report bugs, suggest features, or ask questions about our free browser-based developer tools.",
+    "title": "Contact Us",
+    "intro": "Have a question, found a bug, or want to suggest a new tool? We'd love to hear from you.",
+    "emailTitle": "Email",
+    "emailDescription": "For general inquiries, bug reports, or feature requests:",
+    "email": "support@purekit.dev",
+    "responseTime": "We typically respond within 1–2 business days.",
+    "topics": {
+      "title": "What can we help with?",
+      "items": [
+        "Bug reports — something not working as expected",
+        "Feature requests — tools or features you'd like to see",
+        "General questions — about PureKit, privacy, or how our tools work",
+        "Partnership inquiries — collaboration or integration opportunities"
+      ]
+    }
+  },
+  "home": {
+    "title": "Free Browser-Based Developer Tools",
+    "subtitle": "Privacy-first tools that run entirely in your browser. No uploads, no tracking, no signup required.",
+    "badge": "Your data never leaves your device",
+    "allTools": "All Tools",
+    "searchPlaceholder": "Search tools...",
+    "noResults": "No tools found. Try a different search term.",
+    "searchHint": "Quick search",
+    "mostPopular": "Most Popular Tools",
+    "mostPopularSubtitle": "Our most-used privacy-first developer tools"
+  },
+  "tools": {
+    "json-formatter": {
+      "name": "JSON Formatter & Validator",
+      "shortDescription": "Format, validate, and minify JSON data instantly in your browser.",
+      "metaTitle": "JSON Formatter & Validator - Free Online Tool | PureKit",
+      "metaDescription": "Format, validate, and beautify JSON online for free. No signup, no data upload. Supports minification, syntax highlighting, and error detection. Browser-based and privacy-first.",
+      "keywords": [
+        "json formatter",
+        "json validator",
+        "json beautifier",
+        "json minifier",
+        "format json online",
+        "validate json",
+        "json pretty print"
+      ],
+      "indentation": "Indentation",
+      "spaces2": "2 Spaces",
+      "spaces4": "4 Spaces",
+      "tab": "Tab",
+      "validJson": "Valid JSON",
+      "invalidJson": "Invalid JSON",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Format and beautify JSON with customizable indentation (2 spaces, 4 spaces, or tabs)",
+          "Validate JSON syntax with detailed error messages and line numbers",
+          "Minify JSON to reduce file size for production use",
+          "Real-time preview as you type",
+          "Support for large JSON files up to several megabytes"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the JSON Formatter",
+        "steps": [
+          "Paste your JSON data into the input area on the left",
+          "Click \"Format\" to beautify or \"Minify\" to compress your JSON",
+          "View validation results — valid JSON shows a green indicator, errors show details",
+          "Click \"Copy\" to copy the formatted output to your clipboard"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Is my JSON data safe?",
+          "answer": "Yes, absolutely. All JSON processing happens entirely in your browser using JavaScript's built-in JSON.parse() and JSON.stringify(). Your data is never sent to any server."
+        },
+        {
+          "question": "What is the maximum JSON size supported?",
+          "answer": "PureKit can handle JSON files up to several megabytes. Processing happens in your browser, so performance depends on your device's capabilities."
+        },
+        {
+          "question": "Can I validate JSON with comments?",
+          "answer": "No, standard JSON doesn't support comments. If your JSON file has lines starting with // or /* */, the validator will show syntax errors.\n\nTip: If you're using JSON for configuration files (like VS Code settings), you may be using JSONC or JSON5, which allow comments. Our validator only checks standard JSON. You can remove the comments first, or use a JSONC/JSON5-specific tool."
+        },
+        {
+          "question": "What's the difference between Format and Minify?",
+          "answer": "Format (beautify) adds indentation and line breaks to make JSON human-readable. Minify removes all unnecessary whitespace to produce the smallest possible output, ideal for production use or API payloads."
+        }
+      ]
+    },
+    "base64-encode-decode": {
+      "name": "Base64 Encode / Decode",
+      "shortDescription": "Encode text to Base64 or decode Base64 strings instantly in your browser.",
+      "metaTitle": "Base64 Encode & Decode - Free Online Tool | PureKit",
+      "metaDescription": "Encode and decode Base64 strings online for free. Supports UTF-8 text. No signup, no data upload. Browser-based and privacy-first.",
+      "keywords": [
+        "base64 encode",
+        "base64 decode",
+        "base64 converter",
+        "base64 online",
+        "text to base64",
+        "base64 to text",
+        "base64 image encoder",
+        "base64url",
+        "file to base64"
+      ],
+      "encodePlaceholder": "Enter text to encode to Base64...",
+      "decodePlaceholder": "Enter Base64 string to decode...",
+      "encodeOutputPlaceholder": "Base64 encoded output will appear here...",
+      "decodeOutputPlaceholder": "Decoded text will appear here...",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Encode any text string to Base64 format",
+          "Decode Base64 strings back to plain text",
+          "Full UTF-8 support for international characters and emoji",
+          "Real-time encoding and decoding as you type",
+          "Works entirely offline — no internet needed"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Base64 Encoder/Decoder",
+        "steps": [
+          "Select the \"Encode\" or \"Decode\" tab based on your needs",
+          "Paste or type your text in the input area",
+          "The result appears instantly in the output area",
+          "Click \"Copy\" to copy the result to your clipboard"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is Base64 encoding?",
+          "answer": "Base64 is a binary-to-text encoding scheme that represents binary data using 64 ASCII characters (A-Z, a-z, 0-9, +, /). It's commonly used to embed binary data in text-based formats like JSON, XML, HTML, and email."
+        },
+        {
+          "question": "Is Base64 encryption?",
+          "answer": "No. Base64 is an encoding scheme, not encryption. It does not provide any security — anyone can decode a Base64 string. Use proper encryption (like AES) if you need to protect sensitive data."
+        },
+        {
+          "question": "Does this support UTF-8 characters?",
+          "answer": "Yes. This tool properly handles UTF-8 text including international characters, accented letters, CJK characters, and emoji. It uses the TextEncoder/TextDecoder APIs for correct Unicode handling."
+        },
+        {
+          "question": "How do I encode a file to Base64?",
+          "answer": "In JavaScript, use the FileReader API with readAsDataURL() to convert a file into a Base64 data URI. This is useful for embedding images directly in HTML or CSS, or for sending file attachments inside JSON payloads to APIs that don't support multipart uploads."
+        },
+        {
+          "question": "What is Base64url encoding?",
+          "answer": "Base64url is a URL-safe variant of Base64 that replaces + with - and / with _, and omits padding (=). It's used in JSON Web Tokens (JWT), URL query parameters, and filenames where standard Base64 characters would cause issues."
+        },
+        {
+          "question": "Why does Base64 increase data size?",
+          "answer": "Base64 encodes every 3 bytes of binary data into 4 ASCII characters, resulting in roughly 33% size increase. This overhead makes it unsuitable for transferring large files. For large data, use direct binary transfer (e.g., multipart form upload) and reserve Base64 for small payloads like icons or tokens."
+        }
+      ]
+    },
+    "url-encode-decode": {
+      "name": "URL Encode / Decode",
+      "shortDescription": "Encode or decode URL components instantly in your browser.",
+      "metaTitle": "URL Encode & Decode - Free Online Tool | PureKit",
+      "metaDescription": "URL encode and decode strings online for free. Perfect for query parameters, form data, and URI components. No signup required. Browser-based and privacy-first.",
+      "keywords": [
+        "url encode",
+        "url decode",
+        "percent encoding",
+        "urlencode online",
+        "url encoder",
+        "url decoder",
+        "encodeURIComponent"
+      ],
+      "encodePlaceholder": "Enter text to URL encode...",
+      "decodePlaceholder": "Enter URL encoded string to decode...",
+      "encodeOutputPlaceholder": "URL encoded output will appear here...",
+      "decodeOutputPlaceholder": "Decoded text will appear here...",
+      "encodeMode": "Encode Component",
+      "encodeFullUrl": "Encode Full URL",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Encode special characters for safe use in URLs and query parameters",
+          "Decode percent-encoded strings back to readable text",
+          "Two encoding modes: component encoding and full URL encoding",
+          "Real-time processing as you type",
+          "Handles all special characters including Unicode and emoji"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the URL Encoder/Decoder",
+        "steps": [
+          "Select the \"Encode\" or \"Decode\" tab",
+          "Paste or type your text in the input area",
+          "For encoding, choose between \"Component\" mode (for query params) or \"Full URL\" mode",
+          "The result appears instantly — click \"Copy\" to copy it"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is URL encoding?",
+          "answer": "URL encoding (also called percent-encoding) replaces special characters in URLs with percent signs followed by their hexadecimal values. For example, a space becomes %20 and an ampersand becomes %26. This ensures URLs are valid and properly interpreted by web servers."
+        },
+        {
+          "question": "What's the difference between encodeURI and encodeURIComponent?",
+          "answer": "encodeURI encodes a complete URI, preserving characters that are valid in URLs (like /, ?, #, &). encodeURIComponent encodes individual URI components more aggressively, encoding characters like & and = that have special meaning in query strings. Use encodeURIComponent for encoding individual parameter values."
+        },
+        {
+          "question": "When should I URL encode data?",
+          "answer": "You should URL encode data whenever you're building query parameters, form data for POST requests, or including user-generated content in URLs. Common cases include search queries, API parameters, and redirect URLs."
+        }
+      ]
+    },
+    "uuid-generator": {
+      "name": "UUID Generator",
+      "shortDescription": "Generate random UUIDs (v4) instantly in your browser.",
+      "metaTitle": "UUID Generator - Free Online Tool | PureKit",
+      "metaDescription": "Generate random UUID v4 identifiers online for free. Bulk generation, uppercase/lowercase options. No signup required. Browser-based and privacy-first.",
+      "keywords": [
+        "uuid generator",
+        "uuid v4",
+        "random uuid",
+        "guid generator",
+        "unique id generator",
+        "uuid online"
+      ],
+      "quantity": "Quantity",
+      "uppercase": "Uppercase",
+      "lowercase": "Lowercase",
+      "hyphens": "With Hyphens",
+      "noHyphens": "Without Hyphens",
+      "generateCount": "Generate {count}",
+      "copyAll": "Copy All",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Generate cryptographically random UUID v4 identifiers",
+          "Bulk generation — create up to 50 UUIDs at once",
+          "Toggle between uppercase and lowercase output",
+          "Option to include or remove hyphens",
+          "Uses the Web Crypto API for true randomness"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the UUID Generator",
+        "steps": [
+          "Set the quantity of UUIDs you want to generate (1 to 50)",
+          "Choose your preferred format: uppercase/lowercase, with/without hyphens",
+          "Click \"Generate\" to create new UUIDs",
+          "Click on any UUID to copy it, or use \"Copy All\" for bulk copying"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is a UUID?",
+          "answer": "UUID (Universally Unique Identifier) is a 128-bit identifier that is practically unique across all systems. UUID v4, which this tool generates, uses random numbers to create identifiers with an extremely low probability of collision. The format is: xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx."
+        },
+        {
+          "question": "Is UUID the same as GUID?",
+          "answer": "Essentially yes. GUID (Globally Unique Identifier) is Microsoft's implementation of the UUID standard. They follow the same format and serve the same purpose. UUID is the more widely used term in non-Microsoft contexts."
+        },
+        {
+          "question": "Are the generated UUIDs truly random?",
+          "answer": "Yes. This tool uses the Web Crypto API (crypto.randomUUID()), which provides cryptographically secure random values. The generated UUIDs are suitable for use as database primary keys, session tokens, and other security-sensitive identifiers."
+        }
+      ]
+    },
+    "hash-generator": {
+      "name": "Hash Generator",
+      "shortDescription": "Generate MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes in your browser.",
+      "metaTitle": "Hash Generator (MD5, SHA-256) - Free Online Tool | PureKit",
+      "metaDescription": "Generate MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes online for free. Real-time hashing as you type. No data upload. Browser-based and privacy-first.",
+      "keywords": [
+        "hash generator",
+        "md5 hash",
+        "sha256 hash",
+        "sha-1",
+        "sha-512",
+        "online hash",
+        "hash calculator",
+        "sha256 online",
+        "file hash check",
+        "md5 checksum"
+      ],
+      "algorithm": "Algorithm",
+      "inputPlaceholder": "Enter text to hash...",
+      "allHashes": "All Hashes",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Generate hashes using MD5, SHA-1, SHA-256, SHA-384, and SHA-512 algorithms",
+          "Real-time hashing — results update as you type",
+          "View all hash algorithms at once or select a specific one",
+          "Uses the Web Crypto API for SHA family hashes",
+          "Output in standard hexadecimal format"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Hash Generator",
+        "steps": [
+          "Enter or paste the text you want to hash in the input area",
+          "Select a specific algorithm or view all hashes simultaneously",
+          "Hash values update in real-time as you type",
+          "Click \"Copy\" next to any hash to copy it to your clipboard"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is a hash function?",
+          "answer": "A hash function takes an input (any text or data) and produces a fixed-size string of characters (the hash or digest). The same input always produces the same hash, but even a tiny change in input produces a completely different hash. Hashes are one-way — you cannot reverse them to get the original input."
+        },
+        {
+          "question": "Which hash algorithm should I use?",
+          "answer": "For general-purpose use and security, SHA-256 is recommended. MD5 and SHA-1 are considered weak for security purposes but are still useful for checksums and data integrity verification. SHA-384 and SHA-512 provide longer hashes for higher security requirements."
+        },
+        {
+          "question": "Is my data safe when generating hashes?",
+          "answer": "Yes. All hashing is performed entirely in your browser using the Web Crypto API (for SHA) and a JavaScript implementation (for MD5). Your text is never transmitted to any server."
+        },
+        {
+          "question": "Can I reverse a hash to get the original text?",
+          "answer": "No. Hash functions are one-way by design — there is no mathematical way to reverse them. Attackers may use rainbow tables (precomputed hash-to-text lookups) or brute-force attempts, but a strong input with sufficient length and randomness is practically irreversible."
+        },
+        {
+          "question": "What is the difference between hashing and encryption?",
+          "answer": "Hashing is one-way: it produces a fixed-size digest and cannot be reversed. Encryption is two-way: data is transformed with a key and can be decrypted back. Use hashing for password storage and data integrity checks; use encryption (like AES) when you need to recover the original data."
+        },
+        {
+          "question": "How do I verify a file's integrity with a hash?",
+          "answer": "After downloading a file, generate its SHA-256 hash and compare it with the hash published by the source. If the two hashes match exactly, the file has not been altered or corrupted during transfer. Many software download pages provide SHA-256 checksums for this purpose."
+        }
+      ]
+    },
+    "jwt-decoder": {
+      "name": "JWT Decoder",
+      "shortDescription": "Decode and inspect JWT tokens and bearer tokens online. View header, payload, signature, and expiration status.",
+      "metaTitle": "JWT & Bearer Token Decoder - Free Online Tool | PureKit",
+      "metaDescription": "Decode JWT tokens and bearer tokens online. Inspect header, payload, signature, and claims. Check expiration status. OAuth token decoder, JWT debugger, and claims parser - browser-based and privacy-first.",
+      "keywords": [
+        "jwt decoder",
+        "bearer token decoder",
+        "jwt parser",
+        "json web token",
+        "decode jwt",
+        "jwt online",
+        "jwt inspector",
+        "token decoder",
+        "oauth token decoder",
+        "jwt claims parser",
+        "jwt debugger",
+        "bearer token parser",
+        "jwt validator",
+        "jwt token analyzer",
+        "jwt header decoder",
+        "jwt payload decoder",
+        "jwt signature verify",
+        "authentication token decoder",
+        "access token decoder",
+        "jwt base64 decoder"
+      ],
+      "header": "Header",
+      "payload": "Payload",
+      "signature": "Signature",
+      "algorithm": "Algorithm",
+      "type": "Type",
+      "issued": "Issued (iat)",
+      "expires": "Expires (exp)",
+      "subject": "Subject (sub)",
+      "issuer": "Issuer (iss)",
+      "audience": "Audience (aud)",
+      "expired": "Expired",
+      "valid": "Valid",
+      "invalidFormat": "Invalid JWT format. Please paste a valid JWT token.",
+      "emptyInput": "Please paste a JWT token to decode.",
+      "pasteToken": "Paste JWT token here...",
+      "characters": "characters",
+      "understanding": {
+        "title": "Understanding JWT Structure",
+        "intro": "JSON Web Tokens (JWTs) are a compact, URL-safe means of representing claims between two parties. Understanding their structure is essential for modern web authentication and authorization.",
+        "sections": [
+          {
+            "heading": "What is a JWT Token?",
+            "content": "A JWT (JSON Web Token) is a self-contained token format used for securely transmitting information between parties as a JSON object. It consists of three parts separated by dots: Header.Payload.Signature. JWTs are commonly used for authentication and information exchange in modern web applications, APIs, and microservices architectures."
+          },
+          {
+            "heading": "JWT Header",
+            "content": "The header typically consists of two parts: the token type (JWT) and the signing algorithm (e.g., HMAC SHA256 or RSA). The header is Base64Url encoded to form the first part of the JWT. Example: {\"alg\": \"HS256\", \"typ\": \"JWT\"}. The algorithm field indicates how the token signature should be verified."
+          },
+          {
+            "heading": "JWT Payload (Claims)",
+            "content": "The payload contains the claims - statements about an entity (typically the user) and additional data. There are three types of claims: registered claims (predefined like iss, exp, sub), public claims (custom but should be collision-resistant), and private claims (custom shared between parties). Common claims include exp (expiration time), iat (issued at), sub (subject/user ID), iss (issuer), and aud (audience)."
+          },
+          {
+            "heading": "JWT Signature",
+            "content": "The signature is created by encoding the header and payload with Base64Url, concatenating them with a dot, and then signing the result using the algorithm specified in the header with a secret key. The signature ensures that the token hasn't been tampered with. To verify a JWT, the receiver must have access to the same secret key (for HMAC) or public key (for RSA/ECDSA)."
+          },
+          {
+            "heading": "Bearer Tokens Explained",
+            "content": "Bearer tokens are a type of access token included in the HTTP Authorization header. The format is 'Authorization: Bearer <token>'. JWTs are commonly used as bearer tokens in OAuth 2.0 and OpenID Connect flows. When you paste a bearer token into our decoder, we automatically extract the JWT portion. Bearer tokens grant access to protected resources - anyone who possesses the token can use it, hence they must be kept secure and transmitted only over HTTPS."
+          },
+          {
+            "heading": "Common JWT Use Cases",
+            "content": "Authentication: After login, the server issues a JWT that the client includes in subsequent requests. The server validates the token without querying the database. Authorization: JWTs can contain user roles and permissions in the payload. Information Exchange: JWTs securely transmit information between services because you can verify the sender and ensure data integrity. Single Sign-On (SSO): One token can authenticate a user across multiple applications. Stateless API Authentication: No need to maintain server-side session storage."
+          }
+        ]
+      },
+      "features": {
+        "title": "Key Features",
+        "items": [
+          "Decode JWT tokens and bearer tokens instantly",
+          "View header, payload, and signature in readable JSON format",
+          "Check token expiration status automatically",
+          "Inspect all JWT claims (iss, sub, aud, exp, iat, etc.)",
+          "Support for all JWT algorithms (HS256, RS256, ES256, etc.)",
+          "Parse OAuth 2.0 and OpenID Connect tokens",
+          "Privacy-first: All decoding happens in your browser",
+          "No signup, no data upload, completely free"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the JWT Decoder",
+        "steps": [
+          "Copy your JWT token or bearer token from your application",
+          "Paste it into the input field (we'll auto-extract the token from 'Bearer <token>' format)",
+          "The decoder instantly displays the header, payload, and signature",
+          "Review the decoded claims and check expiration status",
+          "Verify the algorithm and token structure"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is a JWT token?",
+          "answer": "A JWT (JSON Web Token) is a compact, URL-safe token format used for securely transmitting information between parties. It consists of three Base64Url-encoded parts: header, payload, and signature, separated by dots. JWTs are commonly used for authentication and authorization in modern web applications."
+        },
+        {
+          "question": "What is a bearer token?",
+          "answer": "A bearer token is an access token included in the Authorization HTTP header using the format 'Authorization: Bearer <token>'. JWTs are frequently used as bearer tokens in OAuth 2.0 and OpenID Connect protocols. Anyone who possesses a bearer token can use it to access protected resources, so they must be transmitted securely over HTTPS."
+        },
+        {
+          "question": "Can I decode bearer tokens with this tool?",
+          "answer": "Yes! Our decoder automatically extracts the JWT from bearer token format. Simply paste the entire 'Bearer <token>' string or just the JWT portion. The decoder will handle both formats and display the decoded header, payload, and signature."
+        },
+        {
+          "question": "Is JWT decoding safe? Will my token be uploaded?",
+          "answer": "Absolutely safe. All JWT decoding happens entirely in your browser using JavaScript - nothing is sent to any server. Your tokens never leave your device. We don't collect, store, or transmit any data. You can verify this by checking your browser's network tab or inspecting our open-source code."
+        },
+        {
+          "question": "Can this tool verify JWT signatures?",
+          "answer": "Our tool decodes and displays the JWT structure but does not verify signatures because that would require access to your secret key. Signature verification should be done on your backend server where the secret key is stored securely. This tool is designed for inspection and debugging, not authentication."
+        },
+        {
+          "question": "What are JWT claims?",
+          "answer": "JWT claims are statements about an entity (usually the user) contained in the payload. Common registered claims include: exp (expiration time), iat (issued at time), sub (subject/user identifier), iss (issuer), aud (audience), and nbf (not before). You can also include custom private claims specific to your application."
+        },
+        {
+          "question": "JWT vs Session Authentication - what's the difference?",
+          "answer": "Session authentication stores user state on the server and uses a session ID in cookies. JWT authentication is stateless - all user information is encoded in the token itself. JWTs enable horizontal scaling and work well with microservices, but they cannot be easily revoked before expiration. Sessions require server-side storage but allow instant revocation."
+        },
+        {
+          "question": "What is the difference between JWE and JWT?",
+          "answer": "JWT (JSON Web Token) is for signing data to ensure integrity and authenticity. JWE (JSON Web Encryption) is for encrypting data to ensure confidentiality. JWTs are typically signed (JWS - JSON Web Signature) but not encrypted, meaning anyone can decode and read the payload. JWE encrypts the entire payload so only parties with the decryption key can read it."
+        },
+        {
+          "question": "Why does my JWT token show as expired?",
+          "answer": "JWTs include an 'exp' (expiration) claim that specifies when the token becomes invalid. Our decoder checks this timestamp against the current time and highlights expired tokens. Expired tokens should not be accepted by your API. Token expiration is a security feature to limit the window of potential misuse if a token is compromised."
+        }
+      ]
+    },
+    "unix-timestamp-converter": {
+      "name": "Unix Timestamp Converter",
+      "shortDescription": "Convert between Unix timestamps and human-readable dates instantly.",
+      "metaTitle": "Unix Timestamp Converter - Free Online Tool | PureKit",
+      "metaDescription": "Convert Unix timestamps to human-readable dates and vice versa. Supports seconds and milliseconds. No signup required. Browser-based and privacy-first.",
+      "keywords": [
+        "unix timestamp",
+        "epoch converter",
+        "timestamp to date",
+        "date to timestamp",
+        "unix time",
+        "epoch time",
+        "utc converter"
+      ],
+      "currentTimestamp": "Current Unix Timestamp",
+      "timestampToDate": "Timestamp to Date",
+      "dateToTimestamp": "Date to Timestamp",
+      "timestampPlaceholder": "Enter Unix timestamp...",
+      "seconds": "Seconds",
+      "milliseconds": "Milliseconds",
+      "localTime": "Local Time",
+      "utcTime": "UTC Time",
+      "relativeTime": "Relative",
+      "isoFormat": "ISO 8601",
+      "invalidTimestamp": "Invalid timestamp",
+      "invalidDate": "Invalid date",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert Unix timestamps (seconds or milliseconds) to human-readable dates",
+          "Convert dates back to Unix timestamps",
+          "Display current Unix timestamp with live updates",
+          "Show both local time and UTC time",
+          "Display relative time (e.g., '2 hours ago') and ISO 8601 format"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Unix Timestamp Converter",
+        "steps": [
+          "To convert a timestamp: paste it in the \"Timestamp to Date\" section and select seconds or milliseconds",
+          "To get a timestamp: use the date picker in the \"Date to Timestamp\" section",
+          "The current Unix timestamp is shown at the top and updates in real-time",
+          "Copy any result using the \"Copy\" button"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is a Unix timestamp?",
+          "answer": "A Unix timestamp (also called Epoch time) is the number of seconds that have elapsed since January 1, 1970, at 00:00:00 UTC. It's a simple way to represent a point in time as a single number, widely used in programming, databases, and APIs."
+        },
+        {
+          "question": "What's the difference between seconds and milliseconds?",
+          "answer": "Unix timestamps in seconds are 10 digits (e.g., 1700000000), while millisecond timestamps are 13 digits (e.g., 1700000000000). JavaScript's Date.now() returns milliseconds, while many APIs and databases use seconds. This tool auto-detects and supports both formats."
+        },
+        {
+          "question": "What is the Year 2038 problem?",
+          "answer": "The Year 2038 problem occurs because 32-bit systems store Unix timestamps as signed 32-bit integers, which will overflow on January 19, 2038. Modern 64-bit systems and JavaScript use 64-bit numbers, so they are not affected by this limitation."
+        }
+      ]
+    },
+    "color-converter": {
+      "name": "Color Converter",
+      "shortDescription": "Convert colors between HEX, RGB, HSL, and other formats instantly.",
+      "metaTitle": "Color Converter (HEX, RGB, HSL) - Free Online Tool | PureKit",
+      "metaDescription": "Convert colors between HEX, RGB, HSL, and CSS formats online for free. Visual color picker included. No signup required. Browser-based and privacy-first.",
+      "keywords": [
+        "color converter",
+        "hex to rgb",
+        "rgb to hex",
+        "hsl converter",
+        "color picker",
+        "css color",
+        "color code"
+      ],
+      "hex": "HEX",
+      "rgb": "RGB",
+      "hsl": "HSL",
+      "preview": "Preview",
+      "inputPlaceholder": "Enter a color value (e.g., #3b82f6, rgb(59,130,246), hsl(217,91%,60%))...",
+      "invalidColor": "Invalid color value",
+      "cssValues": "CSS Values",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert between HEX, RGB, and HSL color formats",
+          "Visual color preview updates in real-time",
+          "Copy CSS-ready color values with one click",
+          "Interactive color picker for visual color selection",
+          "Parse flexible input — accepts HEX (#fff or #ffffff), RGB, and HSL formats"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Color Converter",
+        "steps": [
+          "Enter a color value in any supported format (HEX, RGB, or HSL)",
+          "All other color formats are calculated and displayed instantly",
+          "Use the color picker to visually select a color",
+          "Click \"Copy\" next to any format to copy it to your clipboard"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What color formats are supported?",
+          "answer": "This tool supports HEX (#RRGGBB or #RGB), RGB (rgb(r, g, b)), and HSL (hsl(h, s%, l%)) formats. All formats can be freely converted between each other. You can input any format and get all others instantly."
+        },
+        {
+          "question": "What's the difference between HEX, RGB, and HSL?",
+          "answer": "HEX uses hexadecimal notation (#FF5733). RGB defines colors by Red, Green, and Blue values (0-255). HSL uses Hue (0-360°), Saturation (0-100%), and Lightness (0-100%), which many designers find more intuitive for adjusting colors."
+        },
+        {
+          "question": "Is the color picker accurate?",
+          "answer": "Yes. The color picker uses the browser's native color input, which accurately represents colors in the sRGB color space. The converted values are precise to standard CSS specifications."
+        }
+      ]
+    },
+    "diff-checker": {
+      "name": "Diff Checker",
+      "shortDescription": "Compare two texts and highlight the differences line by line.",
+      "metaTitle": "Diff Checker - Free Online Text Comparison Tool | PureKit",
+      "metaDescription": "Compare two blocks of text and see differences highlighted line by line. Supports unified and side-by-side views. No signup required. Browser-based and privacy-first.",
+      "keywords": [
+        "diff checker",
+        "text compare",
+        "text diff",
+        "compare files",
+        "difference checker",
+        "online diff",
+        "code compare"
+      ],
+      "original": "Original",
+      "modified": "Modified",
+      "originalPlaceholder": "Paste the original text here...",
+      "modifiedPlaceholder": "Paste the modified text here...",
+      "compare": "Compare",
+      "noDifferences": "No differences found — the texts are identical.",
+      "linesAdded": "lines added",
+      "linesRemoved": "lines removed",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Compare two texts side by side with color-coded differences",
+          "Line-level diff highlighting with added (green) and removed (red) lines",
+          "Summary showing total lines added and removed",
+          "Support for large texts — handles files with thousands of lines",
+          "Clean, readable diff output using the standard unified diff algorithm"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Diff Checker",
+        "steps": [
+          "Paste the original text in the left input area",
+          "Paste the modified text in the right input area",
+          "Click \"Compare\" to generate the diff",
+          "Review the color-coded output — green for additions, red for removals"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What diff algorithm is used?",
+          "answer": "This tool uses the standard diff algorithm (similar to Unix diff) via the 'diff' library. It produces accurate line-by-line comparisons suitable for code reviews, document comparisons, and content auditing."
+        },
+        {
+          "question": "Can I compare code files?",
+          "answer": "Yes. The diff checker works with any plain text including source code, configuration files, JSON, XML, and markdown. It preserves whitespace and formatting for accurate comparisons."
+        },
+        {
+          "question": "Is there a size limit?",
+          "answer": "There's no hard limit, but very large texts (hundreds of thousands of lines) may slow down due to browser processing constraints. For most practical use cases (files up to tens of thousands of lines), performance is excellent."
+        }
+      ]
+    },
+    "markdown-preview": {
+      "name": "Markdown Preview",
+      "shortDescription": "Write Markdown and preview the rendered HTML output in real-time.",
+      "metaTitle": "Markdown Preview - Free Online Renderer | PureKit",
+      "metaDescription": "Write and preview Markdown with real-time rendering. Supports GitHub Flavored Markdown (GFM). No signup required. Browser-based and privacy-first.",
+      "keywords": [
+        "markdown preview",
+        "markdown editor",
+        "markdown renderer",
+        "markdown to html",
+        "gfm",
+        "github markdown",
+        "md preview"
+      ],
+      "editor": "Editor",
+      "renderedPreview": "Preview",
+      "editorPlaceholder": "Write or paste your Markdown here...\n\n# Heading 1\n## Heading 2\n\n**bold** and *italic*\n\n- List item 1\n- List item 2\n\n```js\nconsole.log('Hello!');\n```",
+      "copyHtml": "Copy HTML",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Real-time Markdown rendering as you type",
+          "Support for GitHub Flavored Markdown (GFM) including tables and task lists",
+          "Syntax highlighting for code blocks",
+          "Copy rendered HTML with one click",
+          "Clean, readable preview with proper typography"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Markdown Preview",
+        "steps": [
+          "Type or paste your Markdown content in the editor on the left",
+          "The rendered preview updates in real-time on the right",
+          "Click \"Copy HTML\" to copy the rendered HTML output",
+          "Use standard Markdown syntax — headings, lists, code blocks, links, images, and more"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What Markdown features are supported?",
+          "answer": "This tool supports standard Markdown syntax plus GitHub Flavored Markdown (GFM) extensions including tables, task lists (checkboxes), strikethrough, and fenced code blocks. Most Markdown content you'd write for GitHub, GitLab, or documentation sites will render correctly."
+        },
+        {
+          "question": "Can I use this for GitHub README files?",
+          "answer": "Yes. The renderer supports GitHub Flavored Markdown (GFM), which is the same Markdown dialect used by GitHub for README files, issues, and pull requests. The preview closely matches how your content will look on GitHub."
+        },
+        {
+          "question": "Is the HTML output clean?",
+          "answer": "Yes. The generated HTML is clean, semantic, and ready to use. It uses standard HTML tags (h1-h6, p, ul, ol, code, pre, table, etc.) without unnecessary wrappers or styling. You can copy the HTML and use it in any web project."
+        }
+      ]
+    },
+    "qr-code-generator": {
+      "name": "QR Code Generator",
+      "shortDescription": "Generate QR codes for URLs, text, or any data instantly in your browser.",
+      "metaTitle": "QR Code Generator - Free Online Tool | PureKit",
+      "metaDescription": "Generate QR codes for URLs, text, Wi-Fi credentials, and more. Customize size and download as PNG. No signup required. Browser-based and privacy-first.",
+      "keywords": [
+        "qr code generator",
+        "qr code maker",
+        "create qr code",
+        "qr code online",
+        "url to qr",
+        "free qr code"
+      ],
+      "inputPlaceholder": "Enter URL, text, or any data to encode...",
+      "size": "Size",
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large",
+      "downloadPng": "Download PNG",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Generate QR codes from any text, URL, or data",
+          "Customizable output size (small, medium, large)",
+          "Download QR codes as PNG images",
+          "Real-time generation as you type",
+          "High error correction level for reliable scanning"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the QR Code Generator",
+        "steps": [
+          "Enter the URL, text, or data you want to encode in the input field",
+          "The QR code is generated instantly as you type",
+          "Select your preferred size (small, medium, or large)",
+          "Click \"Download PNG\" to save the QR code image to your device"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What can I encode in a QR code?",
+          "answer": "You can encode any text data including URLs, plain text, email addresses, phone numbers, Wi-Fi credentials, and more. QR codes can hold up to about 3,000 alphanumeric characters or 7,000 numeric characters, depending on the error correction level."
+        },
+        {
+          "question": "What image format is the QR code?",
+          "answer": "QR codes are generated as PNG images, which provide crisp, lossless quality suitable for both digital use and printing. The generated images have a white background with black modules for maximum contrast and scan reliability."
+        },
+        {
+          "question": "How reliable are the generated QR codes?",
+          "answer": "Very reliable. The tool uses high error correction (Level H), which means the QR code can still be scanned even if up to 30% of it is damaged or obscured. This makes the codes suitable for printing on physical materials."
+        }
+      ]
+    },
+    "csv-data-cleaner": {
+      "name": "CSV Data Cleaner",
+      "shortDescription": "Parse, clean, and transform CSV data with deduplication and filtering.",
+      "metaTitle": "CSV Data Cleaner - Free Online Tool | PureKit",
+      "metaDescription": "Parse, clean, and transform CSV data online. Remove duplicates, filter rows, sort columns. No signup required. Browser-based and privacy-first.",
+      "keywords": [
+        "csv cleaner",
+        "csv parser",
+        "csv editor",
+        "clean csv",
+        "remove duplicates csv",
+        "csv filter",
+        "csv online"
+      ],
+      "inputPlaceholder": "Paste your CSV data here...",
+      "parseData": "Parse Data",
+      "removeDuplicates": "Remove Duplicates",
+      "sortBy": "Sort By",
+      "ascending": "Ascending",
+      "descending": "Descending",
+      "downloadCsv": "Download CSV",
+      "rows": "rows",
+      "columns": "columns",
+      "duplicatesFound": "duplicates found",
+      "duplicatesRemoved": "duplicates removed",
+      "noDataParsed": "No data parsed. Paste CSV data and click \"Parse Data\".",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Parse CSV data with automatic delimiter detection",
+          "Remove duplicate rows based on all columns",
+          "Sort data by any column in ascending or descending order",
+          "Preview data in a clean table format",
+          "Export cleaned data as a downloadable CSV file"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the CSV Data Cleaner",
+        "steps": [
+          "Paste your CSV data into the input area",
+          "Click \"Parse Data\" to parse and display the data in a table",
+          "Use the toolbar to remove duplicates or sort by a specific column",
+          "Click \"Download CSV\" to export the cleaned data"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What CSV formats are supported?",
+          "answer": "The tool supports standard CSV with comma delimiters, as well as TSV (tab-separated) and other delimited formats. It auto-detects the delimiter from your data. Headers are expected in the first row."
+        },
+        {
+          "question": "How does duplicate removal work?",
+          "answer": "Duplicate detection compares all column values in each row. Two rows are considered duplicates if every column value matches exactly. The first occurrence is kept and subsequent duplicates are removed."
+        },
+        {
+          "question": "Is there a row limit?",
+          "answer": "There's no hard limit, but the tool works best with datasets up to about 100,000 rows. All processing happens in your browser, so performance depends on your device. For very large datasets, consider using a dedicated data processing tool."
+        }
+      ]
+    },
+    "image-format-converter": {
+      "name": "Image Format Converter",
+      "shortDescription": "Convert images between PNG, JPEG, and WebP formats in your browser.",
+      "metaTitle": "Image Format Converter (PNG, JPEG, WebP) - Free Online Tool | PureKit",
+      "metaDescription": "Convert images between PNG, JPEG, and WebP formats online for free. No upload to server — all conversion happens in your browser. Privacy-first.",
+      "keywords": [
+        "image converter",
+        "png to jpg",
+        "jpg to png",
+        "webp converter",
+        "image format",
+        "convert image online",
+        "png to webp"
+      ],
+      "dropzone": "Drop an image here or click to select",
+      "supportedFormats": "Supports PNG, JPEG, WebP, GIF, BMP",
+      "outputFormat": "Output Format",
+      "quality": "Quality",
+      "convert": "Convert",
+      "downloadImage": "Download Image",
+      "originalSize": "Original Size",
+      "convertedSize": "Converted Size",
+      "sizeReduced": "Smaller by",
+      "sizeIncreased": "Larger by",
+      "sameSize": "Same size",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert between PNG, JPEG, and WebP image formats",
+          "Adjustable quality setting for JPEG and WebP output",
+          "Preview original and converted images side by side",
+          "See file size comparison showing the size difference",
+          "All processing happens locally on your device"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Image Format Converter",
+        "steps": [
+          "Drop an image file into the upload area or click to select from your device",
+          "Choose the desired output format (PNG, JPEG, or WebP)",
+          "Adjust the quality slider for JPEG/WebP output (higher quality = larger file)",
+          "Click \"Convert\" and then \"Download\" to save the converted image"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Is my image uploaded to a server?",
+          "answer": "No. All image conversion happens entirely in your browser using the HTML5 Canvas API. Your images never leave your device, ensuring complete privacy."
+        },
+        {
+          "question": "Which format should I use?",
+          "answer": "PNG is best for images with transparency or graphics/screenshots. JPEG is ideal for photographs (smaller file size). WebP offers the best compression for web use, supporting both lossy and lossless modes with smaller files than PNG or JPEG."
+        },
+        {
+          "question": "Is there a file size limit?",
+          "answer": "There's no hard limit, but very large images (above 50MB) may be slow to process depending on your device. Most images for web use (under 10MB) convert instantly."
+        }
+      ]
+    },
+    "image-compressor": {
+      "name": "Image Compressor",
+      "shortDescription": "Compress images to reduce file size while maintaining visual quality.",
+      "metaTitle": "Image Compressor - Free Online Tool | PureKit",
+      "metaDescription": "Compress images online for free. Reduce file size while maintaining quality. Supports JPEG, PNG, and WebP. No upload to server. Browser-based and privacy-first.",
+      "keywords": [
+        "image compressor",
+        "compress image",
+        "reduce image size",
+        "image optimizer",
+        "compress jpeg",
+        "compress png",
+        "image size reducer"
+      ],
+      "dropzone": "Drop an image here or click to select",
+      "supportedFormats": "Supports JPEG, PNG, WebP",
+      "compressionLevel": "Compression Level",
+      "light": "Light",
+      "medium": "Medium",
+      "strong": "Strong",
+      "lightDesc": "Target ≤ 2 MB — minimal quality loss",
+      "mediumDesc": "Target ≤ 1 MB — good balance of quality and size",
+      "strongDesc": "Target ≤ 300 KB — smallest file size",
+      "outputFormat": "Output Format",
+      "original": "Original",
+      "pngNotice": "PNG is lossless — to reduce file size, convert to JPEG or WebP.",
+      "compress": "Compress",
+      "downloadImage": "Download Image",
+      "originalSize": "Original Size",
+      "compressedSize": "Compressed Size",
+      "sizeReduced": "Smaller by",
+      "sizeIncreased": "Larger by",
+      "sameSize": "Same size",
+      "compressing": "Compressing...",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Compress JPEG, PNG, and WebP images with smart optimization",
+          "Set target file size in KB for precise control",
+          "Optional maximum width to resize large images",
+          "Preview compressed result with before/after comparison",
+          "Zero-knowledge processing — your images stay on your device"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Image Compressor",
+        "steps": [
+          "Drop an image file into the upload area or click to select from your device",
+          "Optionally set a target file size (KB) or maximum width (px)",
+          "Click \"Compress\" to start compression",
+          "Compare original and compressed sizes, then click \"Download\" to save"
+        ]
+      },
+      "faq": [
+        {
+          "question": "How does the compression work?",
+          "answer": "It automatically reduces file size by adjusting image quality and resolution — similar to how Instagram compresses photos when you upload them.\n\nFor JPEG and WebP, we use \"lossy\" compression (some quality loss, much smaller file). For PNG, we use \"lossless\" compression (no quality loss, smaller savings).\n\nTechnical note: We use browser-native APIs + the browser-image-compression library, all running in your browser."
+        },
+        {
+          "question": "Will compression affect image quality?",
+          "answer": "Some quality loss is inherent in lossy compression (JPEG, WebP), but the algorithm is designed to maintain visual quality as much as possible. For typical web use, the difference is usually imperceptible. PNG compression is lossless — quality is preserved."
+        },
+        {
+          "question": "Is there a file size limit?",
+          "answer": "There's no hard limit. The tool works well with images up to about 50MB. All processing happens in your browser, so larger images may take a bit longer. Most web images (under 10MB) compress in seconds."
+        }
+      ]
+    },
+    "pdf-merge": {
+      "name": "PDF Merge",
+      "shortDescription": "Combine multiple PDF files into one document",
+      "title": "PDF Merge - Combine PDF Files Online",
+      "description": "Merge multiple PDF files into a single document. Drag to reorder pages. Free, private, browser-based — your files never leave your device.",
+      "keywords": [
+        "pdf merge",
+        "combine pdf",
+        "join pdf",
+        "merge pdf online",
+        "pdf combiner",
+        "concatenate pdf"
+      ],
+      "dropzone": "Drop PDF files here or click to select",
+      "supportedFormats": "PDF files only",
+      "addMore": "Add More Files",
+      "merge": "Merge PDFs",
+      "merging": "Merging...",
+      "download": "Download Merged PDF",
+      "fileCount": "files selected",
+      "pages": "pages",
+      "dragToReorder": "Drag to reorder",
+      "removeFile": "Remove",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Combine unlimited PDF files into a single document",
+          "Drag and drop to reorder files before merging",
+          "Preview page count for each file",
+          "Complete privacy — files never leave your computer",
+          "Download the merged PDF when ready"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use PDF Merge",
+        "steps": [
+          "Drop PDF files into the upload area or click to select multiple files",
+          "Drag to reorder the files in your preferred sequence",
+          "Click \"Merge PDFs\" to combine all files",
+          "Download the merged PDF document"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Is there a limit on the number of files?",
+          "answer": "No hard limit. You can merge as many PDF files as your browser can handle. All processing happens locally, so performance depends on file sizes and your device's memory."
+        },
+        {
+          "question": "Will the merged PDF maintain original quality?",
+          "answer": "Yes, merging is lossless. The tool combines the PDF pages without re-encoding or compressing the content, so all text, images, and formatting remain exactly as in the originals."
+        },
+        {
+          "question": "Are my files uploaded to a server?",
+          "answer": "No. All processing happens entirely in your browser using JavaScript. Your PDF files never leave your device. This is a core privacy guarantee of PureKit."
+        }
+      ]
+    },
+    "pdf-compress": {
+      "name": "PDF Compress",
+      "shortDescription": "Reduce PDF file size while maintaining quality",
+      "title": "PDF Compress - Reduce PDF File Size Online",
+      "description": "Compress PDF files to reduce size. Optimize images within PDFs for smaller file sizes. Free, private, no upload required.",
+      "keywords": [
+        "pdf compress",
+        "reduce pdf size",
+        "compress pdf online",
+        "pdf optimizer",
+        "shrink pdf",
+        "smaller pdf"
+      ],
+      "dropzone": "Drop a PDF file here or click to select",
+      "supportedFormats": "PDF files only",
+      "compressing": "Compressing...",
+      "download": "Download Compressed PDF",
+      "originalSize": "Original Size",
+      "compressedSize": "Compressed Size",
+      "sizeReduced": "Smaller by",
+      "sizeIncreased": "Larger by",
+      "sameSize": "Same size",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Reduce PDF file size by optimizing embedded images",
+          "Smart compression balances quality and file size",
+          "Preview size reduction before downloading",
+          "All processing in browser — no file upload required",
+          "Fast compression for most document types"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use PDF Compress",
+        "steps": [
+          "Drop a PDF file into the upload area or click to select",
+          "Compression starts automatically",
+          "Review original vs compressed size comparison",
+          "Download the compressed PDF"
+        ]
+      },
+      "faq": [
+        {
+          "question": "How much can the file size be reduced?",
+          "answer": "Reduction depends on the PDF content. PDFs with large embedded images see the most benefit (30-80% reduction). Text-heavy PDFs with few images may see minimal reduction since text is already compact."
+        },
+        {
+          "question": "Does compression affect text quality?",
+          "answer": "No. Text and vector graphics remain untouched. Only embedded raster images are optimized. The text will remain perfectly sharp and searchable."
+        },
+        {
+          "question": "Can I compress password-protected PDFs?",
+          "answer": "No. The tool cannot process encrypted or password-protected PDF files. You need to remove the password protection first before compressing."
+        }
+      ]
+    },
+    "pdf-split": {
+      "name": "PDF Split",
+      "shortDescription": "Extract pages or split PDF into multiple files",
+      "title": "PDF Split - Extract Pages from PDF Online",
+      "description": "Split PDF files into individual pages or custom page ranges. Extract specific pages from any PDF. Free, private, browser-based.",
+      "keywords": [
+        "pdf split",
+        "extract pdf pages",
+        "split pdf online",
+        "pdf page extractor",
+        "separate pdf pages",
+        "divide pdf"
+      ],
+      "dropzone": "Drop a PDF file here or click to select",
+      "supportedFormats": "PDF files only",
+      "totalPages": "Total pages",
+      "pageRange": "Page Range",
+      "pageRangePlaceholder": "e.g. 1-3, 5, 7-9",
+      "pageRangeHint": "Enter page numbers or ranges separated by commas",
+      "extractAll": "Extract All Pages",
+      "extractRange": "Extract Selected Pages",
+      "splitting": "Splitting...",
+      "download": "Download",
+      "downloadAll": "Download All",
+      "page": "Page",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Split PDF into individual pages or custom ranges",
+          "Specify exact pages with flexible range syntax (e.g. 1-3, 5, 7-9)",
+          "Extract all pages as separate PDF files at once",
+          "Preview total page count before splitting",
+          "All processing in browser — no server upload"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use PDF Split",
+        "steps": [
+          "Drop a PDF file into the upload area or click to select",
+          "Enter page numbers or ranges (e.g. 1-3, 5, 7-9), or choose \"Extract All\"",
+          "Click the extract button to split the PDF",
+          "Download individual pages or all extracted pages"
+        ]
+      },
+      "faq": [
+        {
+          "question": "How do I specify which pages to extract?",
+          "answer": "Use a comma-separated list of page numbers and ranges. For example: \"1-3, 5, 7-9\" extracts pages 1 through 3, page 5, and pages 7 through 9. You can also click \"Extract All\" to split every page into a separate file."
+        },
+        {
+          "question": "Is the quality preserved when splitting?",
+          "answer": "Yes. Splitting is lossless — each extracted page retains all original content, formatting, images, and metadata exactly as in the source PDF."
+        },
+        {
+          "question": "Can I split a large PDF with many pages?",
+          "answer": "Yes. The tool handles large PDFs well since all processing happens in your browser. Performance depends on your device, but PDFs with hundreds of pages typically work fine."
+        }
+      ]
+    },
+    "pdf-to-image": {
+      "name": "PDF to Image",
+      "shortDescription": "Convert PDF pages to PNG or JPEG images",
+      "title": "PDF to Image - Convert PDF to PNG/JPEG Online",
+      "description": "Convert PDF pages to high-quality PNG or JPEG images. Export all pages or specific pages. Free, private, browser-based.",
+      "keywords": [
+        "pdf to image",
+        "pdf to png",
+        "pdf to jpg",
+        "convert pdf to image",
+        "pdf to jpeg",
+        "pdf export"
+      ],
+      "dropzone": "Drop a PDF file here or click to select",
+      "supportedFormats": "PDF files only",
+      "totalPages": "Total pages",
+      "outputFormat": "Output Format",
+      "scale": "Scale",
+      "converting": "Converting...",
+      "convertingProgress": "Converting page {current} of {total}...",
+      "convertAll": "Convert All Pages",
+      "pages": "pages",
+      "imagesConverted": "images converted",
+      "download": "Download",
+      "downloadAll": "Download All",
+      "page": "Page",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert PDF pages to high-quality PNG or JPEG images",
+          "Adjustable output scale (1x, 2x, 3x) for different resolution needs",
+          "Convert all pages at once with batch processing",
+          "Preview converted images before downloading",
+          "All rendering happens in your browser — no file upload"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use PDF to Image",
+        "steps": [
+          "Drop a PDF file into the upload area or click to select",
+          "Choose output format (PNG or JPEG) and scale factor",
+          "Click \"Convert All Pages\" to start conversion",
+          "Preview results and download individual images or all as ZIP"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What resolution are the output images?",
+          "answer": "Resolution depends on the scale factor you choose. 1x gives standard screen resolution (72 DPI equivalent), 2x gives double resolution (good for retina displays), and 3x gives triple resolution (suitable for high-quality printing)."
+        },
+        {
+          "question": "Should I choose PNG or JPEG?",
+          "answer": "Use PNG for text-heavy documents, diagrams, or when you need transparency and pixel-perfect quality. Use JPEG for photo-heavy PDFs or when you need smaller file sizes. PNG is lossless; JPEG is lossy but more compact."
+        },
+        {
+          "question": "Can I convert specific pages only?",
+          "answer": "Currently the tool converts all pages at once. For specific pages, you can use the PDF Split tool first to extract the pages you need, then convert those individual PDFs to images."
+        }
+      ]
+    },
+    "regex-tester": {
+      "name": "Regex Tester",
+      "shortDescription": "Test and debug regular expressions with live matching",
+      "title": "Regex Tester - Test Regular Expressions Online",
+      "description": "Test and debug regular expressions with real-time matching and highlighting. See capture groups, match details, and test replacement patterns. Free, private, browser-based.",
+      "metaTitle": "Regex Tester - Test Regular Expressions Online Free | PureKit",
+      "metaDescription": "Test and debug regular expressions online with real-time matching, capture groups, and replacement patterns. Free regex validator — no signup, runs in your browser.",
+      "keywords": [
+        "regex tester",
+        "regular expression test",
+        "regex online",
+        "regex debugger",
+        "regex match",
+        "pattern matcher",
+        "regex validator",
+        "javascript regex",
+        "regex capture groups"
+      ],
+      "pattern": "Pattern",
+      "patternPlaceholder": "Enter regex pattern...",
+      "flags": "Flags",
+      "testString": "Test String",
+      "testStringPlaceholder": "Enter text to test against...",
+      "matches": "Matches",
+      "noMatches": "No matches found",
+      "match": "Match",
+      "group": "Group",
+      "fullMatch": "Full Match",
+      "index": "Index",
+      "replacement": "Replacement",
+      "replacementPlaceholder": "Replacement pattern (e.g. $1-$2)",
+      "replacementResult": "Result",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Real-time regex matching with instant visual feedback",
+          "Support for all JavaScript regex flags (g, i, m, s, u, d)",
+          "View capture groups and named groups for each match",
+          "Test replacement patterns with $1, $2 syntax",
+          "All processing in browser — your test data stays private"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Regex Tester",
+        "steps": [
+          "Enter your regular expression pattern in the pattern field",
+          "Select regex flags (g for global, i for case-insensitive, etc.)",
+          "Type or paste your test string in the text area",
+          "View matches highlighted in real-time with capture group details"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Which regex flavor does this use?",
+          "answer": "This tool uses JavaScript's built-in RegExp engine, which supports ECMAScript regex syntax. This includes features like lookbehind assertions, named capture groups, Unicode property escapes, and the dotAll (s) flag."
+        },
+        {
+          "question": "Can I use replacement patterns?",
+          "answer": "Yes. Enter a replacement pattern using $1, $2 for capture group references, $& for the full match, $` for text before the match, and $' for text after. Named groups can be referenced with $<name>."
+        },
+        {
+          "question": "How do I match across multiple lines?",
+          "answer": "Use the 'm' (multiline) flag to make ^ and $ match the start and end of each line. Use the 's' (dotAll) flag to make '.' match newline characters as well."
+        },
+        {
+          "question": "What are capture groups?",
+          "answer": "Capture groups use parentheses () to extract parts of a match. For example, (\\d{4})-(\\d{2}) captures a year in $1 and a month in $2. Use (?:...) for non-capturing groups when you need grouping without extraction. Named groups like (?<year>\\d{4}) let you reference matches by name."
+        },
+        {
+          "question": "How do I write a regex for email validation?",
+          "answer": "A practical basic pattern is: ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$ — this covers most real-world email addresses. Keep in mind that the full email RFC is extremely complex, so for production systems it's best to combine a simple regex check with actual email verification (sending a confirmation link)."
+        },
+        {
+          "question": "What is the difference between .* and .*? (greedy vs lazy)?",
+          "answer": ".* is greedy — it matches as much text as possible. .*? is lazy (or non-greedy) — it matches as little as possible. For example, given '<b>hello</b><b>world</b>', the pattern <b>(.*)</b> greedily captures 'hello</b><b>world', while <b>(.*?)</b> lazily captures just 'hello'. Use lazy quantifiers when you want the shortest match."
+        }
+      ]
+    },
+    "cron-expression-builder": {
+      "name": "Cron Expression Builder",
+      "shortDescription": "Build and validate cron expressions with a visual editor",
+      "title": "Cron Expression Builder - Visual Cron Editor Online",
+      "description": "Build cron expressions with an interactive visual editor. See human-readable descriptions and next run times. Free, private, browser-based.",
+      "keywords": [
+        "cron expression",
+        "cron builder",
+        "crontab",
+        "cron generator",
+        "cron schedule",
+        "cron editor"
+      ],
+      "expression": "Cron Expression",
+      "expressionPlaceholder": "* * * * *",
+      "minute": "Minute",
+      "hour": "Hour",
+      "dayOfMonth": "Day of Month",
+      "month": "Month",
+      "dayOfWeek": "Day of Week",
+      "every": "Every",
+      "specific": "Specific",
+      "range": "Range",
+      "humanReadable": "Human Readable",
+      "nextRuns": "Next Run Times",
+      "invalidExpression": "Invalid cron expression",
+      "presets": "Common Presets",
+      "everyMinute": "Every Minute",
+      "everyHour": "Every Hour",
+      "everyDay": "Every Day at Midnight",
+      "everyWeek": "Every Monday at Midnight",
+      "everyMonth": "1st of Every Month",
+      "weekdays": "Weekdays at 9 AM",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Visual cron expression builder with interactive field editors",
+          "Human-readable description of the schedule",
+          "Preview next scheduled run times",
+          "Common presets for quick setup (hourly, daily, weekly, monthly)",
+          "Support for standard 5-field cron syntax (minute, hour, day, month, weekday)"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Cron Expression Builder",
+        "steps": [
+          "Start with a preset or type a cron expression directly",
+          "Use the visual fields to adjust minute, hour, day, month, and weekday",
+          "Read the human-readable description to verify the schedule",
+          "Check the next run times to confirm correct behavior"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is a cron expression?",
+          "answer": "A cron expression is a string of five fields separated by spaces, representing a schedule: minute (0-59), hour (0-23), day of month (1-31), month (1-12), and day of week (0-6, where 0 is Sunday). Special characters like * (any), , (list), - (range), and / (step) modify the behavior."
+        },
+        {
+          "question": "What is the difference between 5-field and 6-field cron?",
+          "answer": "This tool uses 5-field (standard UNIX) cron: minute, hour, day-of-month, month, day-of-week. Some systems add a 6th field for seconds at the beginning. If your system uses 6 fields, simply prepend the seconds field to the expression this tool generates."
+        },
+        {
+          "question": "How do I set a schedule for every 15 minutes?",
+          "answer": "Use */15 in the minute field and * for all other fields: '*/15 * * * *'. This means 'every 15th minute', which runs at :00, :15, :30, and :45 of every hour."
+        }
+      ]
+    },
+    "sql-formatter": {
+      "name": "SQL Formatter",
+      "shortDescription": "Format and beautify SQL queries with proper indentation",
+      "title": "SQL Formatter - Beautify SQL Queries Online",
+      "description": "Format and beautify SQL queries with proper indentation and syntax structure. Supports multiple SQL dialects. Free, private, browser-based.",
+      "keywords": [
+        "sql formatter",
+        "sql beautify",
+        "format sql",
+        "sql pretty print",
+        "sql indent",
+        "sql online"
+      ],
+      "inputPlaceholder": "Paste your SQL query here...",
+      "dialect": "SQL Dialect",
+      "standard": "Standard SQL",
+      "mysql": "MySQL",
+      "postgresql": "PostgreSQL",
+      "transactsql": "Transact-SQL",
+      "plsql": "PL/SQL",
+      "sqlite": "SQLite",
+      "indentation": "Indentation",
+      "spaces2": "2 Spaces",
+      "spaces4": "4 Spaces",
+      "tab": "Tab",
+      "uppercase": "Uppercase Keywords",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Format SQL queries with proper indentation and line breaks",
+          "Support for multiple SQL dialects (MySQL, PostgreSQL, SQLite, etc.)",
+          "Configurable indentation (2 spaces, 4 spaces, or tabs)",
+          "Option to uppercase SQL keywords (SELECT, FROM, WHERE, etc.)",
+          "Real-time formatting as you type"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the SQL Formatter",
+        "steps": [
+          "Paste your SQL query into the input area",
+          "Select your SQL dialect for accurate formatting",
+          "Choose indentation style and keyword casing preference",
+          "Copy the formatted output or continue editing"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Which SQL dialects are supported?",
+          "answer": "The tool supports Standard SQL, MySQL, PostgreSQL, Transact-SQL (SQL Server), PL/SQL (Oracle), and SQLite. Each dialect handles specific syntax differences like backtick quoting, TOP vs LIMIT, and dialect-specific functions."
+        },
+        {
+          "question": "Does this validate SQL syntax?",
+          "answer": "The formatter focuses on formatting, not validation. It will format syntactically broken SQL as best it can without reporting errors. For syntax validation, use your database's query analyzer or a dedicated SQL linter."
+        },
+        {
+          "question": "Can it handle complex queries with subqueries and CTEs?",
+          "answer": "Yes. The formatter handles complex queries including nested subqueries, Common Table Expressions (WITH clauses), JOINs, UNION operations, window functions, and more. Each level of nesting is properly indented."
+        }
+      ]
+    },
+    "yaml-json-toml-converter": {
+      "name": "YAML / JSON / TOML Converter",
+      "shortDescription": "Convert between YAML, JSON, and TOML config formats",
+      "title": "YAML JSON TOML Converter - Config Format Converter Online",
+      "description": "Convert between YAML, JSON, and TOML configuration formats. Bidirectional conversion with proper formatting. Free, private, browser-based.",
+      "keywords": [
+        "yaml to json",
+        "json to yaml",
+        "toml converter",
+        "yaml converter",
+        "config converter",
+        "json to toml"
+      ],
+      "inputFormat": "Input Format",
+      "outputFormat": "Output Format",
+      "inputPlaceholder": "Paste your YAML, JSON, or TOML here...",
+      "convertError": "Conversion error",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert between YAML, JSON, and TOML formats bidirectionally",
+          "Auto-detect input format for quick conversion",
+          "Preserves data structure and types during conversion",
+          "Formatted output with proper indentation",
+          "All conversion happens in your browser — config data stays private"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Config Converter",
+        "steps": [
+          "Select your input format (YAML, JSON, or TOML)",
+          "Paste your configuration data into the input area",
+          "Select the desired output format",
+          "Copy the converted output"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Are all YAML features supported?",
+          "answer": "The converter supports standard YAML features including nested objects, arrays, multiline strings, anchors, and aliases. Some advanced YAML features like custom tags may not convert perfectly to JSON or TOML since those formats don't support them."
+        },
+        {
+          "question": "What TOML features are supported?",
+          "answer": "Standard TOML features are supported including tables, arrays of tables, inline tables, multiline strings, dates, and integers. TOML's strict typing means some YAML/JSON values may be represented differently."
+        },
+        {
+          "question": "Will comments be preserved?",
+          "answer": "No. Comments are not preserved during conversion because JSON does not support comments, and the conversion process parses the data into a format-agnostic structure. If you need to preserve comments, consider using a text editor's find-and-replace instead."
+        }
+      ]
+    },
+    "mock-data-generator": {
+      "name": "Mock Data Generator",
+      "shortDescription": "Generate realistic fake data for testing and development",
+      "title": "Mock Data Generator - Generate Test Data Online",
+      "description": "Generate realistic mock data for testing. Names, emails, addresses, phone numbers, and more. Export as JSON or CSV. Free, private, browser-based.",
+      "keywords": [
+        "mock data",
+        "fake data",
+        "test data generator",
+        "random data",
+        "faker",
+        "sample data",
+        "dummy data"
+      ],
+      "fields": "Fields",
+      "addField": "Add Field",
+      "removeField": "Remove",
+      "fieldName": "Field Name",
+      "fieldType": "Type",
+      "rowCount": "Number of Rows",
+      "generate": "Generate Data",
+      "exportJson": "Export JSON",
+      "exportCsv": "Export CSV",
+      "preview": "Preview",
+      "types": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "fullName": "Full Name",
+        "email": "Email",
+        "phone": "Phone",
+        "address": "Address",
+        "city": "City",
+        "country": "Country",
+        "zipCode": "Zip Code",
+        "company": "Company",
+        "jobTitle": "Job Title",
+        "uuid": "UUID",
+        "integer": "Integer",
+        "float": "Float",
+        "boolean": "Boolean",
+        "date": "Date",
+        "url": "URL",
+        "ipAddress": "IP Address",
+        "color": "Color (Hex)",
+        "paragraph": "Paragraph"
+      },
+      "features": {
+        "title": "Features",
+        "items": [
+          "Generate realistic fake data with 20+ field types (names, emails, addresses, etc.)",
+          "Customize field names and types to match your data model",
+          "Generate up to 1000 rows at once",
+          "Export as JSON or CSV for immediate use in your projects",
+          "All data generated in your browser — no external API calls"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Mock Data Generator",
+        "steps": [
+          "Add fields and select the data type for each (name, email, phone, etc.)",
+          "Set the number of rows you want to generate",
+          "Click \"Generate Data\" to create the mock dataset",
+          "Preview the results and export as JSON or CSV"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Is the generated data truly random?",
+          "answer": "Yes. Each generation creates fresh random data using the Faker.js library. Names, emails, addresses, and other fields are randomly combined from realistic datasets. No two generations will produce identical results."
+        },
+        {
+          "question": "Can I use this data in production?",
+          "answer": "The data is intended for testing and development only. While the generated names and addresses look realistic, they are randomly generated and should not be used as real personal information. They are perfect for database seeding, UI prototyping, and automated testing."
+        },
+        {
+          "question": "How many rows can I generate?",
+          "answer": "The tool supports generating up to 1000 rows per batch. For larger datasets, you can generate multiple batches and combine them. All processing happens in your browser, so very large generations may be slow on older devices."
+        }
+      ]
+    },
+    "html-formatter": {
+      "name": "HTML Formatter",
+      "shortDescription": "Format and beautify HTML code online",
+      "metaTitle": "HTML Formatter - Free Online HTML Beautifier Tool | PureKit",
+      "metaDescription": "Format and beautify HTML code online for free. Minify HTML or make it readable with proper indentation. Browser-based, no signup required.",
+      "keywords": [
+        "html formatter",
+        "html beautifier",
+        "html minifier",
+        "format html online",
+        "beautify html",
+        "html pretty print"
+      ],
+      "characters": "characters",
+      "emptyInput": "Please enter HTML code to format",
+      "formatError": "Error formatting HTML. Please check your syntax.",
+      "minifyError": "Error minifying HTML. Please check your syntax.",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Format and beautify messy HTML code with proper indentation",
+          "Minify HTML to reduce file size",
+          "Remove extra whitespace and optimize code",
+          "Syntax-aware formatting preserves tag structure",
+          "All processing happens in your browser — your code never leaves your device"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the HTML Formatter",
+        "steps": [
+          "Paste your HTML code into the input area",
+          "Click \"Format\" to beautify the HTML with proper indentation",
+          "Click \"Minify\" to compress the HTML by removing whitespace",
+          "Copy the formatted output for use in your project"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What's the difference between format and minify?",
+          "answer": "Format (beautify) adds proper indentation and line breaks to make HTML code more readable for humans. Minify removes all unnecessary whitespace and line breaks to reduce file size for production deployment."
+        },
+        {
+          "question": "Does this validator check for syntax errors?",
+          "answer": "This tool focuses on formatting and beautification. While it handles common HTML structures, it doesn't perform strict validation. For comprehensive HTML validation, use the W3C Markup Validation Service."
+        },
+        {
+          "question": "Will my HTML comments be preserved?",
+          "answer": "Yes, when using the format option. Comments are preserved to maintain code documentation. The minify option removes comments to reduce file size."
+        },
+        {
+          "question": "Can I format inline HTML?",
+          "answer": "Yes. The formatter works with any valid HTML, including inline fragments, full documents, or templating syntax (though template tags may not be perfectly formatted)."
+        },
+        {
+          "question": "Is this safe for production HTML?",
+          "answer": "The formatter preserves the structure and functionality of your HTML. However, always test the formatted output before deploying to production, especially with complex templating or custom components."
+        }
+      ]
+    },
+    "javascript-beautifier": {
+      "name": "JavaScript Formatter & Minifier",
+      "shortDescription": "Format and minify JavaScript code online",
+      "metaTitle": "JavaScript Formatter & Minifier - Free JS Tool | PureKit",
+      "metaDescription": "Format and minify JavaScript code online. Beautify messy JS or compress for production. Free, browser-based, no signup required.",
+      "keywords": [
+        "javascript beautifier",
+        "js formatter",
+        "javascript minifier",
+        "beautify javascript",
+        "format js online",
+        "javascript pretty print"
+      ],
+      "characters": "characters",
+      "beautify": "Beautify",
+      "emptyInput": "Please enter JavaScript code to beautify",
+      "beautifyError": "Error beautifying JavaScript. Please check your syntax.",
+      "minifyError": "Error minifying JavaScript. Please check your syntax.",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Beautify minified or messy JavaScript code with proper indentation",
+          "Minify JavaScript to reduce file size for production",
+          "Syntax-aware formatting preserves code logic and structure",
+          "Handles modern ES6+ syntax including arrow functions and template literals",
+          "All processing happens in your browser — your code stays private"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the JavaScript Beautifier",
+        "steps": [
+          "Paste your JavaScript code into the input area",
+          "Click \"Beautify\" to format the code with proper indentation and line breaks",
+          "Click \"Minify\" to compress the code by removing whitespace and comments",
+          "Copy the formatted output for use in your project"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What's the difference between beautify and minify?",
+          "answer": "Beautify adds indentation, line breaks, and spacing to make code human-readable. Minify removes all unnecessary characters (whitespace, comments, newlines) to reduce file size for faster page loads."
+        },
+        {
+          "question": "Does this tool check for syntax errors?",
+          "answer": "This tool focuses on formatting. While it can handle common JavaScript syntax, it doesn't validate or debug code. For syntax checking, use a linter like ESLint or your code editor's built-in checker."
+        },
+        {
+          "question": "Will minifying break my code?",
+          "answer": "Basic minification (removing whitespace and comments) is safe. However, advanced minification techniques like variable renaming are not performed by this tool. For production-grade minification, use tools like Terser or UglifyJS."
+        },
+        {
+          "question": "Can I beautify React/JSX code?",
+          "answer": "This tool is designed for standard JavaScript. While it may handle some JSX syntax, it's not optimized for it. For React code, use a specialized formatter like Prettier."
+        },
+        {
+          "question": "Does it support TypeScript?",
+          "answer": "This tool works best with plain JavaScript. TypeScript-specific syntax (type annotations, interfaces) may not format correctly. Use the TypeScript compiler or Prettier for TypeScript code."
+        }
+      ]
+    },
+    "json-to-csv-converter": {
+      "name": "JSON to CSV Converter",
+      "shortDescription": "Convert JSON data to CSV format online",
+      "metaTitle": "JSON to CSV Converter - Free Online Tool | PureKit",
+      "metaDescription": "Convert JSON to CSV online for free. Export JSON arrays to CSV spreadsheets instantly. Browser-based, no signup, your data stays private.",
+      "keywords": [
+        "json to csv",
+        "json to csv converter",
+        "convert json to csv",
+        "json array to csv",
+        "export json to csv"
+      ],
+      "characters": "characters",
+      "convert": "Convert to CSV",
+      "jsonInput": "JSON Input",
+      "csvOutput": "CSV Output",
+      "jsonPlaceholder": "Paste your JSON array here...\nExample: [{\"name\":\"Alice\",\"age\":30},{\"name\":\"Bob\",\"age\":25}]",
+      "emptyInput": "Please enter JSON data to convert",
+      "convertError": "Error converting JSON to CSV. Please check your JSON format.",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert JSON arrays to CSV format instantly",
+          "Automatic header detection from JSON object keys",
+          "Handles nested values and special characters",
+          "Download output as .csv file for use in Excel, Google Sheets, or any spreadsheet app",
+          "All conversion happens in your browser — your data never leaves your device"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the JSON to CSV Converter",
+        "steps": [
+          "Paste your JSON data into the input area (must be an array of objects)",
+          "Click \"Convert to CSV\" to transform the data",
+          "Review the CSV output with comma-separated values",
+          "Click \"Download\" to save as a .csv file, or copy the text directly"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What JSON format is supported?",
+          "answer": "The converter works best with an array of objects, where each object represents a row and keys represent column headers. Example: [{\"name\":\"Alice\",\"age\":30},{\"name\":\"Bob\",\"age\":25}]. Single objects are also supported and will be converted to a single-row CSV."
+        },
+        {
+          "question": "How are nested objects handled?",
+          "answer": "Nested objects and arrays are converted to strings. For complex nested data, you may need to flatten your JSON structure before conversion for best results."
+        },
+        {
+          "question": "Will the column order be preserved?",
+          "answer": "Column order is determined by the keys in the first JSON object. If different objects have keys in different orders, the converter uses the first object's key order as the header."
+        },
+        {
+          "question": "Can I convert large JSON files?",
+          "answer": "Yes, but very large files (>10MB) may be slow to process since conversion happens in your browser. For massive datasets, consider using a command-line tool or server-side converter."
+        },
+        {
+          "question": "How are special characters handled?",
+          "answer": "The converter follows standard CSV escaping rules. Values containing commas, quotes, or newlines are automatically wrapped in double quotes, and internal quotes are escaped."
+        }
+      ]
+    },
+    "text-case-converter": {
+      "name": "Text Case Converter",
+      "shortDescription": "Convert text to different case formats online",
+      "metaTitle": "Text Case Converter - Uppercase, Lowercase, Title Case | PureKit",
+      "metaDescription": "Convert text to uppercase, lowercase, title case, camelCase, snake_case, and more. Free online case converter. Browser-based, instant results.",
+      "keywords": [
+        "case converter",
+        "text case",
+        "uppercase",
+        "lowercase",
+        "title case",
+        "camel case",
+        "snake case",
+        "kebab case"
+      ],
+      "characters": "characters",
+      "textCases": "Text Cases:",
+      "programmingCases": "Programming Cases:",
+      "lowercase": "lowercase",
+      "uppercase": "UPPERCASE",
+      "titleCase": "Title Case",
+      "sentenceCase": "Sentence case",
+      "camelCase": "camelCase",
+      "pascalCase": "PascalCase",
+      "snakeCase": "snake_case",
+      "kebabCase": "kebab-case",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert text to 8 different case formats instantly",
+          "Standard text cases: uppercase, lowercase, title case, sentence case",
+          "Programming cases: camelCase, PascalCase, snake_case, kebab-case",
+          "Real-time conversion as you type",
+          "All processing happens in your browser — your text stays private"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Text Case Converter",
+        "steps": [
+          "Paste or type your text into the input area",
+          "Click the desired case format button",
+          "The output updates instantly with the converted text",
+          "Copy the result for use in your project"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What's the difference between Title Case and Sentence case?",
+          "answer": "Title Case capitalizes the first letter of every word (e.g., \"This Is A Title\"). Sentence case only capitalizes the first letter of the first word and proper nouns (e.g., \"This is a sentence\")."
+        },
+        {
+          "question": "What is camelCase used for?",
+          "answer": "camelCase is commonly used in programming for variable names and function names. It starts with a lowercase letter and capitalizes each subsequent word (e.g., \"myVariableName\")."
+        },
+        {
+          "question": "When should I use snake_case vs kebab-case?",
+          "answer": "snake_case (words separated by underscores) is common in Python, Ruby, and database column names. kebab-case (words separated by hyphens) is used in URLs, CSS class names, and some languages like Lisp."
+        },
+        {
+          "question": "Does this preserve special characters?",
+          "answer": "For text cases (uppercase, lowercase, title), special characters are preserved. For programming cases (camel, snake, kebab), non-alphanumeric characters are replaced with the appropriate separator or removed."
+        },
+        {
+          "question": "Can I convert programming variable names?",
+          "answer": "Yes! This tool is perfect for converting between different naming conventions. For example, convert \"user_email_address\" (snake_case) to \"userEmailAddress\" (camelCase) or \"user-email-address\" (kebab-case)."
+        }
+      ]
+    },
+    "word-counter": {
+      "name": "Word Counter",
+      "shortDescription": "Count words, characters, sentences, and paragraphs",
+      "metaTitle": "Word Counter - Character Counter & Reading Time | PureKit",
+      "metaDescription": "Count words, characters, sentences, paragraphs, and estimate reading time. Free online word counter tool. Real-time statistics as you type.",
+      "keywords": [
+        "word counter",
+        "character counter",
+        "word count",
+        "character count",
+        "reading time",
+        "sentence counter"
+      ],
+      "characters": "Characters",
+      "charactersNoSpaces": "Characters (no spaces)",
+      "words": "Words",
+      "sentences": "Sentences",
+      "paragraphs": "Paragraphs",
+      "readingTime": "Reading Time",
+      "speakingTime": "Speaking Time",
+      "textInput": "Your Text",
+      "textPlaceholder": "Start typing or paste your text here...",
+      "statistics": "Statistics",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Real-time word, character, sentence, and paragraph counting",
+          "Character count with and without spaces",
+          "Estimated reading time (based on 200 words per minute)",
+          "Estimated speaking time (based on 130 words per minute)",
+          "All processing happens in your browser — your text stays private"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Word Counter",
+        "steps": [
+          "Type or paste your text into the input area",
+          "Statistics update automatically in real-time",
+          "View character count, word count, sentence count, and more",
+          "Use reading time and speaking time estimates for planning"
+        ]
+      },
+      "faq": [
+        {
+          "question": "How is word count calculated?",
+          "answer": "Words are counted by splitting text on whitespace. Any sequence of characters separated by spaces, tabs, or newlines counts as one word. Hyphenated words count as one word."
+        },
+        {
+          "question": "How accurate is the reading time estimate?",
+          "answer": "Reading time is based on an average reading speed of 200 words per minute, which is typical for adults reading standard text. Actual reading speed varies based on text complexity and reader skill."
+        },
+        {
+          "question": "What's the difference between reading and speaking time?",
+          "answer": "Reading time assumes silent reading (200 wpm). Speaking time assumes reading aloud or giving a presentation (130 wpm), which is slower because you need to enunciate and pause."
+        },
+        {
+          "question": "How are sentences counted?",
+          "answer": "Sentences are detected by looking for punctuation marks like periods, exclamation points, and question marks. This is a simple heuristic and may not be 100% accurate for complex text with abbreviations."
+        },
+        {
+          "question": "Does this work for non-English text?",
+          "answer": "Yes! The word counter works with any language. However, languages without spaces (like Chinese or Japanese) may not count words accurately since the tool relies on whitespace to detect word boundaries."
+        }
+      ]
+    },
+    "password-generator": {
+      "name": "Password Generator",
+      "shortDescription": "Generate secure, random passwords instantly in your browser.",
+      "metaTitle": "Password Generator - Free Strong Password Tool | PureKit",
+      "metaDescription": "Generate strong, random passwords online for free. Customize length, characters, and generate in bulk. Browser-based, no data sent to servers.",
+      "keywords": [
+        "password generator",
+        "random password",
+        "strong password",
+        "secure password generator",
+        "password tool online",
+        "generate password"
+      ],
+      "length": "Length",
+      "uppercase": "A-Z",
+      "lowercase": "a-z",
+      "numbers": "0-9",
+      "symbols": "!@#$%",
+      "quantity": "Quantity",
+      "generate": "Generate Password",
+      "strength": "Strength",
+      "copyAll": "Copy All",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Cryptographically secure random generation using Web Crypto API",
+          "Customizable length from 4 to 128 characters",
+          "Toggle uppercase, lowercase, numbers, and symbols independently",
+          "Bulk generation — create up to 50 passwords at once",
+          "Visual password strength indicator",
+          "100% client-side — your passwords never leave your browser"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Password Generator",
+        "steps": [
+          "Set your desired password length using the slider or dropdown",
+          "Choose which character types to include (uppercase, lowercase, numbers, symbols)",
+          "Select how many passwords to generate",
+          "Click 'Generate Password' to create secure passwords",
+          "Click the copy button to copy any password to your clipboard"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Are the passwords generated securely?",
+          "answer": "Yes. This tool uses the Web Crypto API (crypto.getRandomValues), which provides cryptographically secure random values. The passwords are generated entirely in your browser and are never sent to any server."
+        },
+        {
+          "question": "What makes a strong password?",
+          "answer": "A strong password is at least 12 characters long and includes a mix of uppercase letters, lowercase letters, numbers, and symbols. This tool's strength meter evaluates these factors to help you create secure passwords."
+        },
+        {
+          "question": "How long should my password be?",
+          "answer": "We recommend at least 16 characters for important accounts. For maximum security, use 20+ characters. Longer passwords are exponentially harder to crack through brute force attacks."
+        }
+      ]
+    },
+    "lorem-ipsum-generator": {
+      "name": "Lorem Ipsum Generator",
+      "shortDescription": "Generate placeholder text for your designs and layouts.",
+      "metaTitle": "Lorem Ipsum Generator - Free Placeholder Text Tool | PureKit",
+      "metaDescription": "Generate lorem ipsum placeholder text online for free. Create paragraphs, sentences, or words. Perfect for mockups, designs, and content layout testing.",
+      "keywords": [
+        "lorem ipsum generator",
+        "placeholder text",
+        "dummy text generator",
+        "lorem ipsum",
+        "filler text",
+        "sample text"
+      ],
+      "type": "Type",
+      "paragraphs": "Paragraphs",
+      "sentences": "Sentences",
+      "words": "Words",
+      "count": "Count",
+      "startWithLorem": "Start with \"Lorem ipsum...\"",
+      "generate": "Generate Text",
+      "wordsLabel": "words",
+      "charsLabel": "characters",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Generate paragraphs, sentences, or individual words",
+          "Customizable quantity from 1 to 100",
+          "Option to start with the classic \"Lorem ipsum dolor sit amet\" opening",
+          "Word and character count display",
+          "One-click copy to clipboard",
+          "No signup or internet connection required"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Lorem Ipsum Generator",
+        "steps": [
+          "Choose the type of text: paragraphs, sentences, or words",
+          "Set the desired quantity",
+          "Optionally toggle the classic 'Lorem ipsum' opening",
+          "Click 'Generate Text' to create placeholder content",
+          "Copy the generated text with one click"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is Lorem Ipsum?",
+          "answer": "Lorem Ipsum is placeholder text derived from a work by Cicero written in 45 BC. It has been the industry standard dummy text since the 1500s. Designers and developers use it to fill layouts when the actual content is not yet available."
+        },
+        {
+          "question": "Why use Lorem Ipsum instead of real text?",
+          "answer": "Lorem Ipsum helps reviewers focus on the visual design rather than reading the content. It has a relatively normal distribution of letters, making it look like readable English, which helps evaluate typography and layout."
+        },
+        {
+          "question": "Can I use the generated text commercially?",
+          "answer": "Yes, Lorem Ipsum is in the public domain and can be used freely in any project — commercial or personal. It's meant to be replaced with real content before publication."
+        }
+      ]
+    },
+    "image-to-pdf": {
+      "name": "Image to PDF Converter",
+      "shortDescription": "Convert images to PDF documents right in your browser.",
+      "metaTitle": "Image to PDF Converter - Free Online Tool | PureKit",
+      "metaDescription": "Convert JPG, PNG, WebP and other images to PDF online for free. Arrange pages, set margins, choose page sizes. Browser-based, your files never leave your device.",
+      "keywords": [
+        "image to pdf",
+        "jpg to pdf",
+        "png to pdf",
+        "convert image to pdf",
+        "photo to pdf",
+        "image to pdf converter"
+      ],
+      "dropzone": "Drop images here or click to browse (JPG, PNG, WebP, GIF)",
+      "pageSize": "Page Size",
+      "fitToImage": "Fit to Image",
+      "margin": "Margin",
+      "generate": "Generate PDF",
+      "generating": "Generating...",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert JPG, PNG, WebP, GIF and other image formats to PDF",
+          "Drag and drop multiple images at once",
+          "Reorder images before creating the PDF",
+          "Choose page size: A4, Letter, or auto-fit to image dimensions",
+          "Adjustable margins for professional-looking documents",
+          "100% browser-based — your images never leave your device"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Image to PDF Converter",
+        "steps": [
+          "Drag and drop images or click the upload area to select files",
+          "Rearrange images by hovering and using the arrow buttons",
+          "Choose your preferred page size and margin settings",
+          "Click 'Generate PDF' to create and download your PDF"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What image formats are supported?",
+          "answer": "This tool supports all common image formats including JPG/JPEG, PNG, WebP, GIF, BMP, and SVG. The images are converted to high-quality JPEG when embedded in the PDF for optimal file size."
+        },
+        {
+          "question": "Is there a limit on the number of images?",
+          "answer": "There's no hard limit. However, since everything runs in your browser, very large batches (100+ high-resolution images) may be slow depending on your device's memory. For best results, keep batches under 50 images."
+        },
+        {
+          "question": "Are my images uploaded to a server?",
+          "answer": "No. All processing happens entirely in your browser using JavaScript. Your images are never uploaded to any server, making this tool completely private and secure."
+        }
+      ]
+    },
+    "placeholder-image-generator": {
+      "name": "Placeholder Image Generator",
+      "shortDescription": "Generate placeholder images with custom size, color, text, and format. Download as PNG, WebP, or SVG.",
+      "metaTitle": "Placeholder Image Generator - Free Online Tool | PureKit",
+      "metaDescription": "Generate placeholder images instantly with custom dimensions, background color, text, and format. Supports PNG, WebP, and SVG. Free, browser-based, no upload required.",
+      "keywords": [
+        "placeholder image",
+        "dummy image",
+        "placeholder generator",
+        "image generator",
+        "banner placeholder",
+        "og image",
+        "thumbnail generator"
+      ],
+      "width": "Width (px)",
+      "height": "Height (px)",
+      "bgColor": "Background Color",
+      "textColor": "Text Color",
+      "customText": "Custom Text",
+      "format": "Format",
+      "download": "Download Image",
+      "presets": "Preset Sizes",
+      "preview": "Preview",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Generate placeholder images with custom width and height (up to 4096px)",
+          "Choose background color and text color with color picker",
+          "Add custom text or auto-display dimensions",
+          "Export as PNG, WebP, or SVG format",
+          "Preset sizes for common use cases: social media, ads, avatars, and more",
+          "Everything runs in your browser — no server upload needed"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Placeholder Image Generator",
+        "steps": [
+          "Set the image dimensions (width and height) or pick a preset size",
+          "Customize the background color and text color using the color pickers",
+          "Optionally enter custom text (defaults to showing dimensions)",
+          "Select your preferred output format: PNG, WebP, or SVG",
+          "Click \"Download Image\" to save the generated placeholder"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What sizes are available as presets?",
+          "answer": "PureKit includes presets for common sizes: 150×150 (avatar), 300×250 (medium rectangle ad), 728×90 (leaderboard ad), 1200×630 (OG image), 1200×675 (Twitter card), 1080×1080 (Instagram), 1920×1080 (HD), 375×667 (mobile), and 32×32 (favicon)."
+        },
+        {
+          "question": "Is the image generated on the server?",
+          "answer": "No. The image is generated entirely in your browser using the HTML Canvas API. Nothing is uploaded to any server, making it fast and private."
+        },
+        {
+          "question": "What is the maximum image size?",
+          "answer": "You can generate images up to 4096×4096 pixels. Larger sizes depend on your browser and device memory."
+        },
+        {
+          "question": "What is the difference between PNG, WebP, and SVG?",
+          "answer": "PNG is widely supported and lossless. WebP offers smaller file sizes with good quality. SVG is vector-based, scales to any size without quality loss, and is ideal for web use."
+        }
+      ]
+    },
+    "number-base-converter": {
+      "name": "Number Base Converter",
+      "shortDescription": "Convert numbers between Binary, Octal, Decimal, and Hexadecimal instantly.",
+      "metaTitle": "Number Base Converter - Binary, Octal, Decimal, Hex | PureKit",
+      "metaDescription": "Convert numbers between binary, octal, decimal, and hexadecimal in real time. Supports BigInt for large numbers. Free online tool, no signup required.",
+      "keywords": [
+        "number base converter",
+        "binary converter",
+        "hex converter",
+        "decimal to binary",
+        "binary to hex",
+        "octal converter",
+        "radix converter",
+        "base converter"
+      ],
+      "binary": "Binary (Base 2)",
+      "octal": "Octal (Base 8)",
+      "decimal": "Decimal (Base 10)",
+      "hexadecimal": "Hexadecimal (Base 16)",
+      "showSteps": "Show Conversion Steps",
+      "hideSteps": "Hide Steps",
+      "conversionSteps": "Conversion Steps",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert between Binary (base 2), Octal (base 8), Decimal (base 10), and Hexadecimal (base 16)",
+          "Real-time conversion — type in any field and see all other bases update instantly",
+          "BigInt support for arbitrarily large numbers",
+          "Optional step-by-step conversion explanation",
+          "Input validation with clear error messages",
+          "One-click copy for any result"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Number Base Converter",
+        "steps": [
+          "Type a number in any of the four input fields (Binary, Octal, Decimal, or Hex)",
+          "The other three fields will update automatically with the converted values",
+          "Click the copy button next to any result to copy it to your clipboard",
+          "Toggle \"Show Conversion Steps\" to see how the conversion is performed"
+        ]
+      },
+      "faq": [
+        {
+          "question": "How large of a number can I convert?",
+          "answer": "This tool uses JavaScript BigInt, so there is no practical limit on number size. You can convert numbers with hundreds or thousands of digits."
+        },
+        {
+          "question": "Does it support negative numbers?",
+          "answer": "Yes, you can enter negative decimal numbers (e.g., -42). The tool will show the negative representation in all bases."
+        },
+        {
+          "question": "What characters are valid for each base?",
+          "answer": "Binary: 0-1. Octal: 0-7. Decimal: 0-9 (and optional leading minus). Hexadecimal: 0-9 and A-F (case-insensitive)."
+        },
+        {
+          "question": "Is my data processed on a server?",
+          "answer": "No. All conversions happen entirely in your browser using JavaScript. No data is sent anywhere."
+        }
+      ]
+    },
+    "markdown-to-html": {
+      "name": "Markdown to HTML Converter",
+      "shortDescription": "Convert Markdown to HTML in real time with live preview and source code view.",
+      "metaTitle": "Markdown to HTML Converter - Free Online Tool | PureKit",
+      "metaDescription": "Convert Markdown to HTML instantly with live preview. Supports GitHub Flavored Markdown (GFM), tables, task lists, and code blocks. Copy or download the HTML output.",
+      "keywords": [
+        "markdown to html",
+        "markdown converter",
+        "md to html",
+        "markdown render",
+        "gfm",
+        "github markdown",
+        "markdown export"
+      ],
+      "markdownInput": "Markdown Input",
+      "inputPlaceholder": "Type or paste your Markdown here...",
+      "preview": "Preview",
+      "htmlSource": "HTML Source",
+      "downloadHtml": "Download",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Real-time Markdown to HTML conversion as you type",
+          "Side-by-side layout: Markdown editor on the left, output on the right",
+          "Toggle between rendered preview and raw HTML source code",
+          "Full GitHub Flavored Markdown (GFM) support: tables, task lists, strikethrough, and more",
+          "One-click copy HTML to clipboard",
+          "Download complete HTML file with basic styling"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Markdown to HTML Converter",
+        "steps": [
+          "Type or paste your Markdown content in the left editor panel",
+          "View the rendered HTML preview on the right in real time",
+          "Switch to \"HTML Source\" to see the raw HTML code",
+          "Click the copy button to copy the HTML output to your clipboard",
+          "Click \"Download\" to save a complete, styled HTML file"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What Markdown features are supported?",
+          "answer": "This tool supports GitHub Flavored Markdown (GFM) including: headings, bold, italic, strikethrough, links, images, code blocks with syntax highlighting, tables, task lists, blockquotes, and ordered/unordered lists."
+        },
+        {
+          "question": "Is the conversion done on the server?",
+          "answer": "No. Everything is processed in your browser using the marked.js library. Your content is never sent to any server."
+        },
+        {
+          "question": "Can I use the generated HTML in my website?",
+          "answer": "Yes! You can copy the raw HTML source and use it anywhere. The downloaded HTML file includes basic responsive styling that you can customize."
+        },
+        {
+          "question": "What is GFM (GitHub Flavored Markdown)?",
+          "answer": "GFM is an extension of standard Markdown used by GitHub. It adds support for tables, task lists (checkboxes), strikethrough text, and autolinked URLs, among other features."
+        }
+      ]
+    },
+    "html-to-markdown": {
+      "name": "HTML to Markdown Converter",
+      "shortDescription": "Convert HTML to clean Markdown format with support for tables, code blocks, and links.",
+      "metaTitle": "HTML to Markdown Converter - Free Online Tool | PureKit",
+      "metaDescription": "Convert HTML to Markdown instantly in your browser. Preserves structure for tables, code blocks, links, images, and more. Privacy-first with no server uploads.",
+      "keywords": [
+        "html to markdown",
+        "html converter",
+        "markdown export",
+        "html to md",
+        "convert html",
+        "web scraping",
+        "markdown format"
+      ],
+      "htmlInput": "HTML Input",
+      "markdownOutput": "Markdown Output",
+      "htmlPlaceholder": "Paste your HTML here...",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert HTML to clean, readable Markdown format",
+          "Preserves tables, code blocks, links, images, and text formatting",
+          "Real-time conversion as you type or paste",
+          "One-click copy Markdown output to clipboard",
+          "Handles complex HTML structures including nested elements"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the HTML to Markdown Converter",
+        "steps": [
+          "Paste your HTML code into the left input area",
+          "View the converted Markdown output on the right in real time",
+          "Click \"Copy\" to copy the Markdown to your clipboard",
+          "Use the output in README files, documentation, or any Markdown editor"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What HTML elements are supported?",
+          "answer": "This tool supports most standard HTML elements including headings (h1-h6), paragraphs, links, images, lists (ul/ol), tables, code blocks (pre/code), blockquotes, and text formatting (bold, italic, strikethrough)."
+        },
+        {
+          "question": "Is my HTML data sent to a server?",
+          "answer": "No. All conversion happens entirely in your browser using the Turndown library. Your HTML content is never uploaded or sent anywhere."
+        },
+        {
+          "question": "Can I convert entire web pages?",
+          "answer": "Yes, you can paste the HTML source of a web page. However, note that complex styling, scripts, and interactive elements will be stripped out, leaving only the semantic content structure."
+        }
+      ]
+    },
+    "xml-formatter": {
+      "name": "XML Formatter & Validator",
+      "shortDescription": "Format, validate, and minify XML with syntax highlighting and error detection.",
+      "metaTitle": "XML Formatter & Validator - Free Online Tool | PureKit",
+      "metaDescription": "Format and validate XML online for free. Beautify or minify XML with customizable indentation. Real-time syntax checking and error detection. Privacy-first browser tool.",
+      "keywords": [
+        "xml formatter",
+        "xml validator",
+        "xml beautifier",
+        "xml minifier",
+        "format xml",
+        "validate xml",
+        "xml pretty print"
+      ],
+      "indentation": "Indentation",
+      "spaces2": "2 Spaces",
+      "spaces4": "4 Spaces",
+      "tab": "Tab",
+      "xmlPlaceholder": "Paste or type your XML here...",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Format and beautify XML with customizable indentation (2 spaces, 4 spaces, or tabs)",
+          "Validate XML syntax with instant error detection and detailed messages",
+          "Minify XML to reduce file size by removing whitespace",
+          "Real-time processing as you type",
+          "Browser-based validation using native DOMParser"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the XML Formatter",
+        "steps": [
+          "Paste your XML data into the left input area",
+          "Choose \"Format\" to beautify or \"Minify\" to compress",
+          "Adjust indentation style if formatting (2 spaces, 4 spaces, or tab)",
+          "View validation status — valid XML shows green, errors show red with details",
+          "Click \"Copy\" to copy the formatted XML to your clipboard"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Is my XML data safe?",
+          "answer": "Yes, all XML processing happens in your browser using the native DOMParser API and xml-formatter library. Your data never leaves your device."
+        },
+        {
+          "question": "What XML features are supported?",
+          "answer": "This tool supports standard XML 1.0 including elements, attributes, CDATA sections, comments, and processing instructions. Namespaces are also supported."
+        },
+        {
+          "question": "Can I validate XML with schemas (XSD)?",
+          "answer": "No, this tool only validates well-formed XML syntax. It does not validate against XML schemas (XSD) or DTDs. It checks that tags are properly nested and closed."
+        }
+      ]
+    },
+    "favicon-generator": {
+      "name": "Favicon Generator",
+      "shortDescription": "Generate favicons from text or emoji in multiple sizes with customizable colors and styles.",
+      "metaTitle": "Favicon Generator - Create Icons for Your Website | PureKit",
+      "metaDescription": "Generate favicons from text or emoji in all sizes (16x16 to 512x512). Customize colors, border radius, and font size. Download PNG/ICO and get HTML meta tags. Free and browser-based.",
+      "keywords": [
+        "favicon generator",
+        "favicon maker",
+        "icon generator",
+        "emoji favicon",
+        "website icon",
+        "browser icon",
+        "ico generator",
+        "apple touch icon"
+      ],
+      "text": "Text or Emoji",
+      "textPlaceholder": "🚀",
+      "textHint": "Enter text (1-4 characters) or an emoji",
+      "backgroundColor": "Background Color",
+      "fontSize": "Font Size",
+      "borderRadius": "Border Radius",
+      "preview": "Preview",
+      "downloadAll": "Download All Sizes",
+      "htmlMetaTags": "HTML Meta Tags",
+      "htmlHint": "Copy and paste these tags into your HTML <head> section",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Generate favicons from text, letters, or emoji characters",
+          "Customize background color, font size, and border radius",
+          "Generate all standard sizes: 16x16, 32x32, 48x48, 180x180, 512x512",
+          "Download individual sizes or all at once",
+          "Get ready-to-use HTML meta tags for quick integration",
+          "Real-time preview of all icon sizes"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Favicon Generator",
+        "steps": [
+          "Enter text (1-4 characters) or paste an emoji into the text field",
+          "Choose a background color using the color picker or enter a hex code",
+          "Adjust font size and border radius sliders to customize appearance",
+          "Preview all icon sizes in real time on the right",
+          "Click \"Download All Sizes\" to download all favicons as PNG files",
+          "Copy the generated HTML meta tags and paste them into your website's <head> section"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What file format are the favicons?",
+          "answer": "All icons are generated as PNG files. You can convert them to .ico format using a separate converter if needed, but modern browsers support PNG favicons."
+        },
+        {
+          "question": "What sizes should I use for my website?",
+          "answer": "For best compatibility: use 16x16 and 32x32 for browser tabs, 48x48 for desktop shortcuts, 180x180 for Apple touch icons, and 512x512 for high-res displays and PWAs."
+        },
+        {
+          "question": "Can I use emoji as favicons?",
+          "answer": "Yes! Emoji work great for favicons. Just paste an emoji into the text field. Note that emoji appearance may vary across different devices and operating systems."
+        },
+        {
+          "question": "Are the generated icons browser-compatible?",
+          "answer": "Yes, PNG favicons are supported by all modern browsers. The provided HTML meta tags cover compatibility for Chrome, Firefox, Safari, Edge, and mobile browsers."
+        }
+      ]
+    },
+    "image-to-base64": {
+      "name": "Image to Base64 Encoder",
+      "shortDescription": "Convert images to Base64 data URI or plain Base64 string",
+      "metaTitle": "Image to Base64 Encoder - Free Online Tool | PureKit",
+      "metaDescription": "Convert images to Base64 data URI or plain Base64 string instantly. Supports drag and drop. Privacy-first, browser-based conversion.",
+      "keywords": [
+        "image to base64",
+        "base64 encoder",
+        "image encoder",
+        "data uri",
+        "base64 image",
+        "convert image to base64"
+      ],
+      "dropzone": "Drop an image here or click to select",
+      "supportedFormats": "Supports JPEG, PNG, GIF, WebP, BMP, SVG",
+      "outputFormat": "Output Format",
+      "dataUri": "Data URI",
+      "plainBase64": "Plain Base64",
+      "copyDataUri": "Copy Data URI",
+      "copyBase64": "Copy Base64",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert images to Base64-encoded strings instantly",
+          "Two output formats: full data URI or plain Base64",
+          "Drag and drop or click to upload",
+          "Supports JPEG, PNG, GIF, WebP, BMP, and SVG formats",
+          "All conversion happens in your browser — your images never leave your device"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Image to Base64 Encoder",
+        "steps": [
+          "Drag and drop an image or click the upload area to select a file",
+          "Choose output format: Data URI (includes MIME type) or Plain Base64",
+          "Click the copy button to copy the Base64 string",
+          "Use the encoded string in HTML, CSS, or API requests"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is the difference between Data URI and Plain Base64?",
+          "answer": "Data URI includes the MIME type prefix (e.g., data:image/png;base64,...) and can be used directly in HTML img src or CSS background-image. Plain Base64 is just the encoded string without metadata, useful for APIs or databases."
+        },
+        {
+          "question": "Is there a file size limit?",
+          "answer": "There is no hard limit, but very large images (above 10MB) may be slow to process. Base64 encoding increases file size by roughly 33%, so keep that in mind for performance."
+        },
+        {
+          "question": "Are my images uploaded to a server?",
+          "answer": "No. All encoding happens in your browser using the FileReader API. Your images never leave your device."
+        }
+      ]
+    },
+    "html-entity-encoder": {
+      "name": "HTML Entity Encoder & Decoder",
+      "shortDescription": "Encode and decode HTML entities in real time",
+      "metaTitle": "HTML Entity Encoder & Decoder - Free Online Tool | PureKit",
+      "metaDescription": "Encode and decode HTML entities online. Convert special characters like <, >, & to safe HTML entities. Real-time conversion, browser-based.",
+      "keywords": [
+        "html entity encoder",
+        "html entity decoder",
+        "html escape",
+        "encode html",
+        "decode html",
+        "html entities"
+      ],
+      "encodePlaceholder": "Enter text to encode (e.g., <div>Hello & welcome</div>)",
+      "decodePlaceholder": "Enter HTML entities to decode (e.g., &lt;div&gt;Hello &amp; welcome&lt;/div&gt;)",
+      "encodeOutputPlaceholder": "Encoded HTML entities will appear here...",
+      "decodeOutputPlaceholder": "Decoded text will appear here...",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Encode special characters (<, >, &, \", ') to HTML entities",
+          "Decode both named entities (&lt;) and numeric entities (&#60;)",
+          "Real-time conversion as you type",
+          "Handles all standard HTML entities",
+          "All processing happens in your browser"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the HTML Entity Encoder/Decoder",
+        "steps": [
+          "Select the 'Encode' or 'Decode' tab",
+          "Paste or type your text in the input area",
+          "View the result instantly in the output area",
+          "Click 'Copy' to copy the result to your clipboard"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What are HTML entities?",
+          "answer": "HTML entities are special codes used to display reserved characters in HTML. For example, < becomes &lt; and > becomes &gt;. They prevent browsers from interpreting these characters as HTML tags."
+        },
+        {
+          "question": "When should I use HTML entity encoding?",
+          "answer": "Use encoding when displaying user-generated content or raw text in HTML to prevent XSS attacks and rendering issues. Always encode < > & \" ' when inserting untrusted data into HTML."
+        },
+        {
+          "question": "What is the difference between named and numeric entities?",
+          "answer": "Named entities use readable names like &lt; for <. Numeric entities use character codes like &#60; (decimal) or &#x3C; (hex). Both are valid, but named entities are more human-readable."
+        }
+      ]
+    },
+    "svg-to-png": {
+      "name": "SVG to PNG Converter",
+      "shortDescription": "Convert SVG to PNG with custom resolution and scaling",
+      "metaTitle": "SVG to PNG Converter - Free Online Tool | PureKit",
+      "metaDescription": "Convert SVG to PNG online with custom resolution. Supports 1x, 2x, 3x scaling for retina displays. Drag and drop or paste SVG code. Privacy-first, browser-based.",
+      "keywords": [
+        "svg to png",
+        "svg converter",
+        "convert svg",
+        "svg to image",
+        "vector to raster",
+        "svg export"
+      ],
+      "dropzone": "Drop an SVG file here or click to select",
+      "pasteArea": "Or paste your SVG code here",
+      "supportedFormats": "SVG files only",
+      "scale": "Scale",
+      "scale1x": "1x (Standard)",
+      "scale2x": "2x (Retina)",
+      "scale3x": "3x (High-Res)",
+      "convert": "Convert to PNG",
+      "downloadPng": "Download PNG",
+      "preview": "Preview",
+      "originalSize": "Original Size",
+      "outputSize": "Output Size",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert SVG files or code to high-quality PNG images",
+          "Choose output resolution: 1x, 2x, or 3x scaling for retina displays",
+          "Drag and drop SVG files or paste SVG code directly",
+          "Preview the converted image before downloading",
+          "All rendering happens in your browser using Canvas API"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the SVG to PNG Converter",
+        "steps": [
+          "Drag and drop an SVG file or paste SVG code in the text area",
+          "Select the desired output scale (1x, 2x, or 3x)",
+          "Click 'Convert to PNG' to render the image",
+          "Preview the result and click 'Download PNG' to save"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is the difference between 1x, 2x, and 3x scaling?",
+          "answer": "1x renders at the SVG's native size. 2x doubles the resolution (good for retina displays). 3x triples it (high-resolution printing). Higher scales produce larger file sizes but better quality on high-DPI screens."
+        },
+        {
+          "question": "Will transparency be preserved?",
+          "answer": "Yes, transparent areas in your SVG will be preserved as transparent pixels in the PNG output."
+        },
+        {
+          "question": "Is my SVG uploaded to a server?",
+          "answer": "No. All conversion happens in your browser using the Canvas API. Your SVG files and code never leave your device."
+        }
+      ]
+    },
+    "gzip-compress-decompress": {
+      "name": "GZIP Compress/Decompress",
+      "shortDescription": "Compress and decompress GZIP files online",
+      "metaTitle": "GZIP Compress/Decompress - Free Online Tool | PureKit",
+      "metaDescription": "Compress and decompress GZIP files online for free. Convert text or files to .gz format or decompress GZIP archives instantly. Browser-based, no signup required.",
+      "keywords": [
+        "gzip online",
+        "gzip compress",
+        "gzip decompress",
+        "decompress gzip online",
+        "gz file",
+        "gzip converter"
+      ],
+      "compress": "Compress",
+      "decompress": "Decompress",
+      "compressBtn": "Compress to GZIP",
+      "decompressBtn": "Decompress GZIP",
+      "downloadGz": "Download .gz",
+      "characters": "characters",
+      "emptyInput": "Please enter text or upload a file",
+      "compressError": "Error compressing data. Please try again.",
+      "decompressError": "Error decompressing data. Please check the file format.",
+      "inputData": "Input Data",
+      "compressedInput": "Compressed Input (Base64 or upload .gz file)",
+      "compressedOutput": "Compressed Output (Base64)",
+      "decompressedOutput": "Decompressed Output",
+      "inputPlaceholder": "Enter text to compress or upload a file...",
+      "compressedPlaceholder": "Paste Base64 compressed data or upload a .gz file...",
+      "outputPlaceholder": "Result will appear here...",
+      "uploadedFile": "Uploaded file",
+      "compressionRatio": "Compression ratio",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Compress text or files to GZIP format (.gz)",
+          "Decompress GZIP files back to original content",
+          "Real-time compression ratio display",
+          "Download compressed files as .gz archives",
+          "Uses native browser Compression Streams API for fast processing",
+          "All processing happens locally — your data never leaves your device"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use GZIP Compress/Decompress",
+        "steps": [
+          "Select Compress or Decompress mode",
+          "For compression: paste text or upload any file",
+          "For decompression: upload a .gz file or paste Base64 compressed data",
+          "Click the compress/decompress button",
+          "Download the result or view it directly in the output area"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is GZIP compression?",
+          "answer": "GZIP is a file compression format based on the DEFLATE algorithm. It is widely used for web content compression and file archiving. GZIP typically reduces file sizes by 60-80% for text-based content."
+        },
+        {
+          "question": "Can I compress any type of file?",
+          "answer": "Yes! You can compress any file type. However, GZIP works best with text-based files (HTML, JSON, CSV, code). Already-compressed files (JPEG, MP4, ZIP) will not compress much further."
+        },
+        {
+          "question": "Is the compressed output a valid .gz file?",
+          "answer": "Yes. When you click Download .gz, you get a standard GZIP-compressed file that can be opened with any GZIP-compatible tool (gunzip, 7-Zip, WinRAR, etc.)."
+        },
+        {
+          "question": "What is the Base64 output shown?",
+          "answer": "Base64 is a way to represent binary data (like compressed GZIP files) as text. This makes it easier to copy/paste or embed in text-based formats. You can paste this Base64 string back into the Decompress mode to restore the original data."
+        },
+        {
+          "question": "Does this work offline?",
+          "answer": "Yes! All compression and decompression happens in your browser using native APIs. No internet connection is required after the page loads."
+        }
+      ]
+    },
+    "csv-to-json": {
+      "name": "CSV to JSON Converter",
+      "shortDescription": "Convert CSV data to JSON format online",
+      "metaTitle": "CSV to JSON Converter - Free Online Tool | PureKit",
+      "metaDescription": "Convert CSV to JSON online for free. Parse CSV files and convert them to JSON arrays instantly. Auto-detect delimiters, handle quoted fields. Browser-based, no signup required.",
+      "keywords": [
+        "csv to json",
+        "csv to json converter",
+        "convert csv to json online",
+        "csv parser",
+        "csv to json array"
+      ],
+      "convert": "Convert to JSON",
+      "downloadJson": "Download JSON",
+      "characters": "characters",
+      "emptyInput": "Please enter CSV data to convert",
+      "convertError": "Error converting CSV to JSON. Please check your CSV format.",
+      "csvInput": "CSV Input",
+      "jsonOutput": "JSON Output",
+      "csvPlaceholder": "Paste CSV data here or upload a .csv file...\nExample:\nname,age,city\nAlice,30,NYC\nBob,25,LA",
+      "jsonPlaceholder": "JSON output will appear here...",
+      "useFirstRowAsKeys": "Use first row as keys",
+      "delimiter": "Delimiter",
+      "autoDetect": "Auto-detect",
+      "comma": "Comma (,)",
+      "tab": "Tab (\\t)",
+      "semicolon": "Semicolon (;)",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Convert CSV to JSON arrays instantly",
+          "Auto-detect delimiters (comma, tab, semicolon)",
+          "Option to use first row as object keys",
+          "Handles quoted fields and special characters",
+          "Download output as .json file",
+          "All conversion happens locally — your data never leaves your device"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use CSV to JSON Converter",
+        "steps": [
+          "Paste your CSV data or upload a .csv file",
+          "Choose delimiter (or let the tool auto-detect it)",
+          "Enable Use first row as keys if your CSV has headers",
+          "Click Convert to JSON",
+          "Copy or download the JSON output"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What if my CSV uses tabs or semicolons?",
+          "answer": "The tool supports comma, tab, and semicolon delimiters. Use the Auto-detect option (default) to automatically identify the correct delimiter, or manually select it from the dropdown."
+        },
+        {
+          "question": "How are quoted fields handled?",
+          "answer": "The parser correctly handles fields enclosed in double quotes, including fields containing commas or newlines. Quote characters inside quoted fields should be escaped as double quotes (\"\")."
+        },
+        {
+          "question": "What does Use first row as keys do?",
+          "answer": "When enabled, the first row of your CSV is treated as column headers, and each subsequent row becomes a JSON object with those headers as keys. When disabled, each row becomes a simple array."
+        },
+        {
+          "question": "Can I convert large CSV files?",
+          "answer": "Yes, the tool can handle large CSV files. However, very large files (multiple megabytes) may slow down your browser. For best performance, ensure your browser has enough memory."
+        },
+        {
+          "question": "Is my data sent to a server?",
+          "answer": "No. All CSV parsing and conversion happens locally in your browser. Your data is never uploaded to any server."
+        }
+      ]
+    },
+    "character-counter": {
+      "name": "Character Counter",
+      "shortDescription": "Count characters, words, sentences, and more",
+      "metaTitle": "Character Counter - Free Online Tool | PureKit",
+      "metaDescription": "Count characters, words, sentences, paragraphs, and lines online. Get reading time estimates and keyword frequency analysis. Free character counter tool.",
+      "keywords": [
+        "character counter",
+        "character count online",
+        "letter counter",
+        "word count",
+        "text statistics"
+      ],
+      "characters": "Characters",
+      "charactersNoSpaces": "Characters (no spaces)",
+      "words": "Words",
+      "sentences": "Sentences",
+      "paragraphs": "Paragraphs",
+      "lines": "Lines",
+      "readingTime": "Reading Time (min)",
+      "inputText": "Your Text",
+      "placeholder": "Start typing or paste your text here...",
+      "topWords": "Top 10 Most Frequent Words",
+      "topCharacters": "Top 10 Most Frequent Characters",
+      "word": "Word",
+      "character": "Character",
+      "count": "Count",
+      "frequency": "Frequency",
+      "features": {
+        "title": "Features",
+        "items": [
+          "Real-time character counting with and without spaces",
+          "Word, sentence, paragraph, and line counting",
+          "Reading time estimation (200 words/min average)",
+          "Top 10 keyword density analysis",
+          "Character frequency distribution",
+          "Supports Unicode text (CJK characters counted correctly)",
+          "All processing happens locally — your text stays private"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Character Counter",
+        "steps": [
+          "Type or paste your text into the input area",
+          "Statistics update automatically in real-time",
+          "View character count, word count, sentences, paragraphs, and lines",
+          "Check reading time estimates for content planning",
+          "Review keyword frequency to identify common words"
+        ]
+      },
+      "faq": [
+        {
+          "question": "How is character count calculated?",
+          "answer": "Character count includes all visible characters, spaces, punctuation, and newlines. The Characters (no spaces) count excludes all whitespace characters (spaces, tabs, newlines)."
+        },
+        {
+          "question": "How are words counted?",
+          "answer": "Words are counted by splitting text on whitespace. Any sequence of characters separated by spaces, tabs, or newlines counts as one word. Hyphenated words count as a single word."
+        },
+        {
+          "question": "How accurate is the reading time?",
+          "answer": "Reading time is based on an average reading speed of 200 words per minute for adults. Actual reading speed varies by text complexity and reader skill level."
+        },
+        {
+          "question": "What does keyword density show?",
+          "answer": "The Top 10 Most Frequent Words table shows which words appear most often in your text, along with their percentage frequency. This helps identify main themes and avoid overuse of specific words."
+        },
+        {
+          "question": "Does this work for non-English text?",
+          "answer": "Yes! The counter supports Unicode and works with any language. Character and line counts work for all languages. Word counting is most accurate for space-separated languages (English, Spanish, etc.) but may be less accurate for languages without spaces (Chinese, Japanese)."
+        }
+      ]
+    },
+    "css-js-minifier": {
+      "name": "CSS & JS Minifier & Beautifier",
+      "shortDescription": "Minify or beautify CSS/JavaScript code - compress for production or format for readability",
+      "metaTitle": "CSS & JS Minifier & Beautifier - Free Online Code Formatter",
+      "metaDescription": "Minify or beautify CSS and JavaScript code online. Compress code to reduce file size or format it with proper indentation for better readability.",
+      "keywords": [
+        "css minifier",
+        "js minifier",
+        "javascript minifier",
+        "compress css",
+        "compress js",
+        "minify code",
+        "reduce file size",
+        "css beautifier",
+        "js beautifier",
+        "css formatter",
+        "js formatter",
+        "format css",
+        "format javascript",
+        "pretty print",
+        "code indent",
+        "stylesheet formatter"
+      ],
+      "css": "CSS",
+      "javascript": "JavaScript",
+      "minify": "Minify",
+      "beautify": "Beautify",
+      "original": "Original",
+      "minified": "Minified",
+      "formatted": "Formatted",
+      "saved": "Saved",
+      "increased": "Increased",
+      "cssPlaceholder": "Paste your CSS code here...",
+      "jsPlaceholder": "Paste your JavaScript code here...",
+      "characters": "characters",
+      "emptyInput": "Please enter CSS or JavaScript code to process",
+      "minifyError": "Error minifying code. Please check your syntax.",
+      "processError": "Error processing code. Please check your syntax.",
+      "features": {
+        "title": "Key Features",
+        "items": [
+          "Minify or beautify CSS and JavaScript code",
+          "Compress code to reduce file size",
+          "Format code with proper indentation",
+          "Remove or preserve comments",
+          "Show size and compression statistics",
+          "Download processed files",
+          "All processing happens in your browser"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use",
+        "steps": [
+          "Choose CSS or JavaScript mode",
+          "Paste your code in the input area",
+          "Click 'Minify' to compress the code",
+          "Download or copy the minified code"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is code minification?",
+          "answer": "Code minification removes unnecessary characters (whitespace, comments, newlines) without changing functionality, reducing file size and improving load times."
+        },
+        {
+          "question": "Is my code safe?",
+          "answer": "Yes, all minification happens locally in your browser. Your code is never sent to any server."
+        }
+      ]
+    },
+    "svg-optimizer": {
+      "name": "SVG Optimizer",
+      "shortDescription": "Optimize and compress SVG files by removing unnecessary code and metadata",
+      "metaTitle": "SVG Optimizer - Free Online SVG Compression Tool",
+      "metaDescription": "Optimize SVG files online. Remove metadata, comments, and hidden elements to reduce file size while maintaining quality.",
+      "keywords": [
+        "svg optimizer",
+        "svg compress",
+        "optimize svg",
+        "reduce svg size",
+        "clean svg",
+        "svg minifier"
+      ],
+      "optimize": "Optimize",
+      "svgInput": "SVG Input",
+      "svgPlaceholder": "Paste your SVG code here or upload a file...",
+      "optimizedOutput": "Optimized Output",
+      "downloadSvg": "Download SVG",
+      "removeComments": "Remove comments",
+      "removeMetadata": "Remove metadata",
+      "removeHiddenElements": "Remove hidden elements",
+      "precision": "Precision",
+      "original": "Original",
+      "optimized": "Optimized",
+      "saved": "Saved",
+      "characters": "characters",
+      "emptyInput": "Please enter SVG code or upload a file",
+      "invalidSvg": "Invalid SVG code. Please check your input.",
+      "optimizeError": "Error optimizing SVG. Please check your code.",
+      "features": {
+        "title": "Key Features",
+        "items": [
+          "Remove comments and metadata",
+          "Clean up hidden elements",
+          "Round number precision",
+          "Show file size reduction",
+          "Upload SVG files",
+          "All processing happens in your browser"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use",
+        "steps": [
+          "Paste SVG code or upload a file",
+          "Configure optimization options",
+          "Click 'Optimize' to compress",
+          "Download or copy the optimized SVG"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Will optimization affect quality?",
+          "answer": "No, SVG optimization removes unnecessary data without affecting visual quality. The image will look identical."
+        },
+        {
+          "question": "Is my SVG file safe?",
+          "answer": "Yes, all optimization happens locally in your browser. Your files are never uploaded to any server."
+        }
+      ]
+    },
+    "robots-txt-generator": {
+      "name": "Robots.txt Generator",
+      "shortDescription": "Generate robots.txt file to control search engine crawler access",
+      "metaTitle": "Robots.txt Generator - Free Online SEO Tool",
+      "metaDescription": "Generate robots.txt file online. Control search engine crawler access with allow/disallow rules, sitemap, and crawl delay settings.",
+      "keywords": [
+        "robots txt generator",
+        "robots.txt",
+        "seo tool",
+        "crawler control",
+        "search engine",
+        "sitemap",
+        "disallow"
+      ],
+      "templates": "Templates",
+      "allowAll": "Allow All",
+      "blockAll": "Block All",
+      "commonRules": "Common Rules",
+      "userAgent": "User-Agent",
+      "disallow": "Disallow",
+      "allow": "Allow",
+      "addPath": "Add Path",
+      "addRule": "Add Rule",
+      "sitemapUrl": "Sitemap URL",
+      "crawlDelay": "Crawl Delay (seconds)",
+      "robotsTxtOutput": "robots.txt Output",
+      "features": {
+        "title": "Key Features",
+        "items": [
+          "Generate robots.txt files",
+          "Multiple user-agent rules",
+          "Allow and disallow paths",
+          "Sitemap URL configuration",
+          "Crawl delay settings",
+          "Pre-made templates"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use",
+        "steps": [
+          "Choose a template or start from scratch",
+          "Add user-agent rules",
+          "Configure allow/disallow paths",
+          "Add sitemap URL (optional)",
+          "Click 'Generate' and download robots.txt"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is robots.txt?",
+          "answer": "robots.txt is a file that tells search engine crawlers which pages or sections of your site to crawl or avoid."
+        },
+        {
+          "question": "Where should I place robots.txt?",
+          "answer": "Place robots.txt in your website's root directory (e.g., https://example.com/robots.txt)."
+        }
+      ]
+    },
+    "meta-tags-generator": {
+      "name": "Meta Tags Generator",
+      "shortDescription": "Generate HTML meta tags and Open Graph tags with live social media preview",
+      "metaTitle": "Meta Tags & Open Graph Generator - Free SEO Tool",
+      "metaDescription": "Generate HTML meta tags, Open Graph tags, and Twitter Cards. Preview how your page appears on Facebook, Twitter, and other social platforms.",
+      "keywords": "Keywords",
+      "preview": "Preview",
+      "basicInfo": "Basic Information",
+      "socialMedia": "Social Media / Open Graph",
+      "pageTitle": "Page Title",
+      "pageDescription": "Description",
+      "author": "Author",
+      "ogTitle": "OG Title",
+      "ogDescription": "OG Description",
+      "ogImage": "OG Image URL",
+      "pageUrl": "Page URL",
+      "twitterCard": "Twitter Card Type",
+      "optionalFallback": "Optional (falls back to basic info)",
+      "generatedCode": "Generated HTML Code",
+      "socialPreview": "Social Media Preview",
+      "facebookPreview": "Facebook / Open Graph",
+      "twitterPreview": "Twitter Card",
+      "features": {
+        "title": "Key Features",
+        "items": [
+          "Generate meta tags for SEO",
+          "Create Open Graph tags for social sharing",
+          "Twitter Card configuration",
+          "Live social media preview",
+          "See how your page appears on Facebook and Twitter",
+          "All processing happens in your browser"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use",
+        "steps": [
+          "Enter basic page information (title, description)",
+          "Add Open Graph details for social media",
+          "Click 'Preview' to see social media cards",
+          "Click 'Generate' to create HTML meta tags",
+          "Copy and paste into your HTML <head> section"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What are meta tags?",
+          "answer": "Meta tags provide information about a web page to search engines and social media platforms. They control how your page appears in search results and when shared on social media."
+        },
+        {
+          "question": "What is Open Graph?",
+          "answer": "Open Graph is a protocol that controls how URLs appear when shared on social platforms like Facebook, LinkedIn, and Twitter. It defines the title, description, and image shown in social previews."
+        }
+      ]
+    },
+    "hex-to-text": {
+      "name": "Hex to Text Converter",
+      "shortDescription": "Convert between hexadecimal, binary, ASCII and text formats",
+      "metaTitle": "Hex to Text Converter - Free Online Tool",
+      "metaDescription": "Convert between hexadecimal, binary, ASCII and text formats. Encode and decode hex strings, binary data, and text online.",
+      "keywords": [
+        "hex to text",
+        "hexadecimal converter",
+        "binary converter",
+        "ascii converter",
+        "hex decode"
+      ],
+      "hexToText": "Hex → Text",
+      "textToHex": "Text → Hex",
+      "binaryToText": "Binary → Text",
+      "textToBinary": "Text → Binary",
+      "convert": "Convert",
+      "swap": "Swap",
+      "hexInput": "Hexadecimal Input",
+      "textInput": "Text Input",
+      "binaryInput": "Binary Input",
+      "hexOutput": "Hexadecimal Output",
+      "textOutput": "Text Output",
+      "binaryOutput": "Binary Output",
+      "hexPlaceholder": "Enter hexadecimal (e.g., 48656C6C6F)",
+      "textPlaceholder": "Enter text to convert",
+      "binaryPlaceholder": "Enter binary (e.g., 01001000 01100101)",
+      "characters": "characters",
+      "emptyInput": "Please enter data to convert",
+      "invalidHex": "Invalid hexadecimal format. Must contain only 0-9 and A-F.",
+      "invalidBinary": "Invalid binary format. Must contain only 0 and 1, and be a multiple of 8 bits.",
+      "conversionError": "Error during conversion. Please check your input format.",
+      "features": {
+        "title": "Key Features",
+        "items": [
+          "Convert hex to text and vice versa",
+          "Convert binary to text and vice versa",
+          "Supports ASCII character encoding",
+          "Swap input and output",
+          "Validate hex and binary formats",
+          "All processing happens in your browser"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use",
+        "steps": [
+          "Select conversion mode (Hex to Text, Text to Hex, etc.)",
+          "Paste or type your input",
+          "Click 'Convert' to see the result",
+          "Use 'Swap' to reverse the conversion"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is hexadecimal?",
+          "answer": "Hexadecimal (hex) is a base-16 number system using 0-9 and A-F. It's commonly used to represent binary data in a more compact and readable form."
+        },
+        {
+          "question": "When would I use this tool?",
+          "answer": "This tool is useful for debugging, data encoding/decoding, programming, and working with low-level data formats."
+        }
+      ]
+    },
+    "html-viewer": {
+      "name": "HTML Live Preview",
+      "shortDescription": "Real-time HTML code renderer with instant visual preview",
+      "metaTitle": "HTML Live Preview - Free Online HTML Viewer",
+      "metaDescription": "Preview HTML code in real-time. See instant visual output as you type. Test HTML, CSS, and JavaScript code in your browser.",
+      "keywords": [
+        "html viewer",
+        "html preview",
+        "live preview",
+        "html renderer",
+        "code preview",
+        "html editor"
+      ],
+      "autoPreview": "Auto Preview",
+      "updatePreview": "Update Preview",
+      "templates": "Templates",
+      "basicHtml": "Basic HTML",
+      "styledHtml": "Styled (CSS)",
+      "interactiveHtml": "Interactive (JS)",
+      "htmlCode": "HTML Code",
+      "livePreview": "Live Preview",
+      "htmlPlaceholder": "Enter HTML code here...\n\n<!DOCTYPE html>\n<html>\n<head>\n  <title>My Page</title>\n</head>\n<body>\n  <h1>Hello!</h1>\n</body>\n</html>",
+      "characters": "characters",
+      "securityNote": "Preview is sandboxed for security. Some features (like external requests) may be restricted.",
+      "features": {
+        "title": "Key Features",
+        "items": [
+          "Real-time HTML preview",
+          "Supports CSS and JavaScript",
+          "Auto-update as you type",
+          "Pre-made templates",
+          "Sandboxed preview for security",
+          "All processing happens in your browser"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use",
+        "steps": [
+          "Type or paste HTML code in the editor",
+          "Preview updates automatically (or click 'Update Preview')",
+          "Use templates to start quickly",
+          "Test your HTML, CSS, and JavaScript code"
+        ]
+      },
+      "faq": [
+        {
+          "question": "Can I use CSS and JavaScript?",
+          "answer": "Yes! The preview supports inline CSS (<style> tags) and JavaScript (<script> tags). External resources may be restricted for security."
+        },
+        {
+          "question": "Is my code saved?",
+          "answer": "No, all code stays in your browser. Nothing is sent to any server. Your code is completely private."
+        }
+      ]
+    }
+  },
+  "devtoysAlternative": {
+    "metaTitle": "DevToys Alternative - Free Browser-Based Developer Tools | PureKit",
+    "metaDescription": "Looking for a DevToys alternative? PureKit offers 38+ browser-based developer tools with zero installation, complete privacy, and instant access. No download required.",
+    "title": "DevToys Alternative - Free Browser-Based Developer Tools",
+    "intro": "Looking for a better DevToys alternative? PureKit offers 38+ professional developer tools that run 100% in your browser — no installation, no downloads, just instant access from any device.",
+    "whyPureKit": "Why PureKit is the Better Alternative",
+    "comparisonTitle": "PureKit vs DevToys: Feature Comparison",
+    "features": [
+      {
+        "name": "Zero Installation Required",
+        "purekit": true,
+        "devtoys": false
+      },
+      {
+        "name": "Works in Browser (No Download)",
+        "purekit": true,
+        "devtoys": false
+      },
+      {
+        "name": "100% Privacy-First (Data Never Leaves Your Device)",
+        "purekit": true,
+        "devtoys": true
+      },
+      {
+        "name": "Cross-Platform (Windows, Mac, Linux, Mobile)",
+        "purekit": true,
+        "devtoys": false
+      },
+      {
+        "name": "Instant Access from Any Device",
+        "purekit": true,
+        "devtoys": false
+      },
+      {
+        "name": "38+ Tools and Growing Weekly",
+        "purekit": true,
+        "devtoys": false
+      },
+      {
+        "name": "Fast Loading (Static Site)",
+        "purekit": true,
+        "devtoys": false
+      },
+      {
+        "name": "Mobile-Friendly UI",
+        "purekit": true,
+        "devtoys": false
+      },
+      {
+        "name": "Completely Free Forever",
+        "purekit": true,
+        "devtoys": true
+      }
+    ],
+    "advantages": [
+      {
+        "title": "Access Anywhere, Instantly",
+        "description": "No installation needed. Open your browser and start working. Works on Windows, Mac, Linux, tablets, and phones — DevToys requires Windows-only download and installation."
+      },
+      {
+        "title": "Lightning Fast & Always Updated",
+        "description": "Static site architecture means instant load times. We add 3-6 new tools every week. No manual updates, no app store delays — just visit the site and use the latest tools."
+      },
+      {
+        "title": "100% Privacy Protected",
+        "description": "All processing happens in your browser using JavaScript. Your data never touches our servers. No analytics, no tracking, no telemetry — just like DevToys, but without needing to trust an installed app."
+      },
+      {
+        "title": "38+ Tools in One Place",
+        "description": "From JSON formatters to PDF tools, image converters to regex testers — we cover more use cases than DevToys. Everything is organized, searchable, and just one click away."
+      }
+    ],
+    "ctaTitle": "Ready to Try PureKit?",
+    "ctaText": "Join thousands of developers who've switched to PureKit for faster, more convenient browser-based tools. No signup, no installation, no hassle.",
+    "ctaButton": "Browse All Tools"
+  },
+  "itToolsAlternative": {
+    "metaTitle": "IT-Tools Alternative - No Installation Required | PureKit",
+    "metaDescription": "Looking for an IT-Tools alternative? PureKit offers 38+ privacy-first developer tools in your browser. No Docker, no self-hosting, just instant access from anywhere.",
+    "title": "IT-Tools Alternative - No Installation Required",
+    "intro": "Tired of Docker setup and self-hosting? PureKit is a better IT-Tools alternative with 38+ developer tools that run instantly in your browser — zero configuration, complete privacy, accessible from any device.",
+    "whyPureKit": "Why PureKit is the Better Alternative",
+    "comparisonTitle": "PureKit vs IT-Tools: Feature Comparison",
+    "features": [
+      {
+        "name": "No Docker / Self-Hosting Required",
+        "purekit": true,
+        "ittools": false
+      },
+      {
+        "name": "Instant Access (No Setup)",
+        "purekit": true,
+        "ittools": false
+      },
+      {
+        "name": "100% Privacy-First (Client-Side Processing)",
+        "purekit": true,
+        "ittools": true
+      },
+      {
+        "name": "Always Online (No Server Maintenance)",
+        "purekit": true,
+        "ittools": false
+      },
+      {
+        "name": "Mobile-Friendly Interface",
+        "purekit": true,
+        "ittools": false
+      },
+      {
+        "name": "38+ Tools and Growing Weekly",
+        "purekit": true,
+        "ittools": false
+      },
+      {
+        "name": "Zero Configuration",
+        "purekit": true,
+        "ittools": false
+      },
+      {
+        "name": "Stable Updates (No Breaking Changes)",
+        "purekit": true,
+        "ittools": false
+      },
+      {
+        "name": "Completely Free Forever",
+        "purekit": true,
+        "ittools": true
+      }
+    ],
+    "advantages": [
+      {
+        "title": "Zero Setup, Instant Access",
+        "description": "No Docker images to pull, no self-hosting, no server maintenance. Just visit PureKit and start working. IT-Tools requires Docker setup and ongoing server management."
+      },
+      {
+        "title": "Available Everywhere",
+        "description": "PureKit is hosted on Cloudflare Pages with 99.99% uptime. Access from anywhere, on any device — your team doesn't need to VPN into a self-hosted instance."
+      },
+      {
+        "title": "Privacy Without the Hassle",
+        "description": "All tools run 100% in your browser — your data never leaves your device. Same privacy as IT-Tools, but without needing to self-host. No servers, no logs, no tracking."
+      },
+      {
+        "title": "Stable, Growing Toolset",
+        "description": "38+ tools with 3-6 new additions every week. Unlike IT-Tools' community-driven development, PureKit follows a stable, consistent roadmap with weekly updates and zero breaking changes."
+      }
+    ],
+    "ctaTitle": "Skip the Setup, Start Working",
+    "ctaText": "Join thousands of developers who've ditched self-hosting for the simplicity of PureKit. No Docker, no servers, just tools that work.",
+    "ctaButton": "Browse All Tools"
+  }
+}
