@@ -31,7 +31,7 @@ const { URL } = require('url');
 const PROXY_URL = null; // process.env.HTTPS_PROXY || process.env.https_proxy || 'http://127.0.0.1:21467';
 
 // 配置
-const CREDENTIALS_PATH = path.join(__dirname, 'google-credentials.json');
+const CREDENTIALS_PATH = process.env.GOOGLE_CREDENTIALS_PATH || path.join(__dirname, 'google-credentials.json');
 const URLS_PATH = path.join(process.cwd(), 'urls-to-index.json');
 const DAILY_LIMIT = 200;
 const DELAY_BETWEEN_REQUESTS = 100; // 毫秒

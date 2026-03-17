@@ -10,7 +10,6 @@
  * 使用前准备：
  * 1. 生成一个 API Key（可使用任意 UUID 或字符串，8-128 个字符）
  * 2. 将 API Key 放入 scripts/indexnow-key.txt
- * 3. 将同名的验证文件部署到网站根目录：https://www.playbrainrot.org/{your-key}.txt
  *    文件内容就是 key 本身
  *
  * 运行：node scripts/submit-bing-index.js
@@ -22,7 +21,7 @@ const path = require('path');
 const os = require('os');
 
 // 配置
-const KEY_PATH = path.join(__dirname, 'indexnow-key.txt');
+const KEY_PATH = process.env.INDEXNOW_KEY_PATH || path.join(__dirname, 'indexnow-key.txt');
 const URLS_PATH = path.join(process.cwd(), 'urls-to-index.json');
 const HOST = process.argv[2] || 'www.example.com';
 const DAILY_LIMIT = 10000;
