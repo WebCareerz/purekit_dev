@@ -3226,6 +3226,142 @@
           "answer": "No, all code stays in your browser. Nothing is sent to any server. Your code is completely private."
         }
       ]
+    },
+    "css-gradient-generator": {
+      "name": "CSS Gradient Generator",
+      "shortDescription": "Generate beautiful CSS gradients with live preview. Linear, radial, and conic gradients.",
+      "metaTitle": "CSS Gradient Generator - Free Online Tool | PureKit",
+      "metaDescription": "Create stunning CSS gradients with live preview. Generate linear, radial, and conic gradients. Export CSS code instantly.",
+      "keywords": [
+        "css gradient generator",
+        "gradient maker",
+        "css gradient",
+        "linear gradient",
+        "radial gradient",
+        "conic gradient"
+      ],
+      "linear": "Linear",
+      "radial": "Radial",
+      "conic": "Conic",
+      "angle": "Angle",
+      "startAngle": "Start Angle",
+      "colorStops": "Color Stops",
+      "addStop": "Add Stop",
+      "preview": "Preview",
+      "cssCode": "CSS Code",
+      "features": {
+        "title": "Key Features",
+        "items": [
+          "Generate linear, radial, and conic gradients",
+          "Live preview with adjustable angle",
+          "Multiple color stops with position control",
+          "Export CSS code instantly",
+          "Visual color picker",
+          "All processing in your browser"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use",
+        "steps": [
+          "Select gradient type (linear/radial/conic)",
+          "Adjust angle or direction",
+          "Add and customize color stops",
+          "Copy the generated CSS code"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is a CSS gradient?",
+          "answer": "A CSS gradient is a smooth transition between two or more colors, created using CSS properties. It eliminates the need for image files."
+        }
+      ]
+    },
+    "json-diff": {
+      "name": "JSON Diff Checker",
+      "shortDescription": "Compare two JSON objects and visualize differences. Semantic JSON comparison.",
+      "metaTitle": "JSON Diff Checker - Compare JSON Objects | PureKit",
+      "metaDescription": "Compare and visualize differences between two JSON objects. Semantic JSON comparison with detailed diff output.",
+      "keywords": [
+        "json diff",
+        "json compare",
+        "json diff checker",
+        "compare json",
+        "json comparison"
+      ],
+      "compare": "Compare",
+      "json1": "JSON 1",
+      "json2": "JSON 2",
+      "differences": "Differences",
+      "noDifferences": "No differences found",
+      "invalidJson": "Invalid JSON format",
+      "jsonPlaceholder": "Paste JSON here...",
+      "features": {
+        "title": "Key Features",
+        "items": [
+          "Semantic JSON comparison",
+          "Visual difference highlighting",
+          "Detect added/removed/modified fields",
+          "Deep object comparison",
+          "Clear diff output format",
+          "Browser-based and private"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use",
+        "steps": [
+          "Paste first JSON object in left panel",
+          "Paste second JSON object in right panel",
+          "Click 'Compare' to see differences",
+          "Review added (+), removed (-), and changed fields"
+        ]
+      },
+      "faq": [
+        {
+          "question": "How does JSON diff work?",
+          "answer": "The tool recursively compares JSON objects field by field, detecting additions, deletions, and modifications at any depth level."
+        }
+      ]
+    },
+    "markdown-table-generator": {
+      "name": "Markdown Table Generator",
+      "shortDescription": "Create and edit Markdown tables with WYSIWYG interface. Export instantly.",
+      "metaTitle": "Markdown Table Generator - Free Online Tool | PureKit",
+      "metaDescription": "Create Markdown tables easily with visual editor. Add rows and columns, edit cells, and export to Markdown format.",
+      "keywords": [
+        "markdown table generator",
+        "markdown table",
+        "table generator",
+        "markdown editor"
+      ],
+      "addRow": "Add Row",
+      "addColumn": "Add Column",
+      "markdownOutput": "Markdown Output",
+      "features": {
+        "title": "Key Features",
+        "items": [
+          "Visual table editor",
+          "Add/remove rows and columns",
+          "Edit cells inline",
+          "Instant Markdown export",
+          "Copy to clipboard",
+          "Browser-based"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use",
+        "steps": [
+          "Add rows and columns as needed",
+          "Fill in table cells",
+          "Copy the generated Markdown code",
+          "Paste into your Markdown document"
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is Markdown table syntax?",
+          "answer": "Markdown tables use pipes (|) to separate columns and dashes (---) to define the header row. This tool generates the correct syntax automatically."
+        }
+      ]
     }
   },
   "devtoysAlternative": {
