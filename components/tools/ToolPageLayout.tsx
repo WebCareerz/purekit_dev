@@ -25,6 +25,7 @@ export default function ToolPageLayout({
   const name = toolT.name as string;
   const shortDescription = toolT.shortDescription as string;
   const features = toolT.features as { title: string; items: string[] };
+  const beforeAfterExample = toolT.beforeAfterExample as { title: string; before: { src: string; alt: string; label: string }; after: { src: string; alt: string; label: string } } | undefined;
   const howToUse = toolT.howToUse as { title: string; steps: string[] };
   const understanding = toolT.understanding as { title: string; intro: string; sections: { heading: string; content: string }[] } | undefined;
   const faq = toolT.faq as { question: string; answer: string }[];
@@ -81,6 +82,37 @@ export default function ToolPageLayout({
               </li>
             ))}
           </ul>
+        </section>
+      )}
+
+      {/* Before / After Example */}
+      {beforeAfterExample && (
+        <section className="mb-10">
+          <h2 className="text-xl font-semibold mb-4">{beforeAfterExample.title}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <p className="text-sm font-medium text-muted-foreground">{beforeAfterExample.before.label}</p>
+              <div className="border border-border rounded-lg overflow-hidden bg-muted/20">
+                <img
+                  src={beforeAfterExample.before.src}
+                  alt={beforeAfterExample.before.alt}
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div className="space-y-2">
+              <p className="text-sm font-medium text-muted-foreground">{beforeAfterExample.after.label}</p>
+              <div className="border border-border rounded-lg overflow-hidden bg-muted/20">
+                <img
+                  src={beforeAfterExample.after.src}
+                  alt={beforeAfterExample.after.alt}
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
         </section>
       )}
 

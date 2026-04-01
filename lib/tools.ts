@@ -38,7 +38,7 @@ export const categories: CategoryDefinition[] = [
   },
   {
     key: "imageTools",
-    tools: ["image-format-converter", "image-compressor", "image-to-pdf", "image-to-base64", "svg-optimizer"],
+    tools: ["image-format-converter", "image-compressor", "image-to-pdf", "image-to-base64", "svg-optimizer", "gemini-watermark-remover"],
   },
   {
     key: "pdfTools",
@@ -405,6 +405,13 @@ export const tools: Record<string, ToolDefinition> = {
     icon: "Table",
     relatedSlugs: ["markdown-preview", "markdown-to-html", "csv-to-json"],
     searchTerms: ["markdown", "table", "generator", "grid", "rows", "columns"],
+  },
+  "gemini-watermark-remover": {
+    slug: "gemini-watermark-remover",
+    categoryKey: "imageTools",
+    icon: "Eraser",
+    relatedSlugs: ["image-compressor", "image-format-converter", "image-to-base64"],
+    searchTerms: ["gemini", "watermark", "remove", "remover", "ai", "google", "image", "clean", "logo", "cleaner", "star", "icon", "mark", "free", "online", "delete"],
   },
 };
 
