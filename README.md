@@ -5,7 +5,7 @@
 <h1 align="center">PureKit</h1>
 
 <p align="center">
-  <strong>48+ free developer tools that run entirely in your browser.</strong><br>
+  <strong>55+ free developer tools that run entirely in your browser.</strong><br>
   No uploads. No tracking. No signup. Your data never leaves your device.
 </p>
 
@@ -61,6 +61,8 @@ PureKit is different: **every tool runs 100% client-side** using browser APIs. Y
 | [Meta Tags Generator](https://purekit.dev/en/meta-tags-generator) | Generate meta tags with OG preview |
 | [Robots.txt Generator](https://purekit.dev/en/robots-txt-generator) | Generate robots.txt files |
 | [Cron Expression Builder](https://purekit.dev/en/cron-expression-builder) | Visual cron expression builder |
+| [CSS Gradient Generator](https://purekit.dev/en/css-gradient-generator) | Generate CSS gradients with live preview |
+| [Markdown Table Generator](https://purekit.dev/en/markdown-table-generator) | Generate Markdown tables visually |
 
 ### Converters
 | Tool | Description |
@@ -83,6 +85,7 @@ PureKit is different: **every tool runs 100% client-side** using browser APIs. Y
 | [Image to PDF](https://purekit.dev/en/image-to-pdf) | Combine images into a PDF |
 | [SVG Optimizer](https://purekit.dev/en/svg-optimizer) | Optimize and minify SVG files |
 | [SVG to PNG](https://purekit.dev/en/svg-to-png) | Convert SVG to PNG with custom size |
+| [Gemini Watermark Remover](https://purekit.dev/en/gemini-watermark-remover) | Remove watermarks from Gemini AI images |
 
 ### PDF Tools
 | Tool | Description |
@@ -101,6 +104,7 @@ PureKit is different: **every tool runs 100% client-side** using browser APIs. Y
 | [Word Counter](https://purekit.dev/en/word-counter) | Count words, characters, sentences |
 | [Markdown Preview](https://purekit.dev/en/markdown-preview) | Live Markdown preview |
 | [HTML Viewer](https://purekit.dev/en/html-viewer) | Live HTML preview and rendering |
+| [JSON Diff](https://purekit.dev/en/json-diff) | Compare JSON objects side by side |
 
 ### Data Tools
 | Tool | Description |
@@ -127,8 +131,8 @@ PureKit is different: **every tool runs 100% client-side** using browser APIs. Y
 
 ```bash
 # Clone the repo
-git clone https://github.com/WebCareerz/purekit.dev.git
-cd purekit.dev
+git clone https://github.com/WebCareerz/purekit_dev.git
+cd purekit_dev
 
 # Install dependencies
 npm install
@@ -169,7 +173,7 @@ purekit.dev/
 
 Contributions are welcome! Here's how you can help:
 
-1. **Add a new tool** — Check [issues](https://github.com/WebCareerz/purekit.dev/issues) for requested tools
+1. **Add a new tool** — Check [issues](https://github.com/WebCareerz/purekit_dev/issues) for requested tools
 2. **Fix bugs** — Found something broken? PRs welcome
 3. **Improve existing tools** — Better UX, performance, edge cases
 4. **Translations** — Help translate tools to more languages
@@ -189,6 +193,10 @@ Contributions are welcome! Here's how you can help:
 - **No tracking or analytics** — we don't collect user data
 - **Use established libraries** — don't reinvent parsers (Prettier > custom formatter)
 - **Test on Chrome, Firefox, Safari** — cross-browser compatibility matters
+
+## Acknowledgments
+
+- [gemini-watermark-remover](https://github.com/GargantuaX/gemini-watermark-remover) by GargantuaX — Reverse alpha blending algorithm for Gemini watermark removal (MIT)
 
 ## License
 
