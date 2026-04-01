@@ -449,7 +449,7 @@ export default function GeminiWatermarkRemover({ t }: GeminiWatermarkRemoverProp
                           {String(item.meta.size)}x{String(item.meta.size)}px
                         </span>
                       </div>
-                      {item.meta.position && (
+                      {!!item.meta.position && (
                         <div className="p-3 flex items-center justify-between">
                           <span className="text-muted-foreground">{toolT.watermarkPosition}</span>
                           <span className="font-mono font-medium text-foreground">
