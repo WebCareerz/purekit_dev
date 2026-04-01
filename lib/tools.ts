@@ -22,7 +22,7 @@ export const categories: CategoryDefinition[] = [
   },
   {
     key: "generators",
-    tools: ["uuid-generator", "qr-code-generator", "favicon-generator", "mock-data-generator", "cron-expression-builder", "password-generator", "lorem-ipsum-generator", "placeholder-image-generator", "robots-txt-generator", "meta-tags-generator"],
+    tools: ["uuid-generator", "qr-code-generator", "favicon-generator", "mock-data-generator", "cron-expression-builder", "password-generator", "lorem-ipsum-generator", "placeholder-image-generator", "robots-txt-generator", "meta-tags-generator", "css-gradient-generator", "markdown-table-generator"],
   },
   {
     key: "converters",
@@ -30,7 +30,7 @@ export const categories: CategoryDefinition[] = [
   },
   {
     key: "textTools",
-    tools: ["diff-checker", "markdown-preview", "regex-tester", "text-case-converter", "word-counter"],
+    tools: ["diff-checker", "markdown-preview", "regex-tester", "text-case-converter", "word-counter", "json-diff"],
   },
   {
     key: "dataTools",
@@ -384,6 +384,27 @@ export const tools: Record<string, ToolDefinition> = {
     icon: "Eye",
     relatedSlugs: ["html-formatter", "markdown-preview", "html-to-markdown"],
     searchTerms: ["html", "preview", "live", "render", "viewer", "code", "visual"],
+  },
+  "css-gradient-generator": {
+    slug: "css-gradient-generator",
+    categoryKey: "generators",
+    icon: "Palette",
+    relatedSlugs: ["color-converter", "svg-to-png", "placeholder-image-generator"],
+    searchTerms: ["css", "gradient", "linear", "radial", "conic", "color", "generator"],
+  },
+  "json-diff": {
+    slug: "json-diff",
+    categoryKey: "textTools",
+    icon: "GitCompare",
+    relatedSlugs: ["json-formatter", "diff-checker", "json-to-csv-converter"],
+    searchTerms: ["json", "diff", "compare", "difference", "comparison", "merge"],
+  },
+  "markdown-table-generator": {
+    slug: "markdown-table-generator",
+    categoryKey: "generators",
+    icon: "Table",
+    relatedSlugs: ["markdown-preview", "markdown-to-html", "csv-to-json"],
+    searchTerms: ["markdown", "table", "generator", "grid", "rows", "columns"],
   },
 };
 

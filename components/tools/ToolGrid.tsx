@@ -414,6 +414,28 @@ const toolIcons: Record<string, React.ReactNode> = {
       <circle cx="12" cy="12" r="3" />
     </svg>
   ),
+  "css-gradient-generator": (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+      <circle cx="12" cy="12" r="10" />
+      <path d="M16 8a4 4 0 1 1-8 0" />
+      <path d="M8 16a4 4 0 1 1 8 0" />
+    </svg>
+  ),
+  "json-diff": (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+      <path d="M12 3v14" />
+      <path d="m5 10 7 7 7-7" />
+      <line x1="4" y1="21" x2="20" y2="21" />
+    </svg>
+  ),
+  "markdown-table-generator": (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+      <path d="M12 3v18" />
+      <rect width="18" height="18" x="3" y="3" rx="2" />
+      <path d="M3 9h18" />
+      <path d="M3 15h18" />
+    </svg>
+  ),
 };
 
 export default function ToolGrid({
