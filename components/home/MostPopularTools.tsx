@@ -3,6 +3,7 @@ import { type Locale } from "@/lib/i18n";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import {
   Braces,
+  Eraser,
   FileCode,
   FilePlus,
   Fingerprint,
@@ -11,6 +12,7 @@ import {
 
 const iconMap = {
   Braces,
+  Eraser,
   FileCode,
   FilePlus,
   Fingerprint,
@@ -20,6 +22,7 @@ const iconMap = {
 const popularToolSlugs = [
   "json-formatter",
   "base64-encode-decode",
+  "gemini-watermark-remover",
   "pdf-merge",
   "uuid-generator",
   "hash-generator",
