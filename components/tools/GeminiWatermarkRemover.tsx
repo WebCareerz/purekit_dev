@@ -62,7 +62,8 @@ export default function GeminiWatermarkRemover({ t }: GeminiWatermarkRemoverProp
       );
 
       const engine = await getEngine();
-      const { canvas, meta } = await removeWatermarkFromImage(img, { engine });
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const { canvas, meta } = await removeWatermarkFromImage(img, { engine } as any);
 
       const htmlCanvas = canvas as HTMLCanvasElement | OffscreenCanvas;
       let blob: Blob | null = null;
