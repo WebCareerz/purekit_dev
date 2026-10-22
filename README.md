@@ -105,6 +105,7 @@ PureKit is different: **every tool runs 100% client-side** using browser APIs. Y
 | [Markdown Preview](https://purekit.dev/en/markdown-preview) | Live Markdown preview |
 | [HTML Viewer](https://purekit.dev/en/html-viewer) | Live HTML preview and rendering |
 | [JSON Diff](https://purekit.dev/en/json-diff) | Compare JSON objects side by side |
+| [PHP Version Checker](https://purekit.dev/en/php-version-checker) | Check PHP support status and the minimum PHP version your code needs |
 
 ### Data Tools
 | Tool | Description |

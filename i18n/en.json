@@ -3492,6 +3492,185 @@
           "answer": "No. All processing happens 100% in your browser using JavaScript and the Canvas API. Your images never leave your device — nothing is uploaded, stored, or transmitted to any server. You can verify this by monitoring your browser's network tab during processing."
         }
       ]
+    },
+    "php-version-checker": {
+      "name": "PHP Version Checker",
+      "shortDescription": "Check whether a PHP version is still supported, see its end-of-life date and latest patch, or paste PHP code to find the minimum PHP version it needs.",
+      "metaTitle": "PHP Version Checker - EOL Status & Code Compatibility | PureKit",
+      "metaDescription": "Free PHP version checker: see if any PHP version is still supported, its end-of-life date and latest release, or paste code to find the minimum PHP version it requires. Runs in your browser.",
+      "keywords": [
+        "php version checker",
+        "check php version",
+        "php end of life",
+        "php eol dates",
+        "php supported versions",
+        "php compatibility checker",
+        "minimum php version",
+        "php version compatibility",
+        "latest php version"
+      ],
+      "tabVersion": "Check a version",
+      "tabCode": "Check code compatibility",
+      "versionLabel": "PHP version",
+      "versionPlaceholder": "e.g. 8.1.2, or paste php -v output or an X-Powered-By header",
+      "quickPick": "Quick pick:",
+      "versionEmpty": "Enter a PHP version or pick one above to see its support status.",
+      "invalidVersion": "No PHP version found. Enter something like 8.3 or 7.4.33.",
+      "unknownNewer": "PHP {version} is newer than our release data ({date}). Check php.net for its support dates.",
+      "unknownOlder": "PHP {version} is older than PHP 5.0 and has been unsupported for many years. Upgrade as soon as possible.",
+      "neverReleased": "PHP {version} was never released. Check the version number.",
+      "statusActive": "Active support",
+      "statusSecurity": "Security fixes only",
+      "statusEol": "End of life",
+      "released": "Released",
+      "activeSupportUntil": "Active support until",
+      "securityUntil": "Security support until",
+      "summaryActive": "Gets bug and security fixes until {date} ({relative}), then security fixes only until {securityDate}.",
+      "summarySecurity": "Bug fixes have ended. It gets security fixes only until {date} ({relative}).",
+      "summaryEol": "No updates since {date} ({relative}), not even security fixes.",
+      "relativeFuture": "in {value}",
+      "relativePast": "{value} ago",
+      "unitDay": "day",
+      "unitDays": "days",
+      "unitMonth": "month",
+      "unitMonths": "months",
+      "unitYear": "year",
+      "unitYears": "years",
+      "latestRelease": "Latest {branch} release",
+      "patchBehind": "You're on {version}. Update to {latest} to get every fix released for PHP {branch}.",
+      "patchCurrent": "{version} is the latest PHP {branch} release.",
+      "patchNewer": "{version} is newer than the latest release in our data ({latest}).",
+      "distroNote": "Linux distribution packages often backport security fixes without changing the version number, so an older patch number isn't always unpatched. Check your distribution's security notices.",
+      "recommendOk": "This version is fully supported. Keep applying patch releases.",
+      "recommendUpgrade": "Plan an upgrade: PHP {branch} (latest {latest}) gets fixes until {date}.",
+      "recommendUpgradeEol": "Upgrade as soon as possible: php.net warns that unsupported versions may expose you to security vulnerabilities. PHP {branch} (latest {latest}) is supported until {date}.",
+      "migrationGuide": "Official migration guide: PHP {from} → {to}",
+      "howToFind": "How to find your PHP version",
+      "findCli": "Command line",
+      "findHeader": "Website response header",
+      "findScript": "PHP script (shows the web server's version)",
+      "findNote": "Browsers can't read another website's response headers, so run the curl command in a terminal and paste the result above. Many servers hide the header. In WordPress, go to Tools → Site Health → Info → Server.",
+      "tableTitle": "PHP version support timeline",
+      "colVersion": "Version",
+      "colStatus": "Status",
+      "colReleased": "Released",
+      "colActive": "Active support until",
+      "colSecurity": "Security support until",
+      "colLatest": "Latest release",
+      "dataSource": "Release data updated {date}. Status is calculated from today's date. Source:",
+      "codeLabel": "PHP code",
+      "codePlaceholder": "Paste PHP code here, with or without the <?php tag...",
+      "loadExample": "Load example",
+      "resultLabel": "Result",
+      "emptyCode": "Paste PHP code to see the minimum PHP version it needs and which versions can run it.",
+      "minVersion": "Minimum PHP version",
+      "requiredBy": "Needed for: {feature} (line {line})",
+      "syntaxOnly": "The syntax alone needs PHP {version}. The rest comes from built-in functions or classes, which a polyfill (such as symfony/polyfill or WordPress's compat.php) can provide on older versions.",
+      "syntaxNone": "Only built-in functions or classes raise the version, and a polyfill (such as symfony/polyfill) can provide them on older versions.",
+      "noRequirements": "No PHP 5.6+ features found",
+      "noRequirementsDetail": "This code doesn't use syntax or built-in functions added in PHP 5.6 or later, the oldest release this checker covers.",
+      "breaksOn": "Breaks on PHP {version} and later: {feature} (line {line}) was removed in PHP {version}.",
+      "conflict": "No PHP version can run this code as it is: it needs PHP {min}+ but uses {feature}, which was removed in PHP {removed}.",
+      "compatTitle": "Compatibility by version",
+      "legendOk": "Compatible",
+      "legendDeprecated": "Works, with deprecation notices",
+      "legendIncompatible": "Not compatible",
+      "groupAdded": "Features that need a newer PHP",
+      "groupRemoved": "Removed features",
+      "groupDeprecated": "Deprecated features",
+      "groupAttributes": "Attributes",
+      "attributesNote": "These attributes only take effect from the PHP version shown. Older versions ignore them, so they don't raise the minimum version.",
+      "polyfillable": "polyfillable",
+      "lineN": "line {line}",
+      "occurrences": "{count}×",
+      "disclaimer": "Pattern-based static analysis using the php.net migration guides for PHP 5.6 to 8.5. It checks syntax and built-in functions, not runtime behavior, extensions or Composer dependencies.",
+      "features": {
+        "title": "Key Features",
+        "items": [
+          "Look up any PHP version from 5.0 to 8.5 and see whether it gets active support, security fixes only, or has reached end of life",
+          "Paste php -v output, a phpinfo() line or an X-Powered-By header and the version number is picked out automatically",
+          "See the release date, support end dates and latest patch release, and whether your patch level is behind",
+          "Paste PHP code to find the minimum PHP version it needs, with the feature and line number behind each requirement",
+          "Detects syntax from PHP 5.6 to 8.5, including enums, match, readonly properties, property hooks and the pipe operator",
+          "Flags removed functions such as mysql_query(), each() and create_function(), and deprecations such as implicitly nullable parameters",
+          "Separates syntax from built-in functions, so you know which requirements a polyfill can cover",
+          "Everything runs in your browser. Your code is never uploaded"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the PHP Version Checker",
+        "steps": [
+          "To check a version, type it (for example 8.1 or 7.4.33), paste the output of php -v, or pick a version from the quick-pick list.",
+          "Read the status: active support, security fixes only, or end of life, with the exact dates from php.net.",
+          "If you entered a patch number, compare it with the latest release for that branch and follow the upgrade recommendation.",
+          "To check code, open the Check code compatibility tab and paste a PHP file or snippet.",
+          "Review the minimum PHP version, the compatibility row for each PHP release, and the list of features with their line numbers."
+        ]
+      },
+      "understanding": {
+        "title": "PHP Versions and Support Explained",
+        "intro": "PHP releases one new minor version a year, usually in late November or early December. Each version moves through active support, security-only support and end of life. Knowing where your version stands tells you how urgently you need to upgrade.",
+        "sections": [
+          {
+            "heading": "How the PHP release cycle works",
+            "content": "According to php.net, each PHP branch is fully supported for two years after its first stable release, with reported bugs and security issues fixed in regular point releases. It then gets two more years of fixes for critical security issues only, released as needed. After those four years the branch reaches end of life and gets no more updates. Current branches stop receiving support on 31 December: PHP 8.4, for example, has active support until 31 Dec 2026 and security fixes until 31 Dec 2028."
+          },
+          {
+            "heading": "Which PHP versions are supported right now",
+            "content": "As of October 2026, PHP 8.5 and 8.4 have active support, PHP 8.3 and 8.2 get security fixes only, and every version from 8.1 down has reached end of life. Security support for PHP 8.2 ends on 31 Dec 2026. The checker above calculates each status from today's date, so it stays correct as these dates pass."
+          },
+          {
+            "heading": "How to check your PHP version",
+            "content": "On a server, run php -v. The command line can use a different PHP binary than your website, so to see what the web server runs, upload a file containing <?php echo PHP_VERSION; or phpinfo(); open it in a browser, then delete it. Many servers also send an X-Powered-By: PHP/x.y.z response header, which curl -sI https://example.com | grep -i x-powered-by will show. In WordPress, go to Tools → Site Health → Info and open the Server section."
+          },
+          {
+            "heading": "Why a website might hide its PHP version",
+            "content": "The X-Powered-By header is controlled by the expose_php setting in php.ini. Many hosts turn it off, and proxies or CDNs often remove it, so a missing header doesn't mean a site isn't running PHP. Hiding the version doesn't make an outdated PHP any safer; only upgrading does."
+          },
+          {
+            "heading": "How the code compatibility check works",
+            "content": "The checker removes comments and strings, then looks for the syntax, functions and classes listed in the official php.net migration guides for every release from PHP 5.6 to 8.5. The highest version it finds is the minimum your code needs. Removed functions set an upper limit, and deprecated features show which versions will print deprecation notices. It's pattern matching rather than a full parser: it doesn't run your code, follow includes, or check extensions and Composer dependencies. Treat the result as a strong hint and confirm it with your tests or a tool like PHPCompatibility for PHP_CodeSniffer."
+          },
+          {
+            "heading": "Polyfills and the minimum version",
+            "content": "Built-in functions such as str_contains() or array_find() can be added to older PHP versions with a polyfill, for example the symfony/polyfill packages or the compat.php file that WordPress ships. Syntax such as enums, match expressions or readonly properties can't be polyfilled. That's why the checker shows the version needed for the syntax alone next to the overall minimum, and marks functions and classes as polyfillable."
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "How do I check my PHP version?",
+          "answer": "Run php -v on the command line, or create a PHP file containing <?php echo PHP_VERSION; and open it in your browser to see the version your web server uses. In WordPress, go to Tools → Site Health → Info → Server. Paste what you find into this checker to see whether that version is still supported."
+        },
+        {
+          "question": "What is the latest PHP version?",
+          "answer": "PHP 8.5 is the newest branch. It was released on 20 November 2025, and as of October 2026 its latest patch release is 8.5.12. A new minor version usually comes out each year in late November or early December."
+        },
+        {
+          "question": "Is PHP 7.4 still supported?",
+          "answer": "No. PHP 7.4 reached end of life on 28 November 2022 and no longer gets security fixes from the PHP project. Some Linux distributions and hosts maintain their own patched packages, but php.net strongly urges users of unsupported versions to upgrade to a current one."
+        },
+        {
+          "question": "Which PHP versions are still supported?",
+          "answer": "As of October 2026, PHP 8.5 and 8.4 have active support, while PHP 8.3 and 8.2 get security fixes only (8.2 until 31 Dec 2026, 8.3 until 31 Dec 2027). PHP 8.1 and older are end of life. The table above lists every branch and works out each status from today's date."
+        },
+        {
+          "question": "How do I find the minimum PHP version my code needs?",
+          "answer": "Open the Check code compatibility tab and paste your code. The checker lists every feature that needs a specific PHP version, such as enums (8.1) or the nullsafe operator (8.0), and reports the highest one as the minimum. It also flags removed functions like mysql_query() or each() that stop code from running on newer versions."
+        },
+        {
+          "question": "Can this tool check a website's PHP version from its URL?",
+          "answer": "Not directly. This tool runs entirely in your browser, and browsers don't let a page read another site's response headers. Run curl -sI https://example.com | grep -i x-powered-by in a terminal, or open your browser's developer tools and look at the response headers in the Network tab, then paste the X-Powered-By value into the checker. If the header is missing, the server is hiding it."
+        },
+        {
+          "question": "Why does my server show an older patch number than the latest release?",
+          "answer": "Linux distributions such as Ubuntu, Debian and Red Hat often backport security fixes into their own PHP packages without changing the upstream version number. A version like 8.1.2-1ubuntu2.14 can include fixes released long after 8.1.2. Check your distribution's security notices to see what is patched."
+        },
+        {
+          "question": "Is my code uploaded anywhere?",
+          "answer": "No. Version lookups and code analysis both run in your browser with JavaScript. Nothing you type or paste is sent to a server."
+        }
+      ]
     }
   },
   "devtoysAlternative": {

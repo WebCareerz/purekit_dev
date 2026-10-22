@@ -30,7 +30,7 @@ export const categories: CategoryDefinition[] = [
   },
   {
     key: "textTools",
-    tools: ["diff-checker", "markdown-preview", "regex-tester", "text-case-converter", "word-counter", "json-diff"],
+    tools: ["diff-checker", "markdown-preview", "regex-tester", "text-case-converter", "word-counter", "json-diff", "php-version-checker"],
   },
   {
     key: "dataTools",
@@ -412,6 +412,13 @@ export const tools: Record<string, ToolDefinition> = {
     icon: "Eraser",
     relatedSlugs: ["image-compressor", "image-format-converter", "image-to-base64"],
     searchTerms: ["gemini", "watermark", "remove", "remover", "ai", "google", "image", "clean", "logo", "cleaner", "star", "icon", "mark", "free", "online", "delete"],
+  },
+  "php-version-checker": {
+    slug: "php-version-checker",
+    categoryKey: "textTools",
+    icon: "FileCode2",
+    relatedSlugs: ["diff-checker", "regex-tester", "sql-formatter"],
+    searchTerms: ["php", "version", "checker", "eol", "end of life", "supported", "compatibility", "minimum", "upgrade", "php 8", "php 7"],
   },
 };
 
