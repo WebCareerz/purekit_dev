@@ -1,6 +1,7 @@
 // Cloudflare Pages Function: GET /api/php-version?url=<site>
-// Requests a site's homepage once and reports the PHP version it exposes in its
-// response headers (X-Powered-By / Server), plus signs that the site runs PHP.
+// Requests a site's homepage and reports the PHP version it exposes in its response
+// headers (X-Powered-By / Server), plus signs that the site runs PHP. For WordPress sites
+// that don't show it there, one more request goes to the public /wp-json/ index.
 // Browsers can't read another site's response headers, so this has to run server-side.
 // Nothing is stored or logged by this function.
 
@@ -203,14 +204,44 @@ export async function onRequestGet({ request }: PagesContext): Promise<Response>
         await res.body?.cancel().catch(() => {});
       }
 
+      const blocked = res.headers.get("cf-mitigated") === "challenge" || BLOCK_STATUSES.has(res.status);
+      let versionUrl: string | null = ev.phpVersion ? current.toString() : null;
+
+      // WordPress homepages are often served from a page cache without running PHP, so the
+      // header is missing; the REST API index always runs PHP. Measured on 103 WordPress
+      // sites (2026-10-22): 37 showed the version on the homepage, /wp-json/ revealed 5 more.
+      if (!ev.phpVersion && !blocked && ev.signals.has("wordpress")) {
+        const apiUrl = new URL("/wp-json/", current);
+        try {
+          const api = await fetch(apiUrl.toString(), {
+            method: "GET",
+            redirect: "manual",
+            headers: { "user-agent": USER_AGENT, accept: "application/json,*/*;q=0.8" },
+            signal: controller.signal,
+          });
+          await api.body?.cancel().catch(() => {});
+          const poweredBy = api.headers.get("x-powered-by") ?? "";
+          const m = PHP_TOKEN.exec(poweredBy);
+          if (m) {
+            ev.phpVersion = m[1];
+            ev.versionSource = "x-powered-by";
+            ev.poweredBy = poweredBy.slice(0, 200);
+            versionUrl = apiUrl.toString();
+          }
+        } catch {
+          // Optional second look; the homepage result stands on its own.
+        }
+      }
+
       return json({
         ok: true,
         finalUrl: current.toString(),
         status: res.status,
-        blocked: res.headers.get("cf-mitigated") === "challenge" || BLOCK_STATUSES.has(res.status),
+        blocked,
         redirects: hop,
         phpVersion: ev.phpVersion,
         versionSource: ev.versionSource,
+        versionUrl,
         poweredBy: ev.poweredBy,
         server: ev.server,
         signals: [...ev.signals],

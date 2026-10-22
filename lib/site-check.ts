@@ -11,6 +11,8 @@ export interface SiteCheckSuccess {
   redirects: number;
   phpVersion: string | null;
   versionSource: "x-powered-by" | "server" | null;
+  // The URL whose response carried the version: the homepage, or /wp-json/ for WordPress.
+  versionUrl: string | null;
   poweredBy: string | null;
   server: string | null;
   signals: SiteSignal[];

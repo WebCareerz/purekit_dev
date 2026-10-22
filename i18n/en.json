@@ -72,7 +72,7 @@
       },
       {
         "heading": "Website Checks",
-        "content": "The PHP Version Checker and PHP2Shell Checker can check a website by its address. Browsers can't read another site's response headers, so when you use this feature, the address you enter is sent to a PureKit function running on Cloudflare. It requests that site's homepage once and returns what the response headers show (such as X-Powered-By) and signs that the site runs PHP. We don't store the address or the result. Cloudflare's standard request logs apply, as described under Hosting & CDN."
+        "content": "The PHP Version Checker and PHP2Shell Checker can check a website by its address. Browsers can't read another site's response headers, so when you use this feature, the address you enter is sent to a PureKit function running on Cloudflare. It requests that site's homepage (and, for WordPress sites, the public /wp-json/ address) and returns what the response headers show (such as X-Powered-By) and signs that the site runs PHP. We don't store the address or the result. Cloudflare's standard request logs apply, as described under Hosting & CDN."
       },
       {
         "heading": "Privacy-Friendly Analytics",
@@ -3604,7 +3604,7 @@
       "howToUse": {
         "title": "How to Use the PHP Version Checker",
         "steps": [
-          "To check a website, enter its address on the Website tab and click Check. The checker requests the homepage once and reads the PHP version from the response headers.",
+          "To check a website, enter its address on the Website tab and click Check. The checker requests the homepage (for WordPress sites that hide it there, also the public /wp-json/ address) and reads the PHP version from the response headers.",
           "If the site hides its version, find it on the server with php -v or in your hosting panel, then enter it on the Version tab (pasting the php -v output works too).",
           "Read the status: active support, security fixes only, or end of life, with the exact dates from php.net, the latest patch release and whether PHP2Shell affects it.",
           "To check code, open the Code compatibility tab and paste a PHP file or snippet.",
@@ -3668,7 +3668,7 @@
         },
         {
           "question": "Can this tool check a website's PHP version from its URL?",
-          "answer": "Yes. Enter the address on the Website tab. Browsers can't read another site's response headers, so PureKit's server requests the site's homepage once and reads its X-Powered-By header. Many sites hide the version; in that case the checker shows signs that the site runs PHP, such as a PHPSESSID cookie or WordPress, and you'll need to check on the server."
+          "answer": "Yes. Enter the address on the Website tab. Browsers can't read another site's response headers, so PureKit's server requests the site's homepage (for WordPress sites that hide it there, also the public /wp-json/ address) and reads its X-Powered-By header. Many sites hide the version; in that case the checker shows signs that the site runs PHP, such as a PHPSESSID cookie or WordPress, and you'll need to check on the server."
         },
         {
           "question": "Why does my server show an older patch number than the latest release?",
@@ -3676,7 +3676,7 @@
         },
         {
           "question": "Is my code uploaded anywhere?",
-          "answer": "No. Code analysis and version lookups run in your browser, and nothing you paste is sent anywhere. Only the Website tab uses PureKit's server: it receives the address you enter, requests that site's homepage, and returns what the headers show. The address and the result aren't stored."
+          "answer": "No. Code analysis and version lookups run in your browser, and nothing you paste is sent anywhere. Only the Website tab uses PureKit's server: it receives the address you enter, requests that site's homepage (plus /wp-json/ for WordPress sites), and returns what the headers show. The address and the result aren't stored."
         }
       ],
       "processingBadge": "Version and code checks run in your browser",
@@ -3685,9 +3685,9 @@
       "sitePlaceholder": "example.com",
       "siteCheck": "Check",
       "siteCheckingButton": "Checking…",
-      "siteChecking": "Requesting the homepage…",
+      "siteChecking": "Requesting the site…",
       "siteEmpty": "Enter a website to see which PHP version it reports.",
-      "sitePrivacy": "The address is sent to PureKit's server, which requests that site's homepage once and reads its response headers. Nothing is stored.",
+      "sitePrivacy": "The address is sent to PureKit's server, which requests that site's homepage (and /wp-json/ for WordPress sites) and reads the response headers. Nothing is stored.",
       "siteHiddenDetail": "Many servers hide it on purpose (the expose_php setting, or a proxy or CDN removing the header), so this says nothing about whether the site is up to date. To see the version, run php -v on the server, check your hosting control panel, or in WordPress go to Tools → Site Health → Info → Server.",
       "p2sPatched": "Includes the fixes for CVE-2026-109618 and CVE-2026-109619 (fixed in {fixed}).",
       "p2sAffected": "Affected by CVE-2026-109618 and CVE-2026-109619. Update to {fixed} or later.",
@@ -3739,9 +3739,9 @@
       "inputPlaceholder": "example.com, 8.3.12, or php -v output",
       "check": "Check",
       "checkingButton": "Checking…",
-      "checking": "Requesting the homepage…",
+      "checking": "Requesting the site…",
       "empty": "Enter a website address or a PHP version to see whether PHP2Shell affects it.",
-      "privacyNote": "For a website, the address is sent to PureKit's server, which makes one ordinary request to the homepage and reads the response headers. No exploit traffic is sent and nothing is stored. Version checks run in your browser.",
+      "privacyNote": "For a website, the address is sent to PureKit's server, which makes ordinary requests to the homepage (and /wp-json/ for WordPress sites) and reads the response headers. No exploit traffic is sent and nothing is stored. Version checks run in your browser.",
       "invalidInput": "Enter a website address (like example.com) or a PHP version (like 8.3.12).",
       "verdictPatchedTitle": "Not affected",
       "verdictPatched": "PHP {version} includes the fixes for CVE-2026-109618 and CVE-2026-109619 (fixed in {fixed}).",
@@ -3784,14 +3784,14 @@
           "Tells you whether you're affected, which version to update to, and what to do if your PHP branch no longer gets updates",
           "Flags Linux distribution builds, which often get the fix without a version change",
           "Looks for signs of PHP (session cookies, WordPress, Drupal, Joomla) when a site hides its version",
-          "Passive: one ordinary request to the homepage, no exploit traffic, nothing stored"
+          "Passive: at most two ordinary requests (the homepage, plus /wp-json/ for WordPress), no exploit traffic, nothing stored"
         ]
       },
       "howToUse": {
         "title": "How to Check for PHP2Shell",
         "steps": [
           "Enter your website address (for example example.com) or a PHP version such as 8.3.12, then click Check.",
-          "For a website, the checker requests the homepage once and reads the PHP version from the response headers.",
+          "For a website, the checker requests the homepage (for WordPress sites that hide it there, also the public /wp-json/ address) and reads the PHP version from the response headers.",
           "Read the verdict: not affected, affected with the version to update to, or no fixed release for your branch.",
           "If the site hides its version, run php -v on the server or check your hosting panel, then enter the version here.",
           "After updating, restart PHP and check again."
@@ -3862,7 +3862,7 @@
         },
         {
           "question": "Does this checker attack or scan my site?",
-          "answer": "No. It makes one ordinary request to the homepage, like a browser would, and reads the response headers. It doesn't send exploit traffic, and it doesn't store the address or the result."
+          "answer": "No. It makes at most two ordinary requests, like a browser would: the homepage, plus the public /wp-json/ address for WordPress sites that hide the version on the homepage. It reads the response headers, doesn't send exploit traffic, and doesn't store the address or the result."
         }
       ],
       "signalPoweredBy": "an X-Powered-By: PHP header",
