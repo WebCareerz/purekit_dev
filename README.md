@@ -120,7 +120,7 @@ PureKit is different: **every tool runs 100% client-side** using browser APIs. Y
 - **PDF Processing**: [pdf-lib](https://pdf-lib.js.org/) + [PDF.js](https://mozilla.github.io/pdf.js/)
 - **Image Processing**: Canvas API + Web Workers
 - **Hashing**: Web Crypto API
-- **Deployment**: [Cloudflare Pages](https://pages.cloudflare.com/) (static, plus one Pages Function in `functions/api/php-version.ts` for website PHP checks)
+- **Deployment**: [Cloudflare Pages](https://pages.cloudflare.com/) (static, plus two Pages Functions: `functions/api/php-version.ts` for website PHP checks, and `functions/rks6/[[path]].ts`, which hands analytics requests to a proxy Worker through a service binding)
 
 ## Getting Started
 
@@ -192,7 +192,7 @@ Contributions are welcome! Here's how you can help:
 ### Guidelines
 
 - **All processing must be client-side** — no server calls with user data
-- **No tracking or analytics** — we don't collect user data
+- **No cookies, no personal tracking** — only aggregate, cookieless analytics (Cloudflare Web Analytics and self-hosted Plausible)
 - **Use established libraries** — don't reinvent parsers (Prettier > custom formatter)
 - **Test on Chrome, Firefox, Safari** — cross-browser compatibility matters
 

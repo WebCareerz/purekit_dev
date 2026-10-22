@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { isValidLocale, getDictionary, locales, type Locale } from "@/lib/i18n";
 import { SITE_URL } from "@/lib/seo";
+import { ANALYTICS_INIT, ANALYTICS_SCRIPT_SRC } from "@/lib/analytics";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
@@ -52,6 +54,8 @@ export default async function LangLayout({
         <main className="flex-1">{children}</main>
         <Footer lang={lang as Locale} t={t} />
       </body>
+      <Script src={ANALYTICS_SCRIPT_SRC} />
+      <Script id="site-init">{ANALYTICS_INIT}</Script>
     </html>
   );
 }

@@ -76,7 +76,7 @@
       },
       {
         "heading": "Privacy-Friendly Analytics",
-        "content": "PureKit uses Cloudflare Web Analytics, a privacy-respecting analytics service that does not use cookies or track individual users. It provides basic aggregate statistics (page views, referrers) without collecting personally identifiable information. Cloudflare Web Analytics is GDPR and CCPA compliant."
+        "content": "PureKit uses two privacy-respecting analytics services: Cloudflare Web Analytics and a self-hosted instance of Plausible Analytics. Neither uses cookies or tracks individual users. Cloudflare Web Analytics provides basic aggregate statistics (page views, referrers) without collecting personally identifiable information, and is GDPR and CCPA compliant. Plausible does not store IP addresses or raw User-Agent strings: they are combined with a salt that is rotated and deleted every 24 hours to count unique visitors per day, and are used to work out the browser, operating system, device type and approximate location (country, region, city). It does not track people across devices, websites or apps. We only see aggregate statistics such as page views, referrers and countries."
       },
       {
         "heading": "No Cookies or Personal Tracking",
