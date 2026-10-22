@@ -192,6 +192,11 @@ export default function Php2ShellChecker({ lang, t }: Php2ShellCheckerProps) {
             </p>
             {verdictCard(parsed)}
           </>
+        ) : site.blocked ? (
+          <div className={`rounded-lg border p-4 space-y-2 text-sm ${TONE_CLASSES.warn}`}>
+            <p className="text-lg font-semibold">{fill(toolT.siteBlocked, { host, status: site.status })}</p>
+            <p>{toolT.siteBlockedDetail}</p>
+          </div>
         ) : (
           <div className={`rounded-lg border p-4 space-y-2 text-sm ${TONE_CLASSES.warn}`}>
             <p className="text-lg font-semibold">{fill(toolT.siteHidden, { host })}</p>

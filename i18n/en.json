@@ -3711,7 +3711,9 @@
       "siteErrorTimeout": "The site took too long to respond. Try again in a moment.",
       "siteErrorFetch": "We couldn't reach that site. Check the address and try again.",
       "siteErrorRedirects": "The site redirected too many times. Enter the final address directly.",
-      "siteErrorUnavailable": "The website check isn't available right now. You can still check a version number."
+      "siteErrorUnavailable": "The website check isn't available right now. You can still check a version number.",
+      "siteBlocked": "{host} blocked the check (HTTP {status})",
+      "siteBlockedDetail": "Its security protection, such as a bot challenge or firewall, stopped our request, so we couldn't see its response headers. This doesn't mean the site hides its PHP version. To see the version, run php -v on the server, check your hosting control panel, or in WordPress go to Tools → Site Health → Info → Server."
     },
     "php2shell-checker": {
       "name": "PHP2Shell Checker",
@@ -3878,7 +3880,9 @@
       "siteErrorTimeout": "The site took too long to respond. Try again in a moment.",
       "siteErrorFetch": "We couldn't reach that site. Check the address and try again.",
       "siteErrorRedirects": "The site redirected too many times. Enter the final address directly.",
-      "siteErrorUnavailable": "The website check isn't available right now. You can still check a version number."
+      "siteErrorUnavailable": "The website check isn't available right now. You can still check a version number.",
+      "siteBlocked": "{host} blocked the check (HTTP {status})",
+      "siteBlockedDetail": "Its security protection, such as a bot challenge or firewall, stopped our request, so we couldn't see its response headers. This doesn't tell you whether the site is affected. Find the version on the server with php -v, in your hosting control panel, or in WordPress under Tools → Site Health → Info → Server, then enter it here."
     }
   },
   "devtoysAlternative": {

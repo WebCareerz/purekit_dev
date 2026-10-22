@@ -6,6 +6,8 @@ export interface SiteCheckSuccess {
   ok: true;
   finalUrl: string;
   status: number;
+  // The site's bot protection or firewall refused the request.
+  blocked: boolean;
   redirects: number;
   phpVersion: string | null;
   versionSource: "x-powered-by" | "server" | null;

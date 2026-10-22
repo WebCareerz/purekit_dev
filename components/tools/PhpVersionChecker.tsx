@@ -347,6 +347,11 @@ export default function PhpVersionChecker({ lang, t }: PhpVersionCheckerProps) {
             </p>
             {renderVersionReport(parsed)}
           </>
+        ) : siteResult.blocked ? (
+          <div className="space-y-2 text-sm">
+            <p className="text-lg font-semibold">{fill(toolT.siteBlocked, { host, status: siteResult.status })}</p>
+            <p className="text-muted-foreground">{toolT.siteBlockedDetail}</p>
+          </div>
         ) : (
           <div className="space-y-2 text-sm">
             <p className="text-lg font-semibold">{fill(toolT.siteHidden, { host })}</p>

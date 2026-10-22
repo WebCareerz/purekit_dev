@@ -14,6 +14,10 @@ type ErrorCode = "invalid_url" | "blocked_host" | "forbidden_host" | "timeout" |
 // project's *.pages.dev address or preview deployments. localhost is for `wrangler pages dev`.
 const ALLOWED_HOSTS = new Set(["www.purekit.dev", "purekit.dev", "localhost", "127.0.0.1"]);
 
+// Responses that mean the site's protection refused us, not that it hides its PHP version.
+// Cloudflare marks challenge pages with "cf-mitigated: challenge".
+const BLOCK_STATUSES = new Set([401, 403, 429, 503]);
+
 const MAX_REDIRECTS = 4;
 const TIMEOUT_MS = 8000;
 const BODY_LIMIT = 131072;
@@ -203,6 +207,7 @@ export async function onRequestGet({ request }: PagesContext): Promise<Response>
         ok: true,
         finalUrl: current.toString(),
         status: res.status,
+        blocked: res.headers.get("cf-mitigated") === "challenge" || BLOCK_STATUSES.has(res.status),
         redirects: hop,
         phpVersion: ev.phpVersion,
         versionSource: ev.versionSource,
