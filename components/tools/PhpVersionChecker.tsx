@@ -1,11 +1,13 @@
 "use client";
 
 import { useDeferredValue, useMemo, useState, useSyncExternalStore } from "react";
+import Link from "next/link";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import CopyButton from "./CopyButton";
+import { type Locale } from "@/lib/i18n";
 import {
   PHP_BRANCHES,
   PHP_DATA_AS_OF,
@@ -18,12 +20,16 @@ import {
   parsePhpVersion,
   recommendedBranch,
   todayIso,
+  type ParsedPhpVersion,
   type PhpBranch,
   type SupportStatus,
 } from "@/lib/php-versions";
 import { analyzePhpCode, branchCompat, type BranchCompat, type Finding } from "@/lib/php-compat";
+import { php2shellVerdict } from "@/lib/php2shell";
+import { checkSite, hostOf, type SiteCheckResult, type SiteSignal } from "@/lib/site-check";
 
 interface PhpVersionCheckerProps {
+  lang: Locale;
   t: Record<string, unknown>;
 }
 
@@ -91,6 +97,24 @@ const COMPAT_CLASSES: Record<BranchCompat, string> = {
   incompatible: "bg-muted text-muted-foreground border-border line-through",
 };
 
+const SIGNAL_KEYS: Record<SiteSignal, string> = {
+  "powered-by": "signalPoweredBy",
+  phpsessid: "signalPhpsessid",
+  laravel: "signalLaravel",
+  wordpress: "signalWordpress",
+  drupal: "signalDrupal",
+  joomla: "signalJoomla",
+};
+
+const SITE_ERROR_KEYS: Record<string, string> = {
+  invalid_url: "siteErrorInvalid",
+  blocked_host: "siteErrorBlocked",
+  timeout: "siteErrorTimeout",
+  fetch_failed: "siteErrorFetch",
+  too_many_redirects: "siteErrorRedirects",
+  unavailable: "siteErrorUnavailable",
+};
+
 const subscribeNoop = () => () => {};
 
 function fill(template: string, vars: Record<string, string | number>): string {
@@ -101,7 +125,7 @@ function migrationGuideUrl(branch: string): string {
   return `https://www.php.net/manual/en/migration${branch.replace(".", "")}.php`;
 }
 
-export default function PhpVersionChecker({ t }: PhpVersionCheckerProps) {
+export default function PhpVersionChecker({ lang, t }: PhpVersionCheckerProps) {
   const common = t.common as Record<string, string>;
   const toolT = (t.tools as Record<string, Record<string, string>>)["php-version-checker"];
 
@@ -109,6 +133,9 @@ export default function PhpVersionChecker({ t }: PhpVersionCheckerProps) {
   // server and during hydration, then switch to the visitor's real date.
   const today = useSyncExternalStore(subscribeNoop, todayIso, () => PHP_DATA_AS_OF);
 
+  const [siteInput, setSiteInput] = useState("");
+  const [siteLoading, setSiteLoading] = useState(false);
+  const [siteResult, setSiteResult] = useState<SiteCheckResult | null>(null);
   const [versionInput, setVersionInput] = useState("");
   const [code, setCode] = useState("");
   const deferredCode = useDeferredValue(code);
@@ -139,23 +166,12 @@ export default function PhpVersionChecker({ t }: PhpVersionCheckerProps) {
     </span>
   );
 
-  // ----- Version lookup -----
-  const parsed = useMemo(() => parsePhpVersion(versionInput), [versionInput]);
-  const branch = parsed ? findBranch(parsed.major, parsed.minor) : undefined;
   const recommended = recommendedBranch(today);
 
-  const renderVersionResult = () => {
-    if (!versionInput.trim()) {
-      return <p className="text-sm text-muted-foreground">{toolT.versionEmpty}</p>;
-    }
-    if (!parsed) {
-      return (
-        <div className="text-sm px-3 py-1.5 rounded-md bg-red-50 text-red-700 dark:bg-red-950 dark:text-red-400">
-          {toolT.invalidVersion}
-        </div>
-      );
-    }
+  // ----- Version report (shared by the website and version tabs) -----
+  const renderVersionReport = (parsed: ParsedPhpVersion) => {
     const versionText = `${parsed.major}.${parsed.minor}${parsed.patch !== null ? `.${parsed.patch}` : ""}`;
+    const branch = findBranch(parsed.major, parsed.minor);
     if (!branch) {
       const key = `${parsed.major}.${parsed.minor}`;
       const message =
@@ -202,6 +218,18 @@ export default function PhpVersionChecker({ t }: PhpVersionCheckerProps) {
             : fill(toolT.patchNewer, vars);
     }
 
+    const p2s = php2shellVerdict(parsed);
+    const p2sText =
+      p2s.kind === "patched"
+        ? fill(toolT.p2sPatched, { fixed: p2s.fixed })
+        : p2s.kind === "affected"
+          ? fill(toolT.p2sAffected, { fixed: p2s.fixed })
+          : p2s.kind === "needsPatch"
+            ? fill(toolT.p2sNeedsPatch, { fixed: p2s.fixed })
+            : p2s.kind === "unsupported"
+              ? toolT.p2sUnsupported
+              : null;
+
     return (
       <div className="space-y-4">
         <div className="flex flex-wrap items-center gap-3">
@@ -234,6 +262,22 @@ export default function PhpVersionChecker({ t }: PhpVersionCheckerProps) {
           {parsed.suffix && <p className="text-muted-foreground">{toolT.distroNote}</p>}
         </div>
 
+        {p2sText && (
+          <div
+            className={`rounded-md border p-3 text-sm ${
+              p2s.kind === "patched"
+                ? "border-border"
+                : "border-red-200 bg-red-50 text-red-800 dark:border-red-900 dark:bg-red-950 dark:text-red-300"
+            }`}
+          >
+            <span className="font-semibold">PHP2Shell: </span>
+            {p2sText}{" "}
+            <Link href={`/${lang}/php2shell-checker/`} className="underline underline-offset-4">
+              {toolT.p2sLearnMore}
+            </Link>
+          </div>
+        )}
+
         <div className="rounded-md bg-muted/40 border border-border p-3 text-sm space-y-1">
           {status === "active" ? (
             <p>{toolT.recommendOk}</p>
@@ -261,6 +305,80 @@ export default function PhpVersionChecker({ t }: PhpVersionCheckerProps) {
         </div>
       </div>
     );
+  };
+
+  // ----- Website check -----
+  const runSiteCheck = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!siteInput.trim() || siteLoading) return;
+    setSiteLoading(true);
+    setSiteResult(await checkSite(siteInput));
+    setSiteLoading(false);
+  };
+
+  const renderSiteResult = () => {
+    if (siteLoading) return <p className="text-sm text-muted-foreground">{toolT.siteChecking}</p>;
+    if (!siteResult) return <p className="text-sm text-muted-foreground">{toolT.siteEmpty}</p>;
+    if (!siteResult.ok) {
+      return (
+        <div className="text-sm px-3 py-1.5 rounded-md bg-red-50 text-red-700 dark:bg-red-950 dark:text-red-400">
+          {toolT[SITE_ERROR_KEYS[siteResult.error] ?? "siteErrorFetch"]}
+        </div>
+      );
+    }
+    const host = hostOf(siteResult.finalUrl);
+    const parsed = siteResult.phpVersion ? parsePhpVersion(`PHP/${siteResult.phpVersion}`) : null;
+    const signals = siteResult.signals.filter((s) => s !== "powered-by" || !parsed).map((s) => toolT[SIGNAL_KEYS[s]]);
+
+    return (
+      <div className="space-y-4">
+        <div className="text-xs text-muted-foreground break-all">
+          {siteResult.finalUrl} · HTTP {siteResult.status}
+        </div>
+        {parsed ? (
+          <>
+            <p className="text-sm">
+              {fill(toolT.siteFound, {
+                host,
+                version: siteResult.phpVersion!,
+                header: siteResult.versionSource === "server" ? "Server" : "X-Powered-By",
+              })}
+            </p>
+            {renderVersionReport(parsed)}
+          </>
+        ) : (
+          <div className="space-y-2 text-sm">
+            <p className="text-lg font-semibold">{fill(toolT.siteHidden, { host })}</p>
+            <p className="text-muted-foreground">{toolT.siteHiddenDetail}</p>
+            <p>{signals.length ? fill(toolT.siteSignals, { signals: signals.join(", ") }) : toolT.siteNoSignals}</p>
+          </div>
+        )}
+        {(siteResult.poweredBy || siteResult.server) && (
+          <div className="rounded-md bg-muted/40 border border-border p-3 font-mono text-xs space-y-1 break-all">
+            {siteResult.poweredBy && <div>X-Powered-By: {siteResult.poweredBy}</div>}
+            {siteResult.server && <div>Server: {siteResult.server}</div>}
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  // ----- Version lookup -----
+  const parsedInput = useMemo(() => parsePhpVersion(versionInput), [versionInput]);
+  const inputBranch = parsedInput ? findBranch(parsedInput.major, parsedInput.minor) : undefined;
+
+  const renderVersionResult = () => {
+    if (!versionInput.trim()) {
+      return <p className="text-sm text-muted-foreground">{toolT.versionEmpty}</p>;
+    }
+    if (!parsedInput) {
+      return (
+        <div className="text-sm px-3 py-1.5 rounded-md bg-red-50 text-red-700 dark:bg-red-950 dark:text-red-400">
+          {toolT.invalidVersion}
+        </div>
+      );
+    }
+    return renderVersionReport(parsedInput);
   };
 
   // ----- Code compatibility -----
@@ -387,153 +505,193 @@ export default function PhpVersionChecker({ t }: PhpVersionCheckerProps) {
   };
 
   return (
-    <Tabs defaultValue="version" className="space-y-4">
-      <TabsList className="w-full sm:w-fit">
-        <TabsTrigger value="version">{toolT.tabVersion}</TabsTrigger>
-        <TabsTrigger value="code">{toolT.tabCode}</TabsTrigger>
-      </TabsList>
+    <div className="space-y-4">
+      {/* PHP2Shell notice */}
+      <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800 dark:border-red-900 dark:bg-red-950 dark:text-red-300">
+        {toolT.bannerText}{" "}
+        <Link href={`/${lang}/php2shell-checker/`} className="font-medium underline underline-offset-4">
+          {toolT.bannerLink}
+        </Link>
+      </div>
 
-      {/* Version lookup */}
-      <TabsContent value="version" className="space-y-6 mt-0">
-        <div className="space-y-3">
-          <label htmlFor="php-version-input" className="text-sm font-medium">
-            {toolT.versionLabel}
-          </label>
-          <div className="flex flex-col sm:flex-row gap-2">
-            <Input
-              id="php-version-input"
-              value={versionInput}
-              onChange={(e) => setVersionInput(e.target.value)}
-              placeholder={toolT.versionPlaceholder}
-              className="font-mono"
-              spellCheck={false}
-              autoComplete="off"
-            />
-            <Button variant="outline" onClick={() => setVersionInput("")} disabled={!versionInput}>
-              {common.clear}
-            </Button>
-          </div>
-          <div className="flex flex-wrap items-center gap-1.5">
-            <span className="text-xs text-muted-foreground mr-1">{toolT.quickPick}</span>
-            {QUICK_PICKS.map((b) => (
-              <button
-                key={b}
-                type="button"
-                onClick={() => setVersionInput(b)}
-                className={`rounded-md border px-2 py-0.5 text-xs font-mono transition-colors hover:border-primary/50 ${
-                  branch?.branch === b ? "border-primary bg-primary/10 text-primary" : "border-border"
-                }`}
-              >
-                {b}
-              </button>
-            ))}
-          </div>
-        </div>
+      <Tabs defaultValue="website" className="space-y-4">
+        <TabsList className="w-full sm:w-fit">
+          <TabsTrigger value="website">{toolT.tabWebsite}</TabsTrigger>
+          <TabsTrigger value="version">{toolT.tabVersion}</TabsTrigger>
+          <TabsTrigger value="code">{toolT.tabCode}</TabsTrigger>
+        </TabsList>
 
-        <div className="border border-border rounded-lg p-4">{renderVersionResult()}</div>
-
-        {/* How to find your version */}
-        <div className="space-y-3">
-          <h3 className="text-sm font-semibold">{toolT.howToFind}</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-            {FIND_SNIPPETS.map((s) => (
-              <div key={s.key} className="border border-border rounded-lg p-3 space-y-2 min-w-0">
-                <div className="flex items-center justify-between gap-2">
-                  <span className="text-xs font-medium text-muted-foreground">{toolT[s.key]}</span>
-                  <CopyButton
-                    text={s.code}
-                    copyLabel={common.copy}
-                    copiedLabel={common.copied}
-                    size="sm"
-                    className="h-6 text-xs"
-                  />
-                </div>
-                <code className="block font-mono text-xs break-all">{s.code}</code>
-              </div>
-            ))}
-          </div>
-          <p className="text-xs text-muted-foreground">{toolT.findNote}</p>
-        </div>
-
-        {/* Support timeline */}
-        <div className="space-y-2">
-          <h3 className="text-sm font-semibold">{toolT.tableTitle}</h3>
-          <div className="overflow-x-auto border border-border rounded-lg">
-            <table className="w-full text-sm">
-              <thead className="bg-muted/50 text-left">
-                <tr>
-                  <th className="px-3 py-2 font-medium whitespace-nowrap">{toolT.colVersion}</th>
-                  <th className="px-3 py-2 font-medium whitespace-nowrap">{toolT.colStatus}</th>
-                  <th className="px-3 py-2 font-medium whitespace-nowrap">{toolT.colReleased}</th>
-                  <th className="px-3 py-2 font-medium whitespace-nowrap">{toolT.colActive}</th>
-                  <th className="px-3 py-2 font-medium whitespace-nowrap">{toolT.colSecurity}</th>
-                  <th className="px-3 py-2 font-medium whitespace-nowrap">{toolT.colLatest}</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-border">
-                {PHP_BRANCHES.map((b) => (
-                  <tr
-                    key={b.branch}
-                    onClick={() => setVersionInput(b.branch)}
-                    className={`cursor-pointer hover:bg-muted/30 ${branch?.branch === b.branch ? "bg-primary/5" : ""}`}
-                  >
-                    <td className="px-3 py-1.5 whitespace-nowrap font-mono font-medium">{b.branch}</td>
-                    <td className="px-3 py-1.5 whitespace-nowrap">{statusBadge(getSupportStatus(b, today))}</td>
-                    <td className="px-3 py-1.5 whitespace-nowrap">{formatDate(b.released)}</td>
-                    <td className="px-3 py-1.5 whitespace-nowrap">{b.activeUntil ? formatDate(b.activeUntil) : "—"}</td>
-                    <td className="px-3 py-1.5 whitespace-nowrap">{formatDate(b.securityUntil)}</td>
-                    <td className="px-3 py-1.5 whitespace-nowrap font-mono">{b.latest}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-xs text-muted-foreground">
-            {fill(toolT.dataSource, { date: formatDate(PHP_DATA_AS_OF) })}{" "}
-            <a
-              href="https://www.php.net/supported-versions.php"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline underline-offset-4"
-            >
-              php.net
-            </a>
-          </p>
-        </div>
-      </TabsContent>
-
-      {/* Code compatibility */}
-      <TabsContent value="code" className="space-y-4 mt-0">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="space-y-2">
-            <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3">
-              <label htmlFor="php-code-input" className="text-sm font-medium">
-                {toolT.codeLabel}
-              </label>
-              <div className="flex items-center gap-2">
-                <Button variant="outline" size="sm" onClick={() => setCode(EXAMPLE_CODE)}>
-                  {toolT.loadExample}
-                </Button>
-                <Button variant="outline" size="sm" onClick={() => setCode("")} disabled={!code}>
-                  {common.clear}
-                </Button>
-              </div>
+        {/* Website check */}
+        <TabsContent value="website" className="space-y-6 mt-0">
+          <form onSubmit={runSiteCheck} className="space-y-2">
+            <label htmlFor="php-site-input" className="text-sm font-medium">
+              {toolT.siteLabel}
+            </label>
+            <div className="flex flex-col sm:flex-row gap-2">
+              <Input
+                id="php-site-input"
+                value={siteInput}
+                onChange={(e) => setSiteInput(e.target.value)}
+                placeholder={toolT.sitePlaceholder}
+                className="font-mono"
+                spellCheck={false}
+                autoComplete="off"
+                inputMode="url"
+              />
+              <Button type="submit" disabled={!siteInput.trim() || siteLoading}>
+                {siteLoading ? toolT.siteCheckingButton : toolT.siteCheck}
+              </Button>
             </div>
-            <Textarea
-              id="php-code-input"
-              value={code}
-              onChange={(e) => setCode(e.target.value)}
-              placeholder={toolT.codePlaceholder}
-              className="font-mono text-sm min-h-[200px] sm:min-h-[400px] resize-y"
-              spellCheck={false}
-            />
+            <p className="text-xs text-muted-foreground">{toolT.sitePrivacy}</p>
+          </form>
+
+          <div className="border border-border rounded-lg p-4" aria-live="polite">
+            {renderSiteResult()}
           </div>
+        </TabsContent>
+
+        {/* Version lookup */}
+        <TabsContent value="version" className="space-y-6 mt-0">
+          <div className="space-y-3">
+            <label htmlFor="php-version-input" className="text-sm font-medium">
+              {toolT.versionLabel}
+            </label>
+            <div className="flex flex-col sm:flex-row gap-2">
+              <Input
+                id="php-version-input"
+                value={versionInput}
+                onChange={(e) => setVersionInput(e.target.value)}
+                placeholder={toolT.versionPlaceholder}
+                className="font-mono"
+                spellCheck={false}
+                autoComplete="off"
+              />
+              <Button variant="outline" onClick={() => setVersionInput("")} disabled={!versionInput}>
+                {common.clear}
+              </Button>
+            </div>
+            <div className="flex flex-wrap items-center gap-1.5">
+              <span className="text-xs text-muted-foreground mr-1">{toolT.quickPick}</span>
+              {QUICK_PICKS.map((b) => (
+                <button
+                  key={b}
+                  type="button"
+                  onClick={() => setVersionInput(b)}
+                  className={`rounded-md border px-2 py-0.5 text-xs font-mono transition-colors hover:border-primary/50 ${
+                    inputBranch?.branch === b ? "border-primary bg-primary/10 text-primary" : "border-border"
+                  }`}
+                >
+                  {b}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="border border-border rounded-lg p-4">{renderVersionResult()}</div>
+
+          {/* How to find your version */}
+          <div className="space-y-3">
+            <h3 className="text-sm font-semibold">{toolT.howToFind}</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+              {FIND_SNIPPETS.map((s) => (
+                <div key={s.key} className="border border-border rounded-lg p-3 space-y-2 min-w-0">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-xs font-medium text-muted-foreground">{toolT[s.key]}</span>
+                    <CopyButton
+                      text={s.code}
+                      copyLabel={common.copy}
+                      copiedLabel={common.copied}
+                      size="sm"
+                      className="h-6 text-xs"
+                    />
+                  </div>
+                  <code className="block font-mono text-xs break-all">{s.code}</code>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-muted-foreground">{toolT.findNote}</p>
+          </div>
+
+          {/* Support timeline */}
           <div className="space-y-2">
-            <div className="text-sm font-medium sm:h-8 sm:flex sm:items-center">{toolT.resultLabel}</div>
-            <div className="border border-border rounded-lg p-4 min-h-[200px] sm:min-h-[400px]">{renderCodeResult()}</div>
+            <h3 className="text-sm font-semibold">{toolT.tableTitle}</h3>
+            <div className="overflow-x-auto border border-border rounded-lg">
+              <table className="w-full text-sm">
+                <thead className="bg-muted/50 text-left">
+                  <tr>
+                    <th className="px-3 py-2 font-medium whitespace-nowrap">{toolT.colVersion}</th>
+                    <th className="px-3 py-2 font-medium whitespace-nowrap">{toolT.colStatus}</th>
+                    <th className="px-3 py-2 font-medium whitespace-nowrap">{toolT.colReleased}</th>
+                    <th className="px-3 py-2 font-medium whitespace-nowrap">{toolT.colActive}</th>
+                    <th className="px-3 py-2 font-medium whitespace-nowrap">{toolT.colSecurity}</th>
+                    <th className="px-3 py-2 font-medium whitespace-nowrap">{toolT.colLatest}</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border">
+                  {PHP_BRANCHES.map((b) => (
+                    <tr
+                      key={b.branch}
+                      onClick={() => setVersionInput(b.branch)}
+                      className={`cursor-pointer hover:bg-muted/30 ${inputBranch?.branch === b.branch ? "bg-primary/5" : ""}`}
+                    >
+                      <td className="px-3 py-1.5 whitespace-nowrap font-mono font-medium">{b.branch}</td>
+                      <td className="px-3 py-1.5 whitespace-nowrap">{statusBadge(getSupportStatus(b, today))}</td>
+                      <td className="px-3 py-1.5 whitespace-nowrap">{formatDate(b.released)}</td>
+                      <td className="px-3 py-1.5 whitespace-nowrap">{b.activeUntil ? formatDate(b.activeUntil) : "—"}</td>
+                      <td className="px-3 py-1.5 whitespace-nowrap">{formatDate(b.securityUntil)}</td>
+                      <td className="px-3 py-1.5 whitespace-nowrap font-mono">{b.latest}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-muted-foreground">
+              {fill(toolT.dataSource, { date: formatDate(PHP_DATA_AS_OF) })}{" "}
+              <a
+                href="https://www.php.net/supported-versions.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4"
+              >
+                php.net
+              </a>
+            </p>
           </div>
-        </div>
-      </TabsContent>
-    </Tabs>
+        </TabsContent>
+
+        {/* Code compatibility */}
+        <TabsContent value="code" className="space-y-4 mt-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3">
+                <label htmlFor="php-code-input" className="text-sm font-medium">
+                  {toolT.codeLabel}
+                </label>
+                <div className="flex items-center gap-2">
+                  <Button variant="outline" size="sm" onClick={() => setCode(EXAMPLE_CODE)}>
+                    {toolT.loadExample}
+                  </Button>
+                  <Button variant="outline" size="sm" onClick={() => setCode("")} disabled={!code}>
+                    {common.clear}
+                  </Button>
+                </div>
+              </div>
+              <Textarea
+                id="php-code-input"
+                value={code}
+                onChange={(e) => setCode(e.target.value)}
+                placeholder={toolT.codePlaceholder}
+                className="font-mono text-sm min-h-[200px] sm:min-h-[400px] resize-y"
+                spellCheck={false}
+              />
+            </div>
+            <div className="space-y-2">
+              <div className="text-sm font-medium sm:h-8 sm:flex sm:items-center">{toolT.resultLabel}</div>
+              <div className="border border-border rounded-lg p-4 min-h-[200px] sm:min-h-[400px]">{renderCodeResult()}</div>
+            </div>
+          </div>
+        </TabsContent>
+      </Tabs>
+    </div>
   );
 }

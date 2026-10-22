@@ -30,7 +30,7 @@ export const categories: CategoryDefinition[] = [
   },
   {
     key: "textTools",
-    tools: ["diff-checker", "markdown-preview", "regex-tester", "text-case-converter", "word-counter", "json-diff", "php-version-checker"],
+    tools: ["diff-checker", "markdown-preview", "regex-tester", "text-case-converter", "word-counter", "json-diff", "php-version-checker", "php2shell-checker"],
   },
   {
     key: "dataTools",
@@ -417,8 +417,15 @@ export const tools: Record<string, ToolDefinition> = {
     slug: "php-version-checker",
     categoryKey: "textTools",
     icon: "FileCode2",
-    relatedSlugs: ["diff-checker", "regex-tester", "sql-formatter"],
-    searchTerms: ["php", "version", "checker", "eol", "end of life", "supported", "compatibility", "minimum", "upgrade", "php 8", "php 7"],
+    relatedSlugs: ["php2shell-checker", "diff-checker", "regex-tester"],
+    searchTerms: ["php", "version", "checker", "website", "eol", "end of life", "supported", "compatibility", "minimum", "upgrade", "php 8", "php 7"],
+  },
+  "php2shell-checker": {
+    slug: "php2shell-checker",
+    categoryKey: "textTools",
+    icon: "ShieldAlert",
+    relatedSlugs: ["php-version-checker", "hash-generator", "password-generator"],
+    searchTerms: ["php2shell", "php", "vulnerability", "cve-2026-109618", "cve-2026-109619", "rce", "security", "patch", "exploit", "checker"],
   },
 };
 

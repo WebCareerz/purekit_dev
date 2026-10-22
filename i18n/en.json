@@ -61,14 +61,18 @@
   },
   "privacy": {
     "metaTitle": "Privacy Policy | PureKit",
-    "metaDescription": "PureKit's privacy policy. All tools run entirely in your browser — no data is collected, stored, or transmitted to any server.",
+    "metaDescription": "PureKit's privacy policy. Tools run entirely in your browser; the only exception is the website check, which sends the address you enter to our server and stores nothing.",
     "title": "Privacy Policy",
-    "lastUpdated": "Last updated: March 2026",
+    "lastUpdated": "Last updated: October 2026",
     "intro": "PureKit is built with a privacy-first approach. This policy explains how we handle your data — or more accurately, how we don't.",
     "sections": [
       {
         "heading": "No Data Collection",
-        "content": "All PureKit tools run entirely in your browser using client-side JavaScript. Your data — including text, files, images, and any other input — is processed locally on your device and is never sent to any server. We do not collect, store, transmit, or have access to any data you process with our tools."
+        "content": "PureKit tools run in your browser using client-side JavaScript. Your text, files, images and any other input are processed on your device and are never sent to any server. We do not collect, store or have access to the data you process with our tools. The one exception is the website check described below, which needs the website address you enter."
+      },
+      {
+        "heading": "Website Checks",
+        "content": "The PHP Version Checker and PHP2Shell Checker can check a website by its address. Browsers can't read another site's response headers, so when you use this feature, the address you enter is sent to a PureKit function running on Cloudflare. It requests that site's homepage once and returns what the response headers show (such as X-Powered-By and Server) and signs that the site runs PHP. We don't store the address or the result. Cloudflare's standard request logs apply, as described under Hosting & CDN."
       },
       {
         "heading": "Privacy-Friendly Analytics",
@@ -84,11 +88,11 @@
       },
       {
         "heading": "Hosting & CDN",
-        "content": "PureKit is hosted as a static website on Cloudflare Pages. Cloudflare may collect standard server logs (IP address, user agent, timestamps) as part of their infrastructure. These logs are managed by Cloudflare under their own privacy policy and are not accessible to PureKit."
+        "content": "PureKit is hosted on Cloudflare Pages: a static website plus the small function behind the website check. Cloudflare may collect standard server logs (IP address, user agent, timestamps) as part of their infrastructure. These logs are managed by Cloudflare under their own privacy policy and are not accessible to PureKit."
       },
       {
         "heading": "Third-Party Services",
-        "content": "PureKit does not integrate with any third-party services that process your data. All tool functionality is self-contained within the browser. No external APIs are called with your data."
+        "content": "PureKit does not integrate with any third-party services that process your data. Tool functionality runs in your browser, except the website check, which runs on Cloudflare as described above. No external APIs are called with your data."
       },
       {
         "heading": "Open Source",
@@ -96,7 +100,7 @@
       },
       {
         "heading": "Changes to This Policy",
-        "content": "If we make changes to this privacy policy, we will update this page. Given our architecture (100% client-side processing), significant privacy changes are unlikely."
+        "content": "If we make changes to this privacy policy, we will update this page. Given our architecture (client-side processing, with the website check as the only server-side step), significant privacy changes are unlikely."
       },
       {
         "heading": "Contact",
@@ -3495,22 +3499,22 @@
     },
     "php-version-checker": {
       "name": "PHP Version Checker",
-      "shortDescription": "Check whether a PHP version is still supported, see its end-of-life date and latest patch, or paste PHP code to find the minimum PHP version it needs.",
-      "metaTitle": "PHP Version Checker - EOL Status & Code Compatibility | PureKit",
-      "metaDescription": "Free PHP version checker: see if any PHP version is still supported, its end-of-life date and latest release, or paste code to find the minimum PHP version it requires. Runs in your browser.",
+      "shortDescription": "Check which PHP version a website runs, whether a PHP version is still supported and when it reaches end of life, or the minimum PHP version your code needs.",
+      "metaTitle": "PHP Version Checker - Check Any Website's PHP Version & EOL | PureKit",
+      "metaDescription": "Free PHP version checker: enter a website to see the PHP version it runs, check whether any PHP version is still supported and its end-of-life date, or find the minimum PHP version your code needs.",
       "keywords": [
         "php version checker",
+        "php version checker online",
+        "check php version of website",
         "check php version",
         "php end of life",
-        "php eol dates",
         "php supported versions",
         "php compatibility checker",
         "minimum php version",
-        "php version compatibility",
         "latest php version"
       ],
-      "tabVersion": "Check a version",
-      "tabCode": "Check code compatibility",
+      "tabVersion": "Version",
+      "tabCode": "Code compatibility",
       "versionLabel": "PHP version",
       "versionPlaceholder": "e.g. 8.1.2, or paste php -v output or an X-Powered-By header",
       "quickPick": "Quick pick:",
@@ -3549,7 +3553,7 @@
       "findCli": "Command line",
       "findHeader": "Website response header",
       "findScript": "PHP script (shows the web server's version)",
-      "findNote": "Browsers can't read another website's response headers, so run the curl command in a terminal and paste the result above. Many servers hide the header. In WordPress, go to Tools → Site Health → Info → Server.",
+      "findNote": "Run these on your server, or use the Website tab to read the version a site sends. Many servers hide the header. In WordPress, go to Tools → Site Health → Info → Server.",
       "tableTitle": "PHP version support timeline",
       "colVersion": "Version",
       "colStatus": "Status",
@@ -3587,23 +3591,23 @@
       "features": {
         "title": "Key Features",
         "items": [
+          "Enter a website address to see the PHP version it reports in its X-Powered-By or Server header, with signs of PHP when the version is hidden",
           "Look up any PHP version from 5.0 to 8.5 and see whether it gets active support, security fixes only, or has reached end of life",
           "Paste php -v output, a phpinfo() line or an X-Powered-By header and the version number is picked out automatically",
-          "See the release date, support end dates and latest patch release, and whether your patch level is behind",
+          "See the release date, support end dates, the latest patch release, and whether the version is affected by PHP2Shell",
           "Paste PHP code to find the minimum PHP version it needs, with the feature and line number behind each requirement",
           "Detects syntax from PHP 5.6 to 8.5, including enums, match, readonly properties, property hooks and the pipe operator",
           "Flags removed functions such as mysql_query(), each() and create_function(), and deprecations such as implicitly nullable parameters",
-          "Separates syntax from built-in functions, so you know which requirements a polyfill can cover",
-          "Everything runs in your browser. Your code is never uploaded"
+          "Version lookups and code checks run in your browser. Your code is never uploaded"
         ]
       },
       "howToUse": {
         "title": "How to Use the PHP Version Checker",
         "steps": [
-          "To check a version, type it (for example 8.1 or 7.4.33), paste the output of php -v, or pick a version from the quick-pick list.",
-          "Read the status: active support, security fixes only, or end of life, with the exact dates from php.net.",
-          "If you entered a patch number, compare it with the latest release for that branch and follow the upgrade recommendation.",
-          "To check code, open the Check code compatibility tab and paste a PHP file or snippet.",
+          "To check a website, enter its address on the Website tab and click Check. The checker requests the homepage once and reads the PHP version from the response headers.",
+          "If the site hides its version, find it on the server with php -v or in your hosting panel, then enter it on the Version tab (pasting the php -v output works too).",
+          "Read the status: active support, security fixes only, or end of life, with the exact dates from php.net, the latest patch release and whether PHP2Shell affects it.",
+          "To check code, open the Code compatibility tab and paste a PHP file or snippet.",
           "Review the minimum PHP version, the compatibility row for each PHP release, and the list of features with their line numbers."
         ]
       },
@@ -3621,7 +3625,7 @@
           },
           {
             "heading": "How to check your PHP version",
-            "content": "On a server, run php -v. The command line can use a different PHP binary than your website, so to see what the web server runs, upload a file containing <?php echo PHP_VERSION; or phpinfo(); open it in a browser, then delete it. Many servers also send an X-Powered-By: PHP/x.y.z response header, which curl -sI https://example.com | grep -i x-powered-by will show. In WordPress, go to Tools → Site Health → Info and open the Server section."
+            "content": "Enter a site's address on the Website tab to see the version it reports in its X-Powered-By or Server header. On the server itself, run php -v, but note that the command line can use a different PHP binary than your website. To see what the web server runs, upload a file containing <?php echo PHP_VERSION; or phpinfo(); open it in a browser, then delete it. In WordPress, go to Tools → Site Health → Info and open the Server section."
           },
           {
             "heading": "Why a website might hide its PHP version",
@@ -3640,7 +3644,7 @@
       "faq": [
         {
           "question": "How do I check my PHP version?",
-          "answer": "Run php -v on the command line, or create a PHP file containing <?php echo PHP_VERSION; and open it in your browser to see the version your web server uses. In WordPress, go to Tools → Site Health → Info → Server. Paste what you find into this checker to see whether that version is still supported."
+          "answer": "For a website, enter its address on the Website tab. On the server, run php -v, or create a PHP file containing <?php echo PHP_VERSION; and open it in your browser to see the version your web server uses. In WordPress, go to Tools → Site Health → Info → Server. Paste what you find on the Version tab to see whether that version is still supported."
         },
         {
           "question": "What is the latest PHP version?",
@@ -3655,12 +3659,16 @@
           "answer": "As of October 2026, PHP 8.5 and 8.4 have active support, while PHP 8.3 and 8.2 get security fixes only (8.2 until 31 Dec 2026, 8.3 until 31 Dec 2027). PHP 8.1 and older are end of life. The table above lists every branch and works out each status from today's date."
         },
         {
+          "question": "Is my PHP version affected by PHP2Shell?",
+          "answer": "On PHP 8.2 to 8.5, every release below 8.2.35, 8.3.36, 8.4.27 and 8.5.12 is affected by PHP2Shell (CVE-2026-109618 and CVE-2026-109619), and each result above says whether yours is. PHP 8.1 and older get no fixed release. The PHP2Shell Checker explains who is at risk and what to do."
+        },
+        {
           "question": "How do I find the minimum PHP version my code needs?",
           "answer": "Open the Check code compatibility tab and paste your code. The checker lists every feature that needs a specific PHP version, such as enums (8.1) or the nullsafe operator (8.0), and reports the highest one as the minimum. It also flags removed functions like mysql_query() or each() that stop code from running on newer versions."
         },
         {
           "question": "Can this tool check a website's PHP version from its URL?",
-          "answer": "Not directly. This tool runs entirely in your browser, and browsers don't let a page read another site's response headers. Run curl -sI https://example.com | grep -i x-powered-by in a terminal, or open your browser's developer tools and look at the response headers in the Network tab, then paste the X-Powered-By value into the checker. If the header is missing, the server is hiding it."
+          "answer": "Yes. Enter the address on the Website tab. Browsers can't read another site's response headers, so PureKit's server requests the site's homepage once and reads its X-Powered-By and Server headers. Many sites hide the version; in that case the checker shows signs that the site runs PHP, such as a PHPSESSID cookie or WordPress, and you'll need to check on the server."
         },
         {
           "question": "Why does my server show an older patch number than the latest release?",
@@ -3668,9 +3676,209 @@
         },
         {
           "question": "Is my code uploaded anywhere?",
-          "answer": "No. Version lookups and code analysis both run in your browser with JavaScript. Nothing you type or paste is sent to a server."
+          "answer": "No. Code analysis and version lookups run in your browser, and nothing you paste is sent anywhere. Only the Website tab uses PureKit's server: it receives the address you enter, requests that site's homepage, and returns what the headers show. The address and the result aren't stored."
         }
-      ]
+      ],
+      "processingBadge": "Version and code checks run in your browser",
+      "tabWebsite": "Website",
+      "siteLabel": "Website address",
+      "sitePlaceholder": "example.com",
+      "siteCheck": "Check",
+      "siteCheckingButton": "Checking…",
+      "siteChecking": "Requesting the homepage…",
+      "siteEmpty": "Enter a website to see which PHP version it reports.",
+      "sitePrivacy": "The address is sent to PureKit's server, which requests that site's homepage once and reads its response headers. Nothing is stored.",
+      "siteHiddenDetail": "Many servers hide it on purpose (the expose_php setting, or a proxy or CDN removing the header), so this says nothing about whether the site is up to date. To see the version, run php -v on the server, check your hosting control panel, or in WordPress go to Tools → Site Health → Info → Server.",
+      "p2sPatched": "Includes the fixes for CVE-2026-109618 and CVE-2026-109619 (fixed in {fixed}).",
+      "p2sAffected": "Affected by CVE-2026-109618 and CVE-2026-109619. Update to {fixed} or later.",
+      "p2sNeedsPatch": "Affected unless you're on {fixed} or later. Enter the full version number to check.",
+      "p2sUnsupported": "No fixed release exists for this branch, so treat it as vulnerable.",
+      "p2sLearnMore": "About PHP2Shell",
+      "bannerText": "PHP2Shell: two critical PHP remote code execution flaws were patched on 21 October 2026.",
+      "bannerLink": "Check if your site is affected",
+      "signalPoweredBy": "an X-Powered-By: PHP header",
+      "signalPhpsessid": "a PHPSESSID session cookie",
+      "signalLaravel": "a Laravel session cookie",
+      "signalWordpress": "WordPress",
+      "signalDrupal": "Drupal",
+      "signalJoomla": "Joomla",
+      "siteFound": "{host} reports PHP {version} in its {header} header.",
+      "siteHidden": "{host} doesn't reveal its PHP version",
+      "siteSignals": "Signs that it runs PHP: {signals}.",
+      "siteNoSignals": "We found no sign that it runs PHP. It may use another language, or simply hide it.",
+      "siteErrorInvalid": "Enter a website address, like example.com.",
+      "siteErrorBlocked": "That address can't be checked. Enter a public website on the standard web ports.",
+      "siteErrorTimeout": "The site took too long to respond. Try again in a moment.",
+      "siteErrorFetch": "We couldn't reach that site. Check the address and try again.",
+      "siteErrorRedirects": "The site redirected too many times. Enter the final address directly.",
+      "siteErrorUnavailable": "The website check isn't available right now. You can still check a version number."
+    },
+    "php2shell-checker": {
+      "name": "PHP2Shell Checker",
+      "shortDescription": "Check whether a website or PHP version is affected by PHP2Shell (CVE-2026-109618 and CVE-2026-109619), the critical PHP remote code execution flaws patched on 21 October 2026.",
+      "metaTitle": "PHP2Shell Checker: Is Your PHP Affected? (CVE-2026-109618) | PureKit",
+      "metaDescription": "Check if your website or PHP version is affected by PHP2Shell (CVE-2026-109618, CVE-2026-109619). Fixed in PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35. See who is at risk and what to do.",
+      "keywords": [
+        "php2shell",
+        "php2shell checker",
+        "php2shell vulnerability",
+        "php2shell cve",
+        "php2shell patch",
+        "CVE-2026-109618",
+        "CVE-2026-109619",
+        "php rce vulnerability",
+        "php security update"
+      ],
+      "processingBadge": "Passive check • Nothing stored",
+      "factCvss": "CVSS v4.0 9.2 (critical)",
+      "factPatched": "Patched 21 Oct 2026",
+      "advisoryLink": "Official PHP advisory",
+      "inputLabel": "Website or PHP version",
+      "inputPlaceholder": "example.com, 8.3.12, or php -v output",
+      "check": "Check",
+      "checkingButton": "Checking…",
+      "checking": "Requesting the homepage…",
+      "empty": "Enter a website address or a PHP version to see whether PHP2Shell affects it.",
+      "privacyNote": "For a website, the address is sent to PureKit's server, which makes one ordinary request to the homepage and reads the response headers. No exploit traffic is sent and nothing is stored. Version checks run in your browser.",
+      "invalidInput": "Enter a website address (like example.com) or a PHP version (like 8.3.12).",
+      "verdictPatchedTitle": "Not affected",
+      "verdictPatched": "PHP {version} includes the fixes for CVE-2026-109618 and CVE-2026-109619 (fixed in {fixed}).",
+      "verdictAffectedTitle": "Affected",
+      "verdictAffected": "PHP {version} is affected by CVE-2026-109618 and CVE-2026-109619. Update to PHP {fixed} or later.",
+      "verdictNeedsPatchTitle": "Possibly affected",
+      "verdictNeedsPatch": "Every PHP {branch} release before {fixed} is affected. Enter the full version number, such as {fixed}, to check yours.",
+      "verdictUnsupportedTitle": "Treat as vulnerable",
+      "verdictUnsupported": "PHP {branch} no longer gets releases from the PHP project, so no fixed {branch} version exists. Given the severity, the PHP team published source backports for 7.4, 8.0 and 8.1, so assume this version is affected unless your vendor confirms a backported fix.",
+      "verdictPrereleaseTitle": "Pre-release",
+      "verdictPrerelease": "PHP 8.6 isn't released yet. 8.6.0 RC4 and later include the fixes, and earlier 8.6 builds are affected. php.net says not to use pre-releases in production.",
+      "verdictUnknownTitle": "Not in our data",
+      "verdictUnknown": "We don't have PHP2Shell data for PHP {version}. Check the official PHP advisory.",
+      "distroCaveat": "The suffix {suffix} suggests a Linux distribution package. Distributions received the patches in advance and may ship the fix without changing the version number, so check your vendor's security notice before assuming you're affected.",
+      "nextStepsTitle": "What to do",
+      "stepUpdate": "Update PHP to {fixed} or later, from your distribution's packages, your hosting control panel or php.net.",
+      "stepUpgradeBranch": "Upgrade to a supported PHP version, ideally 8.4 or 8.5 (PHP 8.2 reaches end of life on 31 December 2026), or install your vendor's backported fix.",
+      "stepRestart": "Restart PHP-FPM, Apache or your PHP workers so the new version is the one serving requests, then check again.",
+      "stepMitigate": "If you can't update today, apply the interim measures from the official advisory (summarized below). They reduce exposure but don't make the server safe.",
+      "supportLine": "Support status of PHP {branch}:",
+      "versionCheckerLink": "Full details in the PHP Version Checker",
+      "siteHiddenDetail": "Many servers hide it, so this doesn't mean the site is safe. Find the version on the server with php -v, in your hosting control panel, or in WordPress under Tools → Site Health → Info → Server, then enter it here.",
+      "fixedTitle": "Affected and fixed versions",
+      "colBranch": "Branch",
+      "colAffected": "Affected",
+      "colFixed": "Fixed in",
+      "colSupport": "Support status",
+      "andOlder": "and older",
+      "allVersions": "All releases",
+      "noRelease": "No official release. Source backports for 7.4, 8.0 and 8.1; some vendors ship backported packages.",
+      "rcAffected": "Builds before RC4",
+      "prereleaseLabel": "Pre-release",
+      "tableSource": "Source: PHP security advisory and GitHub advisories GHSA-w8hw-w9fx-j79w and GHSA-6wmf-4rv5-p3rp, 21 October 2026.",
+      "disclaimer": "This is a version check, not a vulnerability scan. It can't see vendor backports or interim mitigations, and a hidden version tells you nothing either way.",
+      "features": {
+        "title": "What the PHP2Shell Checker Does",
+        "items": [
+          "Enter a website address and it reads the PHP version from the site's X-Powered-By or Server header",
+          "Or enter a PHP version, or paste php -v output, to compare it with the fixed releases",
+          "Tells you whether you're affected, which version to update to, and what to do if your PHP branch no longer gets updates",
+          "Flags Linux distribution builds, which often get the fix without a version change",
+          "Looks for signs of PHP (session cookies, WordPress, Drupal, Joomla) when a site hides its version",
+          "Passive: one ordinary request to the homepage, no exploit traffic, nothing stored"
+        ]
+      },
+      "howToUse": {
+        "title": "How to Check for PHP2Shell",
+        "steps": [
+          "Enter your website address (for example example.com) or a PHP version such as 8.3.12, then click Check.",
+          "For a website, the checker requests the homepage once and reads the PHP version from the response headers.",
+          "Read the verdict: not affected, affected with the version to update to, or no fixed release for your branch.",
+          "If the site hides its version, run php -v on the server or check your hosting panel, then enter the version here.",
+          "After updating, restart PHP and check again."
+        ]
+      },
+      "understanding": {
+        "title": "PHP2Shell Explained",
+        "intro": "PHP2Shell is the name given to two critical PHP vulnerabilities, CVE-2026-109618 and CVE-2026-109619, which the PHP project fixed on 21 October 2026. Both can let an attacker run code on a server without logging in, and both are rated 9.2 on CVSS v4.0.",
+        "sections": [
+          {
+            "heading": "What the two vulnerabilities are",
+            "content": "CVE-2026-109618, RCE via OOM corruption: if PHP runs out of memory while internal request data is only partly initialized, request cleanup can treat that invalid data as valid. CVE-2026-109619, RCE via stale global state: state that belongs to one request can survive after its memory is freed, and a later request handled by the same worker can use it before normal initialization resets it. According to BleepingComputer, researchers from Calif, OpenAI and Wiz found the flaws."
+          },
+          {
+            "heading": "Who is at risk",
+            "content": "The PHP advisory says all PHP installations that serve web requests are at risk, including PHP-FPM, Apache with mod_php, php-cgi, FrankenPHP and LiteSpeed. It rates the risk highest for mod_php, where a demonstrated exploit lets an unauthenticated request trigger the attack before any application code runs. So the CMS or framework you use doesn't matter; the PHP version your server runs does."
+          },
+          {
+            "heading": "Affected and fixed versions",
+            "content": "The GitHub advisories list every release below PHP 8.2.35, 8.3.36, 8.4.27 and 8.5.12 as affected, and those four releases contain the fixes. PHP 8.6.0 RC4 includes them too. PHP 8.1 and older get no new releases. Given the severity, the PHP team published minimal source backports for PHP 7.4, 8.0 and 8.1 for people who build PHP themselves, and some Linux distributions and LTS vendors provide backported packages."
+          },
+          {
+            "heading": "How to fix it",
+            "content": "Update to a fixed release. Linux distributions and LTS vendors received the patches in advance, so updated packages may already be available from your vendor. On shared hosting, switch to a fixed version in your control panel or ask your host whether they've installed the update. Restart PHP-FPM, Apache or your PHP workers afterwards so the new version is the one serving requests. If you're on PHP 8.1 or older, plan the move to a supported version; PHP 8.2 itself reaches end of life on 31 December 2026."
+          },
+          {
+            "heading": "If you can't update right away",
+            "content": "The advisory lists interim measures that reduce exposure to specific attack paths but don't make an installation safe. For CVE-2026-109618: set memory_limit=-1 in a way applications can't override (such as php_admin_value), use container or cgroup memory limits as the availability boundary, keep post_max_size low (8M without file uploads, 32M with them) with upload_max_filesize below it, and enforce request size and count limits at the web server or proxy. For CVE-2026-109619: set session.upload_progress.enabled=0 in php.ini or the FPM pool (not with ini_set() or .user.ini) and restart every worker; on PHP 8.5, also set fatal_error_backtraces=0. Read the full list in the official advisory before changing production settings."
+          },
+          {
+            "heading": "Is PHP2Shell being exploited?",
+            "content": "The PHP team describes a demonstrated exploit against mod_php. BleepingComputer reported that Cloudflare's CTO saw early attacks targeting both vulnerabilities before the patches were released, and that the UK's National Cyber Security Centre urged organizations to update immediately or take affected systems offline. Reports differ on how widely the flaws are being exploited, so treat any unpatched server as at risk."
+          },
+          {
+            "heading": "What this checker can and can't tell you",
+            "content": "It compares a PHP version with the fixed releases. It doesn't test for the vulnerability or send exploit traffic, and it can't see whether your vendor backported the fix or whether interim mitigations are in place. Many websites hide their PHP version; a hidden version means you need to check on the server, not that you're safe."
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "What is PHP2Shell?",
+          "answer": "PHP2Shell is the name for two critical PHP vulnerabilities, CVE-2026-109618 and CVE-2026-109619, fixed on 21 October 2026. They can let an unauthenticated attacker run code on servers that use PHP to serve web requests. Both are rated 9.2 on CVSS v4.0."
+        },
+        {
+          "question": "Which PHP versions fix PHP2Shell?",
+          "answer": "PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35, released on 21 October 2026, fix both vulnerabilities. For the PHP 8.6 pre-release, 8.6.0 RC4 includes the fixes. Any earlier release in these branches is affected."
+        },
+        {
+          "question": "Is PHP 7.4 or 8.1 affected?",
+          "answer": "The PHP project no longer releases PHP 8.1 or older, so there's no fixed 7.4 or 8.1 version. Because of the severity, the PHP team published minimal source backports for 7.4, 8.0 and 8.1, and some Linux distributions and LTS vendors ship backported packages. Unless your vendor confirms a backport, treat these versions as vulnerable and upgrade."
+        },
+        {
+          "question": "How do I check if my website is affected?",
+          "answer": "Enter your site's address in the checker above. If the site shows its PHP version, you'll see straight away whether it's affected. If the version is hidden, run php -v on the server, check your hosting control panel, or in WordPress go to Tools → Site Health → Info → Server, then enter the version here."
+        },
+        {
+          "question": "Does hiding the PHP version protect me?",
+          "answer": "No. Turning off expose_php or removing the X-Powered-By header only hides the version from outside checks like this one. The vulnerabilities are in PHP itself, so an unpatched server stays vulnerable."
+        },
+        {
+          "question": "Is WordPress affected by PHP2Shell?",
+          "answer": "WordPress isn't the vulnerable part; PHP is. Any WordPress site whose server runs an affected PHP version is at risk, whatever the WordPress version. Check your PHP version under Tools → Site Health → Info → Server, and ask your host to update PHP if it's affected."
+        },
+        {
+          "question": "I'm on shared hosting. What should I do?",
+          "answer": "Check which PHP versions your hosting control panel offers and switch to a fixed release if one is available. If not, contact your host and ask whether they've installed the PHP2Shell fixes."
+        },
+        {
+          "question": "Does this checker attack or scan my site?",
+          "answer": "No. It makes one ordinary request to the homepage, like a browser would, and reads the response headers. It doesn't send exploit traffic, and it doesn't store the address or the result."
+        }
+      ],
+      "signalPoweredBy": "an X-Powered-By: PHP header",
+      "signalPhpsessid": "a PHPSESSID session cookie",
+      "signalLaravel": "a Laravel session cookie",
+      "signalWordpress": "WordPress",
+      "signalDrupal": "Drupal",
+      "signalJoomla": "Joomla",
+      "siteFound": "{host} reports PHP {version} in its {header} header.",
+      "siteHidden": "{host} doesn't reveal its PHP version",
+      "siteSignals": "Signs that it runs PHP: {signals}.",
+      "siteNoSignals": "We found no sign that it runs PHP. It may use another language, or simply hide it.",
+      "siteErrorInvalid": "Enter a website address, like example.com.",
+      "siteErrorBlocked": "That address can't be checked. Enter a public website on the standard web ports.",
+      "siteErrorTimeout": "The site took too long to respond. Try again in a moment.",
+      "siteErrorFetch": "We couldn't reach that site. Check the address and try again.",
+      "siteErrorRedirects": "The site redirected too many times. Enter the final address directly.",
+      "siteErrorUnavailable": "The website check isn't available right now. You can still check a version number."
     }
   },
   "devtoysAlternative": {

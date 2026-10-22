@@ -35,7 +35,7 @@ export default async function PhpVersionCheckerPage({
 
   return (
     <ToolPageLayout lang={lang as Locale} toolSlug="php-version-checker" t={t}>
-      <PhpVersionChecker t={t} />
+      <PhpVersionChecker lang={lang as Locale} t={t} />
     </ToolPageLayout>
   );
 }

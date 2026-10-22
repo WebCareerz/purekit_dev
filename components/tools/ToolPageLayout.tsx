@@ -23,6 +23,8 @@ export default function ToolPageLayout({
   const common = t.common as Record<string, string>;
 
   const name = toolT.name as string;
+  // Tools with a server-side step say what stays local instead of the default badge.
+  const processingBadge = (toolT.processingBadge as string | undefined) ?? common.processedLocally;
   const shortDescription = toolT.shortDescription as string;
   const features = toolT.features as { title: string; items: string[] };
   const beforeAfterExample = toolT.beforeAfterExample as { title: string; before: { src: string; alt: string; label: string }; after: { src: string; alt: string; label: string } } | undefined;
@@ -62,7 +64,7 @@ export default function ToolPageLayout({
         <div className="flex flex-wrap items-center gap-2">
           <p className="text-muted-foreground">{shortDescription}</p>
           <Badge variant="outline" className="text-xs shrink-0">
-            {common.processedLocally}
+            {processingBadge}
           </Badge>
         </div>
       </div>

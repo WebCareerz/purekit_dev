@@ -105,7 +105,8 @@ PureKit is different: **every tool runs 100% client-side** using browser APIs. Y
 | [Markdown Preview](https://purekit.dev/en/markdown-preview) | Live Markdown preview |
 | [HTML Viewer](https://purekit.dev/en/html-viewer) | Live HTML preview and rendering |
 | [JSON Diff](https://purekit.dev/en/json-diff) | Compare JSON objects side by side |
-| [PHP Version Checker](https://purekit.dev/en/php-version-checker) | Check PHP support status and the minimum PHP version your code needs |
+| [PHP Version Checker](https://purekit.dev/en/php-version-checker) | Check a website's PHP version, PHP support status, and the minimum PHP version your code needs |
+| [PHP2Shell Checker](https://purekit.dev/en/php2shell-checker) | Check whether a website or PHP version is affected by PHP2Shell (CVE-2026-109618/109619) |
 
 ### Data Tools
 | Tool | Description |
@@ -119,7 +120,7 @@ PureKit is different: **every tool runs 100% client-side** using browser APIs. Y
 - **PDF Processing**: [pdf-lib](https://pdf-lib.js.org/) + [PDF.js](https://mozilla.github.io/pdf.js/)
 - **Image Processing**: Canvas API + Web Workers
 - **Hashing**: Web Crypto API
-- **Deployment**: [Cloudflare Pages](https://pages.cloudflare.com/) (static, no server)
+- **Deployment**: [Cloudflare Pages](https://pages.cloudflare.com/) (static, plus one Pages Function in `functions/api/php-version.ts` for website PHP checks)
 
 ## Getting Started
 
