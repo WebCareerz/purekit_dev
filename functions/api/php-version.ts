@@ -8,7 +8,11 @@ interface PagesContext {
   request: Request;
 }
 
-type ErrorCode = "invalid_url" | "blocked_host" | "timeout" | "fetch_failed" | "too_many_redirects";
+type ErrorCode = "invalid_url" | "blocked_host" | "forbidden_host" | "timeout" | "fetch_failed" | "too_many_redirects";
+
+// Only answer on the production domains: the zone's rate limiting rule doesn't cover the
+// project's *.pages.dev address or preview deployments. localhost is for `wrangler pages dev`.
+const ALLOWED_HOSTS = new Set(["www.purekit.dev", "purekit.dev", "localhost", "127.0.0.1"]);
 
 const MAX_REDIRECTS = 4;
 const TIMEOUT_MS = 8000;
@@ -145,7 +149,9 @@ function collectBody(html: string, ev: Evidence) {
 }
 
 export async function onRequestGet({ request }: PagesContext): Promise<Response> {
-  const target = normalizeTarget(new URL(request.url).searchParams.get("url") ?? "");
+  const requestUrl = new URL(request.url);
+  if (!ALLOWED_HOSTS.has(requestUrl.hostname)) return fail("forbidden_host", 403);
+  const target = normalizeTarget(requestUrl.searchParams.get("url") ?? "");
   if (!target) return fail("invalid_url", 400);
 
   const ev: Evidence = { phpVersion: null, versionSource: null, poweredBy: null, server: null, signals: new Set() };

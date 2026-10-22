@@ -17,6 +17,7 @@ export interface SiteCheckSuccess {
 export type SiteCheckErrorCode =
   | "invalid_url"
   | "blocked_host"
+  | "forbidden_host"
   | "timeout"
   | "fetch_failed"
   | "too_many_redirects"

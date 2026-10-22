@@ -109,6 +109,7 @@ const SIGNAL_KEYS: Record<SiteSignal, string> = {
 const SITE_ERROR_KEYS: Record<string, string> = {
   invalid_url: "siteErrorInvalid",
   blocked_host: "siteErrorBlocked",
+  forbidden_host: "siteErrorUnavailable",
   timeout: "siteErrorTimeout",
   fetch_failed: "siteErrorFetch",
   too_many_redirects: "siteErrorRedirects",
