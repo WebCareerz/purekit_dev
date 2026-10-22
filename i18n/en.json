@@ -72,7 +72,7 @@
       },
       {
         "heading": "Website Checks",
-        "content": "The PHP Version Checker and PHP2Shell Checker can check a website by its address. Browsers can't read another site's response headers, so when you use this feature, the address you enter is sent to a PureKit function running on Cloudflare. It requests that site's homepage once and returns what the response headers show (such as X-Powered-By and Server) and signs that the site runs PHP. We don't store the address or the result. Cloudflare's standard request logs apply, as described under Hosting & CDN."
+        "content": "The PHP Version Checker and PHP2Shell Checker can check a website by its address. Browsers can't read another site's response headers, so when you use this feature, the address you enter is sent to a PureKit function running on Cloudflare. It requests that site's homepage once and returns what the response headers show (such as X-Powered-By) and signs that the site runs PHP. We don't store the address or the result. Cloudflare's standard request logs apply, as described under Hosting & CDN."
       },
       {
         "heading": "Privacy-Friendly Analytics",
@@ -3591,7 +3591,7 @@
       "features": {
         "title": "Key Features",
         "items": [
-          "Enter a website address to see the PHP version it reports in its X-Powered-By or Server header, with signs of PHP when the version is hidden",
+          "Enter a website address to see the PHP version it reports in its X-Powered-By header, with signs of PHP when the version is hidden",
           "Look up any PHP version from 5.0 to 8.5 and see whether it gets active support, security fixes only, or has reached end of life",
           "Paste php -v output, a phpinfo() line or an X-Powered-By header and the version number is picked out automatically",
           "See the release date, support end dates, the latest patch release, and whether the version is affected by PHP2Shell",
@@ -3625,7 +3625,7 @@
           },
           {
             "heading": "How to check your PHP version",
-            "content": "Enter a site's address on the Website tab to see the version it reports in its X-Powered-By or Server header. On the server itself, run php -v, but note that the command line can use a different PHP binary than your website. To see what the web server runs, upload a file containing <?php echo PHP_VERSION; or phpinfo(); open it in a browser, then delete it. In WordPress, go to Tools → Site Health → Info and open the Server section."
+            "content": "Enter a site's address on the Website tab to see the version it reports in its X-Powered-By header. On the server itself, run php -v, but note that the command line can use a different PHP binary than your website. To see what the web server runs, upload a file containing <?php echo PHP_VERSION; or phpinfo(); open it in a browser, then delete it. In WordPress, go to Tools → Site Health → Info and open the Server section."
           },
           {
             "heading": "Why a website might hide its PHP version",
@@ -3668,7 +3668,7 @@
         },
         {
           "question": "Can this tool check a website's PHP version from its URL?",
-          "answer": "Yes. Enter the address on the Website tab. Browsers can't read another site's response headers, so PureKit's server requests the site's homepage once and reads its X-Powered-By and Server headers. Many sites hide the version; in that case the checker shows signs that the site runs PHP, such as a PHPSESSID cookie or WordPress, and you'll need to check on the server."
+          "answer": "Yes. Enter the address on the Website tab. Browsers can't read another site's response headers, so PureKit's server requests the site's homepage once and reads its X-Powered-By header. Many sites hide the version; in that case the checker shows signs that the site runs PHP, such as a PHPSESSID cookie or WordPress, and you'll need to check on the server."
         },
         {
           "question": "Why does my server show an older patch number than the latest release?",
@@ -3777,7 +3777,7 @@
       "features": {
         "title": "What the PHP2Shell Checker Does",
         "items": [
-          "Enter a website address and it reads the PHP version from the site's X-Powered-By or Server header",
+          "Enter a website address and it reads the PHP version from the site's X-Powered-By header",
           "Or enter a PHP version, or paste php -v output, to compare it with the fixed releases",
           "Tells you whether you're affected, which version to update to, and what to do if your PHP branch no longer gets updates",
           "Flags Linux distribution builds, which often get the fix without a version change",

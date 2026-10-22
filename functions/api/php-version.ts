@@ -117,7 +117,9 @@ function collectHeaders(headers: Headers, ev: Evidence) {
       ev.versionSource = "x-powered-by";
     }
   }
-  if (server) {
+  // Inside Cloudflare Workers, subrequest responses carry "server: cloudflare" no matter
+  // which server the site runs, so that value says nothing about the target.
+  if (server && server.trim().toLowerCase() !== "cloudflare") {
     ev.server = server.slice(0, 200);
     const m = PHP_TOKEN.exec(server);
     if (m && !ev.phpVersion) {
