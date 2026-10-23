@@ -26,7 +26,8 @@ import {
 } from "@/lib/php-versions";
 import { analyzePhpCode, branchCompat, type BranchCompat, type Finding } from "@/lib/php-compat";
 import { php2shellVerdict } from "@/lib/php2shell";
-import { checkSite, hostOf, type SiteCheckResult, type SiteSignal } from "@/lib/site-check";
+import { checkSite, hostOf, siteCheckEventProps, type SiteCheckResult, type SiteSignal } from "@/lib/site-check";
+import { trackEvent } from "@/lib/analytics";
 
 interface PhpVersionCheckerProps {
   lang: Locale;
@@ -313,8 +314,10 @@ export default function PhpVersionChecker({ lang, t }: PhpVersionCheckerProps) {
     e.preventDefault();
     if (!siteInput.trim() || siteLoading) return;
     setSiteLoading(true);
-    setSiteResult(await checkSite(siteInput));
+    const result = await checkSite(siteInput);
+    setSiteResult(result);
     setSiteLoading(false);
+    trackEvent("Site Check", siteCheckEventProps("php-version-checker", result));
   };
 
   const renderSiteResult = () => {

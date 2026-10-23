@@ -22,7 +22,8 @@ import {
   php2shellVerdict,
   type Php2ShellVerdict,
 } from "@/lib/php2shell";
-import { checkSite, hostOf, looksLikeUrl, type SiteCheckResult, type SiteSignal } from "@/lib/site-check";
+import { checkSite, hostOf, looksLikeUrl, siteCheckEventProps, type SiteCheckResult, type SiteSignal } from "@/lib/site-check";
+import { trackEvent } from "@/lib/analytics";
 
 interface Php2ShellCheckerProps {
   lang: Locale;
@@ -89,8 +90,10 @@ export default function Php2ShellChecker({ lang, t }: Php2ShellCheckerProps) {
     if (!value || loading) return;
     if (looksLikeUrl(value)) {
       setLoading(true);
-      setOutcome({ source: "site", site: await checkSite(value) });
+      const site = await checkSite(value);
+      setOutcome({ source: "site", site });
       setLoading(false);
+      trackEvent("Site Check", siteCheckEventProps("php2shell-checker", site));
       return;
     }
     const parsed = parsePhpVersion(value);
