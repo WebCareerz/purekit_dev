@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useEffect, useRef } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Eye, Code } from "lucide-react";
@@ -16,41 +16,27 @@ export default function HtmlViewer({ t }: HtmlViewerProps) {
   ];
 
   const [input, setInput] = useState("");
+  // What the iframe renders. The sandbox has no allow-same-origin, so the page can't
+  // reach into the iframe's document; the HTML goes in through srcDoc instead.
+  const [preview, setPreview] = useState("");
   const [autoPreview, setAutoPreview] = useState(true);
-  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   const updatePreview = useCallback(() => {
-    if (iframeRef.current) {
-      const iframe = iframeRef.current;
-      const doc = iframe.contentDocument || iframe.contentWindow?.document;
-      if (doc) {
-        doc.open();
-        doc.write(input);
-        doc.close();
-      }
-    }
+    setPreview(input);
   }, [input]);
 
   useEffect(() => {
     if (autoPreview) {
       const timer = setTimeout(() => {
-        updatePreview();
+        setPreview(input);
       }, 500);
       return () => clearTimeout(timer);
     }
-  }, [input, autoPreview, updatePreview]);
+  }, [input, autoPreview]);
 
   const handleClear = useCallback(() => {
     setInput("");
-    if (iframeRef.current) {
-      const iframe = iframeRef.current;
-      const doc = iframe.contentDocument || iframe.contentWindow?.document;
-      if (doc) {
-        doc.open();
-        doc.write("");
-        doc.close();
-      }
-    }
+    setPreview("");
   }, []);
 
   const handlePaste = useCallback(async () => {
@@ -178,7 +164,7 @@ export default function HtmlViewer({ t }: HtmlViewerProps) {
       </div>
 
       {/* Editor & Preview */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-2">
           <div className="flex items-center gap-2">
             <Code className="h-4 w-4 text-muted-foreground" />
@@ -191,7 +177,7 @@ export default function HtmlViewer({ t }: HtmlViewerProps) {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder={toolT.htmlPlaceholder}
-            className="font-mono text-sm min-h-[400px] sm:min-h-[500px]"
+            className="font-mono text-sm min-h-[200px] sm:min-h-[500px]"
           />
         </div>
 
@@ -200,10 +186,10 @@ export default function HtmlViewer({ t }: HtmlViewerProps) {
             <Eye className="h-4 w-4 text-muted-foreground" />
             <label className="text-sm font-medium">{toolT.livePreview}</label>
           </div>
-          <div className="border border-border rounded-lg overflow-hidden bg-background min-h-[400px] sm:min-h-[500px]">
+          <div className="border border-border rounded-lg overflow-hidden bg-background">
             <iframe
-              ref={iframeRef}
-              className="w-full h-full"
+              srcDoc={preview}
+              className="block w-full h-[300px] sm:h-[500px]"
               sandbox="allow-scripts"
               title="HTML Preview"
             />
