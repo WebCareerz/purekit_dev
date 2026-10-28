@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { type Locale } from "@/lib/i18n";
+import { localePath, type Locale } from "@/lib/i18n";
 import { type ToolDefinition } from "@/lib/tools";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
@@ -25,7 +25,7 @@ export default function RelatedTools({
         {relatedTools.map((tool) => {
           const toolT = toolsT[tool.slug];
           return (
-            <Link key={tool.slug} href={`/${lang}/${tool.slug}/`}>
+            <Link key={tool.slug} href={localePath(lang, `/${tool.slug}/`)}>
               <Card className="h-full transition-colors hover:border-primary/50 hover:shadow-sm cursor-pointer">
                 <CardHeader>
                   <CardTitle className="text-base">

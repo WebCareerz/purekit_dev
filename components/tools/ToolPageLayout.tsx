@@ -1,4 +1,4 @@
-import { type Locale } from "@/lib/i18n";
+import { localePath, type Locale } from "@/lib/i18n";
 import { SITE_URL, generateWebApplicationSchema, generateFAQSchema } from "@/lib/seo";
 import { getRelatedTools } from "@/lib/tools";
 import { Badge } from "@/components/ui/badge";
@@ -37,7 +37,7 @@ export default function ToolPageLayout({
   const webAppSchema = generateWebApplicationSchema({
     name,
     description: shortDescription,
-    url: `${SITE_URL}/${lang}/${toolSlug}/`,
+    url: `${SITE_URL}${localePath(lang, `/${toolSlug}/`)}`,
   });
 
   const faqSchema = faq?.length ? generateFAQSchema(faq) : null;

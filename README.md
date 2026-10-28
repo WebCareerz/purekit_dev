@@ -30,22 +30,22 @@ PureKit is different: **every tool runs 100% client-side** using browser APIs. Y
 ### Developer Tools
 | Tool | Description |
 |------|-------------|
-| [JWT Decoder](https://purekit.dev/en/jwt-decoder) | Decode and inspect JWT tokens |
-| [JSON Diff](https://purekit.dev/en/json-diff) | Compare JSON objects side by side |
-| [UUID Generator](https://purekit.dev/en/uuid-generator) | Generate UUIDs (v1, v4, v7) |
-| [Gzip Compress/Decompress](https://purekit.dev/en/gzip-compress-decompress) | Compress and decompress with gzip |
-| [HTML Viewer](https://purekit.dev/en/html-viewer) | Live HTML preview and rendering |
+| [JWT Decoder](https://www.purekit.dev/jwt-decoder/) | Decode and inspect JWT tokens |
+| [JSON Diff](https://www.purekit.dev/json-diff/) | Compare JSON objects side by side |
+| [UUID Generator](https://www.purekit.dev/uuid-generator/) | Generate UUIDs (v1, v4, v7) |
+| [Gzip Compress/Decompress](https://www.purekit.dev/gzip-compress-decompress/) | Compress and decompress with gzip |
+| [HTML Viewer](https://www.purekit.dev/html-viewer/) | Live HTML preview and rendering |
 
 ### PHP Tools
 | Tool | Description |
 |------|-------------|
-| [PHP Version Checker](https://purekit.dev/en/php-version-checker) | Check a website's PHP version, PHP support status, and the minimum PHP version your code needs |
-| [PHP2Shell Checker](https://purekit.dev/en/php2shell-checker) | Check whether a website or PHP version is affected by PHP2Shell (CVE-2026-109618/109619) |
+| [PHP Version Checker](https://www.purekit.dev/php-version-checker/) | Check a website's PHP version, PHP support status, and the minimum PHP version your code needs |
+| [PHP2Shell Checker](https://www.purekit.dev/php2shell-checker/) | Check whether a website or PHP version is affected by PHP2Shell (CVE-2026-109618/109619) |
 
 ### Image Tools
 | Tool | Description |
 |------|-------------|
-| [Gemini Watermark Remover](https://purekit.dev/en/gemini-watermark-remover) | Remove watermarks from Gemini AI images |
+| [Gemini Watermark Remover](https://www.purekit.dev/gemini-watermark-remover/) | Remove watermarks from Gemini AI images |
 
 ## Tech Stack
 
@@ -90,11 +90,10 @@ The static site is generated in the `out/` directory, ready for deployment to an
 
 ```
 purekit.dev/
-├── app/
-│   └── [lang]/           # Tool pages (one folder per tool)
-│       ├── jwt-decoder/
-│       ├── php-version-checker/
-│       └── ...
+├── app/                  # Pages at the site root (default locale, no /en/ prefix)
+│   ├── jwt-decoder/      # One folder per tool
+│   ├── php-version-checker/
+│   └── ...
 ├── components/
 │   ├── tools/            # Tool-specific components
 │   └── ui/               # Shared UI components (shadcn/ui)
@@ -115,7 +114,7 @@ Contributions are welcome! Here's how you can help:
 
 ### Adding a New Tool
 
-1. Create a new folder in `app/[lang]/your-tool-slug/`
+1. Create a new folder in `app/your-tool-slug/`
 2. Add the tool component in `components/tools/YourTool.tsx`
 3. Register the tool in `lib/tools.ts`
 4. Add i18n strings in `i18n/en.json`

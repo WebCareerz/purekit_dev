@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { type Locale } from "@/lib/i18n";
+import { localePath, type Locale } from "@/lib/i18n";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import {
   Archive,
@@ -40,7 +40,7 @@ export default function MostPopularTools({ lang, t }: MostPopularToolsProps) {
           if (!toolT) return null;
 
           return (
-            <Link key={slug} href={`/${lang}/${slug}/`}>
+            <Link key={slug} href={localePath(lang, `/${slug}/`)}>
               <Card className="h-full transition-all hover:border-primary hover:shadow-md cursor-pointer group">
                 <CardHeader className="space-y-3">
                   <div className="flex items-start gap-3">

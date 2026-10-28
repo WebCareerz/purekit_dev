@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { categories, tools as toolsRegistry } from "@/lib/tools";
-import { type Locale } from "@/lib/i18n";
+import { localePath, type Locale } from "@/lib/i18n";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 interface ToolGridProps {
@@ -167,7 +167,7 @@ export default function ToolGrid({
             {category.tools.map((slug) => {
               const toolT = toolsT[slug];
               return (
-                <Link key={slug} href={`/${lang}/${slug}/`}>
+                <Link key={slug} href={localePath(lang, `/${slug}/`)}>
                   <Card className="h-full transition-colors hover:border-primary/50 hover:shadow-sm cursor-pointer">
                     <CardHeader className="space-y-2">
                       <div className="flex items-center gap-3">

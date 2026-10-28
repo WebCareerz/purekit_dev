@@ -1,1 +1,24 @@
-/ /en/ 301
+# The default locale moved from /en/ to the site root. /en/ itself is not redirected:
+# see app/en/page.tsx. Removed tools have no rule, so their old URLs return 404.
+/en/php-version-checker/ /php-version-checker/ 301
+/en/php-version-checker /php-version-checker/ 301
+/en/php2shell-checker/ /php2shell-checker/ 301
+/en/php2shell-checker /php2shell-checker/ 301
+/en/jwt-decoder/ /jwt-decoder/ 301
+/en/jwt-decoder /jwt-decoder/ 301
+/en/gemini-watermark-remover/ /gemini-watermark-remover/ 301
+/en/gemini-watermark-remover /gemini-watermark-remover/ 301
+/en/gzip-compress-decompress/ /gzip-compress-decompress/ 301
+/en/gzip-compress-decompress /gzip-compress-decompress/ 301
+/en/html-viewer/ /html-viewer/ 301
+/en/html-viewer /html-viewer/ 301
+/en/uuid-generator/ /uuid-generator/ 301
+/en/uuid-generator /uuid-generator/ 301
+/en/json-diff/ /json-diff/ 301
+/en/json-diff /json-diff/ 301
+/en/privacy/ /privacy/ 301
+/en/privacy /privacy/ 301
+/en/terms/ /terms/ 301
+/en/terms /terms/ 301
+/en/contact/ /contact/ 301
+/en/contact /contact/ 301

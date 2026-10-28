@@ -4,7 +4,7 @@ import { useState, useEffect, useMemo, useCallback, useRef } from "react";
 import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
 import { categories, tools as toolsRegistry } from "@/lib/tools";
-import { type Locale } from "@/lib/i18n";
+import { localePath, type Locale } from "@/lib/i18n";
 
 interface SearchDialogProps {
   lang: Locale;
@@ -80,7 +80,7 @@ export default function SearchDialog({
   const navigate = useCallback(
     (slug: string) => {
       setOpen(false);
-      router.push(`/${lang}/${slug}/`);
+      router.push(localePath(lang, `/${slug}/`));
     },
     [lang, router]
   );

@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import CopyButton from "./CopyButton";
-import { type Locale } from "@/lib/i18n";
+import { localePath, type Locale } from "@/lib/i18n";
 import {
   PHP_BRANCHES,
   PHP_DATA_AS_OF,
@@ -274,7 +274,7 @@ export default function PhpVersionChecker({ lang, t }: PhpVersionCheckerProps) {
           >
             <span className="font-semibold">PHP2Shell: </span>
             {p2sText}{" "}
-            <Link href={`/${lang}/php2shell-checker/`} className="underline underline-offset-4">
+            <Link href={localePath(lang, "/php2shell-checker/")} className="underline underline-offset-4">
               {toolT.p2sLearnMore}
             </Link>
           </div>
@@ -518,7 +518,7 @@ export default function PhpVersionChecker({ lang, t }: PhpVersionCheckerProps) {
       {/* PHP2Shell notice */}
       <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800 dark:border-red-900 dark:bg-red-950 dark:text-red-300">
         {toolT.bannerText}{" "}
-        <Link href={`/${lang}/php2shell-checker/`} className="font-medium underline underline-offset-4">
+        <Link href={localePath(lang, "/php2shell-checker/")} className="font-medium underline underline-offset-4">
           {toolT.bannerLink}
         </Link>
       </div>

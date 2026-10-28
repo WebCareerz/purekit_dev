@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { categories } from "@/lib/tools";
-import { type Locale, localeNames } from "@/lib/i18n";
+import { localeNames, localePath, type Locale } from "@/lib/i18n";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import SearchDialog from "./SearchDialog";
@@ -58,7 +58,7 @@ export default function Header({ lang, t }: HeaderProps) {
         <div className="flex h-14 items-center justify-between gap-4">
           {/* Logo */}
           <Link
-            href={`/${lang}/`}
+            href={localePath(lang, "/")}
             className="flex items-center gap-2 font-semibold text-lg shrink-0"
           >
             <svg
@@ -117,7 +117,7 @@ export default function Header({ lang, t }: HeaderProps) {
                         return (
                           <Link
                             key={toolSlug}
-                            href={`/${lang}/${toolSlug}/`}
+                            href={localePath(lang, `/${toolSlug}/`)}
                             className={`block px-3 py-1.5 text-sm transition-colors ${
                               isToolActive
                                 ? "bg-accent font-medium text-accent-foreground"
@@ -176,7 +176,7 @@ export default function Header({ lang, t }: HeaderProps) {
                             return (
                               <Link
                                 key={toolSlug}
-                                href={`/${lang}/${toolSlug}/`}
+                                href={localePath(lang, `/${toolSlug}/`)}
                                 className={`block px-2 py-1.5 text-sm rounded-md transition-colors ${
                                   isToolActive
                                     ? "bg-accent font-medium text-accent-foreground"
@@ -254,7 +254,7 @@ export default function Header({ lang, t }: HeaderProps) {
         <div className="md:hidden border-t border-border bg-background max-h-[70vh] overflow-y-auto">
           <div className="px-4 py-3 space-y-3">
             <Link
-              href={`/${lang}/`}
+              href={localePath(lang, "/")}
               className="block px-3 py-2 text-sm rounded-md hover:bg-accent"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -270,7 +270,7 @@ export default function Header({ lang, t }: HeaderProps) {
                   return (
                     <Link
                       key={toolSlug}
-                      href={`/${lang}/${toolSlug}/`}
+                      href={localePath(lang, `/${toolSlug}/`)}
                       className={`block px-3 py-2 text-sm rounded-md hover:bg-accent ml-2 ${
                         pathname.includes(toolSlug)
                           ? "bg-accent font-medium"

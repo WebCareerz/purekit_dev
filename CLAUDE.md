@@ -87,7 +87,7 @@ className="min-h-[200px] sm:min-h-[400px]"
 
 1. **确保开发服务器运行** — 先检查 `lsof -i :3000`，未运行则后台启动 `npm run dev`
 2. **获取标签页上下文** — 调用 `tabs_context_mcp` 获取可用 tab，或 `tabs_create_mcp` 创建新 tab
-3. **导航到目标页面** — 使用 `navigate` 工具访问 `http://localhost:3000/en/{tool-slug}/`
+3. **导航到目标页面** — 使用 `navigate` 工具访问 `http://localhost:3000/{tool-slug}/`
 4. **截图验证渲染** — 使用 `computer` 工具的 `screenshot` 动作检查页面渲染
 5. **交互测试** — 使用 `left_click`、`type` 等动作模拟用户操作
 6. **检查控制台** — 使用 `read_console_messages` 检查是否有 JS 错误

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { locales, ogLocales, type Locale } from "./i18n";
+import { defaultLocale, localePath, locales, ogLocales, type Locale } from "./i18n";
 
 export const SITE_URL = "https://www.purekit.dev";
 
 interface SEOParams {
   title: string;
   description: string;
+  // Path without the locale prefix, e.g. "/jwt-decoder/".
   path: string;
   lang: Locale;
   keywords?: string[];
@@ -18,7 +19,7 @@ export function generateSEO({
   lang,
   keywords,
 }: SEOParams): Metadata {
-  const url = `${SITE_URL}${path}`;
+  const url = `${SITE_URL}${localePath(lang, path)}`;
 
   return {
     title: { absolute: title },
@@ -28,9 +29,9 @@ export function generateSEO({
       canonical: url,
       languages: {
         ...Object.fromEntries(
-          locales.map((l) => [l, `${SITE_URL}/${l}${path.replace(`/${lang}`, "")}`])
+          locales.map((l) => [l, `${SITE_URL}${localePath(l, path)}`])
         ),
-        "x-default": `${SITE_URL}/${locales[0]}${path.replace(`/${lang}`, "")}`,
+        "x-default": `${SITE_URL}${localePath(defaultLocale, path)}`,
       },
     },
     openGraph: {

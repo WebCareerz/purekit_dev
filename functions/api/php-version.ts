@@ -22,7 +22,7 @@ const BLOCK_STATUSES = new Set([401, 403, 429, 503]);
 const MAX_REDIRECTS = 4;
 const TIMEOUT_MS = 8000;
 const BODY_LIMIT = 131072;
-const USER_AGENT = "Mozilla/5.0 (compatible; PureKitPHPCheck/1.0; +https://www.purekit.dev/en/php-version-checker/)";
+const USER_AGENT = "Mozilla/5.0 (compatible; PureKitPHPCheck/1.0; +https://www.purekit.dev/php-version-checker/)";
 
 function json(body: unknown, status = 200): Response {
   return new Response(JSON.stringify(body), {

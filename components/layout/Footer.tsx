@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { type Locale } from "@/lib/i18n";
+import { localePath, type Locale } from "@/lib/i18n";
 
 interface FooterProps {
   lang: Locale;
@@ -35,19 +35,19 @@ export default function Footer({ lang, t }: FooterProps) {
             <h3 className="font-semibold text-sm">{footer.linksTitle}</h3>
             <nav className="flex flex-col gap-2">
               <Link
-                href={`/${lang}/privacy/`}
+                href={localePath(lang, "/privacy/")}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 {footer.privacyPolicy}
               </Link>
               <Link
-                href={`/${lang}/terms/`}
+                href={localePath(lang, "/terms/")}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 {footer.termsOfService}
               </Link>
               <Link
-                href={`/${lang}/contact/`}
+                href={localePath(lang, "/contact/")}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 {footer.contact}

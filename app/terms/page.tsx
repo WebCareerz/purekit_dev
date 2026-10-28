@@ -1,35 +1,23 @@
-import { getDictionary, locales, type Locale } from "@/lib/i18n";
+import { defaultLocale, getDictionary } from "@/lib/i18n";
 import { generateSEO } from "@/lib/seo";
 
-export function generateStaticParams() {
-  return locales.map((lang) => ({ lang }));
-}
+const lang = defaultLocale;
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}) {
-  const { lang } = await params;
-  const t = await getDictionary(lang as Locale);
-  const page = t.privacy as Record<string, string>;
+export async function generateMetadata() {
+  const t = await getDictionary(lang);
+  const page = t.terms as Record<string, string>;
 
   return generateSEO({
     title: page.metaTitle,
     description: page.metaDescription,
-    path: `/${lang}/privacy/`,
-    lang: lang as Locale,
+    path: "/terms/",
+    lang,
   });
 }
 
-export default async function PrivacyPage({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}) {
-  const { lang } = await params;
-  const t = await getDictionary(lang as Locale);
-  const page = t.privacy as {
+export default async function TermsPage() {
+  const t = await getDictionary(lang);
+  const page = t.terms as {
     title: string;
     lastUpdated: string;
     intro: string;

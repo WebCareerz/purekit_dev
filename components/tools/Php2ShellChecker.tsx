@@ -4,7 +4,7 @@ import { useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { type Locale } from "@/lib/i18n";
+import { localePath, type Locale } from "@/lib/i18n";
 import {
   PHP_BRANCHES,
   PHP_DATA_AS_OF,
@@ -146,7 +146,7 @@ export default function Php2ShellChecker({ lang, t }: Php2ShellCheckerProps) {
         {supportBranch && (
           <p className="text-sm text-muted-foreground">
             {fill(toolT.supportLine, { branch: supportBranch.branch })} {statusBadge(getSupportStatus(supportBranch, today))}{" "}
-            <Link href={`/${lang}/php-version-checker/`} className="underline underline-offset-4">
+            <Link href={localePath(lang, "/php-version-checker/")} className="underline underline-offset-4">
               {toolT.versionCheckerLink}
             </Link>
           </p>
