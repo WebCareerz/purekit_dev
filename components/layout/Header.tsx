@@ -39,7 +39,7 @@ export default function Header({ lang, t }: HeaderProps) {
   }, [openDropdown]);
 
   // Top 3 categories shown directly, rest under "More"
-  const primaryKeys = ["formatters", "encodersDecoders", "pdfTools"];
+  const primaryKeys = ["textTools", "encodersDecoders", "imageTools"];
   const primaryCategories = categories.filter((c) =>
     primaryKeys.includes(c.key)
   );

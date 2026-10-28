@@ -2,30 +2,21 @@ import Link from "next/link";
 import { type Locale } from "@/lib/i18n";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import {
-  Braces,
+  Archive,
   Eraser,
-  FileCode,
-  FilePlus,
-  Fingerprint,
-  ShieldCheck,
+  Eye,
+  FileCode2,
+  Key,
+  ShieldAlert,
 } from "lucide-react";
 
-const iconMap = {
-  Braces,
-  Eraser,
-  FileCode,
-  FilePlus,
-  Fingerprint,
-  ShieldCheck,
-};
-
-const popularToolSlugs = [
-  "json-formatter",
-  "base64-encode-decode",
-  "gemini-watermark-remover",
-  "pdf-merge",
-  "uuid-generator",
-  "hash-generator",
+const popularTools = [
+  { slug: "php-version-checker", Icon: FileCode2 },
+  { slug: "jwt-decoder", Icon: Key },
+  { slug: "gzip-compress-decompress", Icon: Archive },
+  { slug: "php2shell-checker", Icon: ShieldAlert },
+  { slug: "gemini-watermark-remover", Icon: Eraser },
+  { slug: "html-viewer", Icon: Eye },
 ];
 
 interface MostPopularToolsProps {
@@ -44,17 +35,9 @@ export default function MostPopularTools({ lang, t }: MostPopularToolsProps) {
         <p className="text-muted-foreground">{home.mostPopularSubtitle}</p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {popularToolSlugs.map((slug) => {
+        {popularTools.map(({ slug, Icon }) => {
           const toolT = toolsT[slug];
           if (!toolT) return null;
-
-          const iconName = slug === "json-formatter" ? "Braces"
-            : slug === "base64-encode-decode" ? "FileCode"
-            : slug === "pdf-merge" ? "FilePlus"
-            : slug === "uuid-generator" ? "Fingerprint"
-            : "ShieldCheck";
-
-          const Icon = iconMap[iconName];
 
           return (
             <Link key={slug} href={`/${lang}/${slug}/`}>
