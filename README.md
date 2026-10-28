@@ -51,7 +51,6 @@ PureKit is different: **every tool runs 100% client-side** using browser APIs. Y
 
 - **Framework**: [Next.js](https://nextjs.org/) (Static Export)
 - **UI**: [React](https://react.dev/) + [Tailwind CSS](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/)
-- **PDF Processing**: [pdf-lib](https://pdf-lib.js.org/) + [PDF.js](https://mozilla.github.io/pdf.js/)
 - **Image Processing**: Canvas API + Web Workers
 - **Hashing**: Web Crypto API
 - **Deployment**: [Cloudflare Pages](https://pages.cloudflare.com/) (static, plus two Pages Functions: `functions/api/php-version.ts` for website PHP checks, and `functions/rks6/[[path]].ts`, which hands analytics requests to a proxy Worker through a service binding)
